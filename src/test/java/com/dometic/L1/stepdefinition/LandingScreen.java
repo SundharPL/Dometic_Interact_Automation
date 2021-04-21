@@ -29,8 +29,6 @@ public class LandingScreen extends Baseclass {
         if(elements3.size()!=0){
             TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_remainderView_iconClose_access_id);
         }
-        WebDriverWait wait=new WebDriverWait(driver,300);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.LandingPage_Climate_Outside_xpath)));
 //        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_landingscreen.LandingPage_Climate_Outside_xpath));
 //        if (elements.size()!=0){
 //            System.out.println(elements.get(0).getText());

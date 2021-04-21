@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 @CucumberOptions(
         features = "src/test/java/com/dometic/L2/features/",
         glue = {"com.dometic.L2.stepdefinition"},
-        tags = {"@First,@sanity,@Device1,@Device2"},
+        tags = {"@First,@sanity"},
         plugin = {"html:target/cucumber-html-report", "json:target/cucumber-reports/cucumber.json", "junit:target/cucumber-reports/cucumber.xml", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "rerun:target/rerun.txt"}
 )
 

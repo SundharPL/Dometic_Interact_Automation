@@ -1,6 +1,6 @@
 Feature: Testing an Dometic LMC application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Light screen UI
     Then I Tap on Light in Landing screen
     Then I Wait short period for Page to Load

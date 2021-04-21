@@ -37,4 +37,6 @@ public class Constant_forgotpassword extends Baseclass{
     // ----------------------Xpath--------------------------//
     public static final String ForgetPassword_send_button_xpath="//android.view.ViewGroup[@content-desc=\"com.dometicapp:id/forgot-sendButton\"]/android.widget.TextView";
     public static final String Forgot_password_backbutton_xpath="//*[@content-desc='com.dometicapp:id/forgot-backToLoginImage']";
+    public static final String ForgetPassword_parentPanel_xpath="//*[@resource-id='android:id/parentPanel']";
+    public static final String ForgetPassword_OK_xpath="//*[@resource-id='android:id/button1']";
 }

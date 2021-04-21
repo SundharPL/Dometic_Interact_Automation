@@ -131,6 +131,43 @@ public class Constant_Spanish_Language {
     public static final String L2_PredictiveData = "No text";
     public static final String L2_PredictiveData_access_id = "com.dometicapp:id/powerScreen-flatListItem-undefined-11-cardTitle";
 
+    //Version 103 Access_id and data
+    public static final String BATTERIES_header_text_access_id="com.dometicapp:id/setting-selectedLanguage";
+    public static final String BATTERIES_header_text="Need Text";
+    public static final String powerScreen_batteryCarousel_circle_Engine1_access_id="com.dometicapp:id/powerScreen-batteryCarousel-circle-0";
+    public static final String powerScreen_batteryCarousel_circle_Engine1_text="Need Text";
+    public static final String powerScreen_batteryCarousel_circle_STBD_access_id="com.dometicapp:id/powerScreen-batteryCarousel-circle-1";
+    public static final String powerScreen_batteryCarousel_circle_STBD_text="Need Text";
+    public static final String powerScreen_batteryCarousel_circle_House_access_id="com.dometicapp:id/powerScreen-batteryCarousel-circle-2";
+    public static final String powerScreen_batteryCarousel_circle_House_text="Need Text";
+    public static final String powerScreen_batteryCarousel_circle_Engine1_text_access_id="com.dometicapp:id/powerScreen-batteryCarousel-circle-0";
+    public static final String powerScreen_batteryCarousel_circle_STBD_text_access_id="com.dometicapp:id/powerScreen-batteryCarousel-circle-1";
+    public static final String powerScreen_batteryCarousel_circle_House_text_access_id="com.dometicapp:id/powerScreen-batteryCarousel-circle-2";
+    public static final String powerScreen_Measured_Voltage_text="Voltaje medido";
+    public static final String powerScreen_Measured_Voltage_access_id="com.dometicapp:id/powerScreen-measuredVoltage-cardTitle";
+    public static final String powerScreen_Measured_Voltage_cardSubText_access_id="com.dometicapp:id/powerScreen-measuredVoltage-cardSubText";
+    public static final String powerScreen_status_text="Need Text";
+    public static final String powerScreen_status_access_id="com.dometicapp:id/powerScreen-status-cardTitle";
+    public static final String powerScreen_status_cardSubText_access_id="com.dometicapp:id/powerScreen-status-cardSubText";
+    public static final String powerScreen_usage_text="Análisis de uso";
+    public static final String powerScreen_usage_access_id="com.dometicapp:id/powerScreen-usage-cardTitle";
+    public static final String powerScreen_usage_expandIcon_access_id="com.dometicapp:id/powerScreen-usage-expandIcon";
+    public static final String powerScreen_alert_text="Alerta";
+    public static final String powerScreen_alert_access_id="com.dometicapp:id/powerScreen-alert-cardTitle";
+    public static final String powerScreen_alert_switchText_access_id="com.dometicapp:id/powerScreen-alert-switchText";
+    public static final String powerScreen_alert_switchComponent_access_id="com.dometicapp:id/powerScreen-alert-switchComponent";
+    public static final String powerScreen_notify_text="Notificarme";
+    public static final String powerScreen_notify_access_id="com.dometicapp:id/powerScreen-notify-cardTitle";
+    public static final String powerScreen_notify_switchText_access_id="com.dometicapp:id/powerScreen-notify-switchText";
+    public static final String powerScreen_notify_switchComponent_access_id="com.dometicapp:id/powerScreen-notify-switchComponent";
+    public static final String powerScreen_batteryVoltage_text="Voltaje de la batería";
+    public static final String powerScreen_batteryVoltage_access_id="com.dometicapp:id/powerScreen-batteryVoltage-cardTitle";
+    public static final String powerScreen_batteryVoltage_textButton_access_id="com.dometicapp:id/powerScreen-batteryVoltage-textButton";
+    public static final String powerScreen_batteryCarousel_circle_Engine1_text_xpath="(//*[@content-desc='com.dometicapp:id/powerScreen-batteryCarousel-batteryName-0']//following::android.widget.TextView)[1]";
+    public static final String powerScreen_batteryCarousel_circle_STBD_text_xpath="(//*[@content-desc='com.dometicapp:id/powerScreen-batteryCarousel-batteryName-1']//following::android.widget.TextView)[1]";
+    public static final String powerScreen_batteryCarousel_circle_House_text_xpath="(//*[@content-desc='com.dometicapp:id/powerScreen-batteryCarousel-batteryName-2']//following::android.widget.TextView)[1]";
+
+
     /* ----------------------Power Page ---------------------- */
     //Generator Main screen Text
     public static final String L2_Control_Generator = "No text";

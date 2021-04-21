@@ -879,4 +879,54 @@ public class FrenchLanguage extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Affichage par liste");
         TaponbuttonaccessabilityID(Constant_French_Language.listView_French_access_id);
     }
+
+    @Then("I Verify BATTERIES header French text")
+    public void iVerifyBATTERIESHeaderFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.BATTERIES_header_text, Constant_French_Language.BATTERIES_header_text_access_id);
+    }
+
+    @Then("I verify the Engine{int} French text")
+    public void iVerifyTheEngineFrenchText(int arg0) throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_batteryCarousel_circle_Engine1_text, Constant_French_Language.powerScreen_batteryCarousel_circle_Engine1_text_access_id);
+    }
+
+    @Then("I verify the STBD French text")
+    public void iVerifyTheSTBDFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_batteryCarousel_circle_STBD_text, Constant_French_Language.powerScreen_batteryCarousel_circle_STBD_text_access_id);
+    }
+
+    @Then("I verify the House French text")
+    public void iVerifyTheHouseFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_batteryCarousel_circle_House_text, Constant_French_Language.powerScreen_batteryCarousel_circle_House_text_access_id);
+    }
+
+    @Then("I verify the Measured voltage French text")
+    public void iVerifyTheMeasuredVoltageFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_Measured_Voltage_text, Constant_French_Language.powerScreen_Measured_Voltage_access_id);
+    }
+
+    @Then("I verify the Status French text")
+    public void iVerifyTheStatusFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_status_text, Constant_French_Language.powerScreen_status_access_id);
+    }
+
+    @Then("I verify the UsageAnalysis French text")
+    public void iVerifyTheUsageAnalysisFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_usage_text, Constant_French_Language.powerScreen_usage_access_id);
+    }
+
+    @Then("I verify the Alert French text")
+    public void iVerifyTheAlertFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_alert_text, Constant_French_Language.powerScreen_alert_access_id);
+    }
+
+    @Then("I verify the Notify Me French text")
+    public void iVerifyTheNotifyMeFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_notify_text, Constant_French_Language.powerScreen_notify_access_id);
+    }
+
+    @Then("I verify the Battery voltage French text")
+    public void iVerifyTheBatteryVoltageFrenchText() throws Throwable {
+        asserttextValidationAccessibility(Constant_French_Language.powerScreen_batteryVoltage_text, Constant_French_Language.powerScreen_batteryVoltage_access_id);
+    }
 }

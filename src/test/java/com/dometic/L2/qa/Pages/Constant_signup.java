@@ -43,4 +43,6 @@ public class Constant_signup extends Baseclass{
     public static final String SignUp_login_link_xpath="//android.widget.TextView[@content-desc='com.dometicapp:id/signUp-loginText']";
     public static final String Signup_accept_Terms_and_Conditions_xpath="//*[@resource-id='android:id/button1']";
     public static final String Signup_alomost_there_xpath="//android.widget.ImageView[@content-desc='com.dometicapp:id/signUp-closeButton']";
+    public static final String Signup_parentPanel_xpath="//*[@resource-id='android:id/parentPanel']";
+    public static final String Signup_OK_xpath="//*[@resource-id='android:id/button1']";
 }

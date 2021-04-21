@@ -779,7 +779,7 @@ public class LandingPage extends Baseclass {
     public void iValidatedTankProgressIndicatorFreshWaterPercentageIsDisplayedInLandingScreen() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Validated Tank-progressIndicator (Fresh Water) percentage is displayed in Landing screen");
         System.out.println(freshWater);
-        if (freshWater.contains(driver.findElement(By.xpath(Constant_Tank.Tanksscreen_Fresh_water_Level_Percentage_xpath)).getText())) {
+        if (driver.findElement(By.xpath(Constant_Tank.Tanksscreen_Fresh_water_Level_Percentage_xpath)).getText().contains(freshWater)) {
             System.out.println("Text comparison is Successful");
         }
     }

@@ -11,38 +11,24 @@
 <!--            &lt;!&ndash;            <class name="com.dometic.L1.androidrunner.ReRunTest"/>&ndash;&gt;-->
 <!--        </classes>-->
 <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
-<!--    <test name="L2-Test(Pixel4_10)">-->
+<!--    <test name="L2-Test">-->
+<!--&lt;!&ndash;        <parameter name="PortNumber" value="5723" />&ndash;&gt;-->
 <!--        <classes>-->
-<!--            &lt;!&ndash;            <class name="com.dometic.L1.androidrunner.ReRunTest"/>&ndash;&gt;-->
 <!--            <class name="com.dometic.L2.androidrunner.L2_runner"/>-->
 <!--        </classes>-->
 <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
-    <test name="L2-Test">
-<!--        <parameter name="PortNumber" value="5723" />-->
+    <test name="L2-Test1">
+        <parameter name="PortNumber" value="4723" />
         <classes>
             <class name="com.dometic.L2.androidrunner.L2_runner"/>
         </classes>
     </test> <!-- Test -->
-<!--    <test name="L2-Test1">-->
-<!--        <parameter name="PortNumber" value="4723" />-->
-<!--        <classes>-->
-<!--            &lt;!&ndash;            <class name="com.dometic.L1.androidrunner.ReRunTest"/>&ndash;&gt;-->
-<!--            <class name="com.dometic.L2.androidrunner.L2_runner"/>-->
-<!--        </classes>-->
-<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
-<!--    <test name="L2-Test">-->
-<!--        &lt;!&ndash;        <parameter name="PortNumber" value="5723" />&ndash;&gt;-->
-<!--        <classes>-->
-
-<!--            &lt;!&ndash;            <class name="com.dometic.L1.androidrunner.ReRunTest"/>&ndash;&gt;-->
-<!--            <class name="com.dometic.L2.Sprint6.androidrunner.L2_runner"/>-->
-<!--        </classes>-->
-<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
-<!--    <test name="L2-Test1">-->
-<!--        &lt;!&ndash;        <parameter name="PortNumber" value="4723" />&ndash;&gt;-->
-<!--        <classes>-->
-<!--            &lt;!&ndash;            <class name="com.dometic.L1.androidrunner.ReRunTest"/>&ndash;&gt;-->
-<!--            <class name="com.dometic.L2.Sprint6.androidrunner.L2_runner"/>-->
-<!--        </classes>-->
-<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+    <test name="MTC">
+        <!--        <parameter name="PortNumber" value="5723" />-->
+        <classes>
+            <class name="com.dometic.MTC.androidrunner.MTC_runner"/>
+        </classes>
+    </test> <!-- Test -->
 </suite> <!-- Suite -->
+
+

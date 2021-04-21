@@ -6,7 +6,11 @@ import com.dometic.L2.qa.Pages.Constant_login;
 import com.dometic.L2.qa.util.Baseclass;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import io.appium.java_client.android.AndroidElement;
+import org.openqa.selenium.By;
 import org.testng.Assert;
+
+import java.util.List;
 
 public class Forgotpassword extends Baseclass {
     Constant_forgotpassword forgotpassword_obj;
@@ -60,6 +64,16 @@ public class Forgotpassword extends Baseclass {
     public void iVerifyEMailCaseSensitiveLabelIsDisplayed() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify E-mail (case sensitive) label is displayed");
         asserttextAccessibility(Constant_forgotpassword.ForgetPassword_forgot_email_label_expected,Constant_forgotpassword.ForgetPassword_forgot_email_label_access_id);
+    }
+
+
+    @Then("I Tap on Successfully email send popup")
+    public void iTapOnSuccessfullyEmailSendPopup() throws InterruptedException {
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_forgotpassword.ForgetPassword_parentPanel_xpath));
+        if(elements.size()!=0){
+            Thread.sleep(2000);
+            Taponbutton(Constant_forgotpassword.ForgetPassword_OK_xpath);
+        }
     }
 }
 

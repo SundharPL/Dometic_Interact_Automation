@@ -60,4 +60,36 @@ public class OnboardingScreen extends Baseclass {
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.LandingPage_Firmware_popup_xpath)));
     }
 
+    @Then("I Validate the application logo On boarding screen")
+    public void iValidateTheApplicationLogoOnBoardingScreen() {
+        List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_OnboardingPage.onboarding_logo_access_id);
+        if(id.size()!=0){
+            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_OnboardingPage.onboarding_logo_access_id));
+//            String text = driver.findElementByAccessibilityId(Constant_OnboardingPage.onboarding_logo_access_id).getText();
+//            if(text.equalsIgnoreCase(Constant_OnboardingPage.onboarding_logo_Eriba)){
+//                System.out.println("Text comparison is Successful");
+//            }
+//            else if(text.contains(Constant_OnboardingPage.onboarding_logo_LMC)){
+//                System.out.println("Text comparison is Successful");
+//            }
+
+        }
+        WebDriverWait wait=new WebDriverWait(driver,300);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.LandingPage_Climate_xpath)));
+    }
+    @Then("I Validate the application logo Landing screen")
+    public void iValidateTheApplicationLogoLandingScreen() {
+        List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_mainScreen_BrandLogo_access_id);
+        if(id.size()!=0){
+            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_landingscreen.LandingPage_mainScreen_BrandLogo_access_id));
+//            String text = driver.findElementByAccessibilityId(Constant_landingscreen.LandingPage_mainScreen_BrandLogo_access_id).getText();
+//            System.out.println(text);
+//            if(text.equalsIgnoreCase(Constant_OnboardingPage.onboarding_logo_Eriba)){
+//                System.out.println("Text comparison is Successful");
+//            }
+//            else if(text.contains(Constant_OnboardingPage.onboarding_logo_LMC)){
+//                System.out.println("Text comparison is Successful");
+//            }
+        }
+    }
 }

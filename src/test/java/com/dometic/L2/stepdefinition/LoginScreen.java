@@ -103,6 +103,8 @@ public class LoginScreen extends Baseclass {
     public void assert_Welcome() throws Throwable
     {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Welcome Text is displaying in Login Page");
+        System.out.println("Please change the status into Test Environment");
+        Thread.sleep(30000);
         asserttextAccessibility(login_obj.Login_welcome_text_expected, login_obj.Login_pagetitle);
     }
 

@@ -151,7 +151,7 @@ public class Constant_landingscreen {
     public static final String LandingPage_remainder_view_onclick_xpath="//*[@content-desc='com.dometicapp:id/remainderView-onClick']";
     public static final String LandingPage_header_connectionType_xpath="//*[@content-desc='com.dometicapp:id/header-connectionType']";
     public static final String LandingPage_header_brandLogo_xpath="//*[@content-desc='com.dometicapp:id/header-brandLogo']";
-    public static final String LandingPage_L21stclimate_tile_xpath="(//*[@content-desc='com.dometicapp:id/tile']//following::android.view.ViewGroup)[1]";
+    public static final String LandingPage_L21stclimate_tile_xpath="(//*[@content-desc='com.dometicapp:id/tiles-refreshControl']//following::android.widget.TextView)[1]";
     public static final String LandingPage_L21stclimate_text_xpath="(//*[@text='Climate'])[1]";
     public static final String LandingPage_L21stcool_text_xpath="(//*[@text='Cool'])[1]";
     public static final String LandingPage_L21stmainCardText_xpath="(//android.widget.TextView[@content-desc=\"com.dometicapp:id/tile-mainCardText\"])[1]";
@@ -175,7 +175,7 @@ public class Constant_landingscreen {
     public static final String LandingPage_L2Power_cardUnitText_xpath="(//android.widget.TextView[@content-desc=\"com.dometicapp:id/tile-cardUnitText\"])[3]";
     public static final String LandingPage_L2Power_warningText_xpath="//*[@text='Charge Battery!']";
     public static final String LandingPage_L2light_tile_xpath="//*[@text='Light']";
-    public static final String LandingPage_L2light_text_xpath="(//*[@content-desc='titleView'])[4]";
+    public static final String LandingPage_L2light_text_xpath="//android.widget.TextView[@text='Light']";
     public static final String LandingPage_L2light_CurentlyOn_text_xpath="//*[@text='Currently ON']";
     public static final String LandingPage_L2light_mainCardText_xpath="(//*[@content-desc='mainContentView'])[4]";
     public static final String LandingPage_L2AGS_tile_xpath="(//android.view.ViewGroup[@content-desc=\"com.dometicapp:id/tile\"])[5]";
@@ -204,7 +204,7 @@ public class Constant_landingscreen {
     public static final String LandingPage_L2Tank_Black_cardUnitText_xpath="";
     public static final String LandingPage_BottomLayout_All_xpath="//*[@text='All']";
     public static final String LandingPage_BottomLayout_Climate_xpath="//*[@text='Climate']";
-    public static final String LandingPage_BottomLayout_Climate_text_xpath="(//*[@text='Climate'])[3]";
+    public static final String LandingPage_BottomLayout_Climate_text_xpath="(//*[@text='Climate'])[2]";
     public static final String LandingPage_BottomLayout_Climate2tile_text_xpath="(//*[@text='Climate'])[2]";
     public static final String LandingPage_Climate_text_xpath="(//*[@text='Climate'])[1]";
     public static final String LandingPage_BottomLayout_Device_xpath="//*[@text='Devices']";

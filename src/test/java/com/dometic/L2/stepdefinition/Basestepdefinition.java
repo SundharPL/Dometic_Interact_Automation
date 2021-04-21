@@ -9,12 +9,15 @@ import com.dometic.L2.qa.util.ExtentReport;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 
 //import io.appium.java_client.android.AndroidDriver;
 
@@ -45,7 +48,7 @@ public class Basestepdefinition extends Baseclass {
     //Wait for Short period to load
     @Then("^I Wait short period for Page to Load$")
     public void I_Wait_short_for_Page_to_Load() throws Throwable {
-        ScenarioDef.createNode(new GherkinKeyword("Then"), "Signup");
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Wait short period for Page to Load");
         Thread.sleep(5000);
     }
 
@@ -59,9 +62,10 @@ public class Basestepdefinition extends Baseclass {
     @Then("I Tap on Allow button in Permission popup in Login Page")
     public void tap_on_Allow_button() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Allow button in Permission popup in Login Page");
-        String property = System.getProperty("user.dir");
-        System.out.println(property);
-        Taponbutton(login_obj.Login_Allow_popup);
+        List<AndroidElement> elements = driver.findElements(By.xpath(login_obj.Login_Allow_popup));
+        if(elements.size()!=0){
+            Taponbutton(login_obj.Login_Allow_popup);
+        }
     }
 
     // Swipe the screen right to left

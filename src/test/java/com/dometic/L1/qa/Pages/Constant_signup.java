@@ -13,7 +13,7 @@ public class Constant_signup extends Baseclass{
     public static final String SignUp_showPassword_button_access_id="com.dometicapp:id/signUp-viewPassword";
     public static final String SignUp_verifyPassword_text_access_id="com.dometicapp:id/signUp-verify";
     public static final String SignUp_verifyPassword_text_field_access_id="com.dometicapp:id/signUp-verifySecurePwd";
-    public static final String Signup_email_value1 = "test12345@gmail.com";
+    public static final String Signup_email_value1 = "testtttt@gmail.com";
     public static final String Signup_invalid_email_value1="123";
     public static final String Signup_password_value1 = "DoM@12345";
     public static final String Signup_confirmpassword_value1 = "DoM@12345";
@@ -53,4 +53,6 @@ public class Constant_signup extends Baseclass{
     public static final String SignUp_login_link_xpath="//android.widget.TextView[@content-desc='com.dometicapp:id/signUp-loginText']";
     public static final String Signup_accept_Terms_and_Conditions_xpath="//*[@resource-id='android:id/button1']";
     public static final String Signup_alomost_there_xpath="//*[@content-desc='com.dometicapp:id/signUp-closeButton']";
+    public static final String Signup_parentPanel_xpath="//*[@resource-id='android:id/parentPanel']";
+    public static final String Signup_OK_xpath="//*[@resource-id='android:id/button1']";
 }

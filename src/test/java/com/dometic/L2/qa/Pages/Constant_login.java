@@ -1,14 +1,14 @@
 package com.dometic.L2.qa.Pages;
 
-import com.dometic.L1.qa.util.Baseclass;
+import com.dometic.L2.qa.util.Baseclass;
 
 public class Constant_login extends Baseclass {
         public static final String Login_Allow_popup = "//*[@resource-id='com.android.permissioncontroller:id/permission_allow_button']";
         public static final String Login_pagetitle = "com.dometicapp:id/login-welcomeText";
         public static final String Login_Email = "com.dometicapp:id/login-emailTextfield";
         public static final String Login_Password = "com.dometicapp:id/login-securePwdfield";
-        public static final String ValidUser = "dometictest@gmail.com";
-        public static final String Validpassword = "Dom@12345";
+        public static final String ValidUser = "ramesht39@yopmail.com";
+        public static final String Validpassword = "Dom@1234";
         public static final String invaliduser1 = "dsasdddfd@gmail.com";
         public static final String loginbutton = "com.dometicapp:id/login-loginButton";
         public static final String ForgotPassword = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView";

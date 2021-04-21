@@ -7,3 +7,8 @@ Feature: Testing an Dometic LMC application
     Then I Tap on Yes button
     Then Landing screen is displayed
 
+  @sanity
+  Scenario: Verifying application Dynamic logo change functionality
+    Then I Validate the application logo On boarding screen
+    Then I Wait short period for Page to Load
+    Then I Validate the application logo Landing screen

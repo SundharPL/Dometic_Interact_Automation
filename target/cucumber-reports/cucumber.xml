@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="81" time="1112.837163">
-<testcase classname="Testing Login page in Dometic LMC application" name="Launching the application" time="22.460893">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="24" time="521.331693">
+<testcase classname="Testing Login page in Dometic LMC application" name="Launching the application" time="28.509238">
 <system-out><![CDATA[Given I Launch the application..............................................passed
 Then I Wait short period for Page to Load...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing Login page in Dometic LMC application" name="Verifying application Splash screen Functionality" time="10.521119">
+<testcase classname="Testing Login page in Dometic LMC application" name="Verifying application Splash screen Functionality" time="40.563807">
 <system-out><![CDATA[Then I Tap on Allow button in Permission popup in Login Page................passed
 Then I Wait short period for Page to Load...................................passed
 Then I verify Welcome Text is displaying in Login Page......................passed
@@ -12,7 +12,7 @@ Then I Verify Page title is displayed in Login Page.........................pass
 Then I Wait short period for Page to Load...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Login Functionality with valid credentials" time="24.965789">
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Login Functionality with valid credentials" time="23.757893">
 <system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
 Then I enter Valid Password in Login Page...................................passed
 Then I Tap on an Login button in Login Page.................................passed
@@ -20,860 +20,309 @@ Then I Wait short period for Page to Load...................................pass
 Then I verify successfully navigated to On boarding screen..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application On boarding screen functionality" time="15.563458">
+<testcase classname="Testing an Dometic LMC application" name="Verifying application On boarding screen functionality" time="16.003553">
 <system-out><![CDATA[Then I entered into On boarding screen......................................passed
 Then I Wait short period for Page to Load...................................passed
 Then I Tap on Yes button....................................................passed
 Then Landing screen is displayed............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Landing Screen functionality" time="32.681473">
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Landing Screen functionality" time="31.882733">
 <system-out><![CDATA[Then I Tap on LATER Button..................................................passed
 Then I Tap on cancel button in Upgrade Firmware.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Settings screen functionality" time="15.112249">
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Bottom Layout screen functionality" time="27.60268">
+<system-out><![CDATA[Then I Verify the All option in the Bottom layout of Landing screen.........passed
+Then I Verify the Device option in the Bottom  layout of Landing screen.....passed
+Then I Verify the Tanks option in the Bottom  layout of Landing screen......passed
+Then I Verify the climate option in the Bottom  layout of Landing screen....passed
+Then I Verify the Scene option in the Bottom  layout of Landing screen......passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on climate option in the Bottom  layout of Landing screen........passed
+Then I Validated Corresponding Climate tile is displayed....................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Device option in the Bottom  layout of Landing screen.........passed
+Then I Validate Corresponding Devices tile is displayed.....................passed
+Then I Tap on Tanks option in the Bottom  layout of Landing screen..........passed
+Then I Validate Corresponding Tank tile is displayed........................passed
+Then I Tap on Scene option in the Bottom  layout of Landing screen..........passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on All option in the Bottom layout of Landing screen.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Bottom Layout screen with ViewOption(Tile View-All Devices) functionality" time="41.345493">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on View option button in landing screen..........................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tile View Options.............................................passed
+Then I Tap on All Devices...................................................passed
+Then I Tap on Cancel Button.................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Verify the All option in the Bottom layout of Landing screen.........passed
+Then I Verify the Device option in the Bottom  layout of Landing screen.....passed
+Then I Verify the Tanks option in the Bottom  layout of Landing screen......passed
+Then I Verify the climate option in the Bottom  layout of Landing screen....passed
+Then I Verify the Scene option in the Bottom  layout of Landing screen......passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on climate option in the Bottom  layout of Landing screen........passed
+Then I Validated Corresponding Climate tile is displayed....................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Device option in the Bottom  layout of Landing screen.........passed
+Then I Validate Corresponding Devices tile is displayed.....................passed
+Then I Tap on Tanks option in the Bottom  layout of Landing screen..........passed
+Then I Validate Corresponding Tank tile is displayed........................passed
+Then I Tap on Scene option in the Bottom  layout of Landing screen..........passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on All option in the Bottom layout of Landing screen.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Bottom Layout screen with ViewOption(Tile View-Connected Devices) functionality" time="31.449781">
+<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
+Then I Tap on Connected Devices.............................................passed
+Then I Tap on Cancel Button.................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Verify the All option in the Bottom layout of Landing screen.........passed
+Then I Verify the Device option in the Bottom  layout of Landing screen.....passed
+Then I Verify the Tanks option in the Bottom  layout of Landing screen......passed
+Then I Verify the climate option in the Bottom  layout of Landing screen....passed
+Then I Verify the Scene option in the Bottom  layout of Landing screen......passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on climate option in the Bottom  layout of Landing screen........passed
+Then I Validated Corresponding Climate tile is displayed....................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Device option in the Bottom  layout of Landing screen.........passed
+Then I Validate Corresponding Devices tile is displayed.....................passed
+Then I Tap on Tanks option in the Bottom  layout of Landing screen..........passed
+Then I Validate Corresponding Tank tile is displayed........................passed
+Then I Tap on Scene option in the Bottom  layout of Landing screen..........passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on All option in the Bottom layout of Landing screen.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Bottom Layout screen with ViewOption(Tile View-Non Connected Devices) functionality" time="23.865501">
+<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
+Then I Tap on Non Connected Devices.........................................passed
+Then I Tap on Cancel Button.................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Verify the All option in the Bottom layout of Landing screen.........passed
+Then I Verify the Device option in the Bottom  layout of Landing screen.....passed
+Then I Verify the Tanks option in the Bottom  layout of Landing screen......passed
+Then I Verify the climate option in the Bottom  layout of Landing screen....passed
+Then I Verify the Scene option in the Bottom  layout of Landing screen......passed
+Then I Tap on Device option in the Bottom  layout of Landing screen.........passed
+Then I Tap on Tanks option in the Bottom  layout of Landing screen..........passed
+Then I Tap on Scene option in the Bottom  layout of Landing screen..........passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on All option in the Bottom layout of Landing screen.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Bottom Layout screen with ViewOption(List View-All Devices) functionality" time="26.101632">
+<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
+Then I Tap on List View Options.............................................passed
+Then I Tap on All Devices...................................................passed
+Then I Tap on Cancel Button.................................................passed
+Then I Verify the All option in the Bottom layout of Landing screen.........passed
+Then I Verify the Device option in the Bottom  layout of Landing screen.....passed
+Then I Verify the Tanks option in the Bottom  layout of Landing screen......passed
+Then I Verify the climate option in the Bottom  layout of Landing screen....passed
+Then I Verify the Scene option in the Bottom  layout of Landing screen......passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on climate option in the Bottom  layout of Landing screen........passed
+Then I Validated Corresponding Climate tile is displayed....................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Device option in the Bottom  layout of Landing screen.........passed
+Then I Validate Corresponding Devices tile is displayed.....................passed
+Then I Tap on Tanks option in the Bottom  layout of Landing screen..........passed
+Then I Validate Corresponding Tank tile is displayed........................passed
+Then I Tap on Scene option in the Bottom  layout of Landing screen..........passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on All option in the Bottom layout of Landing screen.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Bottom Layout screen with ViewOption(List View-Connected Devices) functionality" time="24.550765">
+<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
+Then I Tap on Connected Devices.............................................passed
+Then I Tap on Cancel Button.................................................passed
+Then I Verify the All option in the Bottom layout of Landing screen.........passed
+Then I Verify the Device option in the Bottom  layout of Landing screen.....passed
+Then I Verify the Tanks option in the Bottom  layout of Landing screen......passed
+Then I Verify the climate option in the Bottom  layout of Landing screen....passed
+Then I Verify the Scene option in the Bottom  layout of Landing screen......passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on climate option in the Bottom  layout of Landing screen........passed
+Then I Validated Corresponding Climate tile is displayed....................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Device option in the Bottom  layout of Landing screen.........passed
+Then I Validate Corresponding Devices tile is displayed.....................passed
+Then I Tap on Tanks option in the Bottom  layout of Landing screen..........passed
+Then I Validate Corresponding Tank tile is displayed........................passed
+Then I Tap on Scene option in the Bottom  layout of Landing screen..........passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on All option in the Bottom layout of Landing screen.............passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Bottom Layout screen with ViewOption(List View-Non Connected Devices) functionality" time="36.874835">
+<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
+Then I Tap on Non Connected Devices.........................................passed
+Then I Tap on Cancel Button.................................................passed
+Then I Verify the All option in the Bottom layout of Landing screen.........passed
+Then I Verify the Device option in the Bottom  layout of Landing screen.....passed
+Then I Verify the Tanks option in the Bottom  layout of Landing screen......passed
+Then I Verify the climate option in the Bottom  layout of Landing screen....passed
+Then I Verify the Scene option in the Bottom  layout of Landing screen......passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Device option in the Bottom  layout of Landing screen.........passed
+Then I Tap on Tanks option in the Bottom  layout of Landing screen..........passed
+Then I Tap on Scene option in the Bottom  layout of Landing screen..........passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on All option in the Bottom layout of Landing screen.............passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on View option button in landing screen..........................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tile View Options.............................................passed
+Then I Tap on All Devices...................................................passed
+Then I Tap on Cancel Button.................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Power screen(Batteries) UI" time="20.21163">
+<system-out><![CDATA[Then I Tap on the Power in Landing screen...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Verify BATTERIES header text.........................................passed
+Then I Verify the battery voltage icon......................................passed
+Then I verify the Engine-1 text.............................................passed
+Then I verify the STBD text.................................................passed
+Then I verify the House text................................................passed
+Then I verify the Measured voltage text.....................................passed
+Then I verify the Measured voltage value....................................passed
+Then I verify the Status text...............................................passed
+Then I verify the Status value..............................................passed
+Then I verify the UsageAnalysis text........................................passed
+Then I verify the UsageAnalysis Down Arrow..................................passed
+Then I Scroll up the page...................................................passed
+Then I verify the Alert text................................................passed
+Then I verify the Alert toggle status.......................................passed
+Then I verify the Alert toggle..............................................passed
+Then I verify the Notify Me text............................................passed
+Then I verify the Notify Me toggle status...................................passed
+Then I verify the Notify Me toggle..........................................passed
+Then I verify the Battery voltage text......................................passed
+Then I verify the Battery voltage value.....................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Light screen UI" time="19.142719">
+<system-out><![CDATA[Then I Tap on Light in Landing screen.......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Verified Light screen header.........................................passed
+Then I Verified Assist Handle Text..........................................passed
+Then I Verified Utility center Text.........................................passed
+Then I Verified Accent Light Text...........................................passed
+Then I Verified Shower Text.................................................passed
+Then I Verified Ceiling Text................................................passed
+Then I Verified Bedroom ceiling Text........................................passed
+Then I Verified Galley Text.................................................passed
+Then I Verified Lounge Text.................................................passed
+Then I Verified Awning Light Text...........................................passed
+Then I Verified Bedroom Overhead Text.......................................passed
+Then I Verified Porch Light Text............................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tank Fresh Water screen UI" time="13.661611">
+<system-out><![CDATA[Then I Tap on Tank Fresh Water in Landing screen............................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Verify the fresh water level text....................................passed
+Then I verify the fresh text on button......................................passed
+Then I verify the predictive data in Fresh water text.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tank Fresh Water screen functionality" time="5.528588">
+<system-out><![CDATA[Then I verify Tank-progressIndicator in Tank Fresh Water....................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Validated Tank-progressIndicator(Fresh Water) percentage is displayed in Landing screen.passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Settings screen functionality" time="14.385781">
 <system-out><![CDATA[Then I verify hamburger menu in landing screen..............................passed
 Then I Tap on hamburger menu in landing screen..............................passed
 Then I Verify SETTINGS Text displayed in the top of the app.................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verify application Logout Functionality" time="7.260725">
+<testcase classname="Testing an Dometic LMC application" name="Verify Zone Management UI validation" time="13.260416">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I verify Zone Management text is displayed.............................passed
+Then I Tap on Zone Management in Settings...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Verify ALL ZONES in Zone Management..................................passed
+Then I verify Edit text in Zone Management..................................passed
+Then I verify Limited to 4 Zones only text in Zone Management...............passed
+Then I verify Add ZoneIcon in Zone Management...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verify Zone Management Functionality with Empty Zone name" time="14.699844">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Edit in ALL ZONES.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Rename in ALL ZONES...........................................passed
+Then I Tap on the Zone name.................................................passed
+Then I clear the previous zone name.........................................passed
+Then I save the Zone........................................................passed
+Then I verify Zone Name can not be empty message is displayed...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verify Zone Management Functionality with more then 10 character" time="6.903446">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Enter the zone name more then the limit..............................passed
+Then I verify "10/10" character message is displayed........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verify Zone Management Functionality with Zone name" time="9.132597">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on the Zone name.................................................passed
+Then I clear the previous zone name.........................................passed
+Then I Enter the Zone name..................................................passed
+Then I Tap on Save..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verify Zone Management Delete Zone Functionality" time="17.740195">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Edit in ALL ZONES.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on the Delete Zone Icon..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on YES, DELETE IT Button.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verify Zone Management Add Zone Functionality" time="27.909258">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on the Add Zone Icon.............................................passed
+Then I Select the zone......................................................passed
+Then I Enter the New Zone name..............................................passed
+Then I SAVE the Zone........................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verify application Logout Functionality" time="6.247697">
 <system-out><![CDATA[Then I verify Log out is displayed..........................................passed
-Then I navigate to update language section in Settings......................passed
-Then I update language to Spanish in settings...............................passed
 Then I Wait short period for Page to Load...................................passed
 Then I Tap on Logout in Settings............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Validating application Spanish Language in login page" time="7.878239">
-<system-out><![CDATA[Then I verify Forgot your password Spanish text is displayed in Forgot password Page.passed
-Then I verify Forgot your password content Spanish text is displayed in Forgot password Page.passed
-Then I verify E-mail Spanish label is displayed.............................passed
-Then I Verify Forgot Email Input text field is displayed in Login Page......passed
-Then I Verify Send button is displayed in Forgot password Page..............passed
-And I enter Email in Login Page.............................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Send button in Forgot Password Page...........................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Empty Email and Enter the password and verify password(Spanish Language)" time="25.731188">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on signup link in login page.....................................passed
-Then I left the Email blank.................................................passed
-Then I enter Password in Signup Page........................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on term and conditions checkbox..................................passed
-Then I Tap on Signup button.................................................passed
-Then Email field is required Spanish text Error message is displayed........passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter the Email and Empty password and verify password(Spanish Language)" time="10.103652">
-<system-out><![CDATA[Then I enter Email in Signup Page...........................................passed
-Then I left the password blank..............................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on Signup button.................................................passed
-Then The password field is required Spanish text Error message is displayed.passed
-Then Doesn't match Spanish text Error message is displayed..................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter Valid email valid password and empty verify password(Spanish Language)" time="9.649143">
-<system-out><![CDATA[Then I enter Email in Signup Page...........................................passed
-Then I enter Password in Signup Page........................................passed
-Then I left the Verify password blank.......................................passed
-Then I Tap on Signup button.................................................passed
-Then The verify password field is required Spanish text Error message is displayed.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter inValid email, password and valid verify password(Spanish Language)" time="9.713873">
-<system-out><![CDATA[Then I enter Invalid Email in Signup Page...................................passed
-Then I enter Password in Signup Page........................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on Signup button.................................................passed
-Then The email must be a valid email address Spanish text Error message is displayed.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter Valid email, invalid password and valid verify password(Spanish Language)" time="10.006062">
-<system-out><![CDATA[Then I enter Email in Signup Page...........................................passed
-Then I enter invalid Password in Signup Page................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on Signup button.................................................passed
-Then The password doesn't satisfy the conditions Spanish text Error message is displayed.passed
-Then Doesn't match Spanish text Error message is displayed..................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter Valid email, password and invalid verify password(Spanish Language)" time="9.986359">
-<system-out><![CDATA[Then I enter Email in Signup Page...........................................passed
-Then I enter Password in Signup Page........................................passed
-And I enter invalid verify password password in Signup Page.................passed
-Then I Tap on Signup button.................................................passed
-Then Doesn't match Spanish text Error message is displayed..................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Validating application Spanish Language in Signup Page" time="37.592632">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on signup link in login page.....................................passed
-Then I Verify Email Inputbox is displayed in Signup Page....................passed
-Then I Verify Password Inputbox is displayed in Signup Page.................passed
-Then I Verify Confirm Password Inputbox is displayed in Signup Page.........passed
-Then I Verify Signup button is displayed in Signup Page.....................passed
-And I enter Email in Signup Page............................................passed
-And I enter Password in Signup Page.........................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on Send button in Signup Page....................................passed
-Then I Tap on login link in signup page.....................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Validating application Spanish Language in login page" time="1.396257">
-<system-out><![CDATA[Then I verify Welcome! Text(Spanish) is displayed in login screen...........passed
-Then I verify Log In Text(Spanish) is displayed in login screen.............passed
-Then I verify E-mail label is displayed in login page.......................passed
-Then I verify Password label is displayed in login page.....................passed
-Then I verify Forgot password? link is displayed in login page..............passed
-Then I verify Don't have an account? text(Spanish) is displayed in login page.passed
-Then I verify Sign Up link is displayed in login page.......................passed
-Then I verify Login CTA is displayed in login page..........................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with blank email and blank password field(Spanish Language)" time="6.27558">
-<system-out><![CDATA[Then I verify black email in email text field...............................passed
-Then I verify black password in password text field.........................passed
-Then I Tap on Login button in Login Page....................................passed
-Then The Email field is required Spanish Error message is displayed in login page.passed
-Then The Password field is required Spanish Error message is displayed in login page.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with Invalid Email with valid password(Spanish Language)" time="8.297762">
-<system-out><![CDATA[Then I enter Invalid Email in Login Page....................................passed
-Then I enter Valid Password in Login Page...................................passed
-Then I Tap on Login button in Login Page....................................passed
-Then Spanish Error message is displayed.....................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with Valid email and invalid password(Spanish Language)" time="7.918961">
-<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
-Then I enter an Invalid Password in Login Page..............................passed
-Then I Tap on Login button in Login Page....................................passed
-Then The password must be at least 5 characters. Spanish Error message is displayed in login page.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with Valid email and blank password(Spanish Language)" time="7.512341">
-<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
-Then I verify black password in password text field.........................passed
-Then I Tap on Login button in Login Page....................................passed
-Then The Password field is required Spanish Error message is displayed in login page.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with empty email and valid password(Spanish Language)" time="6.140885">
-<system-out><![CDATA[Then I verify black email in email text field...............................passed
-Then I enter Valid Password in Login Page...................................passed
-Then I Tap on Login button in Login Page....................................passed
-Then The Email field is required Spanish Error message is displayed in login page.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Login Functionality with invalid credentials(Spanish Language)" time="17.062012">
-<system-out><![CDATA[Then I enter Invalid Email in Login Page....................................passed
-Then I enter an Invalid Password in Login Page..............................passed
-Then I Tap on Login button in Login Page....................................passed
-Then Spanish Error message is displayed.....................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Login Functionality with valid credentials(Spanish Language)" time="50.165561">
-<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
-Then I enter Valid Password in Login Page...................................passed
-Then I Tap on an Login button(Spanish) in Login Page........................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify successfully navigated to On boarding screen..................passed
-Then I entered into On boarding screen......................................passed
-Then I Tap on Yes button....................................................passed
-Then Landing screen is displayed............................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on hamburger menu in landing screen..............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I navigate to update language section in Settings......................passed
-Then I Wait short period for Page to Load...................................passed
-Then I update language to Spanish in settings...............................passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Spanish Language in Landing screen" time="17.229968">
-<system-out><![CDATA[Then I verify the Climatización in Landing page.............................passed
-Then I Verify the ¡Temperatura fuera de rango! on climate tile in Landing page.passed
-Then I verify the Alimentación text in Landing page.........................passed
-Then I Verify the Batería de la casa text in Landing page...................passed
-Then I Verify the ¡Cargar batería! text in Landing page.....................passed
-Then I verify the Luz text in Landing page..................................passed
-Then I verify the Actualmente encendido text in Landing page................passed
-Then I Verify the AGS text in Landing page..................................passed
-Then I Verify the Cargador automático text in Landing page..................passed
-Then I verify the ENCENDER text in Landing page.............................passed
-Then I verify the Fusibles text in Landing page.............................passed
-Then I Verify the Todo bien text in Landing page............................passed
-Then I verify the Mecánica text in Landing page.............................passed
-Then I scroll up the screen in Landing page.................................passed
-Then I verify the Toldo Text in the Landing Page............................passed
-Then I verify the Depósito text in Landing page.............................passed
-Then I verify the Fresh Water(Spanish) text in Landing page.................passed
-Then I verify the Agua negra text in Landing page...........................passed
-Then I Scroll the screen upto water heater truma............................passed
-Then I verify the Calentador de agua text in Landing page...................passed
-Then I verify the Todas text in Landing page................................passed
-Then I verify the Dispositivos text in Landing page.........................passed
-Then I verify the Tanques text in Landing page..............................passed
-Then I scroll down the screen in Landing page...............................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Spanish Language in Climate screen" time="2.213382">
-<system-out><![CDATA[Then I Tap on Climate in Landing screen.....................................passed
-Then I verify the Climate header Spanish text displayed in Climate page.....passed
-Then I Verify inside Spanish text displayed.................................passed
-Then I Verify outside Spanish text displayed................................passed
-Then I verify All Climate Spanish text displayed............................passed
-Then I Verify Climate toggle is displayed in Climate page...................passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Spanish Language in Power screen" time="59.442634">
-<system-out><![CDATA[Then I Tap on the Alimentación in Landing screen............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Verify the power main screen header Spanish text.....................passed
-Then I Verify the House Battery Text Spanish text...........................passed
-Then I Verify the Inverter Text Spanish text................................passed
-Then I Verify the Operating Mode Text Spanish text..........................passed
-Then I Verify the House Battery Voltage Text Spanish text...................passed
-Then I Verify the Load Wattage Text Spanish text............................passed
-Then I Scroll up the page...................................................passed
-Then I Verify the Chassis Battery Voltage Text Spanish text.................passed
-Then I Verify the Generator Text Spanish text...............................passed
-Then I Verify the Charger Text Spanish text.................................passed
-Then I Verify the AGS Spanish text Text in power main screen................passed
-Then I Verify the Predictive data Spanish text in power main screen.........passed
-Then I Tap on Generator in Power Screen.....................................passed
-Then I Verify control Spanish text in Generator main screen.................passed
-Then I Verify Start button in power main screen.............................passed
-Then I Verify Stop button in power main screen..............................passed
-Then I Verify the  status Spanish text in Generator main screen.............passed
-Then I verify the Run time Spanish text in Generator main screen............passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Charger in Power Screen.......................................passed
-Then I verify the charger state Spanish text in  charger main screen........passed
-Then I verify the AC Input Current Spanish text in charger main screen......passed
-Then I verify the AC Load Current Spanish text in charger main screen.......passed
-Then I verify the charger current Spanish text in charger main screen.......passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on AGS in Power Screen...........................................passed
-Then I verify clear AGS Spanish text in power AGS main screen...............passed
-Then I verify status Spanish text in power AGs main screen..................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Predictive Data in Power Screen...............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Spanish text in AGS screen" time="12.694382">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on AGS in Landing Screen.........................................passed
-Then I verify the Cargador automático in the AGS main screen................passed
-Then I verify the Inicio del tiempo de silencio in the AGS main screen......passed
-Then I verify the Fin del tiempo de silencio in the AGS main screen.........passed
-Then I verify the Tensión de inicio in the AGS main screen..................passed
-Then I verify the Tiempo de espera in the AGS main screen...................passed
-Then I verify the Funcionamiento preventivo del generador in the AGS main screen.passed
-Then I verify the Días seleccionados in the AGS main screen.................passed
-Then I verify the Hora de inicio in the AGS main screen.....................passed
-Then I Scroll up the page...................................................passed
-Then I verify the Tiempo de funcionamiento in the AGS main screen...........passed
-Then I verify the Climatización con AGS in the AGS main screen..............passed
-Then I Scroll down the page.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying Inicio del tiempo de silencio main screen Spanish text in AGS screen" time="5.630772">
-<system-out><![CDATA[Then I Tap on Inicio del tiempo de silencio.................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify the Inicio del tiempo de silencio Header text in main screen..passed
-Then I Verify the Apply button in the Inicio del tiempo de silencio main screen.passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying Fin del tiempo de silencio main screen Spanish text in AGS screen" time="7.081758">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on Fin del tiempo de silencio....................................passed
-Then I verify the Fin del tiempo de silencio Header text in main screen.....passed
-Then I Verify the Apply button in the Fin del tiempo de silencio main screen.passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying Tensión de inicio main screen Spanish text in AGS screen" time="7.076608">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on Tensión de inicio.............................................passed
-Then I verify the Tensión de inicio Header text in main screen..............passed
-Then I Verify the Apply button in the Tensión de inicio main screen.........passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying Tiempo de espera main screen Spanish text in AGS screen" time="7.110837">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on Tiempo de espera..............................................passed
-Then I verify the Tiempo de espera Header text in main screen...............passed
-Then I Verify the Apply button in the Tiempo de espera main screen..........passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying Hora de inicio main screen Spanish text in AGS screen" time="6.95255">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on Hora de inicio................................................passed
-Then I verify the Hora de inicio Header text in main screen.................passed
-Then I Verify the Apply button in the Hora de inicio main screen............passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying Tiempo de funcionamiento main screen Spanish text in AGS screen" time="14.678733">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Scroll up the page...................................................passed
-Then I Tap on Tiempo de funcionamiento......................................passed
-Then I verify the Tiempo de funcionamiento Header text in main screen.......passed
-Then I Verify the Apply button in the Tiempo de funcionamiento main screen..passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Fuses screen(Spanish) UI" time="15.718576">
-<system-out><![CDATA[Then I Tap on Fusibles in Landing Screen....................................passed
-Then I verify water pump Spanish text in Fuse...............................passed
-Then I verify Satellite Dish Spanish text in Fuse...........................passed
-Then I verify Accent light Spanish text in Fuse.............................passed
-Then I verify Ceiling Light Spanish text in Fuse............................passed
-Then I verify Bed light Spanish text in Fuse................................passed
-Then I verify washroom light Spanish text in Fuse...........................passed
-Then I Scroll up the page...................................................passed
-Then I verify Galley Spanish text in Fuse...................................passed
-Then I verify Lounge light Spanish text in Fuse.............................passed
-Then I verify Awning Spanish text in Fuse...................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Mechanical screen(Spanish) UI" time="16.171511">
-<system-out><![CDATA[Then I Tap on Mecánica in Landing screen....................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify Controller Spanish text in Mechanical screen..................passed
-Then I verify Open button in Mechanical screen..............................passed
-And I verify Open button Spanish text in Mechanical screen..................passed
-Then I verify Close button in Mechanical screen.............................passed
-And I verify Close button Spanish text in Mechanical screen.................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Spanish Language in Tank Fresh Water screen" time="30.928421">
-<system-out><![CDATA[Then I Tap on Depósito Fresh Water in Landing screen........................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify the NIVEL DE AGUA DULCE in the Fresh tank main screen.........passed
-Then I verify the Bomba de agua in the Fresh tank main screen...............passed
-Then I verify the Agua dulce in the Fresh tank main screen..................passed
-Then I verify the Negra in the Fresh tank main screen.......................passed
-Then I verify the Análisis predictivo in the Fresh tank main screen.........passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Spanish Language in Tank Black Water screen" time="16.288782">
-<system-out><![CDATA[Then I Tap on Depósito Agua negra in Landing screen.........................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify the NIVEL DE AGUA NEGRA in the Black tank main screen.........passed
-Then I verify the Bomba de agua in the Black tank main screen...............passed
-Then I verify the Agua dulce in the Black tank main screen..................passed
-Then I verify the Negra in the Black tank main screen.......................passed
-Then I verify the Análisis predictivo in the Black tank main screen.........passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Spanish Language in Water Heater Truma screen" time="18.815819">
-<system-out><![CDATA[Then I Scroll the screen upto water heater truma............................passed
-Then I Tap on Calentador de agua............................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Verify the Modo text in the Water Truma main screen..................passed
-Then I Verify the MODO DE CAMBIO text in the Water Truma main screen........passed
-Then I scroll up the Truma heater carousel..................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify the Aplicar in apply button...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption UI functionality" time="7.48197">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Validate the cancel button...........................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify Ver Opciones spanish text is displayed........................passed
-Then I verify Vista de cuadrícula spanish text is displayed.................passed
-Then I verify Vista de lista spanish text is displayed......................passed
-Then I verify Display spanish text is displayed.............................passed
-Then I verify All Devices spanish text is displayed.........................passed
-Then I verify Connected Devices spanish text is displayed...................passed
-Then I verify Non Connected Devices spanish text is displayed...............passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(Tile View-All Devices) functionality" time="2.220171">
-<system-out><![CDATA[Then I Tap on Vista de cuadrícula...........................................passed
-Then I Tap on All Devices...................................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(Tile View-Connected Devices) functionality" time="3.391709">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Connected Devices.............................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(Tile View-Non Connected Devices) functionality" time="3.174374">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Non Connected Devices.........................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(List View-All Devices) functionality" time="3.812658">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Vista de lista................................................passed
-Then I Tap on All Devices...................................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(List View-Connected Devices) functionality" time="3.380472">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Connected Devices.............................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(List View-Non Connected Devices) functionality" time="3.222734">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Non Connected Devices.........................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption functionality after Logout" time="17.235117">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Vista de cuadrícula...........................................passed
-Then I Tap on Connected Devices.............................................passed
-Then I Tap on Cancel Button.................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on hamburger menu in landing screen..............................passed
-Then I navigate to update language section in Settings......................passed
-Then I update language to French in settings................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Logout in Settings............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Validating application French Language in login page" time="7.871105">
-<system-out><![CDATA[Then I verify Forgot your password French text is displayed in Forgot password Page.passed
-Then I verify Forgot your password content French text is displayed in Forgot password Page.passed
-Then I verify E-mail French label is displayed..............................passed
-Then I Verify Forgot Email Input text field is displayed in Login Page......passed
-Then I Verify Send button is displayed in Forgot password Page..............passed
-And I enter Email in Login Page.............................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Send button in Forgot Password Page...........................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Empty Email and Enter the password and verify password(French Language)" time="26.806954">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on signup link in login page.....................................passed
-Then I left the Email blank.................................................passed
-Then I enter Password in Signup Page........................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on term and conditions checkbox..................................passed
-Then I Tap on Signup button.................................................passed
-Then Email field is required French text Error message is displayed.........passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter the Email and Empty password and verify password(French Language)" time="9.791773">
-<system-out><![CDATA[Then I enter Email in Signup Page...........................................passed
-Then I left the password blank..............................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on Signup button.................................................passed
-Then The password field is required Spanish text Error message is displayed.passed
-Then Doesn't match French text Error message is displayed...................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter Valid email valid password and empty verify password(French Language)" time="10.573364">
-<system-out><![CDATA[Then I enter Email in Signup Page...........................................passed
-Then I enter Password in Signup Page........................................passed
-Then I left the Verify password blank.......................................passed
-Then I Tap on Signup button.................................................passed
-Then The verify password field is required French text Error message is displayed.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter inValid email, password and valid verify password(French Language)" time="9.638209">
-<system-out><![CDATA[Then I enter Invalid Email in Signup Page...................................passed
-Then I enter Password in Signup Page........................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on Signup button.................................................passed
-Then The email must be a valid email address French text Error message is displayed.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter Valid email, invalid password and valid verify password(French Language)" time="10.56577">
-<system-out><![CDATA[Then I enter Email in Signup Page...........................................passed
-Then I enter invalid Password in Signup Page................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on Signup button.................................................passed
-Then The password doesn't satisfy the conditions French text Error message is displayed.passed
-Then Doesn't match French text Error message is displayed...................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Enter Valid email, password and invalid verify password(French Language)" time="9.725036">
-<system-out><![CDATA[Then I enter Email in Signup Page...........................................passed
-Then I enter Password in Signup Page........................................passed
-And I enter invalid verify password password in Signup Page.................passed
-Then I Tap on Signup button.................................................passed
-Then Doesn't match French text Error message is displayed...................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Validating application Spanish Language in Signup Page" time="37.838104">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on signup link in login page.....................................passed
-Then I Verify Email Inputbox is displayed in Signup Page....................passed
-Then I Verify Password Inputbox is displayed in Signup Page.................passed
-Then I Verify Confirm Password Inputbox is displayed in Signup Page.........passed
-Then I Verify Signup button is displayed in Signup Page.....................passed
-And I enter Email in Signup Page............................................passed
-And I enter Password in Signup Page.........................................passed
-And I enter confirm password in Signup Page.................................passed
-Then I Tap on Send button in Signup Page....................................passed
-Then I Tap on login link in signup page.....................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Validating application French Language in login page" time="1.396308">
-<system-out><![CDATA[Then I verify Welcome! Text(French) is displayed in login screen............passed
-Then I verify Log In Text(French) is displayed in login screen..............passed
-Then I verify E-mail label is displayed in login page.......................passed
-Then I verify Password label is displayed in login page.....................passed
-Then I verify Forgot password? link(French) is displayed in login page......passed
-Then I verify Don't have an account? text(French) is displayed in login page.passed
-Then I verify Sign Up link(French) is displayed in login page...............passed
-Then I verify Login CTA is displayed in login page..........................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with blank email and blank password field(French Language)" time="7.43335">
-<system-out><![CDATA[Then I verify black email in email text field...............................passed
-Then I verify black password in password text field.........................passed
-Then I Tap on Login button in Login Page....................................passed
-Then The Email field is required French Error message is displayed in login page.passed
-Then The Password field is required French Error message is displayed in login page.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with Invalid Email with valid password(French Language)" time="8.239054">
-<system-out><![CDATA[Then I enter Invalid Email in Login Page....................................passed
-Then I enter Valid Password in Login Page...................................passed
-Then I Tap on Login button in Login Page....................................passed
-Then French Error message is displayed......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with Valid email and invalid password(French Language)" time="7.985654">
-<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
-Then I enter an Invalid Password in Login Page..............................passed
-Then I Tap on Login button in Login Page....................................passed
-Then The password must be at least 5 characters. French Error message is displayed in login page.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with Valid email and blank password(French Language)" time="7.372797">
-<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
-Then I verify black password in password text field.........................passed
-Then I Tap on Login button in Login Page....................................passed
-Then The Password field is required French Error message is displayed in login page.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Login with empty email and valid password(French Language)" time="6.090097">
-<system-out><![CDATA[Then I verify black email in email text field...............................passed
-Then I enter Valid Password in Login Page...................................passed
-Then I Tap on Login button in Login Page....................................passed
-Then The Email field is required French Error message is displayed in login page.passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Login Functionality with invalid credentials(French Language)" time="17.41799">
-<system-out><![CDATA[Then I enter Invalid Email in Login Page....................................passed
-Then I enter an Invalid Password in Login Page..............................passed
-Then I Tap on Login button in Login Page....................................passed
-Then French Error message is displayed......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Login Functionality with valid credentials(French Language)" time="49.863214">
-<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
-Then I enter Valid Password in Login Page...................................passed
-Then I Tap on an Login button(Spanish) in Login Page........................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify successfully navigated to On boarding screen..................passed
-Then I entered into On boarding screen......................................passed
-Then I Tap on Yes button....................................................passed
-Then Landing screen is displayed............................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on hamburger menu in landing screen..............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I navigate to update language section in Settings......................passed
-Then I Wait short period for Page to Load...................................passed
-Then I update language to French in settings................................passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application French text in Landing screen" time="16.489558">
-<system-out><![CDATA[Then I verify the text Climat in the Landing page...........................passed
-Then I verify the text La température est à l’extérieur de la plage in the Landing page.passed
-Then I verify the text Alimentation in the Landing page.....................passed
-Then I verify the text Batterie de maison in the Landing page...............passed
-Then I verify the text Rechargez la batterie! in the Landing page...........passed
-Then I verify the text Lampe in the Landing page............................passed
-Then I verify the text Présentement ALLUMÉ in the Landing page..............passed
-Then I verify the text AGS in the Landing page..............................passed
-Then I verify the text Chargement automatique in the Landing page...........passed
-Then I verify the text MARCHE in the Landing page...........................passed
-Then I verify the text Fusibles in the Landing page.........................passed
-Then I verify the text Tout est OK in the Landing page......................passed
-Then I Scroll up the page...................................................passed
-Then I verify the text Mécanique in the Landing page........................passed
-Then I verify the text Auvent in the Landing page...........................passed
-Then I verify the text Réservoir in the Landing page........................passed
-Then I verify the text Fresh Water(French) in the Landing page..............passed
-Then I verify the text Eaux noires in the Landing page......................passed
-Then I Scroll the screen upto water heater truma............................passed
-Then I verify the text Chauffe-eau in the Landing page......................passed
-Then I verify the text Truma in the Landing page............................passed
-Then I verify the text Dispositifs in the Landing page......................passed
-Then I verify the text réservoirs in the Landing page.......................passed
-Then I scroll down the screen in Landing page...............................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application French Language in Climate screen" time="2.100909">
-<system-out><![CDATA[Then I Tap on Climate in Landing screen.....................................passed
-Then I verify the Climate header French text displayed in Climate page......passed
-Then I Verify inside French text displayed..................................passed
-Then I Verify outside French text displayed.................................passed
-Then I verify All Climate French text displayed.............................passed
-Then I Verify Climate toggle is displayed in Climate page...................passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application French Language in Power screen" time="58.900596">
-<system-out><![CDATA[Then I Tap on the Alimentation in Landing screen............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Verify the power main screen header French text......................passed
-Then I Verify the House Battery French text.................................passed
-Then I Verify the Inverter French text......................................passed
-Then I Verify the Operating Mode French text................................passed
-Then I Verify the House Battery Voltage French text.........................passed
-Then I Verify the Load Wattage French text..................................passed
-Then I Scroll up the page...................................................passed
-Then I Verify the Chassis Battery Voltage French text.......................passed
-Then I Verify the Generator French text.....................................passed
-Then I Verify the Charger French text.......................................passed
-Then I Verify the AGS French Text in power main screen......................passed
-Then I Verify the Predictive data French text in power main screen..........passed
-Then I Tap on Generator in Power Screen.....................................passed
-Then I Verify control French text in Generator main screen..................passed
-Then I Verify Start button in power main screen.............................passed
-Then I Verify Stop button in power main screen..............................passed
-Then I Verify the  status French text in Generator main screen..............passed
-Then I verify the Run time French text in Generator main screen.............passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Charger in Power Screen.......................................passed
-Then I verify the charger state French text in  charger main screen.........passed
-Then I verify the AC Input Current French text in charger main screen.......passed
-Then I verify the AC Load Current French text in charger main screen........passed
-Then I verify the charger current French text in charger main screen........passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on AGS in Power Screen...........................................passed
-Then I verify clear AGS French text in power AGS main screen................passed
-Then I verify status French text in power AGs main screen...................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Predictive Data in Power Screen...............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application French text in AGS screen" time="12.519397">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on AGS in Landing Screen.........................................passed
-Then I verify the Chargement automatique in the AGS main screen.............passed
-Then I verify the Début de la période d’inactivité in the AGS main screen...passed
-Then I verify the Fin de la période d’inactivité in the AGS main screen.....passed
-Then I verify the Tension de démarrage in the AGS main screen...............passed
-Then I verify the Temps en dessous de in the AGS main screen................passed
-Then I verify the Générateur d’exercices in the AGS main screen.............passed
-Then I verify the Selected Days in the AGS main screen......................passed
-Then I verify the Heure de début in the AGS main screen.....................passed
-Then I Scroll up the page...................................................passed
-Then I verify the Durée de fonctionnement in the AGS main screen............passed
-Then I verify the Climate AGS in the AGS main screen........................passed
-Then I Scroll down the page.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying Début de la période d’inactivité main screen French text in AGS screen" time="5.433478">
-<system-out><![CDATA[Then I Tap on Début de la période d’inactivité..............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify the Début de la période d’inactivité Header text in main screen.passed
-Then I Verify the Apply button in the Début de la période d’inactivité main screen.passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying Durée de fonctionnement main screen French text in AGS screen" time="14.502993">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Scroll up the page...................................................passed
-Then I Tap on Durée de fonctionnement.......................................passed
-Then I verify the Durée de fonctionnement Header text in main screen........passed
-Then I Verify the Apply button in the Durée de fonctionnement main screen...passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Fuses screen(French) UI" time="15.699045">
-<system-out><![CDATA[Then I Tap on Fusibles in Landing Screen....................................passed
-Then I verify water pump French text in Fuse................................passed
-Then I verify Satellite Dish French text in Fuse............................passed
-Then I verify Accent light French text in Fuse..............................passed
-Then I verify Ceiling Light French text in Fuse.............................passed
-Then I verify Bed light French text in Fuse.................................passed
-Then I verify washroom light French text in Fuse............................passed
-Then I Scroll up the page...................................................passed
-Then I verify Galley French text in Fuse....................................passed
-Then I verify Lounge light French text in Fuse..............................passed
-Then I verify Awning French text in Fuse....................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Mechanical screen(French) UI" time="16.239803">
-<system-out><![CDATA[Then I Tap on Mécanique in Landing screen...................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify Controller French text in Mechanical screen...................passed
-Then I verify Open button in Mechanical screen..............................passed
-And I verify Open button French text in Mechanical screen...................passed
-Then I verify Close button in Mechanical screen.............................passed
-And I verify Close button French text in Mechanical screen..................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application French Language in Tank Fresh Water screen" time="31.042344">
-<system-out><![CDATA[Then I Tap on Réservoir Fresh Water in Landing screen.......................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify the NIVEAU D’EAU POTABLE in the Fresh tank main screen........passed
-Then I verify the Pompe à eau in the Fresh tank main screen.................passed
-Then I verify the Potable in the Fresh tank main screen.....................passed
-Then I verify the Noires in the Fresh tank main screen......................passed
-Then I verify the Analyse prédictive in the Fresh tank main screen..........passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application French Language in Tank Black Water screen" time="16.809805">
-<system-out><![CDATA[Then I Tap on Réservoir in Landing screen...................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify the NIVEAU D’EAU POTABLE in the Black tank main screen........passed
-Then I verify the Pompe à eau in the Black tank main screen.................passed
-Then I verify the Potable in the Black tank main screen.....................passed
-Then I verify the Noires in the Black tank main screen......................passed
-Then I verify the Analyse prédictive in the Black tank main screen..........passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application French Language in Water Heater Truma screen" time="18.645811">
-<system-out><![CDATA[Then I Scroll the screen upto water heater truma............................passed
-Then I Tap on Chauffe-eau...................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Verify the Mode French text in the Water Truma main screen...........passed
-Then I Verify the CHANGER DE MODE French text in the Water Truma main screen.passed
-Then I scroll up the Truma heater carousel..................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify the Appliquer in apply button.................................passed
-Then I Tap on Back Button...................................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption UI functionality(French)" time="6.802291">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Validate the cancel button...........................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify Voir les options French text is displayed.....................passed
-Then I verify Affichage par vignettes French text is displayed..............passed
-Then I verify Affichage par liste French text is displayed..................passed
-Then I verify Display French text is displayed..............................passed
-Then I verify All Devices French text is displayed..........................passed
-Then I verify Connected Devices French text is displayed....................passed
-Then I verify Non Connected Devices French text is displayed................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(Tile View-All Devices) functionality" time="2.234125">
-<system-out><![CDATA[Then I Tap on Affichage par vignettes.......................................passed
-Then I Tap on All Devices...................................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(Tile View-Connected Devices) functionality" time="3.633461">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Connected Devices.............................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(Tile View-Non Connected Devices) functionality" time="3.41368">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Non Connected Devices.........................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(List View-All Devices) functionality" time="3.541753">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Affichage par liste...........................................passed
-Then I Tap on All Devices...................................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(List View-Connected Devices) functionality" time="3.278285">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Connected Devices.............................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption(List View-Non Connected Devices) functionality" time="3.264988">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Non Connected Devices.........................................passed
-Then I Tap on Cancel Button.................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application ViewOption functionality after Logout" time="13.725911">
-<system-out><![CDATA[Then I Tap on View option button in landing screen..........................passed
-Then I Tap on Affichage par vignettes.......................................passed
-Then I Tap on Connected Devices.............................................passed
-Then I Tap on Cancel Button.................................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on hamburger menu in landing screen..............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Logout........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

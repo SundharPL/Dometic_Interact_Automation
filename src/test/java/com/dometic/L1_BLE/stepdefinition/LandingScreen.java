@@ -197,4 +197,6 @@ public class LandingScreen extends Baseclass {
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Language.Climate_German_Klima_mainContent_access_id));
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Language.Climate_German_Klima_unit_access_id));
     }
+
+
 }
