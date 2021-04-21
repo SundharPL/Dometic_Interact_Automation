@@ -1,6 +1,6 @@
 Feature: Testing an Dometic LMC application
 
-  @sanity
+  @First1 @sanity1
   Scenario: Verifying application Mechanical screen(Spanish) UI
     Then I Tap on Mecánica in Landing screen
     Then I Wait short period for Page to Load

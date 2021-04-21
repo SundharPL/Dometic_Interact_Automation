@@ -38,10 +38,13 @@ public class Fuse extends Baseclass {
     @Then("I validate All Fuse is OK text is displayed in Landing page")
     public void iValidateAllFuseIsOKTextIsDisplayedInLandingPage() throws MalformedURLException, ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I validate All Fuse is OK text is displayed in Landing page");
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Fuses.Fusescreen_Fuse_All_OK_xpath));
+        if(elements.size()!=0){
             String allIsOk = driver.findElement(By.xpath(Constant_Fuses.Fusescreen_Fuse_All_OK_xpath)).getText();
             if(allIsOk.contains(Constant_Fuses.Fusescreen_Fuse_All_OK)){
                 System.out.println("Text comparison is Successful");
             }
+        }
     }
 
     @Then("I validate Maximum Fuses is turn OFF State")

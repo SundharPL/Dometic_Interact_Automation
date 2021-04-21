@@ -8,8 +8,9 @@ public class Constant_OnboardingPage {
     public static final String Onboarding_CANCEL_Button="android:id/button2";
     public static final String Onboarding_YES_Button="android:id/button1";
     public static final String onboarding_permission_allow_foreground_only_button="com.android.permissioncontroller:id/permission_allow_foreground_only_button";
-
-
+    public static final String onboarding_logo_access_id="com.dometicapp:id/scanBle-brandLogo";
+    public static final String onboarding_logo_Eriba="ERIBA";
+    public static final String onboarding_logo_LMC="LMC";
     //----------xpath------------//
     public static final String Onboarding_allow_access_popup_xpath="//*[@resource-id='com.android.permissioncontroller:id/grant_dialog']";
     public static final String Onboarding_while_using_the_app_popup_xpath="//*[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']";

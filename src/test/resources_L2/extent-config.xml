@@ -11,10 +11,10 @@
         <protocol>http</protocol>
 
         <!-- title of the document -->
-        <documentTitle>Dometic_LMC_ERIBA Android Application Automation Testing</documentTitle>
+        <documentTitle>Dometic Android Application Automation Testing</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>Dometic_LMC_ERIBA Android Application Test Report</reportName>
+        <reportName>Dometic Android Application Test Report</reportName>
 
         <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
         <dateFormat>yyyy-MM-dd</dateFormat>

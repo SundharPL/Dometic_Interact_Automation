@@ -6,7 +6,7 @@ Feature: Testing an Dometic LMC application
     Then I Tap on hamburger menu in landing screen
     Then I Verify SETTINGS Text displayed in the top of the app
 
-  @sanity1
+  @sanity
   Scenario: Verify Zone Management UI validation
     Then I Wait short period for Page to Load
     Then I verify Zone Management text is displayed
@@ -17,7 +17,7 @@ Feature: Testing an Dometic LMC application
     Then I verify Limited to 4 Zones only text in Zone Management
     Then I verify Add ZoneIcon in Zone Management
 
-  @sanity1
+  @sanity
   Scenario: Verify Zone Management Functionality with Empty Zone name
     Then I Wait short period for Page to Load
     Then I Tap on Edit in ALL ZONES
@@ -28,13 +28,13 @@ Feature: Testing an Dometic LMC application
     Then I save the Zone
     Then I verify Zone Name can not be empty message is displayed
 
-  @sanity1
+  @sanity
   Scenario: Verify Zone Management Functionality with more then 10 character
     Then I Wait short period for Page to Load
     Then I Enter the zone name more then the limit
     Then I verify "10/10" character message is displayed
 
-  @sanity1
+  @sanity
   Scenario: Verify Zone Management Functionality with Zone name
     Then I Wait short period for Page to Load
     Then I Tap on the Zone name
@@ -42,7 +42,7 @@ Feature: Testing an Dometic LMC application
     Then I Enter the Zone name
     Then I Tap on Save
 
-  @sanity1
+  @sanity
   Scenario: Verify Zone Management Delete Zone Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Edit in ALL ZONES
@@ -51,7 +51,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on YES, DELETE IT Button
 
-  @sanity1
+  @sanity
   Scenario: Verify Zone Management Add Zone Functionality
     Then I Wait short period for Page to Load
     Then I Tap on the Add Zone Icon
@@ -101,8 +101,8 @@ Feature: Testing an Dometic LMC application
   @sanity
   Scenario: Verify application Logout Functionality
     Then I verify Log out is displayed
-    Then I navigate to update language section in Settings
-    Then I update language to Spanish in settings
+#    Then I navigate to update language section in Settings
+#    Then I update language to Spanish in settings
     Then I Wait short period for Page to Load
     Then I Tap on Logout in Settings
 

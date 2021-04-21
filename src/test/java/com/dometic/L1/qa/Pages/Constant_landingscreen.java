@@ -57,7 +57,7 @@ public class Constant_landingscreen {
     public static final String LandingPage_connect_button_access_id="";
     public static final String LandingPage_popUp_Click_here_link_access_id="";
     public static final String LandingPage_popUp_checkbox_alert_text_access_id="";
-    public static final String LandingPage_mainScreen_BrandLogo_access_id="";
+    public static final String LandingPage_mainScreen_BrandLogo_access_id="com.dometicapp:id/header-brandLogo";
     public static final String LandingPage_connection_symbol_access_id="";
     public static final String LandingPage_menu_button_access_id="";
     public static final String LandingPage_climate_tile_access_id="com.dometicapp:id/tiles-Climate-0";
@@ -94,6 +94,7 @@ public class Constant_landingscreen {
     public static String LandingPage_Update_Firmware_CANCEL_xpath="//*[@resource-id='android:id/button2']";
     public static final String LandingPage_Update_Firmware_OK_xpath="//*[@resource-id='android:id/button1']";
     public static final String LandingPage_Climate_Aircondition_xpath="//android.view.ViewGroup[@content-desc='com.dometicapp:id/tiles-Climate-0']/android.view.ViewGroup";
+    public static final String LandingPage_Climate_xpath="(//*[@text='Climate'])[1]";
     public static final String LandingPage_Climate_Outside_xpath="//*[@text='Outside']";
     public static final String LandingPage_Tank_Fresh_Water_xpath="//*[@text='Freshwater Tank']";
     public static final String LandingPage_Tank_grey_water_tank_xpath="//*[@text='Greywater Tank']";

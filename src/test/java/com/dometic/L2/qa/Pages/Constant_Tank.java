@@ -38,7 +38,7 @@ public class Constant_Tank {
     public static final String TrumaHeater_status_xpath="(//*[@content-desc='com.dometicapp:id/trumaWaterHeater-waterHeaterStatusText'])[1]";
     public static final String TrumaHeater_Heater_xpath="//*[@text='WATER HEATER']";
     public static final String Tanksscreen_Fresh_xpath="//*[@text='Fresh']";
-    public static final String Tanksscreen_Fresh_water_Level_Percentage_xpath="(//*[@content-desc='mainContentView'])[6]";
+    public static final String Tanksscreen_Fresh_water_Level_Percentage_xpath="((//*[@class='android.widget.HorizontalScrollView'])[7]//following::android.widget.TextView)[1]";
     public static final String Tanksscreen_Black_water_Level_Percentage_xpath="(//*[@content-desc='mainContentView'])[7]";
     public static final String Tanksscreen_Black_xpath="//*[@text='Black']";
     public static final String WaterTruma_Antifreeze_status_button_xpath ="//*[@text='Anti-Freeze']";

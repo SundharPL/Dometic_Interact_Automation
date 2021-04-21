@@ -194,4 +194,12 @@ public class Signup extends Baseclass{
         entertextaccessabilityId(signup_obj.Signup_invalid_confirm_password,signup_obj.SignUp_verifyPassword_text_field_access_id);
         driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
     }
+    @Then("I Tap on existing user popup")
+    public void iTapOnExistingUserPopup() throws InterruptedException {
+        List<AndroidElement> elements = driver.findElements(By.xpath(signup_obj.Signup_parentPanel_xpath));
+        if(elements.size()!=0){
+            Thread.sleep(2000);
+            Taponbutton(signup_obj.Signup_OK_xpath);
+        }
+    }
 }

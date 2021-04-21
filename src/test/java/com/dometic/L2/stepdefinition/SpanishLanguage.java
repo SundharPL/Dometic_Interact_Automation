@@ -913,4 +913,54 @@ public class SpanishLanguage extends Baseclass {
             Taponbutton(com.dometic.L1.qa.Pages.Constant_OnboardingPage.Onboarding_only_this_time_xpath);
         }
     }
+
+    @Then("I Verify BATTERIES header Spanish text")
+    public void iVerifyBATTERIESHeaderSpanishText() throws Throwable {
+        asserttextValidationAccessibility(Constant_Spanish_Language.BATTERIES_header_text,Constant_Spanish_Language.BATTERIES_header_text_access_id);
+    }
+
+    @Then("I verify the Engine{int} Spanish text")
+    public void iVerifyTheEngineSpanishText(int arg0) throws Throwable {
+        asserttextValidation(Constant_Spanish_Language.powerScreen_batteryCarousel_circle_Engine1_text,Constant_Spanish_Language.powerScreen_batteryCarousel_circle_Engine1_text_xpath);
+    }
+
+    @Then("I verify the STBD Spanish text")
+    public void iVerifyTheSTBDSpanishText() throws Throwable {
+        asserttextValidation(Constant_Spanish_Language.powerScreen_batteryCarousel_circle_STBD_text,Constant_Spanish_Language.powerScreen_batteryCarousel_circle_STBD_text_xpath);
+    }
+
+    @Then("I verify the House Spanish text")
+    public void iVerifyTheHouseSpanishText() throws Throwable {
+        asserttextValidation(Constant_Spanish_Language.powerScreen_batteryCarousel_circle_House_text,Constant_Spanish_Language.powerScreen_batteryCarousel_circle_House_text_xpath);
+    }
+
+    @Then("I verify the Measured voltage Spanish text")
+    public void iVerifyTheMeasuredVoltageSpanishText() throws Throwable {
+        asserttextValidationAccessibility(Constant_Spanish_Language.powerScreen_Measured_Voltage_text,Constant_Spanish_Language.powerScreen_Measured_Voltage_access_id);
+    }
+
+    @Then("I verify the Status Spanish text")
+    public void iVerifyTheStatusSpanishText() throws Throwable {
+        asserttextValidationAccessibility(Constant_Spanish_Language.powerScreen_status_text,Constant_Spanish_Language.powerScreen_status_access_id);
+    }
+
+    @Then("I verify the UsageAnalysis Spanish text")
+    public void iVerifyTheUsageAnalysisSpanishText() throws Throwable {
+        asserttextValidationAccessibility(Constant_Spanish_Language.powerScreen_usage_text,Constant_Spanish_Language.powerScreen_usage_access_id);
+    }
+
+    @Then("I verify the Alert Spanish text")
+    public void iVerifyTheAlertSpanishText() throws Throwable {
+        asserttextValidationAccessibility(Constant_Spanish_Language.powerScreen_alert_text,Constant_Spanish_Language.powerScreen_alert_access_id);
+    }
+
+    @Then("I verify the Notify Me Spanish text")
+    public void iVerifyTheNotifyMeSpanishText() throws Throwable {
+        asserttextValidationAccessibility(Constant_Spanish_Language.powerScreen_notify_text,Constant_Spanish_Language.powerScreen_notify_access_id);
+    }
+
+    @Then("I verify the Battery voltage Spanish text")
+    public void iVerifyTheBatteryVoltageSpanishText() throws Throwable {
+        asserttextValidationAccessibility(Constant_Spanish_Language.powerScreen_batteryVoltage_text,Constant_Spanish_Language.powerScreen_batteryVoltage_textButton_access_id);
+    }
 }
