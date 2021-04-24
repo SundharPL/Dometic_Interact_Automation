@@ -1,6 +1,7 @@
 package com.dometic.MTC.stepdefinition;
 
 import com.dometic.MTC.qa.Pages.Constant_Tank;
+import com.dometic.MTC.qa.Pages.Constant_Tank_MTC;
 import com.dometic.MTC.qa.util.Baseclass;
 import cucumber.api.java.en.Then;
 import io.appium.java_client.TouchAction;
@@ -154,4 +155,45 @@ public class TankMTC extends Baseclass {
     public void iVerifyTheBAITWELLLEVELTextInTheTankScreen() throws Throwable {
         asserttext(Constant_Tank.Bait_LEVEL_text,Constant_Tank.Bait_LEVEL_text_xpath);
     }
+
+    @Then("I Tap on Tank tile on landing screen")
+    public void iTapOnTankTileOnLandingScreen() {
+        Taponbutton(Constant_Tank_MTC.mtc_Tank_Tile_Xpath);
+    }
+
+    @Then("I verify Tank header text")
+    public void iVerifyTankHeaderText() throws Throwable {
+        asserttextValidationAccessibility(Constant_Tank_MTC.mtc_Tank,Constant_Tank_MTC.mtc_Tank_Title_Access_ID);
+    }
+
+    @Then("I Tap on Alert-Tank Level Above")
+    public void iTapOnAlertTankLevelAbove() {
+        Taponbutton(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_xpath);
+    }
+
+    @Then("I verify Warnings-Tank Level Above Text")
+    public void iVerifyWarningsTankLevelAboveText() throws Throwable {
+        asserttextValidation(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above,Constant_Tank_MTC.mtc_Tank_Warnings_Tank_Level_Above_xpath);
+    }
+
+    @Then("I Tap on Warnings-Tank Level Above")
+    public void iTapOnWarningsTankLevelAbove() {
+        Taponbutton(Constant_Tank_MTC.mtc_Tank_Warnings_Tank_Level_Above_xpath);
+    }
+
+    @Then("I verify Alert text")
+    public void iVerifyAlertText() throws Throwable {
+        asserttextValidation(Constant_Tank_MTC.mtc_Tank_AlertsText,Constant_Tank_MTC.mtc_Tank_AlertsText_xpath);
+    }
+
+    @Then("I verify Warning text")
+    public void iVerifyWarningText() throws Throwable {
+        asserttextValidation(Constant_Tank_MTC.mtc_Tank_WarningsText,Constant_Tank_MTC.mtc_Tank_WarningsText_xpath);
+    }
+
+    @Then("I verify Alert-Tank Level Above Text")
+    public void iVerifyAlertTankLevelAboveText() throws Throwable {
+        asserttextValidation(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above,Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_xpath);
+    }
+
 }

@@ -1015,4 +1015,13 @@ public class LandingPage extends Baseclass {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.LandingPage_L21stclimate_text_xpath)));
         }
     }
+
+    @Then("I Tap on All climate toggle if already it's OFF state")
+    public void iTapOnAllClimateToggleIfAlreadyItSOFFState() throws InterruptedException {
+        String text = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Climate_Tile_AllClimate_toggle_Status_Access_ID).getText();
+        if (text.equalsIgnoreCase(Constant_Batteries_MTC.mtc_Climate_Tile_Power_toggle_Status)) {
+            TaponbuttonaccessabilityID(Constant_Batteries_MTC.mtc_Climate_Tile_AllClimate_toggle_Access_ID);
+            Thread.sleep(3000);
+        }
+    }
 }

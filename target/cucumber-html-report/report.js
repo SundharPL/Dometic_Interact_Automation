@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/com/dometic/L2/features/TC01_LaunchScreen.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/com/dometic/MTC/features/TC01_LaunchScreen.feature");
 formatter.feature({
   "name": "Testing Login page in Dometic LMC application",
   "description": "",
@@ -14,6 +14,12 @@ formatter.scenario({
     },
     {
       "name": "@sanity"
+    },
+    {
+      "name": "@Device1"
+    },
+    {
+      "name": "@Device2"
     }
   ]
 });
@@ -46,7 +52,7 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/com/dometic/L2/features/TC02_SplashScreen.feature");
+formatter.uri("src/test/java/com/dometic/MTC/features/TC02_SplashScreen.feature");
 formatter.feature({
   "name": "Testing Login page in Dometic LMC application",
   "description": "",
@@ -58,15 +64,18 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@First"
+      "name": "@First1"
     },
     {
-      "name": "@sanity"
+      "name": "@sanity1"
+    },
+    {
+      "name": "@Device1"
+    },
+    {
+      "name": "@Device2"
     }
   ]
-});
-formatter.before({
-  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -124,7 +133,7 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/com/dometic/L2/features/TC05_LoginScreen.feature");
+formatter.uri("src/test/java/com/dometic/MTC/features/TC05_LoginScreen.feature");
 formatter.feature({
   "name": "Testing an Dometic LMC application",
   "description": "",
@@ -196,7 +205,7 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/com/dometic/L2/features/TC06_OnboardingScreen.feature");
+formatter.uri("src/test/java/com/dometic/MTC/features/TC06_OnboardingScreen.feature");
 formatter.feature({
   "name": "Testing an Dometic LMC application",
   "description": "",
@@ -252,6 +261,26 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on the MTC Thing I\u0027d",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OnboardingScreen.iTapOnTheMTCThingID()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
   "name": "Landing screen is displayed",
   "keyword": "Then "
 });
@@ -264,7 +293,7 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/com/dometic/L2/features/TC07_LandingScreen.feature");
+formatter.uri("src/test/java/com/dometic/MTC/features/TC07_LandingScreen.feature");
 formatter.feature({
   "name": "Testing an Dometic LMC application",
   "description": "",
@@ -290,6 +319,16 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
+  "name": "I Tap on the access this location pop up",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.iTapOnTheAccessThisLocationPopUp()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
   "name": "I Tap on LATER Button",
   "keyword": "Then "
 });
@@ -312,1546 +351,14 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Verifying application Bottom Layout screen functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validated Corresponding Climate tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Devices tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Tank tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verifying application Bottom Layout screen with ViewOption(Tile View-All Devices) functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on View option button in landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tile View Options",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnTileViewOptions()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All Devices",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnAllDevices()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Cancel Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnCancelButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validated Corresponding Climate tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Devices tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Tank tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verifying application Bottom Layout screen with ViewOption(Tile View-Connected Devices) functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on View option button in landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Connected Devices",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnConnectedDevices()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Cancel Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnCancelButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validated Corresponding Climate tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Devices tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Tank tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verifying application Bottom Layout screen with ViewOption(Tile View-Non Connected Devices) functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on View option button in landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Non Connected Devices",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnNonConnectedDevices()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Cancel Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnCancelButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verifying application Bottom Layout screen with ViewOption(List View-All Devices) functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on View option button in landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on List View Options",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnListViewOptions()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All Devices",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnAllDevices()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Cancel Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnCancelButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validated Corresponding Climate tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Devices tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Tank tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verifying application Bottom Layout screen with ViewOption(List View-Connected Devices) functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on View option button in landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Connected Devices",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnConnectedDevices()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Cancel Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnCancelButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validated Corresponding Climate tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Devices tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Validate Corresponding Tank tile is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verifying application Bottom Layout screen with ViewOption(List View-Non Connected Devices) functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on View option button in landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Non Connected Devices",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnNonConnectedDevices()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Cancel Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnCancelButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All option in the Bottom layout of Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on View option button in landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tile View Options",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnTileViewOptions()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on All Devices",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnAllDevices()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Cancel Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ViewOption.iTapOnCancelButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.uri("src/test/java/com/dometic/L2/features/TC08_PoweScreen.feature");
+formatter.uri("src/test/java/com/dometic/MTC/features/TC11_Tracking_GioFencingScreenMTC.feature");
 formatter.feature({
   "name": "Testing an Dometic LMC application",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Verifying application Power screen(Batteries) UI",
+  "name": "Verifying application Tracking(Gio Fencing) screen UI \u0026 Functionality",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -1870,11 +377,11 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Tap on the Power in Landing screen",
+  "name": "I Tap on Tracking tile",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iTapOnThePowerInLandingScreen()"
+  "location": "TrackingMTC.iTapOnTrackingTile()"
 });
 formatter.result({
   "status": "passed"
@@ -1890,211 +397,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verify BATTERIES header text",
+  "name": "I Verify Tracking Header title",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Power.iVerifyBATTERIESHeaderText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the battery voltage icon",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheBatteryVoltageIcon()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Engine-1 text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheEngineText(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the STBD text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheSTBDText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the House text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheHouseText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Measured voltage text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheMeasuredVoltageText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Measured voltage value",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheMeasuredVoltageValue()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Status text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheStatusText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Status value",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheStatusValue()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the UsageAnalysis text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheUsageAnalysisText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the UsageAnalysis Down Arrow",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheUsageAnalysisDownArrow()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Scroll up the page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "SpanishLanguage.iScrollUpThePage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Alert text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheAlertText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Alert toggle status",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheAlertToggleStatus()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Alert toggle",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheAlertToggle()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Notify Me text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheNotifyMeText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Notify Me toggle status",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheNotifyMeToggleStatus()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Notify Me toggle",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheNotifyMeToggle()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Battery voltage text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheBatteryVoltageText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the Battery voltage value",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Power.iVerifyTheBatteryVoltageValue()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+  "location": "TrackingMTC.iVerifyTrackingHeaderTitle()"
 });
 formatter.result({
   "status": "passed"
@@ -2109,27 +416,17 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/com/dometic/L2/features/TC09_LightScreen.feature");
+formatter.uri("src/test/java/com/dometic/MTC/features/TC12_BottomLayoutScreenMTC.feature");
 formatter.feature({
   "name": "Testing an Dometic LMC application",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Verifying application Light screen UI",
+  "name": "Verifying application Bottom Layout screen UI",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -2148,16 +445,6 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Tap on Light in Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnLightInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
   "name": "I Wait short period for Page to Load",
   "keyword": "Then "
 });
@@ -2168,131 +455,101 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Light screen header",
+  "name": "I Verify Home option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedLightScreenHeader()"
+  "location": "BottomLayoutMTC.iVerifyHomeOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Assist Handle Text",
+  "name": "I Tap on Home option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedAssistHandleText()"
+  "location": "BottomLayoutMTC.iTapOnHomeOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Utility center Text",
+  "name": "I Verify Areas option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedUtilityCenterText()"
+  "location": "BottomLayoutMTC.iVerifyAreasOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Accent Light Text",
+  "name": "I Tap on Areas option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedAccentLightText()"
+  "location": "BottomLayoutMTC.iTapOnAreasOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Shower Text",
+  "name": "I Verify Proride option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedShowerText()"
+  "location": "BottomLayoutMTC.iVerifyProrideOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Ceiling Text",
+  "name": "I Tap on Proride option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedCeilingText()"
+  "location": "BottomLayoutMTC.iTapOnProrideOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Bedroom ceiling Text",
+  "name": "I Verify Switching option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedBedroomCeilingText()"
+  "location": "BottomLayoutMTC.iVerifySwitchingOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Galley Text",
+  "name": "I Tap on Switching option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedGalleyText()"
+  "location": "BottomLayoutMTC.iTapOnSwitchingOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Lounge Text",
+  "name": "I Verify Modes option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedLoungeText()"
+  "location": "BottomLayoutMTC.iVerifyModesOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Verified Awning Light Text",
+  "name": "I Tap on Modes option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifiedAwningLightText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verified Bedroom Overhead Text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifiedBedroomOverheadText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verified Porch Light Text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifiedPorchLightText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
+  "location": "BottomLayoutMTC.iTapOnModesOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
@@ -2310,96 +567,8 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/com/dometic/L2/features/TC13_TankFreshWaterScreen.feature");
-formatter.feature({
-  "name": "Testing an Dometic LMC application",
-  "description": "",
-  "keyword": "Feature"
-});
 formatter.scenario({
-  "name": "Verifying application Tank Fresh Water screen UI",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@First"
-    },
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Tank Fresh Water in Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iTapOnTankFreshWaterInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify the fresh water level text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheFreshWaterLevelText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the fresh text on button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyTheFreshTextOnButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify the predictive data in Fresh water text",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iVerifyThePredictiveDataInFreshWaterText()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verifying application Tank Fresh Water screen functionality",
+  "name": "Verifying application Bottom Layout screen UI",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -2412,21 +581,71 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify Tank-progressIndicator in Tank Fresh Water",
+  "name": "I Tap on Home option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.iVerifyTankProgressIndicatorInTankFreshWater()"
+  "location": "BottomLayoutMTC.iTapOnHomeOptionInBottomLayout()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Tap on Back Button",
+  "name": "I Tap on Areas option in Bottom layout",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
+  "location": "BottomLayoutMTC.iTapOnAreasOptionInBottomLayout()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Proride option in Bottom layout",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "BottomLayoutMTC.iTapOnProrideOptionInBottomLayout()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Switching option in Bottom layout",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "BottomLayoutMTC.iTapOnSwitchingOptionInBottomLayout()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Validate Switching option is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "BottomLayoutMTC.iValidateSwitchingOptionIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Modes option in Bottom layout",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "BottomLayoutMTC.iTapOnModesOptionInBottomLayout()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Validate Modes option is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "BottomLayoutMTC.iValidateModesOptionIsDisplayed()"
 });
 formatter.result({
   "status": "passed"
@@ -2441,20 +660,10 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "I Validated Tank-progressIndicator(Fresh Water) percentage is displayed in Landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.iValidatedTankProgressIndicatorFreshWaterPercentageIsDisplayedInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/com/dometic/L2/features/TC17_Settings.feature");
+formatter.uri("src/test/java/com/dometic/MTC/features/TC24_Settings.feature");
 formatter.feature({
   "name": "Testing an Dometic LMC application",
   "description": "",
@@ -2507,473 +716,8 @@ formatter.match({
   "location": "Settings.iVerifySETTINGSTextDisplayedInTheTopOfTheApp()"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Zone Management UI validation",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Zone Management text is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyZoneManagementTextIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Zone Management in Settings",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnZoneManagementInSettings()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Verify ALL ZONES in Zone Management",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyALLZONESInZoneManagement()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Edit text in Zone Management",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyEditTextInZoneManagement()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Limited to 4 Zones only text in Zone Management",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyLimitedToZonesOnlyTextInZoneManagement(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Add ZoneIcon in Zone Management",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyAddZoneIconInZoneManagement()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Zone Management Functionality with Empty Zone name",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Edit in ALL ZONES",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnEditInALLZONES()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Rename in ALL ZONES",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnRenameInALLZONES()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on the Zone name",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnTheZoneName()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I clear the previous zone name",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iClearThePreviousZoneName()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I save the Zone",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iSaveTheZone()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Zone Name can not be empty message is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyZoneNameCanNotBeEmptyMessageIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Zone Management Functionality with more then 10 character",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Enter the zone name more then the limit",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iEnterTheZoneNameMoreThenTheLimit()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify \"10/10\" character message is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyCharacterMessageIsDisplayed(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Zone Management Functionality with Zone name",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on the Zone name",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnTheZoneName()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I clear the previous zone name",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iClearThePreviousZoneName()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Enter the Zone name",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iEnterTheZoneName()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Save",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnSave()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Zone Management Delete Zone Functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Edit in ALL ZONES",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnEditInALLZONES()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on the Delete Zone Icon",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnTheDeleteZoneIcon()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on YES, DELETE IT Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnYESDELETEITButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Verify Zone Management Add Zone Functionality",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on the Add Zone Icon",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnTheAddZoneIcon()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Select the zone",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iSelectTheZone()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Enter the New Zone name",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iEnterTheNewZoneName()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I SAVE the Zone",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iSAVETheZone()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Back Button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
-});
-formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:496)\r\n\tat org.testng.Assert.assertTrue(Assert.java:42)\r\n\tat org.testng.Assert.assertTrue(Assert.java:52)\r\n\tat com.dometic.MTC.qa.util.Baseclass.asserttext(Baseclass.java:91)\r\n\tat com.dometic.MTC.stepdefinition.Settings.iVerifySETTINGSTextDisplayedInTheTopOfTheApp(Settings.java:29)\r\n\tat ✽.I Verify SETTINGS Text displayed in the top of the app(src/test/java/com/dometic/MTC/features/TC24_Settings.feature:7)\r\n",
+  "status": "failed"
 });
 formatter.after({
   "status": "passed"

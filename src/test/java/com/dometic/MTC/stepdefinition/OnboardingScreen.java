@@ -51,4 +51,12 @@ public class OnboardingScreen extends Baseclass {
             Taponbutton(Constant_OnboardingPage.Onboarding_YES_Button_xpath);
         }
     }
+
+    @Then("I Tap on the MTC Thing I'd")
+    public void iTapOnTheMTCThingID() {
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_OnboardingPage.Onboarding_thing_id_xpath));
+        if(elements.size()!=0){
+            Taponbutton(Constant_OnboardingPage.Onboarding_thing_id_xpath);
+        }
+    }
 }

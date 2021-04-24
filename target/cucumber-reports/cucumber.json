@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1281100,
+              "duration": 1602900,
               "status": "passed"
             },
             "match": {
@@ -15,7 +15,7 @@
           },
           {
             "result": {
-              "duration": 224700,
+              "duration": 268000,
               "status": "passed"
             },
             "match": {
@@ -30,7 +30,7 @@
         "after": [
           {
             "result": {
-              "duration": 2907000,
+              "duration": 3561300,
               "status": "passed"
             },
             "match": {
@@ -43,7 +43,7 @@
         "steps": [
           {
             "result": {
-              "duration": 23476593300,
+              "duration": 14995813800,
               "status": "passed"
             },
             "line": 5,
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 5012344500,
+              "duration": 5013877600,
               "status": "passed"
             },
             "line": 6,
@@ -72,6 +72,12 @@
           },
           {
             "name": "@sanity"
+          },
+          {
+            "name": "@Device1"
+          },
+          {
+            "name": "@Device2"
           }
         ]
       }
@@ -80,7 +86,7 @@
     "description": "",
     "id": "testing-login-page-in-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC01_LaunchScreen.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC01_LaunchScreen.feature",
     "tags": []
   },
   {
@@ -90,16 +96,7 @@
         "before": [
           {
             "result": {
-              "duration": 352800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.Init(Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 216600,
+              "duration": 225200,
               "status": "passed"
             },
             "match": {
@@ -114,7 +111,7 @@
         "after": [
           {
             "result": {
-              "duration": 740500,
+              "duration": 1157500,
               "status": "passed"
             },
             "match": {
@@ -127,7 +124,7 @@
         "steps": [
           {
             "result": {
-              "duration": 361646200,
+              "duration": 248270600,
               "status": "passed"
             },
             "line": 5,
@@ -139,7 +136,7 @@
           },
           {
             "result": {
-              "duration": 5009685600,
+              "duration": 5001882400,
               "status": "passed"
             },
             "line": 6,
@@ -151,7 +148,7 @@
           },
           {
             "result": {
-              "duration": 30119772700,
+              "duration": 30150737500,
               "status": "passed"
             },
             "line": 7,
@@ -163,7 +160,7 @@
           },
           {
             "result": {
-              "duration": 51834100,
+              "duration": 62557300,
               "status": "passed"
             },
             "line": 8,
@@ -175,7 +172,7 @@
           },
           {
             "result": {
-              "duration": 5014134800,
+              "duration": 5007689700,
               "status": "passed"
             },
             "line": 9,
@@ -188,10 +185,16 @@
         ],
         "tags": [
           {
-            "name": "@First"
+            "name": "@First1"
           },
           {
-            "name": "@sanity"
+            "name": "@sanity1"
+          },
+          {
+            "name": "@Device1"
+          },
+          {
+            "name": "@Device2"
           }
         ]
       }
@@ -200,7 +203,7 @@
     "description": "",
     "id": "testing-login-page-in-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC02_SplashScreen.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC02_SplashScreen.feature",
     "tags": []
   },
   {
@@ -210,7 +213,7 @@
         "before": [
           {
             "result": {
-              "duration": 867600,
+              "duration": 1267600,
               "status": "passed"
             },
             "match": {
@@ -225,7 +228,7 @@
         "after": [
           {
             "result": {
-              "duration": 448700,
+              "duration": 975000,
               "status": "passed"
             },
             "match": {
@@ -238,7 +241,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4603182500,
+              "duration": 4922437000,
               "status": "passed"
             },
             "line": 53,
@@ -250,7 +253,7 @@
           },
           {
             "result": {
-              "duration": 3715242700,
+              "duration": 4983659300,
               "status": "passed"
             },
             "line": 54,
@@ -262,7 +265,7 @@
           },
           {
             "result": {
-              "duration": 10414024500,
+              "duration": 10571788900,
               "status": "passed"
             },
             "line": 55,
@@ -274,7 +277,7 @@
           },
           {
             "result": {
-              "duration": 5014901300,
+              "duration": 5014344800,
               "status": "passed"
             },
             "line": 56,
@@ -286,7 +289,7 @@
           },
           {
             "result": {
-              "duration": 1126300,
+              "duration": 1480900,
               "status": "passed"
             },
             "line": 57,
@@ -308,7 +311,7 @@
     "description": "",
     "id": "testing-an-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC05_LoginScreen.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC05_LoginScreen.feature",
     "tags": []
   },
   {
@@ -318,7 +321,7 @@
         "before": [
           {
             "result": {
-              "duration": 749300,
+              "duration": 2533800,
               "status": "passed"
             },
             "match": {
@@ -327,7 +330,7 @@
           },
           {
             "result": {
-              "duration": 430000,
+              "duration": 867600,
               "status": "passed"
             },
             "match": {
@@ -342,7 +345,7 @@
         "after": [
           {
             "result": {
-              "duration": 370700,
+              "duration": 208000,
               "status": "passed"
             },
             "match": {
@@ -355,7 +358,7 @@
         "steps": [
           {
             "result": {
-              "duration": 220233700,
+              "duration": 282244200,
               "status": "passed"
             },
             "line": 5,
@@ -367,7 +370,7 @@
           },
           {
             "result": {
-              "duration": 5000591900,
+              "duration": 5003653700,
               "status": "passed"
             },
             "line": 6,
@@ -379,7 +382,7 @@
           },
           {
             "result": {
-              "duration": 233068200,
+              "duration": 328089000,
               "status": "passed"
             },
             "line": 7,
@@ -391,10 +394,34 @@
           },
           {
             "result": {
-              "duration": 10541326700,
+              "duration": 5002858200,
               "status": "passed"
             },
             "line": 8,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10133759900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I Tap on the MTC Thing I\u0027d",
+            "match": {
+              "location": "OnboardingScreen.iTapOnTheMTCThingID()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10099272500,
+              "status": "passed"
+            },
+            "line": 10,
             "name": "Landing screen is displayed",
             "match": {
               "location": "OnboardingScreen.landingScreenIsDisplayed()"
@@ -416,7 +443,7 @@
     "description": "",
     "id": "testing-an-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC06_OnboardingScreen.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC06_OnboardingScreen.feature",
     "tags": []
   },
   {
@@ -426,7 +453,7 @@
         "before": [
           {
             "result": {
-              "duration": 459600,
+              "duration": 652100,
               "status": "passed"
             },
             "match": {
@@ -435,7 +462,7 @@
           },
           {
             "result": {
-              "duration": 196100,
+              "duration": 543900,
               "status": "passed"
             },
             "match": {
@@ -450,7 +477,7 @@
         "after": [
           {
             "result": {
-              "duration": 274200,
+              "duration": 544300,
               "status": "passed"
             },
             "match": {
@@ -463,10 +490,22 @@
         "steps": [
           {
             "result": {
-              "duration": 11613617300,
+              "duration": 10324545300,
               "status": "passed"
             },
             "line": 5,
+            "name": "I Tap on the access this location pop up",
+            "match": {
+              "location": "LandingPage.iTapOnTheAccessThisLocationPopUp()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10237970800,
+              "status": "passed"
+            },
+            "line": 6,
             "name": "I Tap on LATER Button",
             "match": {
               "location": "LandingPage.iTapOnLATERButton()"
@@ -475,10 +514,10 @@
           },
           {
             "result": {
-              "duration": 20264378500,
+              "duration": 20780155400,
               "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "I Tap on cancel button in Upgrade Firmware",
             "match": {
               "location": "LandingPage.iTapOnCancelButtonInUpgradeFirmware()"
@@ -494,1976 +533,13 @@
             "name": "@sanity"
           }
         ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 215000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 9,
-        "name": "Verifying application Bottom Layout screen functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 261900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 316500300,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I Verify the All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 251573700,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 293553800,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 343025100,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 257508900,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5002277600,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 687661500,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 977135600,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I Validated Corresponding Climate tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5014425100,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 252010300,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2330898800,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I Validate Corresponding Devices tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 314060800,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 981395800,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "I Validate Corresponding Tank tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 245544700,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5013730700,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 66723700,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5009061100,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 241109900,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "I Tap on All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 256000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 30,
-        "name": "Verifying application Bottom Layout screen with ViewOption(Tile View-All Devices) functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-with-viewoption(tile-view-all-devices)-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 287000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5007518900,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1480502600,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "I Tap on View option button in landing screen",
-            "match": {
-              "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5002797800,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 347451400,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "I Tap on Tile View Options",
-            "match": {
-              "location": "ViewOption.iTapOnTileViewOptions()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1106898600,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "I Tap on All Devices",
-            "match": {
-              "location": "ViewOption.iTapOnAllDevices()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1074591700,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "I Tap on Cancel Button",
-            "match": {
-              "location": "ViewOption.iTapOnCancelButton()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5001267900,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 365370500,
-              "status": "passed"
-            },
-            "line": 38,
-            "name": "I Verify the All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 235631800,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 230871700,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 253131800,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 338512800,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5007616000,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 730680100,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 966689400,
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "I Validated Corresponding Climate tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5008990100,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 268646300,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2242483400,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "I Validate Corresponding Devices tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 263890400,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 934255000,
-              "status": "passed"
-            },
-            "line": 50,
-            "name": "I Validate Corresponding Tank tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 168881200,
-              "status": "passed"
-            },
-            "line": 51,
-            "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 51165100,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5009459400,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 240054400,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "I Tap on All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 328200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 57,
-        "name": "Verifying application Bottom Layout screen with ViewOption(Tile View-Connected Devices) functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-with-viewoption(tile-view-connected-devices)-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 382800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1679887300,
-              "status": "passed"
-            },
-            "line": 58,
-            "name": "I Tap on View option button in landing screen",
-            "match": {
-              "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1037170000,
-              "status": "passed"
-            },
-            "line": 59,
-            "name": "I Tap on Connected Devices",
-            "match": {
-              "location": "ViewOption.iTapOnConnectedDevices()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1152371000,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "I Tap on Cancel Button",
-            "match": {
-              "location": "ViewOption.iTapOnCancelButton()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5006413100,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 344595700,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "I Verify the All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 317377200,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 323401300,
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 244857500,
-              "status": "passed"
-            },
-            "line": 65,
-            "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 250074800,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5006767400,
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 576351900,
-              "status": "passed"
-            },
-            "line": 68,
-            "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1143393000,
-              "status": "passed"
-            },
-            "line": 69,
-            "name": "I Validated Corresponding Climate tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5015111200,
-              "status": "passed"
-            },
-            "line": 70,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 269511600,
-              "status": "passed"
-            },
-            "line": 71,
-            "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2215375500,
-              "status": "passed"
-            },
-            "line": 72,
-            "name": "I Validate Corresponding Devices tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 288693600,
-              "status": "passed"
-            },
-            "line": 73,
-            "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 922714200,
-              "status": "passed"
-            },
-            "line": 74,
-            "name": "I Validate Corresponding Tank tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 322087300,
-              "status": "passed"
-            },
-            "line": 75,
-            "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 52665500,
-              "status": "passed"
-            },
-            "line": 76,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5002630500,
-              "status": "passed"
-            },
-            "line": 77,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 272329800,
-              "status": "passed"
-            },
-            "line": 78,
-            "name": "I Tap on All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 296800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 81,
-        "name": "Verifying application Bottom Layout screen with ViewOption(Tile View-Non Connected Devices) functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-with-viewoption(tile-view-non-connected-devices)-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 263200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1565246000,
-              "status": "passed"
-            },
-            "line": 82,
-            "name": "I Tap on View option button in landing screen",
-            "match": {
-              "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1074041600,
-              "status": "passed"
-            },
-            "line": 83,
-            "name": "I Tap on Non Connected Devices",
-            "match": {
-              "location": "ViewOption.iTapOnNonConnectedDevices()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1061463900,
-              "status": "passed"
-            },
-            "line": 84,
-            "name": "I Tap on Cancel Button",
-            "match": {
-              "location": "ViewOption.iTapOnCancelButton()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5003177300,
-              "status": "passed"
-            },
-            "line": 85,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 353933100,
-              "status": "passed"
-            },
-            "line": 86,
-            "name": "I Verify the All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 303158000,
-              "status": "passed"
-            },
-            "line": 87,
-            "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 251573600,
-              "status": "passed"
-            },
-            "line": 88,
-            "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 302909600,
-              "status": "passed"
-            },
-            "line": 89,
-            "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 200347000,
-              "status": "passed"
-            },
-            "line": 90,
-            "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 387043300,
-              "status": "passed"
-            },
-            "line": 91,
-            "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2188240000,
-              "status": "passed"
-            },
-            "line": 92,
-            "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 793244400,
-              "status": "passed"
-            },
-            "line": 93,
-            "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5010720300,
-              "status": "passed"
-            },
-            "line": 94,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 60420300,
-              "status": "passed"
-            },
-            "line": 95,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5010632300,
-              "status": "passed"
-            },
-            "line": 96,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 295264900,
-              "status": "passed"
-            },
-            "line": 97,
-            "name": "I Tap on All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 190200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 100,
-        "name": "Verifying application Bottom Layout screen with ViewOption(List View-All Devices) functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-with-viewoption(list-view-all-devices)-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 194600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1430434100,
-              "status": "passed"
-            },
-            "line": 101,
-            "name": "I Tap on View option button in landing screen",
-            "match": {
-              "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1201042700,
-              "status": "passed"
-            },
-            "line": 102,
-            "name": "I Tap on List View Options",
-            "match": {
-              "location": "ViewOption.iTapOnListViewOptions()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1142680000,
-              "status": "passed"
-            },
-            "line": 103,
-            "name": "I Tap on All Devices",
-            "match": {
-              "location": "ViewOption.iTapOnAllDevices()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1095031000,
-              "status": "passed"
-            },
-            "line": 104,
-            "name": "I Tap on Cancel Button",
-            "match": {
-              "location": "ViewOption.iTapOnCancelButton()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 336512000,
-              "status": "passed"
-            },
-            "line": 105,
-            "name": "I Verify the All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 296556800,
-              "status": "passed"
-            },
-            "line": 106,
-            "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 277918200,
-              "status": "passed"
-            },
-            "line": 107,
-            "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 290016100,
-              "status": "passed"
-            },
-            "line": 108,
-            "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 261186000,
-              "status": "passed"
-            },
-            "line": 109,
-            "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5008814400,
-              "status": "passed"
-            },
-            "line": 110,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 696261100,
-              "status": "passed"
-            },
-            "line": 111,
-            "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 979539400,
-              "status": "passed"
-            },
-            "line": 112,
-            "name": "I Validated Corresponding Climate tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5005454500,
-              "status": "passed"
-            },
-            "line": 113,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 253146400,
-              "status": "passed"
-            },
-            "line": 114,
-            "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1046387100,
-              "status": "passed"
-            },
-            "line": 115,
-            "name": "I Validate Corresponding Devices tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 284208700,
-              "status": "passed"
-            },
-            "line": 116,
-            "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 971989800,
-              "status": "passed"
-            },
-            "line": 117,
-            "name": "I Validate Corresponding Tank tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 229739400,
-              "status": "passed"
-            },
-            "line": 118,
-            "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 52787800,
-              "status": "passed"
-            },
-            "line": 119,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5006989600,
-              "status": "passed"
-            },
-            "line": 120,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 231698400,
-              "status": "passed"
-            },
-            "line": 121,
-            "name": "I Tap on All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 165900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 124,
-        "name": "Verifying application Bottom Layout screen with ViewOption(List View-Connected Devices) functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-with-viewoption(list-view-connected-devices)-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 346900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1894794700,
-              "status": "passed"
-            },
-            "line": 125,
-            "name": "I Tap on View option button in landing screen",
-            "match": {
-              "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 981122500,
-              "status": "passed"
-            },
-            "line": 126,
-            "name": "I Tap on Connected Devices",
-            "match": {
-              "location": "ViewOption.iTapOnConnectedDevices()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1138359600,
-              "status": "passed"
-            },
-            "line": 127,
-            "name": "I Tap on Cancel Button",
-            "match": {
-              "location": "ViewOption.iTapOnCancelButton()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 243346500,
-              "status": "passed"
-            },
-            "line": 128,
-            "name": "I Verify the All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 299729400,
-              "status": "passed"
-            },
-            "line": 129,
-            "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 258921300,
-              "status": "passed"
-            },
-            "line": 130,
-            "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 206128300,
-              "status": "passed"
-            },
-            "line": 131,
-            "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 174774900,
-              "status": "passed"
-            },
-            "line": 132,
-            "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5001255400,
-              "status": "passed"
-            },
-            "line": 133,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 471766100,
-              "status": "passed"
-            },
-            "line": 134,
-            "name": "I Tap on climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 955212400,
-              "status": "passed"
-            },
-            "line": 135,
-            "name": "I Validated Corresponding Climate tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidatedCorrespondingClimateTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5012280000,
-              "status": "passed"
-            },
-            "line": 136,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 261036100,
-              "status": "passed"
-            },
-            "line": 137,
-            "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1009340800,
-              "status": "passed"
-            },
-            "line": 138,
-            "name": "I Validate Corresponding Devices tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingDevicesTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 314313000,
-              "status": "passed"
-            },
-            "line": 139,
-            "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 906544900,
-              "status": "passed"
-            },
-            "line": 140,
-            "name": "I Validate Corresponding Tank tile is displayed",
-            "match": {
-              "location": "LandingPage.iValidateCorrespondingTankTileIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 155620200,
-              "status": "passed"
-            },
-            "line": 141,
-            "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 57265700,
-              "status": "passed"
-            },
-            "line": 142,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5010146200,
-              "status": "passed"
-            },
-            "line": 143,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 194951700,
-              "status": "passed"
-            },
-            "line": 144,
-            "name": "I Tap on All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 202100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 147,
-        "name": "Verifying application Bottom Layout screen with ViewOption(List View-Non Connected Devices) functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-with-viewoption(list-view-non-connected-devices)-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 759800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1253232900,
-              "status": "passed"
-            },
-            "line": 148,
-            "name": "I Tap on View option button in landing screen",
-            "match": {
-              "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 955819300,
-              "status": "passed"
-            },
-            "line": 149,
-            "name": "I Tap on Non Connected Devices",
-            "match": {
-              "location": "ViewOption.iTapOnNonConnectedDevices()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 937511400,
-              "status": "passed"
-            },
-            "line": 150,
-            "name": "I Tap on Cancel Button",
-            "match": {
-              "location": "ViewOption.iTapOnCancelButton()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 161379600,
-              "status": "passed"
-            },
-            "line": 151,
-            "name": "I Verify the All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 168475100,
-              "status": "passed"
-            },
-            "line": 152,
-            "name": "I Verify the Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 166339900,
-              "status": "passed"
-            },
-            "line": 153,
-            "name": "I Verify the Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 172719000,
-              "status": "passed"
-            },
-            "line": 154,
-            "name": "I Verify the climate option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheClimateOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 173451800,
-              "status": "passed"
-            },
-            "line": 155,
-            "name": "I Verify the Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iVerifyTheSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5001855500,
-              "status": "passed"
-            },
-            "line": 156,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 371764900,
-              "status": "passed"
-            },
-            "line": 157,
-            "name": "I Tap on Device option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnDeviceOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1029826200,
-              "status": "passed"
-            },
-            "line": 158,
-            "name": "I Tap on Tanks option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnTanksOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 762366100,
-              "status": "passed"
-            },
-            "line": 159,
-            "name": "I Tap on Scene option in the Bottom  layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnSceneOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 54487700,
-              "status": "passed"
-            },
-            "line": 160,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5007332300,
-              "status": "passed"
-            },
-            "line": 161,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 258029400,
-              "status": "passed"
-            },
-            "line": 162,
-            "name": "I Tap on All option in the Bottom layout of Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnAllOptionInTheBottomLayoutOfLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5003935700,
-              "status": "passed"
-            },
-            "line": 163,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1332081000,
-              "status": "passed"
-            },
-            "line": 164,
-            "name": "I Tap on View option button in landing screen",
-            "match": {
-              "location": "ViewOption.iTapOnViewOptionButtonInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5008232100,
-              "status": "passed"
-            },
-            "line": 165,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1290705400,
-              "status": "passed"
-            },
-            "line": 166,
-            "name": "I Tap on Tile View Options",
-            "match": {
-              "location": "ViewOption.iTapOnTileViewOptions()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1158583000,
-              "status": "passed"
-            },
-            "line": 167,
-            "name": "I Tap on All Devices",
-            "match": {
-              "location": "ViewOption.iTapOnAllDevices()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1585890900,
-              "status": "passed"
-            },
-            "line": 168,
-            "name": "I Tap on Cancel Button",
-            "match": {
-              "location": "ViewOption.iTapOnCancelButton()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5014419100,
-              "status": "passed"
-            },
-            "line": 169,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
       }
     ],
     "name": "Testing an Dometic LMC application",
     "description": "",
     "id": "testing-an-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC07_LandingScreen.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC07_LandingScreen.feature",
     "tags": []
   },
   {
@@ -2473,7 +549,7 @@
         "before": [
           {
             "result": {
-              "duration": 500900,
+              "duration": 793800,
               "status": "passed"
             },
             "match": {
@@ -2482,7 +558,7 @@
           },
           {
             "result": {
-              "duration": 373200,
+              "duration": 569000,
               "status": "passed"
             },
             "match": {
@@ -2490,14 +566,14 @@
             }
           }
         ],
-        "line": 14,
-        "name": "Verifying application Power screen(Batteries) UI",
+        "line": 4,
+        "name": "Verifying application Tracking(Gio Fencing) screen UI \u0026 Functionality",
         "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-power-screen(batteries)-ui",
+        "id": "testing-an-dometic-lmc-application;verifying-application-tracking(gio-fencing)-screen-ui-\u0026-functionality",
         "after": [
           {
             "result": {
-              "duration": 637200,
+              "duration": 683400,
               "status": "passed"
             },
             "match": {
@@ -2510,22 +586,22 @@
         "steps": [
           {
             "result": {
-              "duration": 738724500,
+              "duration": 170664700,
               "status": "passed"
             },
-            "line": 15,
-            "name": "I Tap on the Power in Landing screen",
+            "line": 5,
+            "name": "I Tap on Tracking tile",
             "match": {
-              "location": "LandingPage.iTapOnThePowerInLandingScreen()"
+              "location": "TrackingMTC.iTapOnTrackingTile()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5004880900,
+              "duration": 5009684700,
               "status": "passed"
             },
-            "line": 16,
+            "line": 6,
             "name": "I Wait short period for Page to Load",
             "match": {
               "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
@@ -2534,283 +610,25 @@
           },
           {
             "result": {
-              "duration": 62490500,
+              "duration": 60927100,
               "status": "passed"
             },
-            "line": 54,
-            "name": "I Verify BATTERIES header text",
+            "line": 7,
+            "name": "I Verify Tracking Header title",
             "match": {
-              "location": "Power.iVerifyBATTERIESHeaderText()"
+              "location": "TrackingMTC.iVerifyTrackingHeaderTitle()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 171775600,
+              "duration": 59373800,
               "status": "passed"
             },
-            "line": 55,
-            "name": "I Verify the battery voltage icon",
-            "match": {
-              "location": "Power.iVerifyTheBatteryVoltageIcon()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 255031800,
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "I verify the Engine-1 text",
-            "match": {
-              "arguments": [
-                {
-                  "val": "-1",
-                  "offset": 19
-                }
-              ],
-              "location": "Power.iVerifyTheEngineText(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 251783500,
-              "status": "passed"
-            },
-            "line": 57,
-            "name": "I verify the STBD text",
-            "match": {
-              "location": "Power.iVerifyTheSTBDText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 224779300,
-              "status": "passed"
-            },
-            "line": 58,
-            "name": "I verify the House text",
-            "match": {
-              "location": "Power.iVerifyTheHouseText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 75927600,
-              "status": "passed"
-            },
-            "line": 59,
-            "name": "I verify the Measured voltage text",
-            "match": {
-              "location": "Power.iVerifyTheMeasuredVoltageText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 56709300,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "I verify the Measured voltage value",
-            "match": {
-              "location": "Power.iVerifyTheMeasuredVoltageValue()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 62015000,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "I verify the Status text",
-            "match": {
-              "location": "Power.iVerifyTheStatusText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 62314800,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "I verify the Status value",
-            "match": {
-              "location": "Power.iVerifyTheStatusValue()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 66201600,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "I verify the UsageAnalysis text",
-            "match": {
-              "location": "Power.iVerifyTheUsageAnalysisText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 59574800,
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "I verify the UsageAnalysis Down Arrow",
-            "match": {
-              "location": "Power.iVerifyTheUsageAnalysisDownArrow()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2477259100,
-              "status": "passed"
-            },
-            "line": 65,
-            "name": "I Scroll up the page",
-            "match": {
-              "location": "SpanishLanguage.iScrollUpThePage()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 86695300,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "I verify the Alert text",
-            "match": {
-              "location": "Power.iVerifyTheAlertText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 54148100,
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "I verify the Alert toggle status",
-            "match": {
-              "location": "Power.iVerifyTheAlertToggleStatus()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 98155300,
-              "status": "passed"
-            },
-            "line": 68,
-            "name": "I verify the Alert toggle",
-            "match": {
-              "location": "Power.iVerifyTheAlertToggle()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 58736500,
-              "status": "passed"
-            },
-            "line": 69,
-            "name": "I verify the Notify Me text",
-            "match": {
-              "location": "Power.iVerifyTheNotifyMeText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 67189600,
-              "status": "passed"
-            },
-            "line": 70,
-            "name": "I verify the Notify Me toggle status",
-            "match": {
-              "location": "Power.iVerifyTheNotifyMeToggleStatus()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 62538300,
-              "status": "passed"
-            },
-            "line": 71,
-            "name": "I verify the Notify Me toggle",
-            "match": {
-              "location": "Power.iVerifyTheNotifyMeToggle()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 68781800,
-              "status": "passed"
-            },
-            "line": 72,
-            "name": "I verify the Battery voltage text",
-            "match": {
-              "location": "Power.iVerifyTheBatteryVoltageText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 68781100,
-              "status": "passed"
-            },
-            "line": 73,
-            "name": "I verify the Battery voltage value",
-            "match": {
-              "location": "Power.iVerifyTheBatteryVoltageValue()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5000365200,
-              "status": "passed"
-            },
-            "line": 74,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 65178900,
-              "status": "passed"
-            },
-            "line": 75,
+            "line": 8,
             "name": "I Tap on Back Button",
             "match": {
               "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5001613200,
-              "status": "passed"
-            },
-            "line": 76,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
             },
             "keyword": "Then "
           }
@@ -2829,7 +647,7 @@
     "description": "",
     "id": "testing-an-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC08_PoweScreen.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC11_Tracking_GioFencingScreenMTC.feature",
     "tags": []
   },
   {
@@ -2839,7 +657,7 @@
         "before": [
           {
             "result": {
-              "duration": 526300,
+              "duration": 4773500,
               "status": "passed"
             },
             "match": {
@@ -2848,7 +666,7 @@
           },
           {
             "result": {
-              "duration": 187100,
+              "duration": 267100,
               "status": "passed"
             },
             "match": {
@@ -2857,13 +675,13 @@
           }
         ],
         "line": 4,
-        "name": "Verifying application Light screen UI",
+        "name": "Verifying application Bottom Layout screen UI",
         "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-light-screen-ui",
+        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-ui",
         "after": [
           {
             "result": {
-              "duration": 377400,
+              "duration": 676400,
               "status": "passed"
             },
             "match": {
@@ -2876,22 +694,10 @@
         "steps": [
           {
             "result": {
-              "duration": 401022600,
+              "duration": 5014662300,
               "status": "passed"
             },
             "line": 5,
-            "name": "I Tap on Light in Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnLightInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5015611400,
-              "status": "passed"
-            },
-            "line": 6,
             "name": "I Wait short period for Page to Load",
             "match": {
               "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
@@ -2900,301 +706,133 @@
           },
           {
             "result": {
-              "duration": 292626100,
+              "duration": 711340700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I Verify Home option in Bottom layout",
+            "match": {
+              "location": "BottomLayoutMTC.iVerifyHomeOptionInBottomLayout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1135330100,
               "status": "passed"
             },
             "line": 7,
-            "name": "I Verified Light screen header",
+            "name": "I Tap on Home option in Bottom layout",
             "match": {
-              "location": "LandingPage.iVerifiedLightScreenHeader()"
+              "location": "BottomLayoutMTC.iTapOnHomeOptionInBottomLayout()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 274324800,
+              "duration": 111448700,
               "status": "passed"
             },
             "line": 8,
-            "name": "I Verified Assist Handle Text",
+            "name": "I Verify Areas option in Bottom layout",
             "match": {
-              "location": "LandingPage.iVerifiedAssistHandleText()"
+              "location": "BottomLayoutMTC.iVerifyAreasOptionInBottomLayout()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 268140500,
+              "duration": 1162290900,
               "status": "passed"
             },
             "line": 9,
-            "name": "I Verified Utility center Text",
+            "name": "I Tap on Areas option in Bottom layout",
             "match": {
-              "location": "LandingPage.iVerifiedUtilityCenterText()"
+              "location": "BottomLayoutMTC.iTapOnAreasOptionInBottomLayout()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 276687700,
+              "duration": 67439300,
               "status": "passed"
             },
             "line": 10,
-            "name": "I Verified Accent Light Text",
+            "name": "I Verify Proride option in Bottom layout",
             "match": {
-              "location": "LandingPage.iVerifiedAccentLightText()"
+              "location": "BottomLayoutMTC.iVerifyProrideOptionInBottomLayout()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 266490000,
+              "duration": 1099220400,
               "status": "passed"
             },
-            "line": 13,
-            "name": "I Verified Shower Text",
+            "line": 11,
+            "name": "I Tap on Proride option in Bottom layout",
             "match": {
-              "location": "LandingPage.iVerifiedShowerText()"
+              "location": "BottomLayoutMTC.iTapOnProrideOptionInBottomLayout()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 282592000,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I Verified Ceiling Text",
-            "match": {
-              "location": "LandingPage.iVerifiedCeilingText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 335314400,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I Verified Bedroom ceiling Text",
-            "match": {
-              "location": "LandingPage.iVerifiedBedroomCeilingText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2881162900,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I Verified Galley Text",
-            "match": {
-              "location": "LandingPage.iVerifiedGalleyText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 378816900,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I Verified Lounge Text",
-            "match": {
-              "location": "LandingPage.iVerifiedLoungeText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 413004000,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I Verified Awning Light Text",
-            "match": {
-              "location": "LandingPage.iVerifiedAwningLightText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2722431400,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I Verified Bedroom Overhead Text",
-            "match": {
-              "location": "LandingPage.iVerifiedBedroomOverheadText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 253557500,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "I Verified Porch Light Text",
-            "match": {
-              "location": "LandingPage.iVerifiedPorchLightText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 63855700,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5010149800,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@First"
-          },
-          {
-            "name": "@sanity"
-          }
-        ]
-      }
-    ],
-    "name": "Testing an Dometic LMC application",
-    "description": "",
-    "id": "testing-an-dometic-lmc-application",
-    "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC09_LightScreen.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 278000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.Init(Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 174300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 4,
-        "name": "Verifying application Tank Fresh Water screen UI",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-tank-fresh-water-screen-ui",
-        "after": [
-          {
-            "result": {
-              "duration": 209800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3180410700,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "I Tap on Tank Fresh Water in Landing screen",
-            "match": {
-              "location": "LandingPage.iTapOnTankFreshWaterInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5007525400,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5008174000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 173400800,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I Verify the fresh water level text",
-            "match": {
-              "location": "LandingPage.iVerifyTheFreshWaterLevelText()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 157573000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I verify the fresh text on button",
-            "match": {
-              "location": "LandingPage.iVerifyTheFreshTextOnButton()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 130965200,
+              "duration": 83077400,
               "status": "passed"
             },
             "line": 12,
-            "name": "I verify the predictive data in Fresh water text",
+            "name": "I Verify Switching option in Bottom layout",
             "match": {
-              "location": "LandingPage.iVerifyThePredictiveDataInFreshWaterText()"
+              "location": "BottomLayoutMTC.iVerifySwitchingOptionInBottomLayout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1159725700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Tap on Switching option in Bottom layout",
+            "match": {
+              "location": "BottomLayoutMTC.iTapOnSwitchingOptionInBottomLayout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 92407200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I Verify Modes option in Bottom layout",
+            "match": {
+              "location": "BottomLayoutMTC.iVerifyModesOptionInBottomLayout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1183138500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I Tap on Modes option in Bottom layout",
+            "match": {
+              "location": "BottomLayoutMTC.iTapOnModesOptionInBottomLayout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5001812800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
             },
             "keyword": "Then "
           }
@@ -3212,7 +850,7 @@
         "before": [
           {
             "result": {
-              "duration": 877700,
+              "duration": 594400,
               "status": "passed"
             },
             "match": {
@@ -3220,14 +858,14 @@
             }
           }
         ],
-        "line": 15,
-        "name": "Verifying application Tank Fresh Water screen functionality",
+        "line": 19,
+        "name": "Verifying application Bottom Layout screen UI",
         "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-tank-fresh-water-screen-functionality",
+        "id": "testing-an-dometic-lmc-application;verifying-application-bottom-layout-screen-ui",
         "after": [
           {
             "result": {
-              "duration": 513900,
+              "duration": 572600,
               "status": "passed"
             },
             "match": {
@@ -3240,49 +878,97 @@
         "steps": [
           {
             "result": {
-              "duration": 50073500,
+              "duration": 1125807200,
               "status": "passed"
             },
-            "line": 16,
-            "name": "I verify Tank-progressIndicator in Tank Fresh Water",
+            "line": 20,
+            "name": "I Tap on Home option in Bottom layout",
             "match": {
-              "location": "LandingPage.iVerifyTankProgressIndicatorInTankFreshWater()"
+              "location": "BottomLayoutMTC.iTapOnHomeOptionInBottomLayout()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 69200500,
+              "duration": 2582070100,
               "status": "passed"
             },
-            "line": 17,
-            "name": "I Tap on Back Button",
+            "line": 21,
+            "name": "I Tap on Areas option in Bottom layout",
             "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
+              "location": "BottomLayoutMTC.iTapOnAreasOptionInBottomLayout()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5005419600,
+              "duration": 1121873300,
               "status": "passed"
             },
-            "line": 18,
+            "line": 22,
+            "name": "I Tap on Proride option in Bottom layout",
+            "match": {
+              "location": "BottomLayoutMTC.iTapOnProrideOptionInBottomLayout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1135039300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I Tap on Switching option in Bottom layout",
+            "match": {
+              "location": "BottomLayoutMTC.iTapOnSwitchingOptionInBottomLayout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 179132800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I Validate Switching option is displayed",
+            "match": {
+              "location": "BottomLayoutMTC.iValidateSwitchingOptionIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1146168000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I Tap on Modes option in Bottom layout",
+            "match": {
+              "location": "BottomLayoutMTC.iTapOnModesOptionInBottomLayout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 126419300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I Validate Modes option is displayed",
+            "match": {
+              "location": "BottomLayoutMTC.iValidateModesOptionIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5014476600,
+              "status": "passed"
+            },
+            "line": 27,
             "name": "I Wait short period for Page to Load",
             "match": {
               "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 400434700,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I Validated Tank-progressIndicator(Fresh Water) percentage is displayed in Landing screen",
-            "match": {
-              "location": "LandingPage.iValidatedTankProgressIndicatorFreshWaterPercentageIsDisplayedInLandingScreen()"
             },
             "keyword": "Then "
           }
@@ -3298,7 +984,7 @@
     "description": "",
     "id": "testing-an-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC13_TankFreshWaterScreen.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC12_BottomLayoutScreenMTC.feature",
     "tags": []
   },
   {
@@ -3308,7 +994,7 @@
         "before": [
           {
             "result": {
-              "duration": 230300,
+              "duration": 879900,
               "status": "passed"
             },
             "match": {
@@ -3317,7 +1003,7 @@
           },
           {
             "result": {
-              "duration": 138700,
+              "duration": 497800,
               "status": "passed"
             },
             "match": {
@@ -3332,7 +1018,7 @@
         "after": [
           {
             "result": {
-              "duration": 152600,
+              "duration": 290000,
               "status": "passed"
             },
             "match": {
@@ -3345,7 +1031,7 @@
         "steps": [
           {
             "result": {
-              "duration": 12823921500,
+              "duration": 12811778900,
               "status": "passed"
             },
             "line": 5,
@@ -3357,7 +1043,7 @@
           },
           {
             "result": {
-              "duration": 106005800,
+              "duration": 82705300,
               "status": "passed"
             },
             "line": 6,
@@ -3369,8 +1055,9 @@
           },
           {
             "result": {
-              "duration": 1452492200,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:496)\r\n\tat org.testng.Assert.assertTrue(Assert.java:42)\r\n\tat org.testng.Assert.assertTrue(Assert.java:52)\r\n\tat com.dometic.MTC.qa.util.Baseclass.asserttext(Baseclass.java:91)\r\n\tat com.dometic.MTC.stepdefinition.Settings.iVerifySETTINGSTextDisplayedInTheTopOfTheApp(Settings.java:29)\r\n\tat ✽.I Verify SETTINGS Text displayed in the top of the app(src/test/java/com/dometic/MTC/features/TC24_Settings.feature:7)\r\n",
+              "duration": 93336400,
+              "status": "failed"
             },
             "line": 7,
             "name": "I Verify SETTINGS Text displayed in the top of the app",
@@ -3393,685 +1080,7 @@
         "before": [
           {
             "result": {
-              "duration": 148100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 10,
-        "name": "Verify Zone Management UI validation",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verify-zone-management-ui-validation",
-        "after": [
-          {
-            "result": {
-              "duration": 171200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5001372900,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 378652000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I verify Zone Management text is displayed",
-            "match": {
-              "location": "Settings.iVerifyZoneManagementTextIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2100846800,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I Tap on Zone Management in Settings",
-            "match": {
-              "location": "Settings.iTapOnZoneManagementInSettings()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5014293300,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 225035100,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I Verify ALL ZONES in Zone Management",
-            "match": {
-              "location": "Settings.iVerifyALLZONESInZoneManagement()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 232548100,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I verify Edit text in Zone Management",
-            "match": {
-              "location": "Settings.iVerifyEditTextInZoneManagement()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 259580500,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I verify Limited to 4 Zones only text in Zone Management",
-            "match": {
-              "arguments": [
-                {
-                  "val": "4",
-                  "offset": 20
-                }
-              ],
-              "location": "Settings.iVerifyLimitedToZonesOnlyTextInZoneManagement(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 45503900,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I verify Add ZoneIcon in Zone Management",
-            "match": {
-              "location": "Settings.iVerifyAddZoneIconInZoneManagement()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 181700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 21,
-        "name": "Verify Zone Management Functionality with Empty Zone name",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verify-zone-management-functionality-with-empty-zone-name",
-        "after": [
-          {
-            "result": {
-              "duration": 212700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5006191200,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 270011000,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "I Tap on Edit in ALL ZONES",
-            "match": {
-              "location": "Settings.iTapOnEditInALLZONES()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5000975300,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 459077700,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "I Tap on Rename in ALL ZONES",
-            "match": {
-              "location": "Settings.iTapOnRenameInALLZONES()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1281658000,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "I Tap on the Zone name",
-            "match": {
-              "location": "Settings.iTapOnTheZoneName()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1046339400,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "I clear the previous zone name",
-            "match": {
-              "location": "Settings.iClearThePreviousZoneName()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1033136000,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "I save the Zone",
-            "match": {
-              "location": "Settings.iSaveTheZone()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 599498700,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "I verify Zone Name can not be empty message is displayed",
-            "match": {
-              "location": "Settings.iVerifyZoneNameCanNotBeEmptyMessageIsDisplayed()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 181200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 32,
-        "name": "Verify Zone Management Functionality with more then 10 character",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verify-zone-management-functionality-with-more-then-10-character",
-        "after": [
-          {
-            "result": {
-              "duration": 438200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5007708400,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 867828900,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "I Enter the zone name more then the limit",
-            "match": {
-              "location": "Settings.iEnterTheZoneNameMoreThenTheLimit()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1024530100,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "I verify \"10/10\" character message is displayed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"10/10\"",
-                  "offset": 9
-                }
-              ],
-              "location": "Settings.iVerifyCharacterMessageIsDisplayed(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 225300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 38,
-        "name": "Verify Zone Management Functionality with Zone name",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verify-zone-management-functionality-with-zone-name",
-        "after": [
-          {
-            "result": {
-              "duration": 287900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5013801300,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 275766700,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "I Tap on the Zone name",
-            "match": {
-              "location": "Settings.iTapOnTheZoneName()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 806586800,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "I clear the previous zone name",
-            "match": {
-              "location": "Settings.iClearThePreviousZoneName()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1888722000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "I Enter the Zone name",
-            "match": {
-              "location": "Settings.iEnterTheZoneName()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1144741500,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "I Tap on Save",
-            "match": {
-              "location": "Settings.iTapOnSave()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 171800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 46,
-        "name": "Verify Zone Management Delete Zone Functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verify-zone-management-delete-zone-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 202900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5013698600,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 322587600,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "I Tap on Edit in ALL ZONES",
-            "match": {
-              "location": "Settings.iTapOnEditInALLZONES()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5006325900,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 235765600,
-              "status": "passed"
-            },
-            "line": 50,
-            "name": "I Tap on the Delete Zone Icon",
-            "match": {
-              "location": "Settings.iTapOnTheDeleteZoneIcon()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5005531000,
-              "status": "passed"
-            },
-            "line": 51,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2153625300,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "I Tap on YES, DELETE IT Button",
-            "match": {
-              "location": "Settings.iTapOnYESDELETEITButton()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 201600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 55,
-        "name": "Verify Zone Management Add Zone Functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verify-zone-management-add-zone-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 208300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5001669700,
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 10538407000,
-              "status": "passed"
-            },
-            "line": 57,
-            "name": "I Tap on the Add Zone Icon",
-            "match": {
-              "location": "Settings.iTapOnTheAddZoneIcon()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3339477100,
-              "status": "passed"
-            },
-            "line": 58,
-            "name": "I Select the zone",
-            "match": {
-              "location": "Settings.iSelectTheZone()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2557688100,
-              "status": "passed"
-            },
-            "line": 59,
-            "name": "I Enter the New Zone name",
-            "match": {
-              "location": "Settings.iEnterTheNewZoneName()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1377015800,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "I SAVE the Zone",
-            "match": {
-              "location": "Settings.iSAVETheZone()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5006592600,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 84302700,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "I Tap on Back Button",
-            "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 206900,
+              "duration": 492000,
               "status": "passed"
             },
             "match": {
@@ -4086,7 +1095,7 @@
         "after": [
           {
             "result": {
-              "duration": 164900,
+              "duration": 256200,
               "status": "passed"
             },
             "match": {
@@ -4099,7 +1108,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1041022700,
+              "duration": 99202300,
               "status": "passed"
             },
             "line": 103,
@@ -4111,7 +1120,7 @@
           },
           {
             "result": {
-              "duration": 5007512400,
+              "duration": 5007016000,
               "status": "passed"
             },
             "line": 106,
@@ -4123,7 +1132,7 @@
           },
           {
             "result": {
-              "duration": 197075500,
+              "duration": 128563400,
               "status": "passed"
             },
             "line": 107,
@@ -4145,7 +1154,7 @@
     "description": "",
     "id": "testing-an-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/L2/features/TC17_Settings.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC24_Settings.feature",
     "tags": []
   }
 ]
