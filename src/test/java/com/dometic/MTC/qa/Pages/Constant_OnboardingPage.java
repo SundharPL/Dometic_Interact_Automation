@@ -8,6 +8,7 @@ public class Constant_OnboardingPage {
     public static final String Onboarding_CANCEL_Button="android:id/button2";
     public static final String Onboarding_YES_Button="android:id/button1";
     public static final String onboarding_permission_allow_foreground_only_button="com.android.permissioncontroller:id/permission_allow_foreground_only_button";
+
     //----------xpath------------//
     public static final String Onboarding_allow_access_popup_xpath="//*[@resource-id='com.android.permissioncontroller:id/grant_dialog']";
     public static final String Onboarding_while_using_the_app_popup_xpath="//*[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']";
@@ -21,4 +22,5 @@ public class Constant_OnboardingPage {
     public static final String Onboardingpermission_no_upgrade_one_time_and_dont_ask_again_button_xpath="//*[@resource-id='com.android.permissioncontroller:id/permission_no_upgrade_one_time_and_dont_ask_again_button']";
     public static final String Onboarding_Keep_Only_this_time="//*[@text='Keep “Only this time”']";
     public static final String Onboarding_Keep_While_the_app_is_in_use="//*[@text='Keep “While the app is in use”']";
+    public static final String Onboarding_thing_id_xpath="//*[@text='MTC : 246F287E3294' and @content-desc='com.dometicapp:id/scanBle-deviceName']";
 }

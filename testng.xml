@@ -17,14 +17,13 @@
 <!--            <class name="com.dometic.L2.androidrunner.L2_runner"/>-->
 <!--        </classes>-->
 <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
-    <test name="L2-Test1">
-        <parameter name="PortNumber" value="4723" />
-        <classes>
-            <class name="com.dometic.L2.androidrunner.L2_runner"/>
-        </classes>
-    </test> <!-- Test -->
+<!--    <test name="L2-Test1">-->
+<!--        <parameter name="PortNumber" value="4723" />-->
+<!--        <classes>-->
+<!--            <class name="com.dometic.L2.androidrunner.L2_runner"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
     <test name="MTC">
-        <!--        <parameter name="PortNumber" value="5723" />-->
         <classes>
             <class name="com.dometic.MTC.androidrunner.MTC_runner"/>
         </classes>

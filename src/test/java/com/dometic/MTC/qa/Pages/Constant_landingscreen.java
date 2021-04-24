@@ -151,7 +151,7 @@ public class Constant_landingscreen {
     public static final String LandingPage_remainder_view_onclick_xpath="//*[@content-desc='com.dometicapp:id/remainderView-onClick']";
     public static final String LandingPage_header_connectionType_xpath="//*[@content-desc='com.dometicapp:id/header-connectionType']";
     public static final String LandingPage_header_brandLogo_xpath="//*[@content-desc='com.dometicapp:id/header-brandLogo']";
-    public static final String LandingPage_L21stclimate_tile_xpath="(//*[@content-desc='com.dometicapp:id/tiles-refreshControl']//following::android.widget.TextView)[1]";
+    public static final String LandingPage_L21stclimate_tile_xpath="//*[@text='Climate']";
     public static final String LandingPage_L21stclimate_text_xpath="(//*[@text='Climate'])[1]";
     public static final String LandingPage_L21stcool_text_xpath="(//*[@text='Cool'])[1]";
     public static final String LandingPage_L21stmainCardText_xpath="(//android.widget.TextView[@content-desc=\"com.dometicapp:id/tile-mainCardText\"])[1]";
