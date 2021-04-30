@@ -4,13 +4,20 @@ import com.aventstack.extentreports.GherkinKeyword;
 import com.dometic.MTC.qa.Pages.Constant_Batteries_MTC;
 import com.dometic.MTC.qa.util.Baseclass;
 import cucumber.api.java.en.Then;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Batteries extends Baseclass {
+    public static List<String> alertBatteryVoltageBelow, alertSetLatency, warningsBatteryVoltageBelow, warningsSetLatency;
+
     @Then("I Tap on Batteries tile on landing screen")
     public void iTapOnBatteriesTileOnLandingScreen() {
         Taponbutton(Constant_Batteries_MTC.mtc_Batteries_xpath);
@@ -70,7 +77,7 @@ public class Batteries extends Baseclass {
     public void iTapOnAlertToggleIfItSAlreadyInOFFState() throws InterruptedException {
 //        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath)).getText().equalsIgnoreCase(Constant_Batteries_MTC.mtc_Climate_Tile_Power_toggle_Status)) {
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath));
-        if(elements.size()!=0){
+        if (elements.size() != 0) {
             Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Alerts_toggle_xpath);
             Thread.sleep(10000);
 
@@ -93,14 +100,6 @@ public class Batteries extends Baseclass {
         }
     }
 
-    @Then("I Tap on apply button in Alert-Battery Voltage Below")
-    public void iTapOnApplyButtonInAlertBatteryVoltageBelow() {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_On_Text_xpath));
-        if (elements.size() != 0) {
-            Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_BelowText_Apply_xpath);
-        }
-    }
-
     @Then("I verify Alert-Set Latency Text")
     public void iVerifyAlertSetLatencyTextText() throws Throwable {
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_On_Text_xpath));
@@ -117,14 +116,6 @@ public class Batteries extends Baseclass {
         }
     }
 
-    @Then("I Tap on apply button in Alert-Set Latency")
-    public void iTapOnApplyButtonInAlertSetLatency() {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_On_Text_xpath));
-        if (elements.size() != 0) {
-            Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_BelowText_Apply_xpath);
-        }
-    }
-
     @Then("I verify Warnings text")
     public void iVerifyWarningsText() throws Throwable {
         asserttextValidation(Constant_Batteries_MTC.mtc_Batteries_WarningsText, Constant_Batteries_MTC.mtc_Batteries_WarningsText_xpath);
@@ -135,7 +126,7 @@ public class Batteries extends Baseclass {
 //        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath)).getText().equalsIgnoreCase(Constant_Batteries_MTC.mtc_Climate_Tile_Power_toggle_Status)) {
 //            System.out.println(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath)).getText());
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath));
-        if(elements.size()!=0){
+        if (elements.size() != 0) {
             Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Warnings_toggle_xpath);
             Thread.sleep(10000);
         }
@@ -159,14 +150,6 @@ public class Batteries extends Baseclass {
         }
     }
 
-    @Then("I Tap on apply button in Warnings-Battery Voltage Below")
-    public void iTapOnApplyButtonInWarningsBatteryVoltageBelow() {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_On_Text_xpath));
-        if (elements.size() != 0) {
-            Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_BelowText_Apply_xpath);
-        }
-    }
-
     @Then("I verify Warnings-Set Latency Text")
     public void iVerifyWarningsSetLatencyTextText() throws Throwable {
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_On_Text_xpath));
@@ -183,14 +166,6 @@ public class Batteries extends Baseclass {
         }
     }
 
-    @Then("I Tap on apply button in Warnings-Set Latency")
-    public void iTapOnApplyButtonInWarningsSetLatency() {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_On_Text_xpath));
-        if (elements.size() != 0) {
-            Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_BelowText_Apply_xpath);
-        }
-    }
-
     @Then("I Scroll the page")
     public void iScrollThePage() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll up the page");
@@ -200,7 +175,7 @@ public class Batteries extends Baseclass {
     @Then("I verify the apply button")
     public void iVerifyTheApplyButton() {
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_BelowText_Apply_xpath));
-        if(elements.size()!=0){
+        if (elements.size() != 0) {
             iselementdisplayed(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_BelowText_Apply_xpath);
         }
     }
@@ -214,4 +189,158 @@ public class Batteries extends Baseclass {
     public void iTapOnYearInVoltageGraph() {
         Taponbutton(Constant_Batteries_MTC.mtc_Batteries_MONTHText_xpath);
     }
+
+    @Then("I Verify Apply button in Alert-Battery Voltage Below")
+    public void iVerifyApplyButtonInAlertBatteryVoltageBelow() {
+        /** Globally declared BatteryVoltageBelow Values **/
+        alertBatteryVoltageBelow = new ArrayList<>();
+        alertBatteryVoltageBelow.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_Below_FirstValue_xpath)).getText());
+        alertBatteryVoltageBelow.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_Below_SecondValue_xpath)).getText());
+        alertBatteryVoltageBelow.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_Below_ThirdValue_xpath)).getText());
+    }
+
+    @Then("I scroll up the screen in Alert-Battery Voltage Below")
+    public void iScrollUpTheScreenInAlertBatteryVoltageBelow() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(500, 1735)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(500, 1580)).release().perform();
+        System.out.println("Scrolling up the Page");
+    }
+
+    @Then("I Tap on Apply button in Alert-Battery Voltage Below")
+    public void iTapOnApplyButtonInAlertBatteryVoltageBelow() {
+        Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_BelowText_Apply_xpath);
+    }
+
+    @Then("I Validate Applied voltage is displayed")
+    public void iValidateAppliedVoltageIsDisplayed() {
+        if (alertBatteryVoltageBelow.get(0).contains(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (alertBatteryVoltageBelow.get(1).contains(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (alertBatteryVoltageBelow.get(2).contains(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I Verify Apply button in Alert-Set Latency")
+    public void iVerifyApplyButtonInAlertSetLatency() {
+        /** Globally declared SetLatency Values **/
+        alertSetLatency = new ArrayList<>();
+        alertSetLatency.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Set_Latency_FirstValue_xpath)).getText());
+        alertSetLatency.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Set_Latency_SecondValue_xpath)).getText());
+        alertSetLatency.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Set_Latency_ThirdValue_xpath)).getText());
+    }
+
+    @Then("I scroll up the screen in Alert-Set Latency")
+    public void iScrollUpTheScreenInAlertSetLatency() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(530, 1870)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1725)).release().perform();
+        System.out.println("Scrolling up the Page");
+    }
+
+    @Then("I Tap on Apply button in Alert-Set Latency")
+    public void iTapOnApplyButtonInAlertSetLatency() {
+        Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_BelowText_Apply_xpath);
+    }
+
+    @Then("I Validate Applied minutes in Alert-Set Latency is displayed")
+    public void iValidateAppliedMinutesInAlertSetLatencyIsDisplayed() {
+        String text = driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Set_Latency_Updated_Value_xpath)).getText();
+        if (alertSetLatency.get(0).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else if (alertSetLatency.get(1).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else if (alertSetLatency.get(2).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll up the screen in Warnings-Battery Voltage Below")
+    public void iScrollUpTheScreenInWarningsBatteryVoltageBelow() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(530, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1450)).release().perform();
+        System.out.println("Scrolling up the Page");
+    }
+
+    @Then("I Verify Apply button in Warnings-Battery Voltage Below")
+    public void iVerifyApplyButtonInWarningsBatteryVoltageBelow() {
+        warningsBatteryVoltageBelow = new ArrayList<>();
+        warningsBatteryVoltageBelow.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_Below_FirstValue_xpath)).getText());
+        warningsBatteryVoltageBelow.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_Below_SecondValue_xpath)).getText());
+        warningsBatteryVoltageBelow.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_Below_ThirdValue_xpath)).getText());
+    }
+
+    @Then("I Tap on Apply button in Warnings-Battery Voltage Below")
+    public void iTapOnApplyButtonInWarningsBatteryVoltageBelow() {
+        Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_BelowText_Apply_xpath);
+    }
+
+    @Then("I Validate Applied minutes in Warnings-Battery Voltage Below is displayed")
+    public void iValidateAppliedMinutesInWarningsBatteryVoltageBelowIsDisplayed() {
+        String text = driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_Below_Updated_Value_xpath)).getText();
+        if (warningsBatteryVoltageBelow.get(0).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else if (warningsBatteryVoltageBelow.get(1).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else if (warningsBatteryVoltageBelow.get(2).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll up the screen in Warnings-Set Latency")
+    public void iScrollUpTheScreenInWarningsSetLatency() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Warnings-Set Latency");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(530, 1715)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1575)).release().perform();
+        System.out.println("Scrolling up the Page");
+    }
+
+    @Then("I Verify Apply button in Warnings-Set Latency")
+    public void iVerifyApplyButtonInWarningsSetLatency() {
+        warningsSetLatency = new ArrayList<>();
+        warningsSetLatency.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Set_Latency_FirstValue_xpath)).getText());
+        warningsSetLatency.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Set_Latency_Below_SecondValue_xpath)).getText());
+        warningsSetLatency.add(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Set_Latency_ThirdValue_xpath)).getText());
+    }
+
+    @Then("I Tap on Apply button in Warnings-Set Latency")
+    public void iTapOnApplyButtonInWarningsSetLatency() {
+        Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Warnings_Battery_Voltage_BelowText_Apply_xpath);
+    }
+
+    @Then("I Validate Applied minutes in Warnings-Set Latency is displayed")
+    public void iValidateAppliedMinutesInWarningsSetLatencyIsDisplayed() {
+        String text = driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Set_Latency_Updated_Value_xpath)).getText();
+        if (warningsSetLatency.get(0).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else if (warningsSetLatency.get(1).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else if (warningsSetLatency.get(2).equalsIgnoreCase(text)) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I Tap on Ok button")
+    public void iTapOnOkButton() {
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_title_template_xpath));
+        if (elements.size() != 0) {
+            Taponbutton(Constant_Batteries_MTC.mtc_Batteries_button1_xpath);
+        }
+    }
 }
+

@@ -45,3 +45,74 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
+  @sanity1
+  Scenario: Verifying application Batteries screen(Alert-Battery Voltage Below) Functionality
+    Then I Wait short period for Page to Load
+    Then I Tap on Batteries tile on landing screen
+    Then I Wait short period for Page to Load
+    Then I Scroll up the page
+    Then I Tap on Alert-Battery Voltage Below
+    Then I Wait short period for Page to Load
+    Then I scroll up the screen in Alert-Battery Voltage Below
+    Then I Verify Apply button in Alert-Battery Voltage Below
+    Then I Tap on Apply button in Alert-Battery Voltage Below
+    Then I Tap on Ok button
+    Then I Wait for Page to Load
+    Then I Validate Applied voltage is displayed
+    Then I Wait short period for Page to Load
+    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Batteries screen(Alert-Set Latency) Functionality
+    Then I Wait short period for Page to Load
+    Then I Tap on Batteries tile on landing screen
+    Then I Wait short period for Page to Load
+    Then I Scroll up the page
+    Then I Tap on Alert-Set Latency
+    Then I Wait short period for Page to Load
+    Then I scroll up the screen in Alert-Set Latency
+    Then I Verify Apply button in Alert-Set Latency
+    Then I Tap on Apply button in Alert-Set Latency
+    Then I Tap on Ok button
+    Then I Wait for Page to Load
+    Then I Validate Applied minutes in Alert-Set Latency is displayed
+    Then I Wait short period for Page to Load
+    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Batteries screen(Warnings-Battery Voltage Below) Functionality
+    Then I Wait short period for Page to Load
+    Then I Tap on Batteries tile on landing screen
+    Then I Wait short period for Page to Load
+    Then I Scroll up the page
+    Then I Wait short period for Page to Load
+    Then I Tap on Warnings-Battery Voltage Below
+    Then I Wait short period for Page to Load
+    Then I Scroll up the page
+    Then I scroll up the screen in Warnings-Battery Voltage Below
+    Then I Verify Apply button in Warnings-Battery Voltage Below
+    Then I Tap on Apply button in Warnings-Battery Voltage Below
+    Then I Tap on Ok button
+    Then I Wait for Page to Load
+    Then I Validate Applied minutes in Warnings-Battery Voltage Below is displayed
+    Then I Wait short period for Page to Load
+    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Batteries screen(Warnings-Battery Voltage Below) Functionality
+    Then I Wait short period for Page to Load
+    Then I Tap on Batteries tile on landing screen
+    Then I Wait short period for Page to Load
+    Then I Scroll up the page
+    Then I Wait short period for Page to Load
+    Then I Tap on Warnings-Set Latency
+    Then I Wait short period for Page to Load
+    Then I Scroll up the page
+    Then I scroll up the screen in Warnings-Set Latency
+    Then I Verify Apply button in Warnings-Set Latency
+    Then I Tap on Apply button in Warnings-Set Latency
+    Then I Tap on Ok button
+    Then I Wait for Page to Load
+    Then I Validate Applied minutes in Warnings-Set Latency is displayed
+    Then I Wait short period for Page to Load
+    Then I Tap on Back Button

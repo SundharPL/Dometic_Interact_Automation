@@ -1,6 +1,6 @@
 Feature: Testing an Dometic LMC application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Bottom Layout screen UI
     Then I Wait short period for Page to Load
     Then I Verify Home option in Bottom layout
@@ -15,7 +15,7 @@ Feature: Testing an Dometic LMC application
     Then I Tap on Modes option in Bottom layout
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Bottom Layout screen UI
     Then I Tap on Home option in Bottom layout
     Then I Tap on Areas option in Bottom layout
@@ -25,3 +25,4 @@ Feature: Testing an Dometic LMC application
     Then I Tap on Modes option in Bottom layout
     Then I Validate Modes option is displayed
     Then I Wait short period for Page to Load
+    Then I Tap on Back Button

@@ -1,6 +1,6 @@
 Feature: Testing an Dometic LMC application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Climate screen UI
     Then I Tap on Climate in Landing screen
     Then I Wait short period for Page to Load
@@ -60,4 +60,30 @@ Feature: Testing an Dometic LMC application
 #    Then I Scroll up the minutes in Scheduled At
 #    Then I Tap on apply button in Scheduled At
     Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+
+  @sanity
+  Scenario: Verifying application Climate screen scroll up to Minimum temperature functionality
+    Then I Tap on Climate in Landing screen
+    Then I Wait short period for Page to Load
+    Then I scroll minimum temperature in Climate
+    Then I Wait short period for Page to Load
+    Then I Tap on Apply button  in climate
+    Then I Wait for Page to Load
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I validated minimum applied temperature is displayed in Landing screen
+
+  @sanity
+  Scenario: Verifying application Climate screen scroll up to Maximum temperature functionality
+    Then I Wait short period for Page to Load
+    Then I Tap on Climate in Landing screen
+    Then I Wait short period for Page to Load
+    Then I scroll maximum temperature in Climate
+    Then I Wait short period for Page to Load
+    Then I Tap on Apply button  in climate
+    Then I Wait for Page to Load
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I validated maximum applied temperature is displayed in Landing screen
     Then I Wait short period for Page to Load

@@ -1,17 +1,26 @@
 package com.dometic.MTC.stepdefinition;
 
 import com.aventstack.extentreports.GherkinKeyword;
+import com.dometic.L1.qa.Pages.Constant_climate_ac;
+import com.dometic.L1.qa.Pages.Constant_climate_heater;
 import com.dometic.MTC.qa.Pages.Constant_Batteries_MTC;
 import com.dometic.MTC.qa.Pages.Constant_landingscreen;
 import com.dometic.MTC.qa.util.Baseclass;
 import cucumber.api.java.en.Then;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class ClimateMTC extends Baseclass {
+    public static String minTemp,maxTemp;
     @Then("I verify power text climate main screen")
     public void iVerifyPowerTextClimateMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify power text climate main screen");
@@ -132,6 +141,87 @@ public class ClimateMTC extends Baseclass {
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_landingscreen.LandingPage_Climate_sleepmodifier_infoicon_xpath));
         if (elements.size() != 0) {
             Taponbutton(Constant_landingscreen.LandingPage_Climate_sleepmodifier_infoicon_xpath);
+        }
+    }
+
+    @Then("I scroll minimum temperature in Climate")
+    public void iScrollMinimumTemperatureInClimate() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll minimum temperature in Climate");
+        try{
+            List<AndroidElement> list = driver.findElements(By.xpath(Constant_landingscreen.climate_temperatureArray));
+            while (list.size()!=0){
+                TouchAction action = new TouchAction(driver);
+                action.press(PointOption.point(550, 550)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                        .moveTo(PointOption.point(900, 550));
+                action.release().perform();
+                if (driver.findElement(By.xpath(Constant_landingscreen.climate_temperatureArray)).getText().equals("16")){
+                    TouchAction action1 = new TouchAction(driver);
+                    action1.press(PointOption.point(550, 550)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                            .moveTo(PointOption.point(900, 550));
+                    action1.release().perform();
+                    minTemp = driver.findElement(By.xpath(Constant_landingscreen.climate_applied_minmimum_temperature_xpath)).getText();
+                    break;
+                }
+            }
+
+        }
+        catch (Exception e){
+            System.out.println(e.toString());
+            e.printStackTrace();
+        }
+    }
+
+    @Then("I Tap on Apply button  in climate")
+    public void iTapOnApplyButtonInClimate() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Apply button  in climate screen");
+        List<AndroidElement> elements = driver.findElementsByAccessibilityId(Constant_landingscreen.climate_apply_button_access_id);
+        if(elements.size()!=0){
+            TaponbuttonaccessabilityID(Constant_landingscreen.climate_apply_button_access_id);
+        }
+    }
+
+    @Then("I validated minimum applied temperature is displayed in Landing screen")
+    public void iValidatedMinimumAppliedTemperatureIsDisplayedInLandingScreen() {
+        String text = driver.findElement(By.xpath(Constant_landingscreen.climate_applied_temperature_xpath)).getText();
+        if(text.contains(minTemp)){
+            System.out.println("Text comparison is Successful");
+        }
+        else{
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll maximum temperature in Climate")
+    public void iScrollMaximumTemperatureInClimate() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll maximum temperature in Climate AC");
+        try{
+            List<AndroidElement> list = driver.findElements(By.xpath(Constant_landingscreen.climate_temperatureArray));
+            while (list.size()!=0){
+                TouchAction action = new TouchAction(driver);
+                action.press(PointOption.point(900, 550)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                        .moveTo(PointOption.point(550, 550));
+                action.release().perform();
+                if (driver.findElement(By.xpath(Constant_landingscreen.climate_temperatureArray)).getText().equals("30")){
+                    maxTemp = driver.findElement(By.xpath(Constant_landingscreen.climate_applied_maximum_temperature_xpath)).getText();
+                    break;
+                }
+            }
+
+        }
+        catch (Exception e){
+            System.out.println(e.toString());
+            e.printStackTrace();
+        }
+    }
+
+    @Then("I validated maximum applied temperature is displayed in Landing screen")
+    public void iValidatedMaximumAppliedTemperatureIsDisplayedInLandingScreen() {
+        String text = driver.findElement(By.xpath(Constant_landingscreen.climate_applied_temperature_xpath)).getText();
+        if(text.contains(maxTemp)){
+            System.out.println("Text comparison is Successful");
+        }
+        else{
+            System.out.println("Both Actual and Expected text is mismatching");
         }
     }
 }

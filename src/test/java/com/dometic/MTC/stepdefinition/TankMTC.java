@@ -1,5 +1,7 @@
 package com.dometic.MTC.stepdefinition;
 
+import com.aventstack.extentreports.GherkinKeyword;
+import com.dometic.MTC.qa.Pages.Constant_Batteries_MTC;
 import com.dometic.MTC.qa.Pages.Constant_Tank;
 import com.dometic.MTC.qa.Pages.Constant_Tank_MTC;
 import com.dometic.MTC.qa.util.Baseclass;
@@ -11,9 +13,11 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TankMTC extends Baseclass {
+    public static List<String> alertTankLevelAbove,alertSetLatency,warningsTankLevelAbove,warningsSetLatency;
     @Then("Then I Tap on Tank Fuel tile in Landing Screen")
     public void thenITapOnTankFuelTileInLandingScreen() {
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Tank.MTC_Tank_Fuel_xpath));
@@ -196,4 +200,145 @@ public class TankMTC extends Baseclass {
         asserttextValidation(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above,Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_xpath);
     }
 
+    @Then("I scroll up the screen in Alert-Tank Level Above")
+    public void iScrollUpTheScreenInAlertTankLevelAbove() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Tank Level Above");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(530, 1730)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(500, 1600)).release().perform();
+        System.out.println("Scrolling up the Page");
+    }
+
+    @Then("I Verify Apply button in Alert-Tank Level Above")
+    public void iVerifyApplyButtonInAlertTankLevelAbove() {
+        /** Globally declared Tank Level Above Values **/
+        alertTankLevelAbove=new ArrayList<>();
+        alertTankLevelAbove.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_FirstValue_xpath)).getText());alertTankLevelAbove.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_SecondValue_xpath)).getText());
+        alertTankLevelAbove.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_ThirdValue_xpath)).getText());
+    }
+
+    @Then("I Tap on Apply button in Alert-Tank Level Above")
+    public void iTapOnApplyButtonInAlertTankLevelAbove() {
+        Taponbutton(Constant_Tank_MTC.mtc_Tank_Alerts_Apply_xpath);
+    }
+
+    @Then("I Validate Applied percentage in Tank Level Above is displayed")
+    public void iValidateAppliedPercentageInTankLevelAboveIsDisplayed() {
+        if (alertTankLevelAbove.get(0).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (alertTankLevelAbove.get(1).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (alertTankLevelAbove.get(2).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll up the screen in Alert-Set Latency\\(Tank screen)")
+    public void iScrollUpTheScreenInAlertSetLatencyTankScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(530, 1870)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1725)).release().perform();
+        System.out.println("Scrolling up the Page");
+
+    }
+
+    @Then("I Verify Apply button in Alert-Set Latency\\(Tank screen)")
+    public void iVerifyApplyButtonInAlertSetLatencyTankScreen() {
+        /** Globally declared Set Latency Values **/
+        alertSetLatency=new ArrayList<>();
+        alertSetLatency.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Set_Latency_FirstValue_xpath)).getText());alertSetLatency.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Set_Latency_SecondValue_xpath)).getText());
+        alertSetLatency.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Set_Latency_ThirdValue_xpath)).getText());
+
+    }
+
+    @Then("I Tap on Apply button in Alert-Set Latency\\(Tank screen)")
+    public void iTapOnApplyButtonInAlertSetLatencyTankScreen() {
+        Taponbutton(Constant_Tank_MTC.mtc_Tank_Alerts_Apply_xpath);
+    }
+
+    @Then("I Validate Applied minutes in Alert-Set Latency\\(Tank screen) is displayed")
+    public void iValidateAppliedMinutesInAlertSetLatencyTankScreenIsDisplayed() {
+        if (alertSetLatency.get(0).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Set_Latency_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (alertSetLatency.get(1).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Set_Latency_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (alertSetLatency.get(2).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Tank_Alerts_Set_Latency_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll up the screen in Warnings-Tank Level Above")
+    public void iScrollUpTheScreenInWarningsTankLevelAbove() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Warnings-Tank Level Above");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(530, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1450)).release().perform();
+        System.out.println("Scrolling up the Page");
+    }
+
+    @Then("I Verify Apply button in Warnings-Tank Level Above")
+    public void iVerifyApplyButtonInWarningsTankLevelAbove() {
+        /** Globally declared Warnings-Tank Level Above Values **/
+        warningsTankLevelAbove=new ArrayList<>();
+        warningsTankLevelAbove.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Tank_Level_Above_FirstValue_xpath)).getText());warningsTankLevelAbove.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Tank_Level_Above_SecondValue_xpath)).getText());
+        warningsTankLevelAbove.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Tank_Level_Above_ThirdValue_xpath)).getText());
+    }
+
+    @Then("I Tap on Apply button in Warnings-Tank Level Above")
+    public void iTapOnApplyButtonInWarningsTankLevelAbove() {
+        Taponbutton(Constant_Tank_MTC.mtc_Tank_Alerts_Apply_xpath);
+    }
+
+    @Then("I Validate Applied minutes in Warnings-Tank Level Above is displayed")
+    public void iValidateAppliedMinutesInWarningsTankLevelAboveIsDisplayed() {
+        if (warningsTankLevelAbove.get(0).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Tank_Level_Above_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (warningsTankLevelAbove.get(1).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Tank_Level_Above_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (warningsTankLevelAbove.get(2).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Tank_Level_Above_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll up the screen in Warnings-Set Latency\\(Tank screen)")
+    public void iScrollUpTheScreenInWarningsSetLatencyTankScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Warnings-Set Latency(Tank screen)");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(530, 1715)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1575)).release().perform();
+        System.out.println("Scrolling up the Page");
+    }
+
+    @Then("I Verify Apply button in Warnings-Set Latency\\(Tank screen)")
+    public void iVerifyApplyButtonInWarningsSetLatencyTankScreen() {
+        /** Globally declared Warnings-Set Latency Values **/
+        warningsSetLatency=new ArrayList<>();
+        warningsSetLatency.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Set_Latency_FirstValue_xpath)).getText());warningsSetLatency.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Set_Latency_Below_SecondValue_xpath)).getText());
+        warningsSetLatency.add(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Set_Latency_ThirdValue_xpath)).getText());
+    }
+
+    @Then("I Tap on Apply button in Warnings-Set Latency\\(Tank screen)")
+    public void iTapOnApplyButtonInWarningsSetLatencyTankScreen() {
+        Taponbutton(Constant_Tank_MTC.mtc_Tank_Alerts_Apply_xpath);
+    }
+
+    @Then("I Validate Applied minutes in Warnings-Set Latency\\(Tank screen) is displayed")
+    public void iValidateAppliedMinutesInWarningsSetLatencyTankScreenIsDisplayed() {
+        if (warningsSetLatency.get(0).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Set_Latency_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (warningsSetLatency.get(1).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Set_Latency_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else if (warningsSetLatency.get(2).contains(driver.findElement(By.xpath(Constant_Tank_MTC.mtc_Batteries_Warnings_Set_Latency_Updated_Value_xpath)).getText())) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
 }
