@@ -21,12 +21,37 @@ public class Constant_BilgePump_MTC {
     public static final String mtc_Bilge_Pump_WarningsText_xpath="//*[@text='Warnings']";
     public static final String mtc_Bilge_Pump_Warnings_toggle_xpath="(//*[@content-desc='alertsSwitch'])[2]";
     public static final String mtc_Bilge_Pump_Warnings_Status_Text_xpath="(//*[@text='OFF'])[1]";
+    public static final String mtc_Bilge_Pump_Alerts_Warnings_Apply_xpath="//*[@text='Apply']";
     public static final String mtc_Bilge_Pump_Alerts_Max_Cycle_Hour_xpath="(//*[@text='Max Cycle/Hour'])[1]";
+    public static final String mtc_Bilge_Pump_Alerts_Max_Cycle_Hour_First_Value_Xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Bilge_Pump_Alerts_Max_Cycle_Hour_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Bilge_Pump_Alerts_Max_Cycle_Hour_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Bilge_Pump_Alerts_Max_Cycle_Hour_Updated_Value_xpath="(//*[@text='Max Cycle/Hour']//following::android.widget.TextView)[1]\n";
     public static final String mtc_Bilge_Pump_Alerts_Max_Daily_Cycle_xpath="(//*[@text='Max Daily Cycle'])[1]";
+    public static final String mtc_Bilge_Pump_Alerts_Max_Daily_Cycle_First_Value_Xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Bilge_Pump_Alerts_Max_Daily_Cycle_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Bilge_Pump_Alerts_Max_Daily_Cycle_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Bilge_Pump_Alerts_Max_Daily_Cycle_Updated_Value_xpath="(//*[@text='Max Daily Cycle']//following::android.widget.TextView)[1]";
     public static final String mtc_Bilge_Pump_Alerts_Continuous_xpath="(//*[@text='Continuous'])[1]";
+    public static final String mtc_Bilge_Pump_Alerts_Continuous_First_Value_Xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Bilge_Pump_Alerts_Continuous_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Bilge_Pump_Alerts_Continuous_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Bilge_Pump_Alerts_Continuous_Updated_Value_xpath="(//*[@text='Continuous']//following::android.widget.TextView)[1]";
     public static final String mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_xpath="(//*[@text='Max Cycle/Hour'])[2]";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_First_Value_Xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_Updated_Value_xpath="((//*[@text='Max Cycle/Hour'])[2]//following::android.widget.TextView)[1]";
     public static final String mtc_Bilge_Pump_Warnings_Max_Daily_Cycle_xpath="(//*[@text='Max Daily Cycle'])[2]";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Daily_Cycle_First_Value_Xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Daily_Cycle_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Daily_Cycle_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Daily_Cycle_Updated_Value_xpath="((//*[@text='Max Daily Cycle'])[2]//following::android.widget.TextView)[1]";
     public static final String mtc_Bilge_Pump_Warnings_Continuous_xpath="(//*[@text='Continuous'])[2]";
+    public static final String mtc_Bilge_Pump_Warnings_Continuous_First_Value_Xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Bilge_Pump_Warnings_Continuous_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Bilge_Pump_Warnings_Continuous_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Bilge_Pump_Warnings_Continuous_Updated_Value_xpath="((//*[@text='Continuous'])[2]//following::android.widget.TextView)[1]";
 
     //---------------------------Data----------------------------//
     public static final String mtc_Bilge_Pump="BILGE PUMP";

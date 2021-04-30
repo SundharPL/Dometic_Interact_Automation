@@ -13,6 +13,8 @@ public class Constant_Batteries_MTC {
     public static final String mtc_Climate_Tile_Power_text_Access_ID="com.dometicapp:id/climate-powerText";
     public static final String mtc_Batteries_Status_Access_ID="com.dometicapp:id/powerScreen-batteryCarousel-batteryStatus";
     public static final String mtc_Batteries_Alerts_Battery_Voltage_BelowText_Apply_Access_ID="com.dometicapp:id/waterHeater-applyText";
+    public static final String mtc_Batteries_title_template_ID="android:id/title_template";
+    public static final String mtc_Batteries_button1_ID="android:id/button1";
 
     // ---------------------NeededAccesibility_Id-----------------------//
     public static final String mtc_Climate_Tile_AllClimateText_Access_ID="";
@@ -49,6 +51,24 @@ public class Constant_Batteries_MTC {
     public static final String mtc_Batteries_Warnings_Battery_Voltage_BelowText_xpath="(//*[@text='Battery Voltage Below'])[2]";
     public static final String mtc_Batteries_Warnings_Battery_Voltage_BelowText_Apply_xpath="//*[@text='Apply']";
     public static final String mtc_Batteries_Warnings_Set_LatencyText_xpath="(//*[@text='Set Latency'])[2]";
+    public static final String mtc_Batteries_Alerts_Battery_Voltage_Below_FirstValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Batteries_Alerts_Battery_Voltage_Below_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Batteries_Alerts_Battery_Voltage_Below_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Batteries_Alerts_Updated_Value_xpath="(//*[@text='Battery Voltage Below']//following::android.widget.TextView)[1]";
+    public static final String mtc_Batteries_Alerts_Set_Latency_FirstValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Batteries_Alerts_Set_Latency_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Batteries_Alerts_Set_Latency_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Batteries_Alerts_Set_Latency_Updated_Value_xpath="(//*[@text='Set Latency']//following::android.widget.TextView)[1]";
+    public static final String mtc_Batteries_Warnings_Battery_Voltage_Below_FirstValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Batteries_Warnings_Battery_Voltage_Below_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Batteries_Warnings_Battery_Voltage_Below_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Batteries_Warnings_Battery_Voltage_Below_Updated_Value_xpath="((//*[@text='Battery Voltage Below'])[2]//following::android.widget.TextView)[1]";
+    public static final String mtc_Batteries_Warnings_Set_Latency_FirstValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[1]";
+    public static final String mtc_Batteries_Warnings_Set_Latency_Below_SecondValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[3]";
+    public static final String mtc_Batteries_Warnings_Set_Latency_ThirdValue_xpath="(//*[@content-desc='com.dometicapp:id/waterHeater-waterHeaterValue']//following::android.widget.TextView)[5]";
+    public static final String mtc_Batteries_Warnings_Set_Latency_Updated_Value_xpath="((//*[@text='Set Latency'])[2]//following::android.widget.TextView)[1]";
+    public static final String mtc_Batteries_title_template_xpath="//*[@resource-id='android:id/title_template']";
+    public static final String mtc_Batteries_button1_xpath="//*[@resource-id='android:id/button1']";
 
     //---------------------------Data----------------------------//
     public static final String mtc_Batteries="BATTERIES";

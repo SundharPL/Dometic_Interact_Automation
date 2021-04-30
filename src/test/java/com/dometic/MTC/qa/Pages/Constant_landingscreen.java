@@ -61,7 +61,7 @@ public class Constant_landingscreen {
     public static final String LandingPage_remainderView_iconClose_access_id="com.dometicapp:id/remainderView-iconClose";
     public static final String LandingPage_header_brandLogo_access_id="com.dometicapp:id/header-brandLogo";
     public static final String LandingPage_apply_button_access_id="com.dometicapp:id/climate-applyTemperature";
-
+    public static final String climate_apply_button_access_id="com.dometicapp:id/climate-applyText";
 
     //-------------------Needed Accessibility Id-----------------//
     public static final String LandingPage_connect_button_access_id="";
@@ -215,8 +215,12 @@ public class Constant_landingscreen {
     public static final String Landingpage_Bottomlayout_Tank_Text="Tank";
     public static final String Landingpage_Bottomlayout_Climate_Text="Climate";
     public static final String Landingpage_Bottomlayout_AGS_Text="AGS";
+    public static final String climate_temperatureArray="(//*[@content-desc='com.dometicapp:id/climate-temperatureArray']//following::android.widget.TextView)[1]";
+    public static final String climate_applied_temperature_xpath="(//*[@text='Climate']//following::android.widget.TextView)[1]";
+    public static final String climate_applied_minmimum_temperature_xpath="//*[@text='16']";
+    public static final String climate_applied_maximum_temperature_xpath="//*[@text='31']";
 
-//Version 103
+//Version 103temperatureArray
     public static final String LandingPage_Climate_power_text_access_id="com.dometicapp:id/climate-powerText";
     public static final String LandingPage_Climate_power_text="Power";
     public static final String LandingPage_Climate_fanspeed_text_xpath="(//*[@text='Fan Speed'])";
