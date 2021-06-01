@@ -2,6 +2,7 @@ package com.dometic.MTC.stepdefinition;
 
 import com.aventstack.extentreports.GherkinKeyword;
 import com.dometic.MTC.qa.Pages.Constant_Batteries_MTC;
+import com.dometic.MTC.qa.Pages.Constant_BilgePump_MTC;
 import com.dometic.MTC.qa.Pages.Constant_Tank;
 import com.dometic.MTC.qa.Pages.Constant_Tank_MTC;
 import com.dometic.MTC.qa.util.Baseclass;
@@ -339,6 +340,24 @@ public class TankMTC extends Baseclass {
             System.out.println("Text comparison is Successful");
         } else {
             System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I Tap on Tank Alert toggle if it's already in OFF state")
+    public void iTapOnTankAlertToggleIfItSAlreadyInOFFState() throws InterruptedException {
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath));
+        if (elements.size() != 0) {
+            Taponbutton(Constant_Tank_MTC.mtc_Tank_Alerts_toggle_xpath);
+            Thread.sleep(10000);
+        }
+    }
+
+    @Then("I Tap on Tank Warnings toggle if it's already in OFF state")
+    public void iTapOnTankWarningsToggleIfItSAlreadyInOFFState() throws InterruptedException {
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath));
+        if (elements.size() != 0) {
+            Taponbutton(Constant_Tank_MTC.mtc_Tank_Warnings_toggle_xpath);
+            Thread.sleep(10000);
         }
     }
 }

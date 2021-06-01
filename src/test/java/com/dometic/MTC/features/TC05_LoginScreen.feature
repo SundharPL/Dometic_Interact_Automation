@@ -53,5 +53,11 @@ Feature: Testing an Dometic LMC application
     Then I enter Valid Email in Login Page
     Then I enter Valid Password in Login Page
     Then I Tap on an Login button in Login Page
-    Then  I Wait short period for Page to Load
-    Then I verify successfully navigated to On boarding screen
+    Then I Wait short period for Page to Load
+    Then I verify successfully navigated to Dash Board screen
+    Then I verify if user has navigated to the homescreen
+    Then I verify if an empty homescreen is displayed
+    Then I Tap on hamburger menu in landing screen
+    Then I Wait short period for Page to Load
+    Then I Tap on Logout in Settings screen
+    Then I Wait short period for Page to Load

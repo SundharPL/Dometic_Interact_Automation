@@ -23,4 +23,5 @@ public class Constant_OnboardingPage {
     public static final String Onboarding_Keep_Only_this_time="//*[@text='Keep “Only this time”']";
     public static final String Onboarding_Keep_While_the_app_is_in_use="//*[@text='Keep “While the app is in use”']";
     public static final String Onboarding_thing_id_xpath="//*[@text='MTC : 246F287E3294' and @content-desc='com.dometicapp:id/scanBle-deviceName']";
+
 }

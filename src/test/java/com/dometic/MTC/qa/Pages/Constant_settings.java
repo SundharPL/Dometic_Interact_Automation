@@ -44,6 +44,18 @@ public class Constant_settings {
     public static final String Settings_Zone_Management_new_Zone_access_id="com.dometicapp:id/ZoneNumber-dialog-undefined";
     public static final String Settings_Zone_Management_ZoneNumber_dialog_saveButton_access_id="com.dometicapp:id/ZoneNumber-dialog-saveButton";
     public static final String Settings_Zone_Management_ZoneNumber_dialog_cancelButton_access_id="com.dometicapp:id/ZoneNumber-dialog-cancelButton";
+    public static final String Settings_headerBackButtonIcon_access_id="com.dometicapp:id/sidemenu-headerBackButtonIcon";
+    public static final String Settings_userProfilePhoto_access_id="com.dometicapp:id/sidemenu-userProfilePhoto";
+    public static final String Settings_userName_access_id="com.dometicapp:id/sidemenu-userName";
+    public static final String Settings_userEmail_access_id="com.dometicapp:id/sidemenu-userEmail";
+    public static final String Settings_viewEditButtonText_access_id="com.dometicapp:id/sidemenu-viewEditButtonText";
+    public static final String Settings_home_text_access_id="com.dometicapp:id/sidemenu-home-text";
+    public static final String Settings_notificationSettings_text_access_id="com.dometicapp:id/sidemenu-notificationSettings-text";
+    public static final String Settings_deviceMangagement_text_access_id="com.dometicapp:id/sidemenu-deviceMangagement-text";
+    public static final String Settings_appSettings_text_access_id="com.dometicapp:id/sidemenu-appSettings-text";
+    public static final String Settings_Logout_text_access_id="com.dometicapp:id/sidemenu-logout-text";
+    public static final String Settings_Version_16_text_access_id="com.dometicapp:id/sidemenu-versionText";
+
 
 
     //-------------------Needed Accessibility Id-----------------//
@@ -88,4 +100,14 @@ public class Constant_settings {
     public static final String Settings_Zone_Management_Zone_name_already_present_xpath="//*[@text='Zone name already present']";
     public static final String Settings_Zone_Management_ZoneNumber_dialog_saveButton_xpath="//*[@content-desc='com.dometicapp:id/ZoneNumber-dialog-saveButton']";
     public static final String Settings_Zone_Management_ZoneNumber_dialog_cancelButton_xpath="//*[@content-desc='com.dometicapp:id/ZoneNumber-dialog-cancelButton']";
+
+    // ----------------------Data-----------------------------//
+    public static final String Settings_viewEditButtonText="View/Edit Account";
+    public static final String Settings_home_text="Home";
+    public static final String Settings_notificationSettings_text="Notification Settings";
+    public static final String Settings_deviceMangagement_text="Device Management";
+    public static final String Settings_appSettings_text="App Settings";
+    public static final String Settings_Logout_text="Logout";
+    public static final String Settings_Version_16_text="Version 1.6";
+
 }
