@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="267.477558">
+<testcase classname="Testing Login page in Dometic LMC application" name="Launching the application" time="27.483968">
+<system-out><![CDATA[Given I Launch the application..............................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing Login page in Dometic LMC application" name="Verifying application Splash screen Functionality" time="40.774819">
+<system-out><![CDATA[Then I Tap on Allow button in Permission popup in Login Page................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify Welcome Text is displaying in Login Page......................passed
+Then I Verify Page title is displayed in Login Page.........................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Login Functionality with valid credentials" time="40.800883">
+<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
+Then I enter Valid Password in Login Page...................................passed
+Then I Tap on an Login button in Login Page.................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify successfully navigated to Dash Board screen...................passed
+Then I verify if user has navigated to the homescreen.......................passed
+Then I verify if an empty homescreen is displayed...........................passed
+Then I Tap on hamburger menu in landing screen..............................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Logout in Settings screen.....................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Dash Board screen functionality" time="56.583596">
+<system-out><![CDATA[Then I enter Valid Email....................................................passed
+Then I enter Valid Password.................................................passed
+Then I Tap on an Login button...............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I entered into Home Page...............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Marine Tile...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Wait until Landing screen is displayed...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Landing Screen functionality" time="41.375852">
+<system-out><![CDATA[Then I Tap on the access this location pop up...............................passed
+Then I Tap on LATER Button..................................................passed
+Then I Tap on cancel button in Upgrade Firmware.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Settings screen UI" time="22.180172">
+<system-out><![CDATA[Then I verify hamburger menu in landing screen..............................passed
+Then I Tap on hamburger menu in landing screen..............................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify settings screen back button...................................passed
+Then I verify user profile photo is displayed...............................passed
+Then I verify username is displayed.........................................passed
+Then I verify user email is displayed.......................................passed
+Then I verify View Edit Account text is displayed...........................passed
+Then I verify Home text is displayed........................................passed
+Then I verify Notification Settings text is displayed.......................passed
+Then I verify Device Management is displayed................................passed
+Then I verify App Settings is displayed.....................................passed
+Then I verify Logout is displayed...........................................passed
+Then I verify Version 1.6 is displayed......................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Settings screen App Settings screen UI" time="12.520744">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on App Settings..................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify App Settings Header text......................................passed
+Then I verify Language text in App Settings page............................passed
+Then I verify selected language is displayed................................passed
+Then I verify Temperature text in App Settings page.........................passed
+Then I verify celsiusText is displayed......................................passed
+Then I verify fahrenheitText is displayed...................................passed
+Then I verify Unit text is displayed........................................passed
+Then I verify selected unit text is displayed...............................passed
+Then I verify App version text is displayed.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Settings screen App Settings screen Functionality" time="25.757524">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Language in App Settings page.................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Units in App Settings page....................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1010,10 +1010,6 @@ public class LandingPage extends Baseclass {
                 Taponbutton(Constant_OnboardingPage.Onboardingpermission_no_upgrade_one_time_and_dont_ask_again_button_xpath);
             }
         }
-        else{
-            WebDriverWait wait = new WebDriverWait(driver, 300);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.LandingPage_L21stclimate_text_xpath)));
-        }
     }
 
     @Then("I Tap on All climate toggle if already it's OFF state")

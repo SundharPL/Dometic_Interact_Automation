@@ -219,6 +219,7 @@ public class Constant_landingscreen {
     public static final String climate_applied_temperature_xpath="(//*[@text='Climate']//following::android.widget.TextView)[1]";
     public static final String climate_applied_minmimum_temperature_xpath="//*[@text='16']";
     public static final String climate_applied_maximum_temperature_xpath="//*[@text='31']";
+    public static final String Landingpage_header_connectionType_xpath="//*[@content-desc='com.dometicapp:id/header-connectionType']";
 
 //Version 103temperatureArray
     public static final String LandingPage_Climate_power_text_access_id="com.dometicapp:id/climate-powerText";

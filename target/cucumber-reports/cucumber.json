@@ -1,0 +1,1237 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1838800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Init(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 347500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Launching the application",
+        "description": "",
+        "id": "testing-login-page-in-dometic-lmc-application;launching-the-application",
+        "after": [
+          {
+            "result": {
+              "duration": 7807800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 22435688800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I Launch the application",
+            "match": {
+              "location": "Basestepdefinition.iLaunchTheApplicationOn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5012394700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@First"
+          },
+          {
+            "name": "@sanity"
+          },
+          {
+            "name": "@Device1"
+          },
+          {
+            "name": "@Device2"
+          }
+        ]
+      }
+    ],
+    "name": "Testing Login page in Dometic LMC application",
+    "description": "",
+    "id": "testing-login-page-in-dometic-lmc-application",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC01_LaunchScreen.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 483800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verifying application Splash screen Functionality",
+        "description": "",
+        "id": "testing-login-page-in-dometic-lmc-application;verifying-application-splash-screen-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 480400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 593720900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I Tap on Allow button in Permission popup in Login Page",
+            "match": {
+              "location": "Basestepdefinition.tap_on_Allow_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5010453600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30113444300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I verify Welcome Text is displaying in Login Page",
+            "match": {
+              "location": "LoginScreen.assert_Welcome()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 49115000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I Verify Page title is displayed in Login Page",
+            "match": {
+              "location": "LoginScreen.Login_Page_Title()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5004840700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@First1"
+          },
+          {
+            "name": "@sanity1"
+          },
+          {
+            "name": "@Device1"
+          },
+          {
+            "name": "@Device2"
+          }
+        ]
+      }
+    ],
+    "name": "Testing Login page in Dometic LMC application",
+    "description": "",
+    "id": "testing-login-page-in-dometic-lmc-application",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC02_SplashScreen.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 434000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 52,
+        "name": "Verifying application Login Functionality with valid credentials",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-login-functionality-with-valid-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 410800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6581481800,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "I enter Valid Email in Login Page",
+            "match": {
+              "location": "LoginScreen.iEnterValidEmailInLoginPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6056260200,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I enter Valid Password in Login Page",
+            "match": {
+              "location": "LoginScreen.iEnterValidPasswordInLoginPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12735889400,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I Tap on an Login button in Login Page",
+            "match": {
+              "location": "LoginScreen.iTapOnAnLoginButtonInLoginPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5001773800,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 682400,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I verify successfully navigated to Dash Board screen",
+            "match": {
+              "location": "LoginScreen.iVerifySuccessfullyNavigatedToOnBoardingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 62942500,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "I verify if user has navigated to the homescreen",
+            "match": {
+              "location": "OnboardingScreen.iVerifyIfUserHasNavigatedToTheHomescreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 67058700,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I verify if an empty homescreen is displayed",
+            "match": {
+              "location": "OnboardingScreen.iVerifyIfAnEmptyHomescreenIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 116249300,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I Tap on hamburger menu in landing screen",
+            "match": {
+              "location": "Settings.iTapOnHamburgerMenuInLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5004805800,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 165181200,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "I Tap on Logout in Settings screen",
+            "match": {
+              "location": "Settings.iTapOnLogoutInSettingsScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5002744200,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Testing an Dometic LMC application",
+    "description": "",
+    "id": "testing-an-dometic-lmc-application",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC05_LoginScreen.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 459600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Init(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 294800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verifying application Dash Board screen functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-dash-board-screen-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 367200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6515030900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I enter Valid Email",
+            "match": {
+              "location": "LoginScreen.iEnterValidEmail()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5147435300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I enter Valid Password",
+            "match": {
+              "location": "LoginScreen.iEnterValidPassword()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3224335500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Tap on an Login button",
+            "match": {
+              "location": "LoginScreen.iTapOnAnLoginButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5013659900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 201683700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I entered into Home Page",
+            "match": {
+              "location": "OnboardingScreen.iEnteredIntoHomePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5009806300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26280722400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I Tap on Marine Tile",
+            "match": {
+              "location": "OnboardingScreen.iTapOnMarineTile()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5008639900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 176602300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I Wait until Landing screen is displayed",
+            "match": {
+              "location": "OnboardingScreen.iWaitUntilLandingScreenIsDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@First"
+          },
+          {
+            "name": "@sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Testing an Dometic LMC application",
+    "description": "",
+    "id": "testing-an-dometic-lmc-application",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC06_DashboardScreen.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 429400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Init(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 399500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verifying application Landing Screen functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-landing-screen-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 662200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10430439700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I Tap on the access this location pop up",
+            "match": {
+              "location": "LandingPage.iTapOnTheAccessThisLocationPopUp()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10050476900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I Tap on LATER Button",
+            "match": {
+              "location": "LandingPage.iTapOnLATERButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20888439700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I Tap on cancel button in Upgrade Firmware",
+            "match": {
+              "location": "LandingPage.iTapOnCancelButtonInUpgradeFirmware()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@First"
+          },
+          {
+            "name": "@sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Testing an Dometic LMC application",
+    "description": "",
+    "id": "testing-an-dometic-lmc-application",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC07_LandingScreen.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 604900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Init(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 478100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verifying application Settings screen UI",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-settings-screen-ui",
+        "after": [
+          {
+            "result": {
+              "duration": 1115600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10702307300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I verify hamburger menu in landing screen",
+            "match": {
+              "location": "Settings.iVerifyHamburgerMenuInLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 172797800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I Tap on hamburger menu in landing screen",
+            "match": {
+              "location": "Settings.iTapOnHamburgerMenuInLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5003282900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 70363400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I verify settings screen back button",
+            "match": {
+              "location": "Settings.iVerifySettingsScreenBackButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 138383000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I verify user profile photo is displayed",
+            "match": {
+              "location": "Settings.iVerifyUserProfilePhotoIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 80193700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I verify username is displayed",
+            "match": {
+              "location": "Settings.iVerifyUsernameIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 72634500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I verify user email is displayed",
+            "match": {
+              "location": "Settings.iVerifyUserEmailIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 147161700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I verify View Edit Account text is displayed",
+            "match": {
+              "location": "Settings.iVerifyViewEditAccountTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 102660700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I verify Home text is displayed",
+            "match": {
+              "location": "Settings.iVerifyHomeTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 177815800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I verify Notification Settings text is displayed",
+            "match": {
+              "location": "Settings.iVerifyNotificationSettingsTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 98904200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I verify Device Management is displayed",
+            "match": {
+              "location": "Settings.iVerifyDeviceManagementIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 95440600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I verify App Settings is displayed",
+            "match": {
+              "location": "Settings.iVerifyAppSettingsIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 181025200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I verify Logout is displayed",
+            "match": {
+              "location": "Settings.iVerifyLogoutIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 117162300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I verify Version 1.6 is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1.6",
+                  "offset": 17
+                }
+              ],
+              "location": "Settings.iVerifyVersionIsDisplayed(double)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5003197500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@First"
+          },
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 568000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 223,
+        "name": "Verifying application Settings screen App Settings screen UI",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-settings-screen-app-settings-screen-ui",
+        "after": [
+          {
+            "result": {
+              "duration": 565200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5012235000,
+              "status": "passed"
+            },
+            "line": 225,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 143467500,
+              "status": "passed"
+            },
+            "line": 226,
+            "name": "I Tap on App Settings",
+            "match": {
+              "location": "Settings.iTapOnAppSettings()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5011016600,
+              "status": "passed"
+            },
+            "line": 227,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 607813900,
+              "status": "passed"
+            },
+            "line": 228,
+            "name": "I verify App Settings Header text",
+            "match": {
+              "location": "Settings.iVerifyAppSettingsHeaderText()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 170014400,
+              "status": "passed"
+            },
+            "line": 229,
+            "name": "I verify Language text in App Settings page",
+            "match": {
+              "location": "Settings.iVerifyLanguageTextInAppSettingsPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 245018500,
+              "status": "passed"
+            },
+            "line": 230,
+            "name": "I verify selected language is displayed",
+            "match": {
+              "location": "Settings.iVerifySelectedLanguageIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 266609600,
+              "status": "passed"
+            },
+            "line": 231,
+            "name": "I verify Temperature text in App Settings page",
+            "match": {
+              "location": "Settings.iVerifyTemperatureTextInAppSettingsPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 309672100,
+              "status": "passed"
+            },
+            "line": 232,
+            "name": "I verify celsiusText is displayed",
+            "match": {
+              "location": "Settings.iVerifyCelsiusTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 271864700,
+              "status": "passed"
+            },
+            "line": 233,
+            "name": "I verify fahrenheitText is displayed",
+            "match": {
+              "location": "Settings.iVerifyFahrenheitTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 246384000,
+              "status": "passed"
+            },
+            "line": 234,
+            "name": "I verify Unit text is displayed",
+            "match": {
+              "location": "Settings.iVerifyUnitTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 133867600,
+              "status": "passed"
+            },
+            "line": 235,
+            "name": "I verify selected unit text is displayed",
+            "match": {
+              "location": "Settings.iVerifySelectedUnitTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 95922500,
+              "status": "passed"
+            },
+            "line": 236,
+            "name": "I verify App version text is displayed",
+            "match": {
+              "location": "Settings.iVerifyAppVersionTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 553400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 239,
+        "name": "Verifying application Settings screen App Settings screen Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-settings-screen-app-settings-screen-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 634800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5006775700,
+              "status": "passed"
+            },
+            "line": 240,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 188615500,
+              "status": "passed"
+            },
+            "line": 241,
+            "name": "I Tap on Language in App Settings page",
+            "match": {
+              "location": "Settings.iTapOnLanguageInAppSettingsPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5011592300,
+              "status": "passed"
+            },
+            "line": 242,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 119838400,
+              "status": "passed"
+            },
+            "line": 243,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5007143700,
+              "status": "passed"
+            },
+            "line": 244,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 194855500,
+              "status": "passed"
+            },
+            "line": 245,
+            "name": "I Tap on Units in App Settings page",
+            "match": {
+              "location": "Settings.iTapOnUnitsInAppSettingsPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5001779100,
+              "status": "passed"
+            },
+            "line": 246,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 110769100,
+              "status": "passed"
+            },
+            "line": 247,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5013401100,
+              "status": "passed"
+            },
+            "line": 248,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 95554500,
+              "status": "passed"
+            },
+            "line": 249,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Testing an Dometic LMC application",
+    "description": "",
+    "id": "testing-an-dometic-lmc-application",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature",
+    "tags": []
+  }
+]

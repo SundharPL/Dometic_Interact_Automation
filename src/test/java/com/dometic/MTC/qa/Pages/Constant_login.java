@@ -7,8 +7,10 @@ public class Constant_login extends Baseclass {
         public static final String Login_pagetitle = "com.dometicapp:id/login-welcomeText";
         public static final String Login_Email = "com.dometicapp:id/login-emailTextfield";
         public static final String Login_Password = "com.dometicapp:id/login-securePwdfield";
-        public static final String ValidUser = "ramesht40@yopmail.com";
+        public static final String ValidUser = "ramesht38@yopmail.com";
         public static final String Validpassword = "Dom@1234";
+        public static final String new_user_email = "testdometic@yopmail.com";
+        public static final String new_user_password = "Dom@1234";
         public static final String invaliduser1 = "dsasdddfd@gmail.com";
         public static final String loginbutton = "com.dometicapp:id/login-loginButton";
         public static final String ForgotPassword = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView";

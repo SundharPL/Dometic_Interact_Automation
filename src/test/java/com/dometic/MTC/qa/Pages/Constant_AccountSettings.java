@@ -1,0 +1,111 @@
+package com.dometic.MTC.qa.Pages;
+
+public class Constant_AccountSettings {
+    // --------------Accessibility_id-------------------//
+    public static final String accountSettings_Profile_Text_Access_Id="com.dometicapp:id/userSettings-profile-cardTitle";
+    public static final String profile_Header_Text_Access_Id="com.dometicapp:id/header-TitleText";
+    public static final String profile_UserProfile_photo_Access_Id="com.dometicapp:id/userProfile-photo";
+    public static final String profile_PersonalInfoText_Access_Id="com.dometicapp:id/userProfile-personalInfoText";
+    public static final String profile_NameLabel_Access_Id="com.dometicapp:id/userProfile-nameLabel";
+    public static final String profile_NameValue_Access_Id="com.dometicapp:id/userProfile-nameValue";
+    public static final String profile_emailLabel_Access_Id="com.dometicapp:id/userProfile-emailLabel";
+    public static final String profile_emailValue_Access_Id="com.dometicapp:id/userProfile-emailValue";
+    public static final String profile_phoneLabel_Access_Id="com.dometicapp:id/userProfile-phoneLabel";
+    public static final String profile_phoneValue_Access_Id="com.dometicapp:id/userProfile-phoneValue";
+    public static final String profile_addressLabel_Access_Id="com.dometicapp:id/userProfile-addressLabel";
+    public static final String profile_addressValue_Access_Id="com.dometicapp:id/userProfile-addressValue";
+    public static final String profile_EditProfileButton_cardTitle_Access_Id="com.dometicapp:id/userProfile-EditProfileButton-cardTitle";
+    public static final String profile_EditProfileButton_cardIcon_Access_Id="com.dometicapp:id/userProfile-EditProfileButton-cardIcon";
+    public static final String profile_securityText_Access_Id="com.dometicapp:id/userProfile-securityText";
+    public static final String profile_resetPasswordText_Access_Id="com.dometicapp:id/userProfile-resetPasswordText";
+    public static final String profile_renew_cardTitle_Access_Id="com.dometicapp:id/userProfile-renew-cardTitle";
+    public static final String profile_renew_cardIcon_Access_Id="com.dometicapp:id/userProfile-renew-cardIcon";
+    public static final String editProfile_TitleText_Access_Id="com.dometicapp:id/header-TitleText";
+    public static final String editProfile_Photo_Access_Id="com.dometicapp:id/editProfile-photo";
+    public static final String editProfile_EmailValue_Access_Id="com.dometicapp:id/editProfile-emailValue";
+    public static final String editProfile_firstNameLabel_Access_Id="com.dometicapp:id/editProfile-firstNameLabel";
+    public static final String editProfile_firstNNameValue_Access_Id="com.dometicapp:id/editProfile-firstNNameValue";
+    public static final String editProfile_lastameLabel_Access_Id="com.dometicapp:id/editProfile-lastameLabel";
+    public static final String editProfile_lastNameValue_Access_Id="com.dometicapp:id/editProfile-lastNameValue";
+    public static final String editProfile_phoneLabel_Access_Id="com.dometicapp:id/editProfile-phoneLabel";
+    public static final String editProfile_phoneValue_Access_Id="com.dometicapp:id/editProfile-phoneValue";
+    public static final String editProfile_addressLabel_Access_Id="com.dometicapp:id/editProfile-addressLabel";
+    public static final String editProfile_addressValue_Access_Id="com.dometicapp:id/editProfile-addressValue";
+    public static final String editProfile_saveButton_Access_Id="com.dometicapp:id/editProfile-saveButton";
+    public static final String appSettings_Header_Text_Access_Id="com.dometicapp:id/header-TitleText";
+    public static final String appSettings_languageText_Access_Id="com.dometicapp:id/setting-languageText";
+    public static final String appSettings_selectedLanguage_Access_Id="com.dometicapp:id/setting-selectedLanguage";
+    public static final String appSettings_temperatureContainer_Access_Id="com.dometicapp:id/setting-temperatureContainer";
+    public static final String appSettings_celsiusText_Access_Id="com.dometicapp:id/setting-celsiusText";
+    public static final String appSettings_fahrenheitText_Access_Id="com.dometicapp:id/setting-fahrenheitText";
+    public static final String appSettings_unitText_Access_Id="com.dometicapp:id/setting-unitText";
+    public static final String appSettings_selectedUnit_Access_Id="com.dometicapp:id/setting-selectedUnit";
+    public static final String appSettings_versionText_Access_Id="com.dometicapp:id/setting-versionText";
+
+    //------------------New Access id------------------------------//
+    public static final String profile_LandingPage_edit_button_Access_Id = "com.dometicapp:id/sidemenu-viewEditButtonText";
+    public static final String profile_AccountSetting_Header_Access_Id = "com.dometicapp:id/header-TitleText";
+    public static final String profile_AccountSettings_Setting_text_Access_Id = "";
+    public static final String profile_accountSetting_profile_text_Access_Id = "com.dometicapp:id/userSettings-profile-cardTitle";
+    public static final String profile_AccountSetting_subscription_Access_Id = "com.dometicapp:id/userSettings-subscriptions-cardTitle";
+    public static final String profile_AccountSettings_mail_id_Access_Id = "com.dometicapp:id/userSettings-userEmail";
+    public static final String profile_AccountSettings_userNAme_Access_Id = "com.dometicapp:id/userSettings-userName";
+    public static final String profile_AccountSettings_photo_Access_Id = "com.dometicapp:id/userSettings-profilePhoto";
+    public static final String Settings_DeviceManagement_header_accessid = "com.dometicapp:id/header-TitleText";
+    public static final String Settings_DeviceManage_AddNew_Button_accessid = "com.dometicapp:id/DeviceManagement-addNewButtonText";
+    public static final String Settings_DeviceManage_MarineDevice_logo_accessid = "com.dometicapp:id/DeviceManagement-smallLogo";
+    public static final String Settings_DeviceManagement_righticon_Access_Id = "com.dometicapp:id/DeviceManagement-rightIcon";
+    public static final String Settings_Onboarding_close_button_Access_Id = "com.dometicapp:id/onBoarding-closeImage";
+    public static final String Settings_Onboarding_HeaderText_Access_Id = "com.dometicapp:id/header-TitleText";
+    public static final String Settings_Onboarding_Nodevicefound_text_accessid = "com.dometicapp:id/onBoarding-noDeviceTitle";
+    public static final String Settings_Onboarding_attention_image_accessid = "com.dometicapp:id/onBoarding-attentionImage";
+    public static final String Settings_Onboarding_BluetoothPairing_message_access_id = "com.dometicapp:id/onBoarding-bleMsgText";
+    public static final String Settings_Onboarding_SearchAgain_accessid = "com.dometicapp:id/onBoarding-searchAgainButtonText";
+    public static final String Settings_Onboarding_close_button = "com.dometicapp:id/onBoarding-closeImage";
+    public static final String Subscription_title_accessid = "com.dometicapp:id/header-TitleText";
+    public static final String Subscription_backbutton_accessid =  "com.dometicapp:id/tiles-backImage";
+    // ----------------------xpath----------------------//
+
+
+    // ----------------------Data----------------------//
+    public static final String profile_AccountSetting_Header = "ACCOUNT SETTINGS";
+    public static final String profile_AccountSettings_Setting_tex = "";
+    public static final String profile_accountSetting_profile_text = "Profile";
+    public static final String profile_AccountSetting_subscription = "Subscriptions";
+    public static final String Settings_DeviceManagement_header = "DEVICE MANAGEMENT";
+    public static final String Settings_DeviceManage_AddNew_Button = "Add new";
+    public static final String Settings_Onboarding_HeaderText = "ONBOARDING";
+    public static final String Subscription_title = "SUBSCRIPTIONS";
+    public static final String profile_Header_Text="PROFILE";
+    public static final String profile_PersonalInfoText="PERSONAL INFORMATION";
+    public static final String profile_NameLabel="Name";
+    public static final String profile_emailLabel="E-mail";
+    public static final String profile_phoneLabel="Mobile";
+    public static final String profile_addressLabel="Address";
+    public static final String profile_EditProfileButton_cardTitle="Edit Profile";
+    public static final String profile_securityText="SECURITY";
+    public static final String profile_resetPasswordText="Password";
+    public static final String profile_renew_cardTitle="Renew";
+    public static final String editProfile_TitleText="EDIT PROFILE";
+    public static final String editProfile_firstNameLabel="First name";
+    public static final String editProfile_lastameLabel="Last name";
+    public static final String editProfile_phoneLabel="Primary mobile";
+    public static final String editProfile_addressLabel="Address";
+    public static final String editProfile_firstNameValue="RAMESH";
+    public static final String editProfile_lastameValue="BABU";
+    public static final String editProfile_firstNameValue_SpecialCharacter="!@#$%^&*()_+";
+    public static final String editProfile_lastameValue_SpecialCharacter="+_)(*&^%$#@!";
+    public static final String grinning_face_with_smiling_eyes = new String(Character.toChars(0x1F601));
+    public static final String face_with_tears_of_joy = new String(Character.toChars(0x1F602));
+    public static final String smiling_face_with_open_mouth_and_cold_sweat = new String(Character.toChars(0x1F605));
+    public static final String smiling_face_with_open_mouth_and_tightly_closed_eyes = new String(Character.toChars(0x1F606));
+    public static final String winking_face = new String(Character.toChars(0x1F609));
+    public static final String editProfile_phoneValue="+919003034122";
+    public static final String editProfile_addressValue="CHENNAI";
+    public static final String editProfile_addressValue_SpecialCharacter="!@#$%^&*()_+";
+    public static final String appSettings_Header_Text="APP SETTINGS";
+    public static final String appSettings_languageText="Language";
+    public static final String appSettings_temperatureContainer="Temperature";
+    public static final String appSettings_unitText="Units";
+    public static final String appSettings_versionText="App version";
+}

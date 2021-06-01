@@ -1,0 +1,45 @@
+Feature: Testing an Dometic LMC application
+
+  @First @sanity
+  Scenario: Verifying application Tracking(Gio Fencing) screen UI
+    Then I Wait short period for Page to Load
+    Then I Tap on Tracking tile
+    Then I Wait short period for Page to Load
+    Then I Verify Tracking Header title
+    Then I Verify Boat Location text is displayed
+    Then I Verify Latitude text is displayed
+    Then I Verify Longitude text is displayed
+    Then I Verify Geo Fencing text is displayed
+    Then I Verify Geo Fencing-toggle status is displayed
+    Then I Verify Geo Fencing-toggle is displayed
+    Then I Tap on Gio Fencing toggle if it's already in OFF state
+    Then I Scroll up the page
+    Then I Verify Radius from center text is displayed
+    Then I Verify Radius from center expandIcon is displayed
+    Then I Verify Alert Latency text is displayed
+    Then I Verify Alert Latency expandIcon is displayed
+    Then I Wait short period for Page to Load
+
+  @sanity
+  Scenario: Verifying application Tracking(Gio Fencing) screen Functionality
+    Then I Tap on Radius from center
+    Then I Wait short period for Page to Load
+    Then I Scroll up the page
+    Then I Scroll up the screen in Radius from center
+    Then I Verify Apply button in Radius from center
+    Then I Tap on Apply button in Radius from center
+    Then I Wait for Page to Load
+    Then I validated applied minutes is displayed in Radius from center
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I Tap on Tracking tile
+    Then I Wait short period for Page to Load
+    Then I Tap On Alert Latency
+    Then I Wait short period for Page to Load
+    Then I Scroll up the page
+    Then I Scroll up the screen in Alert Latency
+    Then I Verify Apply button in Alert Latency
+    Then I Tap on Apply button in Alert Latency
+    Then I Wait for Page to Load
+    Then I validated applied minutes is displayed in Alert Latency
+    Then I Tap on Back Button

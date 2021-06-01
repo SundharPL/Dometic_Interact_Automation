@@ -6,6 +6,7 @@ import com.dometic.MTC.qa.Pages.Constant_BilgePump_MTC;
 import com.dometic.MTC.qa.util.Baseclass;
 import cucumber.api.java.en.Then;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
@@ -30,7 +31,10 @@ public class BilgePump extends Baseclass {
 
     @Then("I verify Bilge Pump status")
     public void iVerifyBilgePumpStatus() {
-        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_status_Access_ID));
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_status_Access_ID);
+        if(elementsByAccessibilityId.size()!=0){
+            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_status_Access_ID));
+        }
     }
 
     @Then("I verify Run Cycles text")
@@ -128,7 +132,7 @@ public class BilgePump extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Cycle Hour");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(500, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(500, 1350)).release().perform();
+                .moveTo(PointOption.point(500, 1325)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -164,7 +168,7 @@ public class BilgePump extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Daily Cycle");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1500)).release().perform();
+                .moveTo(PointOption.point(530, 1475)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -200,7 +204,7 @@ public class BilgePump extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Daily Cycle");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(530, 1750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1650)).release().perform();
+                .moveTo(PointOption.point(530, 1625)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -336,6 +340,24 @@ public class BilgePump extends Baseclass {
             System.out.println("Text comparison is Successful");
         } else {
             System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I Tap on Bilge Pump Alert toggle if it's already in OFF state")
+    public void iTapOnBilgePumpAlertToggleIfItSAlreadyInOFFState() throws InterruptedException {
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath));
+        if (elements.size() != 0) {
+            Taponbutton(Constant_BilgePump_MTC.mtc_Bilge_Pump_Alerts_toggle_xpath);
+            Thread.sleep(10000);
+        }
+    }
+
+    @Then("I Tap on Bilge Pump Warnings toggle if it's already in OFF state")
+    public void iTapOnBilgePumpWarningsToggleIfItSAlreadyInOFFState() throws InterruptedException {
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath));
+        if (elements.size() != 0) {
+            Taponbutton(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_toggle_xpath);
+            Thread.sleep(10000);
         }
     }
 }
