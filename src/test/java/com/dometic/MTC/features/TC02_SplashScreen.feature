@@ -1,6 +1,6 @@
 Feature: Testing Login page in Dometic LMC application
 
-  @First1 @sanity1 @Device1 @Device2
+  @First @sanity
   Scenario: Verifying application Splash screen Functionality
     Then I Tap on Allow button in Permission popup in Login Page
     Then I Wait short period for Page to Load

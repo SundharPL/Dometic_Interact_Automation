@@ -218,7 +218,6 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Marine Tile
 
-
   @sanity
   Scenario: Verifying application Settings screen App Settings screen UI
     Then I Tap on hamburger menu in landing screen
