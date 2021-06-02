@@ -14,12 +14,6 @@ formatter.scenario({
     },
     {
       "name": "@sanity"
-    },
-    {
-      "name": "@Device1"
-    },
-    {
-      "name": "@Device2"
     }
   ]
 });
@@ -64,18 +58,15 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@First1"
+      "name": "@First"
     },
     {
-      "name": "@sanity1"
-    },
-    {
-      "name": "@Device1"
-    },
-    {
-      "name": "@Device2"
+      "name": "@sanity"
     }
   ]
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -116,138 +107,6 @@ formatter.step({
 });
 formatter.match({
   "location": "LoginScreen.Login_Page_Title()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.uri("src/test/java/com/dometic/MTC/features/TC05_LoginScreen.feature");
-formatter.feature({
-  "name": "Testing an Dometic LMC application",
-  "description": "",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "name": "Verifying application Login Functionality with valid credentials",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@sanity"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I enter Valid Email in Login Page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginScreen.iEnterValidEmailInLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I enter Valid Password in Login Page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginScreen.iEnterValidPasswordInLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on an Login button in Login Page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginScreen.iTapOnAnLoginButtonInLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify successfully navigated to Dash Board screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginScreen.iVerifySuccessfullyNavigatedToOnBoardingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify if user has navigated to the homescreen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OnboardingScreen.iVerifyIfUserHasNavigatedToTheHomescreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify if an empty homescreen is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OnboardingScreen.iVerifyIfAnEmptyHomescreenIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on hamburger menu in landing screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnHamburgerMenuInLandingScreen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Wait short period for Page to Load",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I Tap on Logout in Settings screen",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iTapOnLogoutInSettingsScreen()"
 });
 formatter.result({
   "status": "passed"
@@ -441,14 +300,14 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature");
+formatter.uri("src/test/java/com/dometic/MTC/features/TC19_TankScreenMTC.feature");
 formatter.feature({
   "name": "Testing an Dometic LMC application",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Verifying application Settings screen UI",
+  "name": "Verifying application Tank screen UI",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -467,21 +326,81 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify hamburger menu in landing screen",
+  "name": "I Tap on Tank tile on landing screen",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyHamburgerMenuInLandingScreen()"
+  "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Tap on hamburger menu in landing screen",
+  "name": "I verify Tank header text",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iTapOnHamburgerMenuInLandingScreen()"
+  "location": "TankMTC.iVerifyTankHeaderText()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Alert text",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iVerifyAlertText()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Tank Alert toggle if it\u0027s already in OFF state",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnTankAlertToggleIfItSAlreadyInOFFState()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Alert-Tank Level Above Text",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iVerifyAlertTankLevelAboveText()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Alert-Tank Level Above",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnAlertTankLevelAbove()"
 });
 formatter.result({
   "status": "passed"
@@ -497,111 +416,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify settings screen back button",
+  "name": "I Scroll the page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifySettingsScreenBackButton()"
+  "location": "Batteries.iScrollThePage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify user profile photo is displayed",
+  "name": "I verify the apply button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyUserProfilePhotoIsDisplayed()"
+  "location": "Batteries.iVerifyTheApplyButton()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify username is displayed",
+  "name": "I Tap on Alert-Tank Level Above",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyUsernameIsDisplayed()"
+  "location": "TankMTC.iTapOnAlertTankLevelAbove()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify user email is displayed",
+  "name": "I verify Alert-Set Latency Text",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyUserEmailIsDisplayed()"
+  "location": "Batteries.iVerifyAlertSetLatencyTextText()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify View Edit Account text is displayed",
+  "name": "I Tap on Alert-Set Latency",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyViewEditAccountTextIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Home text is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyHomeTextIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Notification Settings text is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyNotificationSettingsTextIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Device Management is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyDeviceManagementIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify App Settings is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyAppSettingsIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Logout is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyLogoutIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I verify Version 1.6 is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Settings.iVerifyVersionIsDisplayed(double)"
+  "location": "Batteries.iTapOnAlertSetLatency()"
 });
 formatter.result({
   "status": "passed"
@@ -612,6 +471,166 @@ formatter.step({
 });
 formatter.match({
   "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iScrollThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Alert-Set Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iTapOnAlertSetLatency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Warning text",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iVerifyWarningText()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Tank Warnings toggle if it\u0027s already in OFF state",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnTankWarningsToggleIfItSAlreadyInOFFState()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Warnings-Tank Level Above Text",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iVerifyWarningsTankLevelAboveText()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Warnings-Tank Level Above",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnWarningsTankLevelAbove()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Warnings-Tank Level Above",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnWarningsTankLevelAbove()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Warnings-Set Latency Text",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iVerifyWarningsSetLatencyTextText()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Warnings-Set Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iTapOnWarningsSetLatency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Warnings-Set Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iTapOnWarningsSetLatency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
 });
 formatter.result({
   "status": "passed"
@@ -620,7 +639,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Verifying application Settings screen App Settings screen UI",
+  "name": "Verifying application Tank screen(Alert-Tank Level Above) Functionality",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -643,11 +662,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Tap on App Settings",
+  "name": "I Tap on Tank tile on landing screen",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iTapOnAppSettings()"
+  "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
 });
 formatter.result({
   "status": "passed"
@@ -663,91 +682,111 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify App Settings Header text",
+  "name": "I Scroll up the page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyAppSettingsHeaderText()"
+  "location": "SpanishLanguage.iScrollUpThePage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify Language text in App Settings page",
+  "name": "I Tap on Alert-Tank Level Above",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyLanguageTextInAppSettingsPage()"
+  "location": "TankMTC.iTapOnAlertTankLevelAbove()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify selected language is displayed",
+  "name": "I Wait short period for Page to Load",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifySelectedLanguageIsDisplayed()"
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify Temperature text in App Settings page",
+  "name": "I scroll up the screen in Alert-Tank Level Above",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyTemperatureTextInAppSettingsPage()"
+  "location": "TankMTC.iScrollUpTheScreenInAlertTankLevelAbove()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify celsiusText is displayed",
+  "name": "I Verify Apply button in Alert-Tank Level Above",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyCelsiusTextIsDisplayed()"
+  "location": "TankMTC.iVerifyApplyButtonInAlertTankLevelAbove()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify fahrenheitText is displayed",
+  "name": "I Tap on Apply button in Alert-Tank Level Above",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyFahrenheitTextIsDisplayed()"
+  "location": "TankMTC.iTapOnApplyButtonInAlertTankLevelAbove()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify Unit text is displayed",
+  "name": "I Tap on Ok button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyUnitTextIsDisplayed()"
+  "location": "Batteries.iTapOnOkButton()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify selected unit text is displayed",
+  "name": "I Wait for Page to Load",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifySelectedUnitTextIsDisplayed()"
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I verify App version text is displayed",
+  "name": "I Validate Applied percentage in Tank Level Above is displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iVerifyAppVersionTextIsDisplayed()"
+  "location": "TankMTC.iValidateAppliedPercentageInTankLevelAboveIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
 });
 formatter.result({
   "status": "passed"
@@ -756,7 +795,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Verifying application Settings screen App Settings screen Functionality",
+  "name": "Verifying application Tank screen(Alert-Set Latency) Functionality",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -779,11 +818,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Tap on Language in App Settings page",
+  "name": "I Tap on Tank tile on landing screen",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iTapOnLanguageInAppSettingsPage()"
+  "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
 });
 formatter.result({
   "status": "passed"
@@ -794,6 +833,1714 @@ formatter.step({
 });
 formatter.match({
   "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Alert-Set Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iTapOnAlertSetLatency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I scroll up the screen in Alert-Set Latency(Tank screen)",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iScrollUpTheScreenInAlertSetLatencyTankScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Apply button in Alert-Set Latency(Tank screen)",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iVerifyApplyButtonInAlertSetLatencyTankScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Alert-Set Latency(Tank screen)",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnApplyButtonInAlertSetLatencyTankScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Ok button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iTapOnOkButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Validate Applied minutes in Alert-Set Latency(Tank screen) is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iValidateAppliedMinutesInAlertSetLatencyTankScreenIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verifying application Tank screen(Warnings-Tank Level Above) Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Tank tile on landing screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Warnings-Tank Level Above",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnWarningsTankLevelAbove()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I scroll up the screen in Warnings-Tank Level Above",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iScrollUpTheScreenInWarningsTankLevelAbove()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Apply button in Warnings-Tank Level Above",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iVerifyApplyButtonInWarningsTankLevelAbove()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Warnings-Tank Level Above",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnApplyButtonInWarningsTankLevelAbove()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Ok button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iTapOnOkButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Validate Applied minutes in Warnings-Tank Level Above is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iValidateAppliedMinutesInWarningsTankLevelAboveIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verifying application Tank screen(Warnings-Set Latency) Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Tank tile on landing screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Warnings-Set Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iTapOnWarningsSetLatency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I scroll up the screen in Warnings-Set Latency(Tank screen)",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iScrollUpTheScreenInWarningsSetLatencyTankScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Apply button in Warnings-Set Latency(Tank screen)",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iVerifyApplyButtonInWarningsSetLatencyTankScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Warnings-Set Latency(Tank screen)",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iTapOnApplyButtonInWarningsSetLatencyTankScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Ok button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Batteries.iTapOnOkButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Validate Applied minutes in Warnings-Set Latency(Tank screen) is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TankMTC.iValidateAppliedMinutesInWarningsSetLatencyTankScreenIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("src/test/java/com/dometic/MTC/features/TC27_SecurityScreenMTC.feature");
+formatter.feature({
+  "name": "Testing an Dometic LMC application",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Verifying application Security screen UI",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@First"
+    },
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Security Tile on landing screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Security Header text is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifySecurityHeaderTextIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Security Arm Icon is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifySecurityArmIconIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Security current status is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifySecurityCurrentStatusIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Arm button is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyArmButtonIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify Arm button label is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyArmButtonLabelIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing text is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyGeoFencingTextIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing-toggle status is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyGeoFencingToggleStatusIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing-toggle is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyGeoFencingToggleIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Gio Fencing Radius from center toggle if it\u0027s already in OFF state",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnGioFencingRadiusFromCenterToggleIfItSAlreadyInOFFState()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing Radius from center text is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyGeoFencingRadiusFromCenterTextIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing Radius from center Expand Icon is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyGeoFencingRadiusFromCenterExpandIconIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing Alert Latency text is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyGeoFencingAlertLatencyTextIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing Alert Latency Expand Icon is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyGeoFencingAlertLatencyExpandIconIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Door Window Alert toggle if it\u0027s already in OFF state",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnDoorWindowAlertToggleIfItSAlreadyInOFFState()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Door Window Alert text is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyDoorWindowAlertTextIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Door Window Alert-toggle status is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyDoorWindowAlertToggleStatusIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Door Window Alert-toggle is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyDoorWindowAlertToggleIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Door Window Alert Alert Latency text is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyDoorWindowAlertAlertLatencyTextIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Door Window Alert Alert Latency Expand Icon is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyDoorWindowAlertAlertLatencyExpandIconIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Theft Alert toggle if it\u0027s already in OFF state",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnTheftAlertToggleIfItSAlreadyInOFFState()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Theft Alert text is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyTheftAlertTextIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Theft Alert-toggle status is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyTheftAlertToggleStatusIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Theft Alert-toggle is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyTheftAlertToggleIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Theft Alert Alert Latency text is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyTheftAlertAlertLatencyTextIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Theft Alert Alert Latency Expand Icon is displayed in Security screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyTheftAlertAlertLatencyExpandIconIsDisplayedInSecurityScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verifying application Security screen(Gio Fencing-Radius From Center) Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Security Tile on landing screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Radius from center in Gio Fencing Security",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnRadiusFromCenterInGioFencingSecurity()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the screen in Radius from center in Gio Fencing",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iScrollUpTheScreenInRadiusFromCenterInGioFencing()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify apply button is displayed in Radius from center in Gio Fencing",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyApplyButtonIsDisplayedInRadiusFromCenterInGioFencing()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Radius from center in Gio Fencing",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnApplyButtonInRadiusFromCenterInGioFencing()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I validated applied minutes is displayed in Radius from center in Gio Fencing",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iValidatedAppliedMinutesIsDisplayedInRadiusFromCenterInGioFencing()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verifying application Security screen(Gio Fencing-Alert Latency) Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Security Tile on landing screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Alert Latency in Gio Fencing Security",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnAlertLatencyInGioFencingSecurity()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the screen in Alert Latency in Gio Fencing",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iScrollUpTheScreenInAlertLatencyInGioFencing()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify apply button is displayed in Alert Latency in Gio Fencing",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyApplyButtonIsDisplayedInAlertLatencyInGioFencing()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Alert Latency in Gio Fencing",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnApplyButtonInAlertLatencyInGioFencing()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I validated applied minutes is displayed in Alert Latency in Gio Fencing",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iValidatedAppliedMinutesIsDisplayedInAlertLatencyInGioFencing()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verifying application Security screen(Door/Window Alert-Alert Latency) Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Security Tile on landing screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Alert Latency in Door Window Alert Security",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnAlertLatencyInDoorWindowAlertSecurity()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the screen in Alert Latency in Door Window Alert",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iScrollUpTheScreenInAlertLatencyInDoorWindowAlert()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify apply button is displayed in Alert Latency in Door Window Alert",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyApplyButtonIsDisplayedInAlertLatencyInDoorWindowAlert()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Alert Latency in Door Window Alert",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnApplyButtonInAlertLatencyInDoorWindowAlert()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I validated applied minutes is displayed in Alert Latency in Door Window Alert",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iValidatedAppliedMinutesIsDisplayedInAlertLatencyInDoorWindowAlert()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verifying application Security screen(Theft Alert-Alert Latency) Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Security Tile on landing screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Alert Latency in Theft Alert Security",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnAlertLatencyInTheftAlertSecurity()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the screen in Alert Latency in Theft Alert",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iScrollUpTheScreenInAlertLatencyInTheftAlert()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify apply button is displayed in Alert Latency in Theft Alert",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iVerifyApplyButtonIsDisplayedInAlertLatencyInTheftAlert()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Alert Latency in Theft Alert",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iTapOnApplyButtonInAlertLatencyInTheftAlert()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I validated applied minutes is displayed in Alert Latency in Theft Alert",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Security.iValidatedAppliedMinutesIsDisplayedInAlertLatencyInTheftAlert()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Back Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LandingPage.i_Tap_on_Back_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("src/test/java/com/dometic/MTC/features/TC28_Tracking_GioFencingScreenMTC.feature");
+formatter.feature({
+  "name": "Testing an Dometic LMC application",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Verifying application Tracking(Gio Fencing) screen UI",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@First"
+    },
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Tracking tile",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iTapOnTrackingTile()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Tracking Header title",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyTrackingHeaderTitle()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Boat Location text is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyBoatLocationTextIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Latitude text is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyLatitudeTextIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Longitude text is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyLongitudeTextIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing text is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyGeoFencingTextIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing-toggle status is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyGeoFencingToggleStatusIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Geo Fencing-toggle is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyGeoFencingToggleIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Gio Fencing toggle if it\u0027s already in OFF state",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iTapOnGioFencingToggleIfItSAlreadyInOFFState()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Radius from center text is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyRadiusFromCenterTextIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Radius from center expandIcon is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyRadiusFromCenterExpandIconIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Alert Latency text is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyAlertLatencyTextIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Alert Latency expandIcon is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyAlertLatencyExpandIconIsDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verifying application Tracking(Gio Fencing) screen Functionality",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sanity"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Radius from center",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iTapOnRadiusFromCenter()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait short period for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the screen in Radius from center",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iScrollUpTheScreenInRadiusFromCenter()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Apply button in Radius from center",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyApplyButtonInRadiusFromCenter()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Radius from center",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iTapOnApplyButtonInRadiusFromCenter()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I validated applied minutes is displayed in Radius from center",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iValidatedAppliedMinutesIsDisplayedInRadiusFromCenter()"
 });
 formatter.result({
   "status": "passed"
@@ -819,11 +2566,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Tap on Units in App Settings page",
+  "name": "I Tap on Tracking tile",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Settings.iTapOnUnitsInAppSettingsPage()"
+  "location": "TrackingMTC.iTapOnTrackingTile()"
 });
 formatter.result({
   "status": "passed"
@@ -839,11 +2586,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I Tap on Back Button",
+  "name": "I Tap On Alert Latency",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LandingPage.i_Tap_on_Back_Button()"
+  "location": "TrackingMTC.iTapOnAlertLatency()"
 });
 formatter.result({
   "status": "passed"
@@ -854,6 +2601,66 @@ formatter.step({
 });
 formatter.match({
   "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SpanishLanguage.iScrollUpThePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Scroll up the screen in Alert Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iScrollUpTheScreenInAlertLatency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Verify Apply button in Alert Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iVerifyApplyButtonInAlertLatency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Tap on Apply button in Alert Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iTapOnApplyButtonInAlertLatency()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I Wait for Page to Load",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I validated applied minutes is displayed in Alert Latency",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "TrackingMTC.iValidatedAppliedMinutesIsDisplayedInAlertLatency()"
 });
 formatter.result({
   "status": "passed"

@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1838800,
+              "duration": 3089000,
               "status": "passed"
             },
             "match": {
@@ -15,7 +15,7 @@
           },
           {
             "result": {
-              "duration": 347500,
+              "duration": 452800,
               "status": "passed"
             },
             "match": {
@@ -30,7 +30,7 @@
         "after": [
           {
             "result": {
-              "duration": 7807800,
+              "duration": 2869900,
               "status": "passed"
             },
             "match": {
@@ -43,7 +43,7 @@
         "steps": [
           {
             "result": {
-              "duration": 22435688800,
+              "duration": 36949964200,
               "status": "passed"
             },
             "line": 5,
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 5012394700,
+              "duration": 5005912400,
               "status": "passed"
             },
             "line": 6,
@@ -72,12 +72,6 @@
           },
           {
             "name": "@sanity"
-          },
-          {
-            "name": "@Device1"
-          },
-          {
-            "name": "@Device2"
           }
         ]
       }
@@ -96,7 +90,16 @@
         "before": [
           {
             "result": {
-              "duration": 483800,
+              "duration": 417400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Init(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 261500,
               "status": "passed"
             },
             "match": {
@@ -111,7 +114,7 @@
         "after": [
           {
             "result": {
-              "duration": 480400,
+              "duration": 364800,
               "status": "passed"
             },
             "match": {
@@ -124,7 +127,7 @@
         "steps": [
           {
             "result": {
-              "duration": 593720900,
+              "duration": 1864666400,
               "status": "passed"
             },
             "line": 5,
@@ -136,7 +139,7 @@
           },
           {
             "result": {
-              "duration": 5010453600,
+              "duration": 5006870600,
               "status": "passed"
             },
             "line": 6,
@@ -148,7 +151,7 @@
           },
           {
             "result": {
-              "duration": 30113444300,
+              "duration": 10068642300,
               "status": "passed"
             },
             "line": 7,
@@ -160,7 +163,7 @@
           },
           {
             "result": {
-              "duration": 49115000,
+              "duration": 52659800,
               "status": "passed"
             },
             "line": 8,
@@ -172,7 +175,7 @@
           },
           {
             "result": {
-              "duration": 5004840700,
+              "duration": 5000337700,
               "status": "passed"
             },
             "line": 9,
@@ -185,16 +188,10 @@
         ],
         "tags": [
           {
-            "name": "@First1"
+            "name": "@First"
           },
           {
-            "name": "@sanity1"
-          },
-          {
-            "name": "@Device1"
-          },
-          {
-            "name": "@Device2"
+            "name": "@sanity"
           }
         ]
       }
@@ -213,187 +210,7 @@
         "before": [
           {
             "result": {
-              "duration": 434000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 52,
-        "name": "Verifying application Login Functionality with valid credentials",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-login-functionality-with-valid-credentials",
-        "after": [
-          {
-            "result": {
-              "duration": 410800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 6581481800,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "I enter Valid Email in Login Page",
-            "match": {
-              "location": "LoginScreen.iEnterValidEmailInLoginPage()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 6056260200,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "I enter Valid Password in Login Page",
-            "match": {
-              "location": "LoginScreen.iEnterValidPasswordInLoginPage()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 12735889400,
-              "status": "passed"
-            },
-            "line": 55,
-            "name": "I Tap on an Login button in Login Page",
-            "match": {
-              "location": "LoginScreen.iTapOnAnLoginButtonInLoginPage()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5001773800,
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 682400,
-              "status": "passed"
-            },
-            "line": 57,
-            "name": "I verify successfully navigated to Dash Board screen",
-            "match": {
-              "location": "LoginScreen.iVerifySuccessfullyNavigatedToOnBoardingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 62942500,
-              "status": "passed"
-            },
-            "line": 58,
-            "name": "I verify if user has navigated to the homescreen",
-            "match": {
-              "location": "OnboardingScreen.iVerifyIfUserHasNavigatedToTheHomescreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 67058700,
-              "status": "passed"
-            },
-            "line": 59,
-            "name": "I verify if an empty homescreen is displayed",
-            "match": {
-              "location": "OnboardingScreen.iVerifyIfAnEmptyHomescreenIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 116249300,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "I Tap on hamburger menu in landing screen",
-            "match": {
-              "location": "Settings.iTapOnHamburgerMenuInLandingScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5004805800,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 165181200,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "I Tap on Logout in Settings screen",
-            "match": {
-              "location": "Settings.iTapOnLogoutInSettingsScreen()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5002744200,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      }
-    ],
-    "name": "Testing an Dometic LMC application",
-    "description": "",
-    "id": "testing-an-dometic-lmc-application",
-    "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/MTC/features/TC05_LoginScreen.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 459600,
+              "duration": 419000,
               "status": "passed"
             },
             "match": {
@@ -402,7 +219,7 @@
           },
           {
             "result": {
-              "duration": 294800,
+              "duration": 251600,
               "status": "passed"
             },
             "match": {
@@ -417,7 +234,7 @@
         "after": [
           {
             "result": {
-              "duration": 367200,
+              "duration": 437300,
               "status": "passed"
             },
             "match": {
@@ -430,7 +247,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6515030900,
+              "duration": 7614655300,
               "status": "passed"
             },
             "line": 11,
@@ -442,7 +259,7 @@
           },
           {
             "result": {
-              "duration": 5147435300,
+              "duration": 5759570100,
               "status": "passed"
             },
             "line": 12,
@@ -454,7 +271,7 @@
           },
           {
             "result": {
-              "duration": 3224335500,
+              "duration": 3147384300,
               "status": "passed"
             },
             "line": 13,
@@ -466,7 +283,7 @@
           },
           {
             "result": {
-              "duration": 5013659900,
+              "duration": 5005554700,
               "status": "passed"
             },
             "line": 14,
@@ -478,7 +295,7 @@
           },
           {
             "result": {
-              "duration": 201683700,
+              "duration": 5801812400,
               "status": "passed"
             },
             "line": 15,
@@ -490,7 +307,7 @@
           },
           {
             "result": {
-              "duration": 5009806300,
+              "duration": 5006132300,
               "status": "passed"
             },
             "line": 16,
@@ -502,7 +319,7 @@
           },
           {
             "result": {
-              "duration": 26280722400,
+              "duration": 34416482200,
               "status": "passed"
             },
             "line": 17,
@@ -514,7 +331,7 @@
           },
           {
             "result": {
-              "duration": 5008639900,
+              "duration": 5005858200,
               "status": "passed"
             },
             "line": 18,
@@ -526,7 +343,7 @@
           },
           {
             "result": {
-              "duration": 176602300,
+              "duration": 367190400,
               "status": "passed"
             },
             "line": 19,
@@ -561,7 +378,7 @@
         "before": [
           {
             "result": {
-              "duration": 429400,
+              "duration": 611200,
               "status": "passed"
             },
             "match": {
@@ -570,7 +387,7 @@
           },
           {
             "result": {
-              "duration": 399500,
+              "duration": 424800,
               "status": "passed"
             },
             "match": {
@@ -585,7 +402,7 @@
         "after": [
           {
             "result": {
-              "duration": 662200,
+              "duration": 434300,
               "status": "passed"
             },
             "match": {
@@ -598,7 +415,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10430439700,
+              "duration": 10676720000,
               "status": "passed"
             },
             "line": 5,
@@ -610,7 +427,7 @@
           },
           {
             "result": {
-              "duration": 10050476900,
+              "duration": 10489587500,
               "status": "passed"
             },
             "line": 6,
@@ -622,7 +439,7 @@
           },
           {
             "result": {
-              "duration": 20888439700,
+              "duration": 21093005200,
               "status": "passed"
             },
             "line": 7,
@@ -657,7 +474,7 @@
         "before": [
           {
             "result": {
-              "duration": 604900,
+              "duration": 398900,
               "status": "passed"
             },
             "match": {
@@ -666,7 +483,7 @@
           },
           {
             "result": {
-              "duration": 478100,
+              "duration": 241200,
               "status": "passed"
             },
             "match": {
@@ -675,13 +492,13 @@
           }
         ],
         "line": 4,
-        "name": "Verifying application Settings screen UI",
+        "name": "Verifying application Tank screen UI",
         "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-settings-screen-ui",
+        "id": "testing-an-dometic-lmc-application;verifying-application-tank-screen-ui",
         "after": [
           {
             "result": {
-              "duration": 1115600,
+              "duration": 241600,
               "status": "passed"
             },
             "match": {
@@ -694,31 +511,2571 @@
         "steps": [
           {
             "result": {
-              "duration": 10702307300,
+              "duration": 287703900,
               "status": "passed"
             },
             "line": 5,
-            "name": "I verify hamburger menu in landing screen",
+            "name": "I Tap on Tank tile on landing screen",
             "match": {
-              "location": "Settings.iVerifyHamburgerMenuInLandingScreen()"
+              "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 172797800,
+              "duration": 2340437100,
               "status": "passed"
             },
             "line": 6,
-            "name": "I Tap on hamburger menu in landing screen",
+            "name": "I verify Tank header text",
             "match": {
-              "location": "Settings.iTapOnHamburgerMenuInLandingScreen()"
+              "location": "TankMTC.iVerifyTankHeaderText()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5003282900,
+              "duration": 157545200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I verify Alert text",
+            "match": {
+              "location": "TankMTC.iVerifyAlertText()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5005381000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10122510800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I Tap on Tank Alert toggle if it\u0027s already in OFF state",
+            "match": {
+              "location": "TankMTC.iTapOnTankAlertToggleIfItSAlreadyInOFFState()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3421480400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 142216600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I verify Alert-Tank Level Above Text",
+            "match": {
+              "location": "TankMTC.iVerifyAlertTankLevelAboveText()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 154699400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I Tap on Alert-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iTapOnAlertTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5005112200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3576951500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I Scroll the page",
+            "match": {
+              "location": "Batteries.iScrollThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 163910400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I verify the apply button",
+            "match": {
+              "location": "Batteries.iVerifyTheApplyButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 155190900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I Tap on Alert-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iTapOnAlertTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1014404800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I verify Alert-Set Latency Text",
+            "match": {
+              "location": "Batteries.iVerifyAlertSetLatencyTextText()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 219300500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I Tap on Alert-Set Latency",
+            "match": {
+              "location": "Batteries.iTapOnAlertSetLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5001125500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2550173500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I Scroll the page",
+            "match": {
+              "location": "Batteries.iScrollThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 247628600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I Tap on Alert-Set Latency",
+            "match": {
+              "location": "Batteries.iTapOnAlertSetLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 169662500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I verify Warning text",
+            "match": {
+              "location": "TankMTC.iVerifyWarningText()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10452165700,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I Tap on Tank Warnings toggle if it\u0027s already in OFF state",
+            "match": {
+              "location": "TankMTC.iTapOnTankWarningsToggleIfItSAlreadyInOFFState()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 127830900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I verify Warnings-Tank Level Above Text",
+            "match": {
+              "location": "TankMTC.iVerifyWarningsTankLevelAboveText()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 153324600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I Tap on Warnings-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iTapOnWarningsTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5009262500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2601453800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 139733400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I Tap on Warnings-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iTapOnWarningsTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 976536700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I verify Warnings-Set Latency Text",
+            "match": {
+              "location": "Batteries.iVerifyWarningsSetLatencyTextText()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 202187000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I Tap on Warnings-Set Latency",
+            "match": {
+              "location": "Batteries.iTapOnWarningsSetLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5005615400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2591574700,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 417127200,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I Tap on Warnings-Set Latency",
+            "match": {
+              "location": "Batteries.iTapOnWarningsSetLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5014322800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 82499800,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@First"
+          },
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 881100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "Verifying application Tank screen(Alert-Tank Level Above) Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-tank-screen(alert-tank-level-above)-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 220200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5006403300,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 124116800,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I Tap on Tank tile on landing screen",
+            "match": {
+              "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5000744500,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3848195200,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 195109600,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I Tap on Alert-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iTapOnAlertTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5014648600,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1620969800,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I scroll up the screen in Alert-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iScrollUpTheScreenInAlertTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 815951200,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I Verify Apply button in Alert-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iVerifyApplyButtonInAlertTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 210787900,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I Tap on Apply button in Alert-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iTapOnApplyButtonInAlertTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10508774800,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I Tap on Ok button",
+            "match": {
+              "location": "Batteries.iTapOnOkButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10005391500,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 133247400,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I Validate Applied percentage in Tank Level Above is displayed",
+            "match": {
+              "location": "TankMTC.iValidateAppliedPercentageInTankLevelAboveIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5003375800,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 67909200,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 273900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 55,
+        "name": "Verifying application Tank screen(Alert-Set Latency) Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-tank-screen(alert-set-latency)-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 270900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5008355400,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 139835800,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I Tap on Tank tile on landing screen",
+            "match": {
+              "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5012682900,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2616667100,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 184858800,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I Tap on Alert-Set Latency",
+            "match": {
+              "location": "Batteries.iTapOnAlertSetLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5015159700,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1467277300,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "I scroll up the screen in Alert-Set Latency(Tank screen)",
+            "match": {
+              "location": "TankMTC.iScrollUpTheScreenInAlertSetLatencyTankScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 810739200,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "I Verify Apply button in Alert-Set Latency(Tank screen)",
+            "match": {
+              "location": "TankMTC.iVerifyApplyButtonInAlertSetLatencyTankScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 172365600,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "I Tap on Apply button in Alert-Set Latency(Tank screen)",
+            "match": {
+              "location": "TankMTC.iTapOnApplyButtonInAlertSetLatencyTankScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10308732100,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "I Tap on Ok button",
+            "match": {
+              "location": "Batteries.iTapOnOkButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10012156100,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 150521600,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "I Validate Applied minutes in Alert-Set Latency(Tank screen) is displayed",
+            "match": {
+              "location": "TankMTC.iValidateAppliedMinutesInAlertSetLatencyTankScreenIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5013900300,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60950500,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 205600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 72,
+        "name": "Verifying application Tank screen(Warnings-Tank Level Above) Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-tank-screen(warnings-tank-level-above)-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 518000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5002635700,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 105689800,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "I Tap on Tank tile on landing screen",
+            "match": {
+              "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5009022300,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2250363900,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5010250300,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 122309900,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "I Tap on Warnings-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iTapOnWarningsTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5000591000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2287138300,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1397832200,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "I scroll up the screen in Warnings-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iScrollUpTheScreenInWarningsTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 631973800,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "I Verify Apply button in Warnings-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iVerifyApplyButtonInWarningsTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 118138600,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "I Tap on Apply button in Warnings-Tank Level Above",
+            "match": {
+              "location": "TankMTC.iTapOnApplyButtonInWarningsTankLevelAbove()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10079686200,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "I Tap on Ok button",
+            "match": {
+              "location": "Batteries.iTapOnOkButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10004757800,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 171013800,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "I Validate Applied minutes in Warnings-Tank Level Above is displayed",
+            "match": {
+              "location": "TankMTC.iValidateAppliedMinutesInWarningsTankLevelAboveIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5009828300,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 85769400,
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 266500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 91,
+        "name": "Verifying application Tank screen(Warnings-Set Latency) Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-tank-screen(warnings-set-latency)-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 223400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5010182700,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 113618900,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "I Tap on Tank tile on landing screen",
+            "match": {
+              "location": "TankMTC.iTapOnTankTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5006067800,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2287727300,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5002212400,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 156873900,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "I Tap on Warnings-Set Latency",
+            "match": {
+              "location": "Batteries.iTapOnWarningsSetLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5004721200,
+              "status": "passed"
+            },
+            "line": 98,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2469123100,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1505733300,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "I scroll up the screen in Warnings-Set Latency(Tank screen)",
+            "match": {
+              "location": "TankMTC.iScrollUpTheScreenInWarningsSetLatencyTankScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1390916500,
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "I Verify Apply button in Warnings-Set Latency(Tank screen)",
+            "match": {
+              "location": "TankMTC.iVerifyApplyButtonInWarningsSetLatencyTankScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 173380300,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "I Tap on Apply button in Warnings-Set Latency(Tank screen)",
+            "match": {
+              "location": "TankMTC.iTapOnApplyButtonInWarningsSetLatencyTankScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10222226100,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "I Tap on Ok button",
+            "match": {
+              "location": "Batteries.iTapOnOkButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10004339300,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 130527800,
+              "status": "passed"
+            },
+            "line": 105,
+            "name": "I Validate Applied minutes in Warnings-Set Latency(Tank screen) is displayed",
+            "match": {
+              "location": "TankMTC.iValidateAppliedMinutesInWarningsSetLatencyTankScreenIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5000483400,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56383100,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Testing an Dometic LMC application",
+    "description": "",
+    "id": "testing-an-dometic-lmc-application",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC19_TankScreenMTC.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 251600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Init(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 172800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verifying application Security screen UI",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-security-screen-ui",
+        "after": [
+          {
+            "result": {
+              "duration": 237200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5015124900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 89621800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I Tap on Security Tile on landing screen",
+            "match": {
+              "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1421999200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I verify Security Header text is displayed",
+            "match": {
+              "location": "Security.iVerifySecurityHeaderTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 34066800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I verify Security Arm Icon is displayed",
+            "match": {
+              "location": "Security.iVerifySecurityArmIconIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 29752500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I verify Security current status is displayed",
+            "match": {
+              "location": "Security.iVerifySecurityCurrentStatusIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 34252800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I verify Arm button is displayed",
+            "match": {
+              "location": "Security.iVerifyArmButtonIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 45083300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I verify Arm button label is displayed",
+            "match": {
+              "location": "Security.iVerifyArmButtonLabelIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 37899600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I Verify Geo Fencing text is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyGeoFencingTextIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 44120500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Verify Geo Fencing-toggle status is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyGeoFencingToggleStatusIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 44989100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I Verify Geo Fencing-toggle is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyGeoFencingToggleIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10140506100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I Tap on Gio Fencing Radius from center toggle if it\u0027s already in OFF state",
+            "match": {
+              "location": "Security.iTapOnGioFencingRadiusFromCenterToggleIfItSAlreadyInOFFState()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 57563700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I Verify Geo Fencing Radius from center text is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyGeoFencingRadiusFromCenterTextIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 33693700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I Verify Geo Fencing Radius from center Expand Icon is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyGeoFencingRadiusFromCenterExpandIconIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 33181300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I Verify Geo Fencing Alert Latency text is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyGeoFencingAlertLatencyTextIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 29907500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I Verify Geo Fencing Alert Latency Expand Icon is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyGeoFencingAlertLatencyExpandIconIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2303152500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5003421600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10136024300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I Tap on Door Window Alert toggle if it\u0027s already in OFF state",
+            "match": {
+              "location": "Security.iTapOnDoorWindowAlertToggleIfItSAlreadyInOFFState()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53761900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I Verify Door Window Alert text is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyDoorWindowAlertTextIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 42177300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I Verify Door Window Alert-toggle status is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyDoorWindowAlertToggleStatusIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 52651800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I Verify Door Window Alert-toggle is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyDoorWindowAlertToggleIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 40126800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I Verify Door Window Alert Alert Latency text is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyDoorWindowAlertAlertLatencyTextIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 57908100,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I Verify Door Window Alert Alert Latency Expand Icon is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyDoorWindowAlertAlertLatencyExpandIconIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2548076300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5013924000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10143864900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I Tap on Theft Alert toggle if it\u0027s already in OFF state",
+            "match": {
+              "location": "Security.iTapOnTheftAlertToggleIfItSAlreadyInOFFState()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 51586900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I Verify Theft Alert text is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyTheftAlertTextIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 46465000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I Verify Theft Alert-toggle status is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyTheftAlertToggleStatusIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 48366300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I Verify Theft Alert-toggle is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyTheftAlertToggleIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 52094700,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I Verify Theft Alert Alert Latency text is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyTheftAlertAlertLatencyTextIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 49742700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I Verify Theft Alert Alert Latency Expand Icon is displayed in Security screen",
+            "match": {
+              "location": "Security.iVerifyTheftAlertAlertLatencyExpandIconIsDisplayedInSecurityScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5001266300,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 57459700,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@First"
+          },
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 246900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "Verifying application Security screen(Gio Fencing-Radius From Center) Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-security-screen(gio-fencing-radius-from-center)-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 282100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5004461700,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 102254700,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I Tap on Security Tile on landing screen",
+            "match": {
+              "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5002461700,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2475778600,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1087544100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I Tap on Radius from center in Gio Fencing Security",
+            "match": {
+              "location": "Security.iTapOnRadiusFromCenterInGioFencingSecurity()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5001506200,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1425281400,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I Scroll up the screen in Radius from center in Gio Fencing",
+            "match": {
+              "location": "Security.iScrollUpTheScreenInRadiusFromCenterInGioFencing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1071373500,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I verify apply button is displayed in Radius from center in Gio Fencing",
+            "match": {
+              "location": "Security.iVerifyApplyButtonIsDisplayedInRadiusFromCenterInGioFencing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 213172700,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I Tap on Apply button in Radius from center in Gio Fencing",
+            "match": {
+              "location": "Security.iTapOnApplyButtonInRadiusFromCenterInGioFencing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10010190000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 78636900,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I validated applied minutes is displayed in Radius from center in Gio Fencing",
+            "match": {
+              "location": "Security.iValidatedAppliedMinutesIsDisplayedInRadiusFromCenterInGioFencing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5006585200,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53472200,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 225900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 56,
+        "name": "Verifying application Security screen(Gio Fencing-Alert Latency) Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-security-screen(gio-fencing-alert-latency)-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 172100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5013976200,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 88005700,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "I Tap on Security Tile on landing screen",
+            "match": {
+              "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5001221100,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2259589100,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1092398400,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "I Tap on Alert Latency in Gio Fencing Security",
+            "match": {
+              "location": "Security.iTapOnAlertLatencyInGioFencingSecurity()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5013543800,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1530264700,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "I Scroll up the screen in Alert Latency in Gio Fencing",
+            "match": {
+              "location": "Security.iScrollUpTheScreenInAlertLatencyInGioFencing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2599381300,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "I verify apply button is displayed in Alert Latency in Gio Fencing",
+            "match": {
+              "location": "Security.iVerifyApplyButtonIsDisplayedInAlertLatencyInGioFencing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 766369900,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "I Tap on Apply button in Alert Latency in Gio Fencing",
+            "match": {
+              "location": "Security.iTapOnApplyButtonInAlertLatencyInGioFencing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10002774700,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 76491700,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "I validated applied minutes is displayed in Alert Latency in Gio Fencing",
+            "match": {
+              "location": "Security.iValidatedAppliedMinutesIsDisplayedInAlertLatencyInGioFencing()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5002089000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 49654500,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 160100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 72,
+        "name": "Verifying application Security screen(Door/Window Alert-Alert Latency) Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-security-screen(door/window-alert-alert-latency)-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 254300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5011916700,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 89384800,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "I Tap on Security Tile on landing screen",
+            "match": {
+              "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5008398800,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1089903000,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "I Tap on Alert Latency in Door Window Alert Security",
+            "match": {
+              "location": "Security.iTapOnAlertLatencyInDoorWindowAlertSecurity()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5009143900,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2373012300,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1604612700,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "I Scroll up the screen in Alert Latency in Door Window Alert",
+            "match": {
+              "location": "Security.iScrollUpTheScreenInAlertLatencyInDoorWindowAlert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2596976100,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I verify apply button is displayed in Alert Latency in Door Window Alert",
+            "match": {
+              "location": "Security.iVerifyApplyButtonIsDisplayedInAlertLatencyInDoorWindowAlert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 680068000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "I Tap on Apply button in Alert Latency in Door Window Alert",
+            "match": {
+              "location": "Security.iTapOnApplyButtonInAlertLatencyInDoorWindowAlert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10002525900,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 76072000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "I validated applied minutes is displayed in Alert Latency in Door Window Alert",
+            "match": {
+              "location": "Security.iValidatedAppliedMinutesIsDisplayedInAlertLatencyInDoorWindowAlert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5007610600,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 64077500,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 226600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 88,
+        "name": "Verifying application Security screen(Theft Alert-Alert Latency) Functionality",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-security-screen(theft-alert-alert-latency)-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 181200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5015418800,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 99475400,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "I Tap on Security Tile on landing screen",
+            "match": {
+              "location": "Security.iTapOnSecurityTileOnLandingScreen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5000624000,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2343523800,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1088325300,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "I Tap on Alert Latency in Theft Alert Security",
+            "match": {
+              "location": "Security.iTapOnAlertLatencyInTheftAlertSecurity()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5005441100,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2356394700,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1553124500,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "I Scroll up the screen in Alert Latency in Theft Alert",
+            "match": {
+              "location": "Security.iScrollUpTheScreenInAlertLatencyInTheftAlert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2657123800,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "I verify apply button is displayed in Alert Latency in Theft Alert",
+            "match": {
+              "location": "Security.iVerifyApplyButtonIsDisplayedInAlertLatencyInTheftAlert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 591538600,
+              "status": "passed"
+            },
+            "line": 98,
+            "name": "I Tap on Apply button in Alert Latency in Theft Alert",
+            "match": {
+              "location": "Security.iTapOnApplyButtonInAlertLatencyInTheftAlert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10001311600,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 94052800,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "I validated applied minutes is displayed in Alert Latency in Theft Alert",
+            "match": {
+              "location": "Security.iValidatedAppliedMinutesIsDisplayedInAlertLatencyInTheftAlert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5003781400,
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 49560700,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "I Tap on Back Button",
+            "match": {
+              "location": "LandingPage.i_Tap_on_Back_Button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Testing an Dometic LMC application",
+    "description": "",
+    "id": "testing-an-dometic-lmc-application",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC27_SecurityScreenMTC.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 379900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Init(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 221800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.InitializeStep(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verifying application Tracking(Gio Fencing) screen UI",
+        "description": "",
+        "id": "testing-an-dometic-lmc-application;verifying-application-tracking(gio-fencing)-screen-ui",
+        "after": [
+          {
+            "result": {
+              "duration": 381600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.StatusLogScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5013419400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I Wait short period for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 126441300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I Tap on Tracking tile",
+            "match": {
+              "location": "TrackingMTC.iTapOnTrackingTile()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5008900800,
               "status": "passed"
             },
             "line": 7,
@@ -730,148 +3087,166 @@
           },
           {
             "result": {
-              "duration": 70363400,
+              "duration": 51455700,
               "status": "passed"
             },
             "line": 8,
-            "name": "I verify settings screen back button",
+            "name": "I Verify Tracking Header title",
             "match": {
-              "location": "Settings.iVerifySettingsScreenBackButton()"
+              "location": "TrackingMTC.iVerifyTrackingHeaderTitle()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 138383000,
+              "duration": 39162700,
               "status": "passed"
             },
             "line": 9,
-            "name": "I verify user profile photo is displayed",
+            "name": "I Verify Boat Location text is displayed",
             "match": {
-              "location": "Settings.iVerifyUserProfilePhotoIsDisplayed()"
+              "location": "TrackingMTC.iVerifyBoatLocationTextIsDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 80193700,
+              "duration": 33616200,
               "status": "passed"
             },
             "line": 10,
-            "name": "I verify username is displayed",
+            "name": "I Verify Latitude text is displayed",
             "match": {
-              "location": "Settings.iVerifyUsernameIsDisplayed()"
+              "location": "TrackingMTC.iVerifyLatitudeTextIsDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 72634500,
+              "duration": 30838600,
               "status": "passed"
             },
             "line": 11,
-            "name": "I verify user email is displayed",
+            "name": "I Verify Longitude text is displayed",
             "match": {
-              "location": "Settings.iVerifyUserEmailIsDisplayed()"
+              "location": "TrackingMTC.iVerifyLongitudeTextIsDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 147161700,
+              "duration": 41053300,
               "status": "passed"
             },
             "line": 12,
-            "name": "I verify View Edit Account text is displayed",
+            "name": "I Verify Geo Fencing text is displayed",
             "match": {
-              "location": "Settings.iVerifyViewEditAccountTextIsDisplayed()"
+              "location": "TrackingMTC.iVerifyGeoFencingTextIsDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 102660700,
+              "duration": 44455700,
               "status": "passed"
             },
             "line": 13,
-            "name": "I verify Home text is displayed",
+            "name": "I Verify Geo Fencing-toggle status is displayed",
             "match": {
-              "location": "Settings.iVerifyHomeTextIsDisplayed()"
+              "location": "TrackingMTC.iVerifyGeoFencingToggleStatusIsDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 177815800,
+              "duration": 52437700,
               "status": "passed"
             },
             "line": 14,
-            "name": "I verify Notification Settings text is displayed",
+            "name": "I Verify Geo Fencing-toggle is displayed",
             "match": {
-              "location": "Settings.iVerifyNotificationSettingsTextIsDisplayed()"
+              "location": "TrackingMTC.iVerifyGeoFencingToggleIsDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 98904200,
+              "duration": 53784700,
               "status": "passed"
             },
             "line": 15,
-            "name": "I verify Device Management is displayed",
+            "name": "I Tap on Gio Fencing toggle if it\u0027s already in OFF state",
             "match": {
-              "location": "Settings.iVerifyDeviceManagementIsDisplayed()"
+              "location": "TrackingMTC.iTapOnGioFencingToggleIfItSAlreadyInOFFState()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 95440600,
+              "duration": 2455645400,
               "status": "passed"
             },
             "line": 16,
-            "name": "I verify App Settings is displayed",
+            "name": "I Scroll up the page",
             "match": {
-              "location": "Settings.iVerifyAppSettingsIsDisplayed()"
+              "location": "SpanishLanguage.iScrollUpThePage()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 181025200,
+              "duration": 47340800,
               "status": "passed"
             },
             "line": 17,
-            "name": "I verify Logout is displayed",
+            "name": "I Verify Radius from center text is displayed",
             "match": {
-              "location": "Settings.iVerifyLogoutIsDisplayed()"
+              "location": "TrackingMTC.iVerifyRadiusFromCenterTextIsDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 117162300,
+              "duration": 48318800,
               "status": "passed"
             },
             "line": 18,
-            "name": "I verify Version 1.6 is displayed",
+            "name": "I Verify Radius from center expandIcon is displayed",
             "match": {
-              "arguments": [
-                {
-                  "val": "1.6",
-                  "offset": 17
-                }
-              ],
-              "location": "Settings.iVerifyVersionIsDisplayed(double)"
+              "location": "TrackingMTC.iVerifyRadiusFromCenterExpandIconIsDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5003197500,
+              "duration": 50395000,
               "status": "passed"
             },
             "line": 19,
+            "name": "I Verify Alert Latency text is displayed",
+            "match": {
+              "location": "TrackingMTC.iVerifyAlertLatencyTextIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 50948500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I Verify Alert Latency expandIcon is displayed",
+            "match": {
+              "location": "TrackingMTC.iVerifyAlertLatencyExpandIconIsDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5010540900,
+              "status": "passed"
+            },
+            "line": 21,
             "name": "I Wait short period for Page to Load",
             "match": {
               "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
@@ -892,7 +3267,7 @@
         "before": [
           {
             "result": {
-              "duration": 568000,
+              "duration": 1698100,
               "status": "passed"
             },
             "match": {
@@ -900,14 +3275,14 @@
             }
           }
         ],
-        "line": 223,
-        "name": "Verifying application Settings screen App Settings screen UI",
+        "line": 24,
+        "name": "Verifying application Tracking(Gio Fencing) screen Functionality",
         "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-settings-screen-app-settings-screen-ui",
+        "id": "testing-an-dometic-lmc-application;verifying-application-tracking(gio-fencing)-screen-functionality",
         "after": [
           {
             "result": {
-              "duration": 565200,
+              "duration": 506100,
               "status": "passed"
             },
             "match": {
@@ -920,10 +3295,22 @@
         "steps": [
           {
             "result": {
-              "duration": 5012235000,
+              "duration": 84299700,
               "status": "passed"
             },
-            "line": 225,
+            "line": 25,
+            "name": "I Tap on Radius from center",
+            "match": {
+              "location": "TrackingMTC.iTapOnRadiusFromCenter()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5003247000,
+              "status": "passed"
+            },
+            "line": 26,
             "name": "I Wait short period for Page to Load",
             "match": {
               "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
@@ -932,215 +3319,82 @@
           },
           {
             "result": {
-              "duration": 143467500,
+              "duration": 2398135600,
               "status": "passed"
             },
-            "line": 226,
-            "name": "I Tap on App Settings",
+            "line": 27,
+            "name": "I Scroll up the page",
             "match": {
-              "location": "Settings.iTapOnAppSettings()"
+              "location": "SpanishLanguage.iScrollUpThePage()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5011016600,
+              "duration": 1367697900,
               "status": "passed"
             },
-            "line": 227,
-            "name": "I Wait short period for Page to Load",
+            "line": 28,
+            "name": "I Scroll up the screen in Radius from center",
             "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
+              "location": "TrackingMTC.iScrollUpTheScreenInRadiusFromCenter()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 607813900,
+              "duration": 1065285600,
               "status": "passed"
             },
-            "line": 228,
-            "name": "I verify App Settings Header text",
+            "line": 29,
+            "name": "I Verify Apply button in Radius from center",
             "match": {
-              "location": "Settings.iVerifyAppSettingsHeaderText()"
+              "location": "TrackingMTC.iVerifyApplyButtonInRadiusFromCenter()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 170014400,
+              "duration": 201415700,
               "status": "passed"
             },
-            "line": 229,
-            "name": "I verify Language text in App Settings page",
+            "line": 30,
+            "name": "I Tap on Apply button in Radius from center",
             "match": {
-              "location": "Settings.iVerifyLanguageTextInAppSettingsPage()"
+              "location": "TrackingMTC.iTapOnApplyButtonInRadiusFromCenter()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 245018500,
+              "duration": 10012047500,
               "status": "passed"
             },
-            "line": 230,
-            "name": "I verify selected language is displayed",
+            "line": 31,
+            "name": "I Wait for Page to Load",
             "match": {
-              "location": "Settings.iVerifySelectedLanguageIsDisplayed()"
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 266609600,
+              "duration": 95211100,
               "status": "passed"
             },
-            "line": 231,
-            "name": "I verify Temperature text in App Settings page",
+            "line": 32,
+            "name": "I validated applied minutes is displayed in Radius from center",
             "match": {
-              "location": "Settings.iVerifyTemperatureTextInAppSettingsPage()"
+              "location": "TrackingMTC.iValidatedAppliedMinutesIsDisplayedInRadiusFromCenter()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 309672100,
+              "duration": 57917300,
               "status": "passed"
             },
-            "line": 232,
-            "name": "I verify celsiusText is displayed",
-            "match": {
-              "location": "Settings.iVerifyCelsiusTextIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 271864700,
-              "status": "passed"
-            },
-            "line": 233,
-            "name": "I verify fahrenheitText is displayed",
-            "match": {
-              "location": "Settings.iVerifyFahrenheitTextIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 246384000,
-              "status": "passed"
-            },
-            "line": 234,
-            "name": "I verify Unit text is displayed",
-            "match": {
-              "location": "Settings.iVerifyUnitTextIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 133867600,
-              "status": "passed"
-            },
-            "line": 235,
-            "name": "I verify selected unit text is displayed",
-            "match": {
-              "location": "Settings.iVerifySelectedUnitTextIsDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 95922500,
-              "status": "passed"
-            },
-            "line": 236,
-            "name": "I verify App version text is displayed",
-            "match": {
-              "location": "Settings.iVerifyAppVersionTextIsDisplayed()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sanity"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 553400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.InitializeStep(Scenario)"
-            }
-          }
-        ],
-        "line": 239,
-        "name": "Verifying application Settings screen App Settings screen Functionality",
-        "description": "",
-        "id": "testing-an-dometic-lmc-application;verifying-application-settings-screen-app-settings-screen-functionality",
-        "after": [
-          {
-            "result": {
-              "duration": 634800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.StatusLogScenario(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5006775700,
-              "status": "passed"
-            },
-            "line": 240,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 188615500,
-              "status": "passed"
-            },
-            "line": 241,
-            "name": "I Tap on Language in App Settings page",
-            "match": {
-              "location": "Settings.iTapOnLanguageInAppSettingsPage()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5011592300,
-              "status": "passed"
-            },
-            "line": 242,
-            "name": "I Wait short period for Page to Load",
-            "match": {
-              "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 119838400,
-              "status": "passed"
-            },
-            "line": 243,
+            "line": 33,
             "name": "I Tap on Back Button",
             "match": {
               "location": "LandingPage.i_Tap_on_Back_Button()"
@@ -1149,10 +3403,10 @@
           },
           {
             "result": {
-              "duration": 5007143700,
+              "duration": 5014086300,
               "status": "passed"
             },
-            "line": 244,
+            "line": 34,
             "name": "I Wait short period for Page to Load",
             "match": {
               "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
@@ -1161,22 +3415,22 @@
           },
           {
             "result": {
-              "duration": 194855500,
+              "duration": 127466900,
               "status": "passed"
             },
-            "line": 245,
-            "name": "I Tap on Units in App Settings page",
+            "line": 35,
+            "name": "I Tap on Tracking tile",
             "match": {
-              "location": "Settings.iTapOnUnitsInAppSettingsPage()"
+              "location": "TrackingMTC.iTapOnTrackingTile()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5001779100,
+              "duration": 5008743100,
               "status": "passed"
             },
-            "line": 246,
+            "line": 36,
             "name": "I Wait short period for Page to Load",
             "match": {
               "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
@@ -1185,22 +3439,22 @@
           },
           {
             "result": {
-              "duration": 110769100,
+              "duration": 99949300,
               "status": "passed"
             },
-            "line": 247,
-            "name": "I Tap on Back Button",
+            "line": 37,
+            "name": "I Tap On Alert Latency",
             "match": {
-              "location": "LandingPage.i_Tap_on_Back_Button()"
+              "location": "TrackingMTC.iTapOnAlertLatency()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5013401100,
+              "duration": 5007373700,
               "status": "passed"
             },
-            "line": 248,
+            "line": 38,
             "name": "I Wait short period for Page to Load",
             "match": {
               "location": "Basestepdefinition.I_Wait_short_for_Page_to_Load()"
@@ -1209,10 +3463,82 @@
           },
           {
             "result": {
-              "duration": 95554500,
+              "duration": 2510638800,
               "status": "passed"
             },
-            "line": 249,
+            "line": 39,
+            "name": "I Scroll up the page",
+            "match": {
+              "location": "SpanishLanguage.iScrollUpThePage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1506498100,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I Scroll up the screen in Alert Latency",
+            "match": {
+              "location": "TrackingMTC.iScrollUpTheScreenInAlertLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4181047500,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I Verify Apply button in Alert Latency",
+            "match": {
+              "location": "TrackingMTC.iVerifyApplyButtonInAlertLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 644810500,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I Tap on Apply button in Alert Latency",
+            "match": {
+              "location": "TrackingMTC.iTapOnApplyButtonInAlertLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10003628600,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I Wait for Page to Load",
+            "match": {
+              "location": "Basestepdefinition.I_Wait_for_Page_to_Load()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 99228000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "I validated applied minutes is displayed in Alert Latency",
+            "match": {
+              "location": "TrackingMTC.iValidatedAppliedMinutesIsDisplayedInAlertLatency()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61674200,
+              "status": "passed"
+            },
+            "line": 45,
             "name": "I Tap on Back Button",
             "match": {
               "location": "LandingPage.i_Tap_on_Back_Button()"
@@ -1231,7 +3557,7 @@
     "description": "",
     "id": "testing-an-dometic-lmc-application",
     "keyword": "Feature",
-    "uri": "src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature",
+    "uri": "src/test/java/com/dometic/MTC/features/TC28_Tracking_GioFencingScreenMTC.feature",
     "tags": []
   }
 ]

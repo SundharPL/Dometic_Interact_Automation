@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="267.477558">
-<testcase classname="Testing Login page in Dometic LMC application" name="Launching the application" time="27.483968">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="16" time="735.322614">
+<testcase classname="Testing Login page in Dometic LMC application" name="Launching the application" time="42.005052">
 <system-out><![CDATA[Given I Launch the application..............................................passed
 Then I Wait short period for Page to Load...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing Login page in Dometic LMC application" name="Verifying application Splash screen Functionality" time="40.774819">
+<testcase classname="Testing Login page in Dometic LMC application" name="Verifying application Splash screen Functionality" time="21.99591">
 <system-out><![CDATA[Then I Tap on Allow button in Permission popup in Login Page................passed
 Then I Wait short period for Page to Load...................................passed
 Then I verify Welcome Text is displaying in Login Page......................passed
@@ -12,21 +12,7 @@ Then I Verify Page title is displayed in Login Page.........................pass
 Then I Wait short period for Page to Load...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Login Functionality with valid credentials" time="40.800883">
-<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
-Then I enter Valid Password in Login Page...................................passed
-Then I Tap on an Login button in Login Page.................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify successfully navigated to Dash Board screen...................passed
-Then I verify if user has navigated to the homescreen.......................passed
-Then I verify if an empty homescreen is displayed...........................passed
-Then I Tap on hamburger menu in landing screen..............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Logout in Settings screen.....................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Dash Board screen functionality" time="56.583596">
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Dash Board screen functionality" time="72.130014">
 <system-out><![CDATA[Then I enter Valid Email....................................................passed
 Then I enter Valid Password.................................................passed
 Then I Tap on an Login button...............................................passed
@@ -38,55 +24,260 @@ Then I Wait short period for Page to Load...................................pass
 Then I Wait until Landing screen is displayed...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Landing Screen functionality" time="41.375852">
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Landing Screen functionality" time="42.265663">
 <system-out><![CDATA[Then I Tap on the access this location pop up...............................passed
 Then I Tap on LATER Button..................................................passed
 Then I Tap on cancel button in Upgrade Firmware.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Settings screen UI" time="22.180172">
-<system-out><![CDATA[Then I verify hamburger menu in landing screen..............................passed
-Then I Tap on hamburger menu in landing screen..............................passed
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tank screen UI" time="72.52149">
+<system-out><![CDATA[Then I Tap on Tank tile on landing screen...................................passed
+Then I verify Tank header text..............................................passed
+Then I verify Alert text....................................................passed
 Then I Wait short period for Page to Load...................................passed
-Then I verify settings screen back button...................................passed
-Then I verify user profile photo is displayed...............................passed
-Then I verify username is displayed.........................................passed
-Then I verify user email is displayed.......................................passed
-Then I verify View Edit Account text is displayed...........................passed
-Then I verify Home text is displayed........................................passed
-Then I verify Notification Settings text is displayed.......................passed
-Then I verify Device Management is displayed................................passed
-Then I verify App Settings is displayed.....................................passed
-Then I verify Logout is displayed...........................................passed
-Then I verify Version 1.6 is displayed......................................passed
+Then I Tap on Tank Alert toggle if it's already in OFF state................passed
+Then I Scroll up the page...................................................passed
+Then I verify Alert-Tank Level Above Text...................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I verify Alert-Set Latency Text........................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I verify Warning text..................................................passed
+Then I Tap on Tank Warnings toggle if it's already in OFF state.............passed
+Then I verify Warnings-Tank Level Above Text................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I verify Warnings-Set Latency Text.....................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tank screen(Alert-Tank Level Above) Functionality" time="47.560681">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tank tile on landing screen...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I scroll up the screen in Alert-Tank Level Above.......................passed
+Then I Verify Apply button in Alert-Tank Level Above........................passed
+Then I Tap on Apply button in Alert-Tank Level Above........................passed
+Then I Tap on Ok button.....................................................passed
+Then I Wait for Page to Load................................................passed
+Then I Validate Applied percentage in Tank Level Above is displayed.........passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tank screen(Alert-Set Latency) Functionality" time="45.978555">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tank tile on landing screen...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I scroll up the screen in Alert-Set Latency(Tank screen)...............passed
+Then I Verify Apply button in Alert-Set Latency(Tank screen)................passed
+Then I Tap on Apply button in Alert-Set Latency(Tank screen)................passed
+Then I Tap on Ok button.....................................................passed
+Then I Wait for Page to Load................................................passed
+Then I Validate Applied minutes in Alert-Set Latency(Tank screen) is displayed.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tank screen(Warnings-Tank Level Above) Functionality" time="52.29266">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tank tile on landing screen...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I scroll up the screen in Warnings-Tank Level Above....................passed
+Then I Verify Apply button in Warnings-Tank Level Above.....................passed
+Then I Tap on Apply button in Warnings-Tank Level Above.....................passed
+Then I Tap on Ok button.....................................................passed
+Then I Wait for Page to Load................................................passed
+Then I Validate Applied minutes in Warnings-Tank Level Above is displayed...passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tank screen(Warnings-Set Latency) Functionality" time="53.539518">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tank tile on landing screen...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I scroll up the screen in Warnings-Set Latency(Tank screen)............passed
+Then I Verify Apply button in Warnings-Set Latency(Tank screen).............passed
+Then I Tap on Apply button in Warnings-Set Latency(Tank screen).............passed
+Then I Tap on Ok button.....................................................passed
+Then I Wait for Page to Load................................................passed
+Then I Validate Applied minutes in Warnings-Set Latency(Tank screen) is displayed.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Security screen UI" time="57.799986">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I verify Security Header text is displayed.............................passed
+Then I verify Security Arm Icon is displayed................................passed
+Then I verify Security current status is displayed..........................passed
+Then I verify Arm button is displayed.......................................passed
+Then I verify Arm button label is displayed.................................passed
+Then I Verify Geo Fencing text is displayed in Security screen..............passed
+Then I Verify Geo Fencing-toggle status is displayed in Security screen.....passed
+Then I Verify Geo Fencing-toggle is displayed in Security screen............passed
+Then I Tap on Gio Fencing Radius from center toggle if it's already in OFF state.passed
+Then I Verify Geo Fencing Radius from center text is displayed in Security screen.passed
+Then I Verify Geo Fencing Radius from center Expand Icon is displayed in Security screen.passed
+Then I Verify Geo Fencing Alert Latency text is displayed in Security screen.passed
+Then I Verify Geo Fencing Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Scroll up the page...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Door Window Alert toggle if it's already in OFF state.........passed
+Then I Verify Door Window Alert text is displayed in Security screen........passed
+Then I Verify Door Window Alert-toggle status is displayed in Security screen.passed
+Then I Verify Door Window Alert-toggle is displayed in Security screen......passed
+Then I Verify Door Window Alert Alert Latency text is displayed in Security screen.passed
+Then I Verify Door Window Alert Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Scroll up the page...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Theft Alert toggle if it's already in OFF state...............passed
+Then I Verify Theft Alert text is displayed in Security screen..............passed
+Then I Verify Theft Alert-toggle status is displayed in Security screen.....passed
+Then I Verify Theft Alert-toggle is displayed in Security screen............passed
+Then I Verify Theft Alert Alert Latency text is displayed in Security screen.passed
+Then I Verify Theft Alert Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Security screen(Gio Fencing-Radius From Center) Functionality" time="36.536985">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Radius from center in Gio Fencing Security....................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the screen in Radius from center in Gio Fencing............passed
+Then I verify apply button is displayed in Radius from center in Gio Fencing.passed
+Then I Tap on Apply button in Radius from center in Gio Fencing.............passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Radius from center in Gio Fencing.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Security screen(Gio Fencing-Alert Latency) Functionality" time="38.498529">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Alert Latency in Gio Fencing Security.........................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the screen in Alert Latency in Gio Fencing.................passed
+Then I verify apply button is displayed in Alert Latency in Gio Fencing.....passed
+Then I Tap on Apply button in Alert Latency in Gio Fencing..................passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Alert Latency in Gio Fencing.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Security screen(Door/Window Alert-Alert Latency) Functionality" time="38.61628">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Alert Latency in Door Window Alert Security...................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Scroll up the screen in Alert Latency in Door Window Alert...........passed
+Then I verify apply button is displayed in Alert Latency in Door Window Alert.passed
+Then I Tap on Apply button in Alert Latency in Door Window Alert............passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Alert Latency in Door Window Alert.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Security screen(Theft Alert-Alert Latency) Functionality" time="40.862303">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Alert Latency in Theft Alert Security.........................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Scroll up the screen in Alert Latency in Theft Alert.................passed
+Then I verify apply button is displayed in Alert Latency in Theft Alert.....passed
+Then I Tap on Apply button in Alert Latency in Theft Alert..................passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Alert Latency in Theft Alert.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tracking(Gio Fencing) screen UI" time="18.16333">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tracking tile.................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Verify Tracking Header title.........................................passed
+Then I Verify Boat Location text is displayed...............................passed
+Then I Verify Latitude text is displayed....................................passed
+Then I Verify Longitude text is displayed...................................passed
+Then I Verify Geo Fencing text is displayed.................................passed
+Then I Verify Geo Fencing-toggle status is displayed........................passed
+Then I Verify Geo Fencing-toggle is displayed...............................passed
+Then I Tap on Gio Fencing toggle if it's already in OFF state...............passed
+Then I Scroll up the page...................................................passed
+Then I Verify Radius from center text is displayed..........................passed
+Then I Verify Radius from center expandIcon is displayed....................passed
+Then I Verify Alert Latency text is displayed...............................passed
+Then I Verify Alert Latency expandIcon is displayed.........................passed
 Then I Wait short period for Page to Load...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Settings screen App Settings screen UI" time="12.520744">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on App Settings..................................................passed
+<testcase classname="Testing an Dometic LMC application" name="Verifying application Tracking(Gio Fencing) screen Functionality" time="54.555658">
+<system-out><![CDATA[Then I Tap on Radius from center............................................passed
 Then I Wait short period for Page to Load...................................passed
-Then I verify App Settings Header text......................................passed
-Then I verify Language text in App Settings page............................passed
-Then I verify selected language is displayed................................passed
-Then I verify Temperature text in App Settings page.........................passed
-Then I verify celsiusText is displayed......................................passed
-Then I verify fahrenheitText is displayed...................................passed
-Then I verify Unit text is displayed........................................passed
-Then I verify selected unit text is displayed...............................passed
-Then I verify App version text is displayed.................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Testing an Dometic LMC application" name="Verifying application Settings screen App Settings screen Functionality" time="25.757524">
-<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
-Then I Tap on Language in App Settings page.................................passed
-Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Scroll up the screen in Radius from center...........................passed
+Then I Verify Apply button in Radius from center............................passed
+Then I Tap on Apply button in Radius from center............................passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Radius from center.........passed
 Then I Tap on Back Button...................................................passed
 Then I Wait short period for Page to Load...................................passed
-Then I Tap on Units in App Settings page....................................passed
+Then I Tap on Tracking tile.................................................passed
 Then I Wait short period for Page to Load...................................passed
-Then I Tap on Back Button...................................................passed
+Then I Tap On Alert Latency.................................................passed
 Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Scroll up the screen in Alert Latency................................passed
+Then I Verify Apply button in Alert Latency.................................passed
+Then I Tap on Apply button in Alert Latency.................................passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Alert Latency..............passed
 Then I Tap on Back Button...................................................passed
 ]]></system-out>
 </testcase>
