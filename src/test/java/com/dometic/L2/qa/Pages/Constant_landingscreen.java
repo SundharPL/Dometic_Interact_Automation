@@ -214,5 +214,6 @@ public class Constant_landingscreen {
     public static final String Landingpage_Bottomlayout_Tank_Text="Tank";
     public static final String Landingpage_Bottomlayout_Climate_Text="Climate";
     public static final String Landingpage_Bottomlayout_AGS_Text="AGS";
-
+    public static final String Landingpage_Header_Hamburger_xpath="//*[@content-desc='com.dometicapp:id/header-menuButton']";
+    public static final String Landingpage_LastShowText_xpath="//*[@content-desc='com.dometicapp:id/tiles-lastShadowText']";
 }

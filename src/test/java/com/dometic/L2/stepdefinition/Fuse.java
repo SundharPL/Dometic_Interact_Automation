@@ -90,7 +90,7 @@ public class Fuse extends Baseclass {
             Thread.sleep(2000);
             AllisOK = driver.findElementByAccessibilityId(Constant_Fuses.Fusescreen_All_fuses_are_OK_access_id).getText();
             System.out.println(AllisOK);
-            Taponbutton(Constant_Fuses.Fusescreen_BlownOut_First_xpath);
+            Taponbutton(Constant_Fuses.Fusescreen_BlownOut_Third_xpath);
             Thread.sleep(10000);
             Taponbutton(Constant_Fuses.Fusescreen_BlownOut_Fifth_xpath);
             Thread.sleep(10000);

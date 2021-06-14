@@ -1,13 +1,13 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Settings Screen in Dometic LMC/ERIBA application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Settings screen functionality
     Then I Wait short period for Page to Load
     Then I verify hamburger menu in landing screen
     Then I Tap on hamburger menu in landing screen
     Then I Verify SETTINGS Text displayed in the top of the app
 
-  @sanity
+  @sanity1
   Scenario: Verify Language Functionality
     Then I verify Languages text is displayed
     Then I navigate to update language section in Settings
@@ -26,18 +26,18 @@ Feature: Testing an Dometic LMC application
     Then I Tap on Back Button
     Then I Tap on hamburger menu in landing screen
 
-  @sanity
+  @sanity1
   Scenario: Verify Temperature Functionality
     Then I Verify Temperature unit text is displayed
     Then I update Temperature Unit in Settings
     Then I Tap on Back button from Settings
     Then I Tap on hamburger menu in landing screen
 
-  @sanity
+  @sanity1
   Scenario: Verify Version Functionality
     Then I verify Version is displayed
 
-  @sanity
+  @sanity1
   Scenario: Verify Logout Functionality
     Then I verify Log out is displayed
-    Then I Tap on Logout in Settings
+#    Then I Tap on Logout in Settings

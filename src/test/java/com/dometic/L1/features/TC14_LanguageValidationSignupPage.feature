@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Signup Screen Language validation in Dometic LMC/ERIBA application
 
   @First1 @sanity1
   Scenario: Empty Email and Enter the password and verify password

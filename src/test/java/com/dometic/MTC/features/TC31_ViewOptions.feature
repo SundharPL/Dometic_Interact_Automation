@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application View Options Screen in Dometic Marine application
 
   @First1 @sanity1
   Scenario: Verifying application ViewOption(Tile View-All Devices) functionality

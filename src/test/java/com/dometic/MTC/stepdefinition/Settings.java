@@ -18,8 +18,10 @@ public class Settings extends Baseclass {
     @Then("I Tap on hamburger menu in landing screen")
     public void iTapOnHamburgerMenuInLandingScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on hamburger menu in landing screen");
-        TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
-
+        List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
+        if(id.size()!=0){
+            TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
+        }
     }
 
     @Then("I Verify SETTINGS Text displayed in the top of the app")
@@ -796,8 +798,8 @@ public class Settings extends Baseclass {
         Thread.sleep(1000);
         cleartextaccessabilityId(Constant_AccountSettings.editProfile_firstNNameValue_Access_Id);
         //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
-        String emojis = Constant_AccountSettings.grinning_face_with_smiling_eyes + Constant_AccountSettings.face_with_tears_of_joy+
-                Constant_AccountSettings.smiling_face_with_open_mouth_and_cold_sweat+Constant_AccountSettings.smiling_face_with_open_mouth_and_tightly_closed_eyes+
+        String emojis = Constant_AccountSettings.grinning_face_with_smiling_eyes + Constant_AccountSettings.face_with_tears_of_joy +
+                Constant_AccountSettings.smiling_face_with_open_mouth_and_cold_sweat + Constant_AccountSettings.smiling_face_with_open_mouth_and_tightly_closed_eyes +
                 Constant_AccountSettings.winking_face;
         entertextaccessabilityId(emojis, Constant_AccountSettings.editProfile_firstNNameValue_Access_Id);
         Thread.sleep(1000);
@@ -812,8 +814,8 @@ public class Settings extends Baseclass {
         Thread.sleep(1000);
         cleartextaccessabilityId(Constant_AccountSettings.editProfile_lastNameValue_Access_Id);
         //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
-        String emojis = Constant_AccountSettings.grinning_face_with_smiling_eyes + Constant_AccountSettings.face_with_tears_of_joy+
-                Constant_AccountSettings.smiling_face_with_open_mouth_and_cold_sweat+Constant_AccountSettings.smiling_face_with_open_mouth_and_tightly_closed_eyes+
+        String emojis = Constant_AccountSettings.grinning_face_with_smiling_eyes + Constant_AccountSettings.face_with_tears_of_joy +
+                Constant_AccountSettings.smiling_face_with_open_mouth_and_cold_sweat + Constant_AccountSettings.smiling_face_with_open_mouth_and_tightly_closed_eyes +
                 Constant_AccountSettings.winking_face;
         entertextaccessabilityId(emojis, Constant_AccountSettings.editProfile_lastNameValue_Access_Id);
         Thread.sleep(1000);
@@ -829,8 +831,8 @@ public class Settings extends Baseclass {
         Thread.sleep(1000);
         cleartextaccessabilityId(Constant_AccountSettings.editProfile_addressValue_Access_Id);
         //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
-        String emojis = Constant_AccountSettings.grinning_face_with_smiling_eyes + Constant_AccountSettings.face_with_tears_of_joy+
-                Constant_AccountSettings.smiling_face_with_open_mouth_and_cold_sweat+Constant_AccountSettings.smiling_face_with_open_mouth_and_tightly_closed_eyes+
+        String emojis = Constant_AccountSettings.grinning_face_with_smiling_eyes + Constant_AccountSettings.face_with_tears_of_joy +
+                Constant_AccountSettings.smiling_face_with_open_mouth_and_cold_sweat + Constant_AccountSettings.smiling_face_with_open_mouth_and_tightly_closed_eyes +
                 Constant_AccountSettings.winking_face;
         entertextaccessabilityId(emojis, Constant_AccountSettings.editProfile_addressValue_Access_Id);
         Thread.sleep(1000);
@@ -891,7 +893,7 @@ public class Settings extends Baseclass {
 
     @Then("I enter an Special character in First name Field in Edit profile screen")
     public void iEnterAnSpecialCharacterInFirstNameFieldInEditProfileScreen() throws InterruptedException, ClassNotFoundException {
-        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an First name in Edit profile screen");
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Special character in First name Field in Edit profile screen");
         Thread.sleep(1000);
         TaponbuttonaccessabilityID(Constant_AccountSettings.editProfile_firstNNameValue_Access_Id);
         Thread.sleep(1000);
@@ -905,7 +907,7 @@ public class Settings extends Baseclass {
 
     @Then("I enter an Special character in Last name Field in Edit profile screen")
     public void iEnterAnSpecialCharacterInLastNameFieldInEditProfileScreen() throws InterruptedException, ClassNotFoundException {
-        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Last name in Edit profile screen");
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Special character in Last name Field in Edit profile screen");
         Thread.sleep(1000);
         TaponbuttonaccessabilityID(Constant_AccountSettings.editProfile_lastNameValue_Access_Id);
         Thread.sleep(1000);
@@ -919,7 +921,7 @@ public class Settings extends Baseclass {
 
     @Then("I enter an Special character in Address field in Edit profile screen")
     public void iEnterAnSpecialCharacterInAddressFieldInEditProfileScreen() throws ClassNotFoundException, InterruptedException {
-        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Address in Edit profile screen");
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Special character in Address field in Edit profile screen");
         Thread.sleep(1000);
         TaponbuttonaccessabilityID(Constant_AccountSettings.editProfile_addressValue_Access_Id);
         Thread.sleep(1000);
@@ -933,109 +935,226 @@ public class Settings extends Baseclass {
 
     @Then("I Verify the account setting header")
     public void iVerifyTheAccountSettingHeader() throws Throwable {
-        asserttextValidationAccessibility(Constant_AccountSettings.profile_AccountSetting_Header,Constant_AccountSettings.profile_AccountSetting_Header_Access_Id);
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the account setting header");
+        asserttextValidationAccessibility(Constant_AccountSettings.profile_AccountSetting_Header, Constant_AccountSettings.profile_AccountSetting_Header_Access_Id);
     }
 
     @Then("I verify the account holder photo")
-    public void iVerifyTheAccountHolderPhoto() {
+    public void iVerifyTheAccountHolderPhoto() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the account holder photo");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.profile_AccountSettings_photo_Access_Id));
     }
 
     @Then("I verify the user name in account setting")
-    public void iVerifyTheUserNameInAccountSetting() {
+    public void iVerifyTheUserNameInAccountSetting() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the user name in account setting");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.profile_AccountSettings_userNAme_Access_Id));
     }
 
     @Then("I verify the user mail id")
-    public void iVerifyTheUserMailId() {
+    public void iVerifyTheUserMailId() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the user mail id");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.profile_AccountSettings_mail_id_Access_Id));
     }
 
     @Then("I Verify the profile text")
     public void iVerifyTheProfileText() throws Throwable {
-        asserttextValidationAccessibility(Constant_AccountSettings.profile_accountSetting_profile_text,Constant_AccountSettings.profile_accountSetting_profile_text_Access_Id);
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the profile text");
+        asserttextValidationAccessibility(Constant_AccountSettings.profile_accountSetting_profile_text, Constant_AccountSettings.profile_accountSetting_profile_text_Access_Id);
     }
 
     @Then("I Verify the Subscription text")
     public void iVerifyTheSubscriptionText() throws Throwable {
-        asserttextValidationAccessibility(Constant_AccountSettings.profile_AccountSetting_subscription,Constant_AccountSettings.profile_AccountSetting_subscription_Access_Id);
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Subscription text");
+        asserttextValidationAccessibility(Constant_AccountSettings.profile_AccountSetting_subscription, Constant_AccountSettings.profile_AccountSetting_subscription_Access_Id);
     }
 
     @Then("I Navigate to the Profile page")
-    public void iNavigateToTheProfilePage() {
+    public void iNavigateToTheProfilePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Navigate to the Profile page");
         TaponbuttonaccessabilityID(Constant_AccountSettings.profile_accountSetting_profile_text_Access_Id);
     }
 
     @Then("I Navigate to Subscription page")
-    public void iNavigateToSubscriptionPage() {
+    public void iNavigateToSubscriptionPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Navigate to Subscription page");
         TaponbuttonaccessabilityID(Constant_AccountSettings.profile_AccountSetting_subscription_Access_Id);
         System.out.println("1234");
     }
 
     @Then("I verify the Device Management Header")
     public void iVerifyTheDeviceManagementHeader() throws Throwable {
-        asserttextValidationAccessibility(Constant_AccountSettings.Settings_DeviceManagement_header,Constant_AccountSettings.Settings_DeviceManagement_header_accessid);
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Device Management Header");
+        asserttextValidationAccessibility(Constant_AccountSettings.Settings_DeviceManagement_header, Constant_AccountSettings.Settings_DeviceManagement_header_accessid);
     }
 
     @Then("I verify the Device Management Logo")
-    public void iVerifyTheDeviceManagementLogo() {
+    public void iVerifyTheDeviceManagementLogo() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Device Management Logo");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_DeviceManage_MarineDevice_logo_accessid));
     }
 
     @Then("I verify the Device Management right icon")
-    public void iVerifyTheDeviceManagementRightIcon() {
+    public void iVerifyTheDeviceManagementRightIcon() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Device Management right icon");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_DeviceManagement_righticon_Access_Id));
     }
 
     @Then("I verify the Add New Button text")
     public void iVerifyTheAddNewButtonText() throws Throwable {
-        asserttextValidationAccessibility(Constant_AccountSettings.Settings_DeviceManage_AddNew_Button,Constant_AccountSettings.Settings_DeviceManage_AddNew_Button_accessid);
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Add New Button text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Settings_DeviceManage_AddNew_Button, Constant_AccountSettings.Settings_DeviceManage_AddNew_Button_accessid);
     }
 
     @Then("I Tap on the Add New button")
-    public void iTapOnTheAddNewButton() {
+    public void iTapOnTheAddNewButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Add New button");
         TaponbuttonaccessabilityID(Constant_AccountSettings.Settings_DeviceManage_AddNew_Button_accessid);
     }
 
     @Then("I Verify the OnBoarding Header")
     public void iVerifyTheOnBoardingHeader() throws Throwable {
-        asserttextValidationAccessibility(Constant_AccountSettings.Settings_Onboarding_HeaderText,Constant_AccountSettings.Settings_Onboarding_HeaderText_Access_Id);
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the OnBoarding Header");
+        asserttextValidationAccessibility(Constant_AccountSettings.Settings_Onboarding_HeaderText, Constant_AccountSettings.Settings_Onboarding_HeaderText_Access_Id);
     }
 
     @Then("I Verify the close button in Onboarding Page")
-    public void iVerifyTheCloseButtonInOnboardingPage() {
+    public void iVerifyTheCloseButtonInOnboardingPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the close button in Onboarding Page");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_Onboarding_close_button_Access_Id));
     }
 
     @Then("I Verify the Attention image")
-    public void iVerifyTheAttentionImage() {
+    public void iVerifyTheAttentionImage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Attention image");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_Onboarding_attention_image_accessid));
     }
 
     @Then("I Verify the Bluetooth Pairing Message")
-    public void iVerifyTheBluetoothPairingMessage() {
+    public void iVerifyTheBluetoothPairingMessage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Bluetooth Pairing Message");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_Onboarding_BluetoothPairing_message_access_id));
     }
 
     @Then("I verify the Search Again Text")
-    public void iVerifyTheSearchAgainText() {
+    public void iVerifyTheSearchAgainText() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Search Again Text");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_Onboarding_SearchAgain_accessid));
 
     }
 
     @Then("I Tap on close button")
-    public void iTapOnCloseButton() {
+    public void iTapOnCloseButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on close button");
         TaponbuttonaccessabilityID(Constant_AccountSettings.Settings_Onboarding_close_button);
     }
 
     @Then("I verify if subscription title is displayed")
     public void iVerifyIfSubscriptionTitleIsDisplayed() throws Throwable {
-        asserttextValidationAccessibility(Constant_AccountSettings.Subscription_title,Constant_AccountSettings.Subscription_title_accessid);
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if subscription title is displayed");
+        asserttextValidationAccessibility(Constant_AccountSettings.Subscription_title, Constant_AccountSettings.Subscription_title_accessid);
     }
 
     @Then("I verify if subscription back button is available")
-    public void iVerifyIfSubscriptionBackButtonIsAvailable() {
+    public void iVerifyIfSubscriptionBackButtonIsAvailable() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if subscription back button is available");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Subscription_backbutton_accessid));
         System.out.println("9876");
+    }
+
+    @Then("I verify Back Button displayed in Language Page")
+    public void iVerifyBackButtonDisplayedInLanguagePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Back Button displayed in Language Page");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.appSettings_Back_Button_Access_Id));
+    }
+
+    @Then("I verify Language Header Text in Language Page")
+    public void iVerifyLanguageHeaderTextInLanguagePage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Language Header Text in Language Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.appSettings_language_header_TitleText, Constant_AccountSettings.appSettings_language_header_TitleText_Access_Id);
+    }
+
+    @Then("I Verify Language English Text in Language Page")
+    public void iVerifyLanguageEnglishTextInLanguagePage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Language English Text in Language Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.appSettings_Language_English_CardTitle_Text, Constant_AccountSettings.appSettings_Language_English_CardTitle_Access_Id);
+    }
+
+    @Then("I Verify Language German Text in Language Page")
+    public void iVerifyLanguageGermanTextInLanguagePage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Language German Text in Language Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.appSettings_Language_German_CardTitle_Text, Constant_AccountSettings.appSettings_Language_German_CardTitle_Access_Id);
+    }
+
+    @Then("I Verify Language Spanish \\(US) Text in Language Page")
+    public void iVerifyLanguageSpanishUSTextInLanguagePage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Language Spanish(US) Text in Language Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.appSettings_Language_Spanish_CardTitle_Text, Constant_AccountSettings.appSettings_Language_Spanish_CardTitle_Access_Id);
+    }
+
+    @Then("I Verify Language French Text in Language Page")
+    public void iVerifyLanguageFrenchTextInLanguagePage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Language French Text in Language Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.appSettings_Language_French_CardTitle_Text, Constant_AccountSettings.appSettings_Language_French_CardTitle_Access_Id);
+    }
+
+    @Then("I verify Back Button displayed in Units Page")
+    public void iVerifyBackButtonDisplayedInUnitsPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Back Button displayed in Units Page");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.appSettings_Back_Button_Access_Id));
+    }
+
+    @Then("I verify Metric Text in Units Page")
+    public void iVerifyMetricTextInUnitsPage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Metric Text in Units Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.appSettings_Unit_Metric_Text, Constant_AccountSettings.appSettings_Unit_Metric_Access_Id);
+    }
+
+    @Then("I verify Imperial Text in Units Page")
+    public void iVerifyImperialTextInUnitsPage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Imperial Text in Units Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.appSettings_Unit_Imperial_Text, Constant_AccountSettings.appSettings_Unit_Imperial_Access_Id);
+    }
+
+    @Then("I verify Units Header Text in Units Page")
+    public void iVerifyUnitsHeaderTextInUnitsPage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Units Header Text in Units Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.appSettings_Unit_header_TitleText_Text, Constant_AccountSettings.appSettings_Unit_header_TitleText_Access_Id);
+    }
+
+    @Then("I Tap on German Language in Language Page")
+    public void iTapOnGermanLanguageInLanguagePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on German Language in Language Page");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_Language_German_CardTitle_Access_Id);
+    }
+
+    @Then("I Tap on Spanish \\(US) Language in Language Page")
+    public void iTapOnSpanishUSLanguageInLanguagePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Spanish(US) Language in Language Page");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_Language_Spanish_CardTitle_Access_Id);
+    }
+
+    @Then("I Tap on French Language in Language Page")
+    public void iTapOnFrenchLanguageInLanguagePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on French Language in Language Page");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_Language_French_CardTitle_Access_Id);
+    }
+
+    @Then("I Tap on English Language in Language Page")
+    public void iTapOnEnglishLanguageInLanguagePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on English Language in Language Page");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_Language_English_CardTitle_Access_Id);
+    }
+
+    @Then("I Tap on Imperial Unit in Units Page")
+    public void iTapOnImperialUnitInUnitsPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Imperial Unit in Units Page");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_Unit_Imperial_Access_Id);
+    }
+
+    @Then("I Tap on Metric Unit in Units Page")
+    public void iTapOnMetricUnitInUnitsPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Metric Unit in Units Page");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_Unit_Metric_Access_Id);
     }
 }

@@ -3,7 +3,7 @@ package com.dometic.L1.qa.Pages;
 public class Constant_climate_heater {
     // ---------------------Accesibility_Id-----------------------//
 
-    public static final String CHeater_M_Climate_text_access_id="com.dometicapp:id/setting-selectedLanguage";
+    public static final String CHeater_M_Climate_text_access_id="com.dometicapp:id/header-TitleText";
     public static final String CHeater_M_inside_text_access_id = "com.dometicapp:id/climate-insideTemp";
     public static final String CHeater_M_outside_text_access_id = "com.dometicapp:id/climate-outsideTemp";
     public static final String CHeater_M_inside_value_access_id = "com.dometicapp:id/climate-insideTempValue";

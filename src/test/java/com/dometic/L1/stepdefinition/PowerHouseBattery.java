@@ -66,7 +66,7 @@ public class PowerHouseBattery extends Baseclass {
         if(elementsByAccessibilityId.size()!=0){
             WebDriverWait wait=new WebDriverWait(driver,5);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_houseBattery_text_xpath)));
-            asserttextAccessibility(Constant_power.Powerpage_houseBattery_expected,Constant_power.Powerpage_houseBattery_text_access_id);
+            asserttextValidationAccessibility(Constant_power.Powerpage_houseBattery_expected,Constant_power.Powerpage_houseBattery_text_access_id);
         }
     }
 

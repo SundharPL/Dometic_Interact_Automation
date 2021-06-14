@@ -1,6 +1,6 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Climate Screen in Dometic LMC/ERIBA application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Climate screen functionality
     Then I Tap on Climate CTA in Landing screen
     Then I Verify climate text displayed in the top of the app
@@ -25,7 +25,7 @@ Feature: Testing an Dometic LMC application
     Then I verify AC Mode in climate screen
     Then I verify AC Fan Speed in climate screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Climate screen scroll up-to Maximum temperature functionality
     Then I Wait short period for Page to Load
     Then I scroll maximum temperature in Climate AC
@@ -35,7 +35,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait for Page to Load
     Then I validate applied temperature is displayed in temperature
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate Maximum temperature displayed on Ac Mode
     Then I Wait short period for Page to Load
     Then I Tap on Ac Mode in Climate screen
@@ -43,7 +43,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait for Page to Load
     Then I Tap on Back Button in Ac Mode
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate Maximum temperature displayed on Ac Fan Speed
     Then I Wait short period for Page to Load
     Then I Tap on AC Fan Speed in climate screen
@@ -51,7 +51,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait for Page to Load
     Then I Tap on Back Button in Ac Fan Speed
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate Maximum temperature displayed on Climate Tile
     Then I Wait short period for Page to Load
     Then I Tap on Back Button

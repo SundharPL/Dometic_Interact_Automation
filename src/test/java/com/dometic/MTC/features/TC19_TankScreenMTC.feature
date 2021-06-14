@@ -1,6 +1,6 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Tank Screen in Dometic Marine application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Tank screen UI
     Then I Tap on Tank tile on landing screen
     Then I verify Tank header text
@@ -34,7 +34,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Tank screen(Alert-Tank Level Above) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Tank tile on landing screen
@@ -51,7 +51,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Tank screen(Alert-Set Latency) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Tank tile on landing screen
@@ -68,7 +68,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Tank screen(Warnings-Tank Level Above) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Tank tile on landing screen
@@ -87,7 +87,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Tank screen(Warnings-Set Latency) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Tank tile on landing screen

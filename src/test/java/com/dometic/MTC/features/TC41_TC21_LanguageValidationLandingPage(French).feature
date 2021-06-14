@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Landing Screen Language validation(French) in Dometic Marine application
 
   @First1 @sanity1
   Scenario: Verifying application French text in Landing screen

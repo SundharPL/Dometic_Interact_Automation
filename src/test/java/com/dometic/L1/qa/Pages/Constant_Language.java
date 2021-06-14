@@ -60,15 +60,15 @@ public class Constant_Language {
 
     //-------------Landing Page access id-----------------//
     public static final String Forgot_password_back_button_access_id="com.dometicapp:id/forgot-backToLoginImage";
-    public static final String Climate_German_Klima_text_access_id="com.dometicapp:id/tiles-Klima-0-Klima";
-    public static final String Climate_German_Klima_mainContent_access_id= "com.dometicapp:id/tiles-Klima-0-mainContent";
-    public static final String Climate_German_Klima_unit_access_id= "com.dometicapp:id/tiles-Klima-0-unit";
+    public static final String Climate_German_Klima_text_access_id="com.dometicapp:id/tile-klima-titleView";
+    public static final String Climate_German_Klima_mainContent_access_id= "com.dometicapp:id/tile-klima-mainCardText-0";
+    public static final String Climate_German_Klima_unit_access_id= "com.dometicapp:id/tile-klima-cardUnitText-0";
     public static final String Climate_German_Klima_fanIcon_access_id="com.dometicapp:id/tiles-Klima-0-fanIcon";
     public static final String Climate_German_Klima_fanSpeed_access_id="com.dometicapp:id/tiles-Klima-0-fanSpeedText";
     public static final String Climate_German_Klima1_text_access_id="com.dometicapp:id/tiles-Klima-1-Klima";
-    public static final String Climate_German_Klima_outside_text_access_id="com.dometicapp:id/tiles-Klima-1-Outside";
-    public static final String Climate_German_Klima1_mainContent_access_id= "com.dometicapp:id/tiles-Klima-1-mainContent";
-    public static final String Climate_German_Klima1_unit_access_id= "com.dometicapp:id/tiles-Klima-1-unit";
+    public static final String Climate_German_Klima_outside_text_access_id="com.dometicapp:id/tile-klima-mainCardSubText-1";
+    public static final String Climate_German_Klima1_mainContent_access_id= "com.dometicapp:id/tile-klima-mainCardText-1";
+    public static final String Climate_German_Klima1_unit_access_id= "com.dometicapp:id/tile-klima-cardUnitText-1";
     public static final String Climate_aircondition_Klimaanlage_German_text_access_id="com.dometicapp:id/tiles-Klima-0-Klimaanlage";
     public static final String Climate_heater_Heizung_German_text_access_id="com.dometicapp:id/tiles-Klima-0-Heizung";
     public static final String Climate_outside_German_Klima_text_access_id="com.dometicapp:id/tiles-Klima-1-Klima";
@@ -76,8 +76,10 @@ public class Constant_Language {
     public static final String Power_German_Energie_mainContent_access_id="com.dometicapp:id/tiles-Energie-3-mainContent";
     public static final String Power_German_Energie__unit_access_id="com.dometicapp:id/tiles-Energie-3-unit";
     public static final String HouseBattery_German_Aufbaubatterie_text_access_id="com.dometicapp:id/tiles-Energie-3-Aufbaubatterie";
-    public static final String FreshWater_German_Frischwassertank_text_access_id="com.dometicapp:id/tiles-Tank-6-Frischwassertank";
-    public static final String Greywater_German_Frischwassertank_text_access_id="com.dometicapp:id/tiles-Tank-7-Grauwassertank";
+    public static final String FreshWater_German_Frischwassertank_text_access_id="com.dometicapp:id/tile-tank-mainCardSubText-0";
+    public static final String Greywater_German_Frischwassertank_text_access_id="com.dometicapp:id/tile-tank-mainCardSubText-1";
+    public static final String LandingPage_German_Climate_Air_conditioner_OFF_Heater_access_id="com.dometicapp:id/tile-klima-mainCardSubText-0";
+
 
     //-------------Landing Page xpath-----------------//
     public static final String Climate_German_Klima_text_xpath="(//*[@text='Klima'])[1]";

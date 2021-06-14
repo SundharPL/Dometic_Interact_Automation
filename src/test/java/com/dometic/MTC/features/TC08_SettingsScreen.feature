@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Settings Screen in Dometic Marine application
 
   @First @sanity
   Scenario: Verifying application Settings screen UI
@@ -18,7 +18,7 @@ Feature: Testing an Dometic LMC application
     Then I verify Version 1.6 is displayed
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Functionality
     Then I Tap on Home in Settings screen
     Then I Tap on hamburger menu in landing screen
@@ -40,7 +40,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
 #    Then I Tap on Logout in Settings screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen(Account settings) UI
     Then I Tap on View Edit Account link in Settings screen
     Then I Wait short period for Page to Load
@@ -51,7 +51,7 @@ Feature: Testing an Dometic LMC application
     Then I Verify the profile text
     Then I Verify the Subscription text
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen(Account settings)Functionality
     Then I Navigate to the Profile page
     Then I Tap on Back Button
@@ -59,7 +59,7 @@ Feature: Testing an Dometic LMC application
     Then I Navigate to Subscription page
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen(Subscriptions) UI& Functionality
     Then I verify if subscription title is displayed
     Then I verify if subscription back button is available
@@ -68,7 +68,7 @@ Feature: Testing an Dometic LMC application
     Then I Tap on Back Button
     Then I Tap on hamburger menu in landing screen
 
-  @sanity
+  @sanity1
   Scenario:Verifying application Settings screen(Device Management) UI
     Then I Wait short period for Page to Load
     Then I Tap on Device Management
@@ -86,7 +86,7 @@ Feature: Testing an Dometic LMC application
 #    Then I verify the Search Again Text
 #    Then I Tap on close button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen(View/Edit Account) Functionality
     Then I Tap on Back Button
     Then I Tap on hamburger menu in landing screen
@@ -115,7 +115,7 @@ Feature: Testing an Dometic LMC application
     Then I verify Renew arrow is displayed
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen UI
     Then I Tap on Edit profile in profile screen
     Then I Wait short period for Page to Load
@@ -132,7 +132,7 @@ Feature: Testing an Dometic LMC application
     Then I verify Address value is displayed in Edit profile screen
     Then I verify Save Button is displayed
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen(Checking text field allowing Empty text) Functionality
     Then I Wait short period for Page to Load
     Then I enter an empty in First name Field in Edit profile screen
@@ -144,7 +144,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Ok button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen(Checking text field allowing Emoji's) Functionality
     Then I Wait short period for Page to Load
     Then I enter an Emoji's in First name Field in Edit profile screen
@@ -171,7 +171,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Edit profile in profile screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen(Checking text field allowing Special Characters) Functionality
     Then I Wait short period for Page to Load
     Then I enter an Special character in First name Field in Edit profile screen
@@ -198,7 +198,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Edit profile in profile screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen Functionality
     Then I Wait short period for Page to Load
     Then I enter an First name in Edit profile screen
@@ -235,17 +235,64 @@ Feature: Testing an Dometic LMC application
     Then I verify App version text is displayed
 
   @sanity
-  Scenario: Verifying application Settings screen App Settings screen Functionality
+  Scenario: Verifying application Settings screen-App Settings screen(Set units,Temperature,Language) UI&Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Language in App Settings page
     Then I Wait short period for Page to Load
+    Then I verify Back Button displayed in Language Page
+    Then I verify Language Header Text in Language Page
+    Then I Verify Language English Text in Language Page
+    Then I Verify Language German Text in Language Page
+    Then I Verify Language Spanish (US) Text in Language Page
+    Then I Verify Language French Text in Language Page
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
     Then I Tap on Units in App Settings page
     Then I Wait short period for Page to Load
+    Then I verify Back Button displayed in Units Page
+    Then I verify Units Header Text in Units Page
+    Then I verify Metric Text in Units Page
+    Then I verify Imperial Text in Units Page
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
+
+  @sanity
+  Scenario: Verifying application App Settings screen(Set units,Temperature,Language) Functionality
+    Then I Tap on Language in App Settings page
+    Then I Wait short period for Page to Load
+    Then I Tap on German Language in Language Page
+    Then I Tap on Language in App Settings page
+    Then I Wait short period for Page to Load
+    Then I Tap on Spanish (US) Language in Language Page
+    Then I Tap on Language in App Settings page
+    Then I Wait short period for Page to Load
+    Then I Tap on French Language in Language Page
+    Then I Tap on Language in App Settings page
+    Then I Wait short period for Page to Load
+    Then I Tap on English Language in Language Page
+    Then I Tap on Units in App Settings page
+    Then I Wait short period for Page to Load
+    Then I Tap on Imperial Unit in Units Page
     Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I Tap on Security Tile on landing screen
+    Then I Tap on Gio Fencing Radius from center toggle if it's already in OFF state
+    Then I Tap on Back Button
+    Then I Tap on hamburger menu in landing screen
+    Then I Wait short period for Page to Load
+    Then I Tap on App Settings
+    Then I Tap on Units in App Settings page
+    Then I Wait short period for Page to Load
+    Then I Tap on Metric Unit in Units Page
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I Tap on Security Tile on landing screen
+    Then I Tap on Gio Fencing Radius from center toggle if it's already in OFF state
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+
+
+
 
 
 

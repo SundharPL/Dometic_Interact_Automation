@@ -4,6 +4,8 @@ import com.aventstack.extentreports.GherkinKeyword;
 import com.dometic.L1.qa.Pages.Constant_OnboardingPage;
 import com.dometic.L1.qa.Pages.Constant_landingscreen;
 import com.dometic.L1.qa.util.Baseclass;
+import com.dometic.L1.qa.Pages.Constant_HomePage;
+import com.dometic.MTC.qa.Pages.Constant_settings;
 import cucumber.api.java.en.Then;
 import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
@@ -91,5 +93,56 @@ public class OnboardingScreen extends Baseclass {
 //                System.out.println("Text comparison is Successful");
 //            }
         }
+    }
+
+    @Then("I entered into Home Page.")
+    public void iEnteredIntoHomePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I entered into Home Page");
+        WebDriverWait wait = new WebDriverWait(driver, 200);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_HomePage.homePage_Tile_Xpath)));
+
+    }
+
+    @Then("I Tap on Marine Tile.")
+    public void iTapOnMarineTile() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Marine Tile");
+        List<AndroidElement> elements = driver.findElementsByAccessibilityId(Constant_HomePage.homePage_Tile_Access_Id);
+        if (elements.size() != 0) {
+            TaponbuttonaccessabilityID(Constant_HomePage.homePage_Tile_Access_Id);
+            WebDriverWait wait = new WebDriverWait(driver, 500);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.Landingpage_header_connectionType_xpath)));
+        }
+    }
+
+    @Then("I Wait until Landing screen is displayed.")
+    public void iWaitUntilLandingScreenIsDisplayed() throws ClassNotFoundException {
+        WebDriverWait wait = new WebDriverWait(driver, 500);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.LandingPage_LATER_button_xpath)));
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Wait until Landing screen is displayed");
+        System.out.println("Navigated to Landing screen successfully");
+    }
+
+    @Then("I verify if user has navigated to the homescreen.")
+    public void iVerifyIfUserHasNavigatedToTheHomescreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if user has navigated to the homescreen");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_HomePage.logo_Access_Id));
+    }
+
+    @Then("I verify if an empty homescreen is displayed.")
+    public void iVerifyIfAnEmptyHomescreenIsDisplayed() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if an empty homescreen is displayed");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_HomePage.HomeScreen_background_Access_Id));
+    }
+
+    @Then("I Tap on hamburger menu in landing screen.")
+    public void iTapOnHamburgerMenuInLandingScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on hamburger menu in landing screen");
+        TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
+    }
+
+    @Then("I Tap on Logout in Settings screen.")
+    public void iTapOnLogoutInSettingsScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Logout in Settings screen");
+        TaponbuttonaccessabilityID(Constant_settings.Settings_Logout_text_access_id);
     }
 }

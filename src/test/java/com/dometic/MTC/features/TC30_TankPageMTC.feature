@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Tank Screen in Dometic Marine application
 
   @First1 @sanity1
   Scenario: Verifying the update UI in TANK Screen
@@ -15,7 +15,7 @@ Feature: Testing an Dometic LMC application
     Then I Tap on the BAIT text option in the Tank screen
     Then I verify the BAIT WELL LEVEL text in the Tank screen
 
-  @First1 @sanity1
+  @sanity1
   Scenario: Verifying application Tank Screen(Tank Fuel tile) functionality
     Then Then I Tap on Tank Fuel tile in Landing Screen
     Then I Wait short period for Page to Load

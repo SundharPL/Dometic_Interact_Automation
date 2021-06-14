@@ -1,4 +1,4 @@
-Feature: Testing Login page in Dometic LMC application
+Feature: Verifying application Splash screen in Dometic USLTV application
 
   @First @sanity
   Scenario: Launching the application

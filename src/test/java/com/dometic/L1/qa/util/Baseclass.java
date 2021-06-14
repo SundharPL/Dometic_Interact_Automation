@@ -90,4 +90,23 @@ public class Baseclass {
         Assert.assertTrue(actualString.contains(arg1));
         System.out.println("Text comparison is Successful");
     }
+    public void asserttextValidationAccessibility(String arg1, String arg2) throws Throwable {
+        String actualString = driver.findElementByAccessibilityId(arg2).getText();
+        if(actualString.equalsIgnoreCase(arg1)){
+            Assert.assertTrue(actualString.contains(arg1));
+            System.out.println("Text comparison is Successful");
+        }
+        else{
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+    public void asserttextValidation(String arg1, String arg2) throws Throwable {
+        String actualString = driver.findElement(By.xpath(arg2)).getText();
+        if (actualString.equalsIgnoreCase(arg1)) {
+            Assert.assertTrue(actualString.contains(arg1));
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
 }

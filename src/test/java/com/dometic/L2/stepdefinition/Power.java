@@ -39,7 +39,7 @@ public class Power extends Baseclass {
 
     @Then("I Verify BATTERIES header text")
     public void iVerifyBATTERIESHeaderText() throws Throwable {
-        asserttextAccessibility(Constant_power.BATTERIES_header_text,Constant_power.BATTERIES_header_text_access_id);
+        asserttextValidationAccessibility(Constant_power.BATTERIES_header_text,Constant_power.BATTERIES_header_text_access_id);
     }
 
     @Then("I Verify the battery voltage icon")

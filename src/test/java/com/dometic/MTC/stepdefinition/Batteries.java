@@ -1,6 +1,7 @@
 package com.dometic.MTC.stepdefinition;
 
 import com.aventstack.extentreports.GherkinKeyword;
+import com.dometic.L1.qa.Pages.Constant_climate_heater;
 import com.dometic.MTC.qa.Pages.Constant_Batteries_MTC;
 import com.dometic.MTC.qa.util.Baseclass;
 import cucumber.api.java.en.Then;
@@ -341,6 +342,49 @@ public class Batteries extends Baseclass {
         if (elements.size() != 0) {
             Taponbutton(Constant_Batteries_MTC.mtc_Batteries_button1_xpath);
         }
+    }
+
+    @Then("I scroll up to the maximum value Alert-Battery Voltage Below")
+    public void iScrollUpToTheMaximumValueAlertBatteryVoltageBelow() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up to the maximum value Alert-Battery Voltage Below");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_BelowText_Maximum_Value_Access_ID);
+        System.out.println(list.size());
+//        while (list.size() == 0) {
+//            TouchAction action = new TouchAction(driver);
+//            action.press(PointOption.point(530, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+//                    .moveTo(PointOption.point(530, 1350));
+//            action.release().perform();
+//            Thread.sleep(1000);
+//            if (list.size() != 0) {
+//                break;
+//            }
+//        }
+//        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_BelowText_Maximum_Value));
+//        System.out.println(elements);
+//        for (int i = 0; i < 100; i++) {
+//            TouchAction action = new TouchAction(driver);
+//            action.press(PointOption.point(530, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+//                    .moveTo(PointOption.point(530, 1350));
+//            action.release().perform();
+//            Thread.sleep(1000);
+//            if (Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_BelowText_Maximum_Value.equals("29.5")){
+//                break;
+//            }
+//        }
+        String text = driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Battery_Voltage_BelowText_Maximum_Value)).getText();
+        System.out.println(text);
+        while (true) {
+            if (!text.equals("29.5")) {
+                TouchAction action = new TouchAction(driver);
+                action.press(PointOption.point(530, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                        .moveTo(PointOption.point(530, 1350));
+                action.release().perform();
+                Thread.sleep(1000);
+            } else {
+                break;
+            }
+        }
+
     }
 }
 

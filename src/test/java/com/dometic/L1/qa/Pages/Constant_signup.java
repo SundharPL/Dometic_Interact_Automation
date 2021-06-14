@@ -18,6 +18,9 @@ public class Constant_signup extends Baseclass{
     public static final String Signup_password_value1 = "DoM@12345";
     public static final String Signup_confirmpassword_value1 = "DoM@12345";
     public static final String Signup_invalid_confirm_password="Dom@123";
+    public static final String Signup_below_8_Character="12";
+    public static final String Signup_above_8_Character="Dom@123456789987654321";
+    public static final String Signup_above_8_Character_gmail="Dom@123456789987654321@gmail.com";
     public static final String Signup_signupbutton = "com.dometicapp:id/signUp-signUpButton";
     public static final String Signup_term_and_condition_popup="//*[@resource-id='android:id/button1']";
     public static final String Signup_login_link_access_id="com.dometicapp:id/login-signUpText";
@@ -35,7 +38,7 @@ public class Constant_signup extends Baseclass{
     //-------------------Needed Accessibility Id-----------------//
     public static final String SignUp_info_button_access_id="";
     public static final String SignUp_checkBox_terms_condition_access_id="";
-    public static final String SignUp_terms_condition_link_access_id="com.dometicapp:id/signUp-checkBoxMarketingContainer";
+    public static final String SignUp_terms_condition_link_access_id="com.dometicapp:id/signUp-isCheckedMarketing-iconContainer";
     public static final String SignUp_checkBox_offers_service_access_id="";
     public static final String SignUp_offers_service_text_access_id="";
     public static final String SignUp_offers_services_more_link_access_id="";
@@ -55,4 +58,5 @@ public class Constant_signup extends Baseclass{
     public static final String Signup_alomost_there_xpath="//*[@content-desc='com.dometicapp:id/signUp-closeButton']";
     public static final String Signup_parentPanel_xpath="//*[@resource-id='android:id/parentPanel']";
     public static final String Signup_OK_xpath="//*[@resource-id='android:id/button1']";
+
 }

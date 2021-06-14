@@ -26,6 +26,8 @@ public class Constant_Mechanical {
     public static final String Mechanicalscreen_confirmation_popup_Ok_button_xpath="//*[@resource-id='android:id/button1']";
 
 
+    //   --------------------Data--------------//
+    public static final String Mechanical_Text="MECHANICAL";
     public static final String Mechanical_Awning_Text="Awning";
     public static final String Mechanical_Extend_Text="Extent";
     public static final String Mechanicalscreen_Controller_text="Controller";

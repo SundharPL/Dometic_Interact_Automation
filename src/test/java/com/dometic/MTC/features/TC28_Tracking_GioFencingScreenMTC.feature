@@ -1,6 +1,6 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Tracking(Gio Fencing) screen UI
     Then I Wait short period for Page to Load
     Then I Tap on Tracking tile
@@ -20,7 +20,7 @@ Feature: Testing an Dometic LMC application
     Then I Verify Alert Latency expandIcon is displayed
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Tracking(Gio Fencing) screen Functionality
     Then I Tap on Radius from center
     Then I Wait short period for Page to Load

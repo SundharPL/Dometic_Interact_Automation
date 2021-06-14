@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Power screen in Dometic LMC/ERIBA application
 
   @First @sanity
   Scenario: Verifying application PowerHouseBattery screen functionality

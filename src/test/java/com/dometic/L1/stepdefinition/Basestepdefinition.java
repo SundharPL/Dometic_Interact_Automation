@@ -67,32 +67,32 @@ public class Basestepdefinition extends Baseclass {
     @Then("^I swipe the screen right to left$")
     public void i_swipe_the_right_left_screen() throws Throwable {
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(1200, 700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(700, 700));
+        action.press(PointOption.point(900, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(500, 600));
         action.release().perform();
     }
 
     @Then("I scroll up the screen")
     public void iScrollUpTheScreen() {
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(730, 1950)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(730, 1700)).release().perform();
+        action.press(PointOption.point(530, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1550)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
     @Then("I scroll down the screen")
     public void iScrollDownTheScreen() {
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(730, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(730, 1950)).release().perform();
+        action.press(PointOption.point(530, 1550)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1700)).release().perform();
         System.out.println("Scrolling down the Page");
     }
 
     @Then("I swipe the screen left to right")
     public void iSwipeTheScreenLeftToRight() {
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(700, 700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(1200, 700));
+        action.press(PointOption.point(500, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(900, 600));
         action.release().perform();
     }
 

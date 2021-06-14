@@ -609,7 +609,7 @@ public class SpanishLanguage extends Baseclass {
     @Then("I Scroll down the page")
     public void iScrollDownThePage() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll down the page");
-        Basestepdefinition.verticalSwipe(0.2,0.8,0.5);
+        Basestepdefinition.verticalSwipe(0.3,0.7,0.5);
     }
 
     @Then("I Tap on Inicio del tiempo de silencio")

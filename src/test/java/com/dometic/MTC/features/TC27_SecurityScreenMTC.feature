@@ -1,6 +1,6 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Security Screen in Dometic Marine application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Security screen UI
     Then I Wait short period for Page to Load
     Then I Tap on Security Tile on landing screen
@@ -36,7 +36,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Security screen(Gio Fencing-Radius From Center) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Security Tile on landing screen
@@ -52,7 +52,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Security screen(Gio Fencing-Alert Latency) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Security Tile on landing screen
@@ -68,7 +68,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Security screen(Door/Window Alert-Alert Latency) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Security Tile on landing screen
@@ -84,7 +84,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Security screen(Theft Alert-Alert Latency) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Security Tile on landing screen

@@ -1,7 +1,9 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA application
 
   @First @sanity
   Scenario: Verifying application Climate-Heater screen functionality
+    Then I Tap on Climate CTA in Landing screen
+    Then I Wait short period for Page to Load
     Then I Tap on Heater in climate screen
     Then I verify climate title is displayed in Heater Climate screen
     Then I verify inside text is displayed in Heater Climate screen
@@ -56,7 +58,7 @@ Feature: Testing an Dometic LMC application
     Then I validate Energy value is displayed in AC climate screen
     Then I verify Back Button displayed in left corner of the climate screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Climate-Heater screen functionality and scroll up-to minimum temperature
     Then I Tap on heater power
     Then I Wait short period for Page to Load
@@ -69,7 +71,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I validate applied temperature is displayed in Temperature field
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Minimum temperature displayed on Hot Water Level
     Then I Wait short period for Page to Load
     Then I Tap on Hot Water Level in Heater climate screen
@@ -77,7 +79,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Minimum temperature displayed on Energy
     Then I Wait short period for Page to Load
     Then I Tap on Energy in Heater climate screen
@@ -85,7 +87,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Minimum temperature displayed on Climate Tile
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
@@ -93,7 +95,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Climate CTA in Landing screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Climate-Heater screen functionality and scroll up-to Maximum temperature
     Then I Wait short period for Page to Load
     Then I scroll maximum temperature in Climate Heater
@@ -103,7 +105,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I validate applied maximum temperature is displayed in Temperature field
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Maximum temperature displayed on Hot Water Level
     Then I Wait short period for Page to Load
     Then I Tap on Hot Water Level in Heater climate screen
@@ -111,7 +113,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Maximum temperature displayed on Energy
     Then I Wait short period for Page to Load
     Then I Tap on Energy in Heater climate screen
@@ -122,7 +124,7 @@ Feature: Testing an Dometic LMC application
     Then I verify Back Button displayed in left corner of the climate screen
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Maximum temperature displayed on Climate Tile
     Then I Wait short period for Page to Load
     Then I validate applied maximum heater temperature is displayed in Climate Tile

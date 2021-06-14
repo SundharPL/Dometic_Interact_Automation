@@ -1,6 +1,8 @@
 package com.dometic.MTC.stepdefinition;
 
 import com.aventstack.extentreports.GherkinKeyword;
+import com.dometic.L1.qa.Pages.Constant_signup;
+import com.dometic.MTC.qa.Pages.Constant_AccountSettings;
 import com.dometic.MTC.qa.Pages.Constant_OnboardingPage;
 import com.dometic.MTC.qa.Pages.Constant_login;
 import com.dometic.MTC.qa.util.Baseclass;
@@ -215,5 +217,68 @@ public class LoginScreen extends Baseclass {
         //   Taponbutton(login_obj.Login_login_button_xpath);
         TaponbuttonaccessabilityID(login_obj.loginbutton);
         Thread.sleep(3000);
+    }
+
+    @Then("The Email field is required Error message is displayed in login page")
+    public void theEmailFieldIsRequiredErrorMessageIsDisplayedInLoginPage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "The Email field is required Error message is displayed in login page");
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(login_obj.Login_invalidEmail_message_access_id);
+        if (elementsByAccessibilityId.size() != 0) {
+            asserttextAccessibility(login_obj.Login_invalidEmail_message_expected, login_obj.Login_invalidEmail_message_access_id);
+        }
+
+    }
+
+    @Then("The Password field is required Error message is displayed in login page")
+    public void thePasswordFieldIsRequiredErrorMessageIsDisplayedInLoginPage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "The Password field is required Error message is displayed in login page");
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(login_obj.Login_invalidsecurePwd_message_access_id);
+        if (elementsByAccessibilityId.size() != 0) {
+            asserttextAccessibility(login_obj.Login_invalidsecurePwd_message_expected, login_obj.Login_invalidsecurePwd_message_access_id);
+        }
+    }
+    @Then("The password must be at least {int} characters. Error message is displayed in login page")
+    public void thePasswordMustBeAtLeastCharactersErrorMessageIsDisplayedInLoginPage(int arg0) throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "The password must be at least 8 characters. Error message is displayed in login page");
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(login_obj.Login_invalidsecurePwd_message_access_id);
+        if (elementsByAccessibilityId.size() != 0) {
+            asserttextAccessibility(login_obj.Login_invalidsecurePwd_message_The_password_must_be_at_least_5_characters, login_obj.Login_invalidsecurePwd_message_access_id);
+        }
+    }
+    @Then("The email must be a valid email address Error message is displayed")
+    public void theEmailMustBeAValidEmailAddressErrorMessageIsDisplayed() throws Throwable {
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_signup.Signup_invalidemail_message_access_id);
+        if(elementsByAccessibilityId.size()!=0){
+            asserttextValidationAccessibility(Constant_signup.Signup_invalidemail_message_email_must_be_a_valid_email_address,Constant_signup.Signup_invalidemail_message_access_id);
+        }
+    }
+
+    @Then("I enter an Emoji's in Email Field in Login Page")
+    public void iEnterAnEmojiSInEmailFieldInLoginPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Emoji's in Email Field in Login Page");
+        Thread.sleep(1000);
+        TaponbuttonaccessabilityID(login_obj.Login_Email);
+        Thread.sleep(1000);
+        cleartextaccessabilityId(login_obj.Login_Email);
+        //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
+        String emojis = Constant_AccountSettings.grinning_face_with_smiling_eyes + Constant_AccountSettings.face_with_tears_of_joy+
+                Constant_AccountSettings.smiling_face_with_open_mouth_and_cold_sweat+Constant_AccountSettings.smiling_face_with_open_mouth_and_tightly_closed_eyes+
+                Constant_AccountSettings.winking_face;
+        entertextaccessabilityId(emojis, login_obj.Login_Email);
+        Thread.sleep(1000);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
+    }
+
+    @Then("I enter an Special Character in Email Field in Login Page")
+    public void iEnterAnSpecialCharacterInEmailFieldInLoginPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Special Character in Email Field in Login Page");
+        Thread.sleep(1000);
+        TaponbuttonaccessabilityID(login_obj.Login_Email);
+        Thread.sleep(1000);
+        cleartextaccessabilityId(login_obj.Login_Email);
+        //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
+        entertextaccessabilityId(login_obj.email_SpecialCharacter, login_obj.Login_Email);
+        Thread.sleep(1000);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
     }
 }

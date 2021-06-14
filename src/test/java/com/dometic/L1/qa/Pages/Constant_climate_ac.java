@@ -2,7 +2,7 @@ package com.dometic.L1.qa.Pages;
 
 public class Constant_climate_ac {
     // ------------Accessibility_id------------------//
-    public static final String CAC_M_Climate_Text_access_id="com.dometicapp:id/setting-selectedLanguage";
+    public static final String CAC_M_Climate_Text_access_id="com.dometicapp:id/header-TitleText";
     public static final String CAC_M_Climate_Text_expetecd="CLIMATE";
     public static final String CAC_M_Climate_0_mainContent="com.dometicapp:id/tiles-Climate-0-mainContent";
     public static final String CAC_M_Inside_Text_access_id =  "com.dometicapp:id/climate-insideTemp";

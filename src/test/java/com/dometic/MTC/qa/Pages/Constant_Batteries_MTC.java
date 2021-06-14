@@ -13,6 +13,7 @@ public class Constant_Batteries_MTC {
     public static final String mtc_Climate_Tile_Power_text_Access_ID="com.dometicapp:id/climate-powerText";
     public static final String mtc_Batteries_Status_Access_ID="com.dometicapp:id/powerScreen-batteryCarousel-batteryStatus";
     public static final String mtc_Batteries_Alerts_Battery_Voltage_BelowText_Apply_Access_ID="com.dometicapp:id/waterHeater-applyText";
+    public static final String mtc_Batteries_Alerts_Battery_Voltage_BelowText_Maximum_Value_Access_ID="com.dometicapp:id/batteryScreen-alertsBatteryBelowVoltage-carousalItemValue-209";
     public static final String mtc_Batteries_title_template_ID="android:id/title_template";
     public static final String mtc_Batteries_button1_ID="android:id/button1";
     public static final String mtc_Batteries_Header_Text_Access_ID="com.dometicapp:id/header-TitleText";
@@ -69,7 +70,7 @@ public class Constant_Batteries_MTC {
     public static final String mtc_Batteries_Warnings_Set_Latency_Updated_Value_xpath="((//*[@text='Latency'])[2]//following::android.widget.TextView)[1]";
     public static final String mtc_Batteries_title_template_xpath="//*[@resource-id='android:id/title_template']";
     public static final String mtc_Batteries_button1_xpath="//*[@resource-id='android:id/button1']";
-
+    public static final String mtc_Batteries_Alerts_Battery_Voltage_BelowText_Maximum_Value="//*[contains(@content-desc,'com.dometicapp:id/batteryScreen-alertsBatteryBelowVoltage-carousalItemValue-')]";
     //---------------------------Data----------------------------//
     public static final String mtc_Batteries="BATTERIES";
     public static final String mtc_Climate_Tile_Power_toggle_Status="OFF";

@@ -54,7 +54,7 @@ public class Hooks extends Baseclass{
         String appActivity = prop.getProperty("appActivity");
         cap.setCapability("appActivity", appActivity);
 //        String app = prop.getProperty("app");
-        cap.setCapability("app", System.getProperty("user.dir") + "/src/test/java/com/dometic/L1/application/Interact_v66.apk");
+        cap.setCapability("app", System.getProperty("user.dir") + "/src/test/java/com/dometic/L1/application/Interact_v1.6(122).apk");
         String fullReset = prop.getProperty("fullReset");
         cap.setCapability("fullReset", fullReset);
         try {

@@ -1,6 +1,7 @@
 package com.dometic.L2.stepdefinition;
 
 import com.aventstack.extentreports.GherkinKeyword;
+import com.dometic.L1.qa.Pages.Constant_HomePage;
 import com.dometic.L2.qa.Pages.Constant_OnboardingPage;
 import com.dometic.L2.qa.Pages.Constant_landingscreen;
 import com.dometic.L2.qa.util.Baseclass;
@@ -51,4 +52,30 @@ public class OnboardingScreen extends Baseclass {
             Taponbutton(Constant_OnboardingPage.Onboarding_YES_Button_xpath);
         }
     }
+
+    @Then("I entered into Home Page.")
+    public void iEnteredIntoHomePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I entered into Home Page");
+        WebDriverWait wait = new WebDriverWait(driver, 200);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_HomePage.homePage_Tile_Xpath)));
+
+    }
+
+    @Then("I Tap on Marine Tile.")
+    public void iTapOnMarineTile() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Marine Tile");
+        List<AndroidElement> elements = driver.findElementsByAccessibilityId(Constant_HomePage.homePage_Tile_Access_Id);
+        if (elements.size() != 0) {
+            TaponbuttonaccessabilityID(Constant_HomePage.homePage_Tile_Access_Id);
+            WebDriverWait wait = new WebDriverWait(driver, 500);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.Landingpage_LastShowText_xpath)));
+        }
+    }
+
+    @Then("I Wait until Landing screen is displayed.")
+    public void iWaitUntilLandingScreenIsDisplayed() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Wait until Landing screen is displayed");
+        System.out.println("Navigated to Landing screen successfully");
+    }
+
 }
