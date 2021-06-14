@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Climate Screen Language validation in Dometic LMC/ERIBA application
 
   @First1 @sanity1
   Scenario: Verifying application German Language in  Klima screen

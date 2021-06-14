@@ -2,7 +2,7 @@ package com.dometic.L1.qa.Pages;
 
 public class Constant_power {
     // ------------Accessibility_id------------------//
-    public static final String Powerpage_power_text_access_id="com.dometicapp:id/setting-selectedLanguage";
+    public static final String Powerpage_power_text_access_id="com.dometicapp:id/header-TitleText";
     public static final String Powerpage_power_text_expected="POWER";
     public static final String Powerpage_houseBattery_text_access_id="com.dometicapp:id/powerScreen-houseBatteryText";
     public static final String Powerpage_houseBattery_expected="HOUSE BATTERY";
@@ -28,7 +28,7 @@ public class Constant_power {
     // ------------X Path------------------//
     public static final String Powerpage_progressBar_xpath="(//*[@content-desc='com.dometicapp:id/powerScreen-progressBar'])[1]";
     public static final String CAC_M_power_percentage_xpath="//android.view.ViewGroup[@content-desc='com.dometicapp:id/powerScreen-container']/android.view.ViewGroup";
-    public static final String Powerpage_power_text_xpath="//*[@content-desc='com.dometicapp:id/setting-selectedLanguage']";
+    public static final String Powerpage_power_text_xpath="//*[@content-desc='com.dometicapp:id/header-TitleText']";
     public static final String Powerpage_houseBattery_text_xpath="//android.view.ViewGroup[@content-desc='com.dometicapp:id/powerScreen-container']/android.view.ViewGroup";
     public static final String Powerpage_batteryVoltageText_xpath="//*[@content-desc='com.dometicapp:id/powerScreen-houseBatteryText']";
     public static final String Powerpage_batteryVoltageValue_xpath="//*[@content-desc='com.dometicapp:id/powerScreen-batteryVoltageValue']";

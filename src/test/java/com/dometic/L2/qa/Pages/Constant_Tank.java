@@ -12,7 +12,7 @@ public class Constant_Tank {
     public static final String Truma_Decalcification_text_access_id="com.dometicapp:id/trumaWaterHeater-waterHeaterStatusValue";
     public static final String Truma_Mode_text_access_id="com.dometicapp:id/trumaWaterHeater-modeText";
     public static final String Truma_CHANGE_MODE_text_access_id="com.dometicapp:id/trumaWaterHeater-carouselHeader";
-    public static final String Tanksscreen_Fresh_progressIndicator_access_id="com.dometicapp:id/Tank-progressIndicator";
+    public static final String Tanksscreen_Fresh_progressIndicator_access_id="com.dometicapp:id/Tank-progressIndicator-value";
     public static final String Tanksscreen_Black_progressIndicator="com.dometicapp:id/Tank-progressIndicator";
     public static final String Truma_Mode_Value_access_id="com.dometicapp:id/trumaWaterHeater-modeValue";
 

@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Settings Screen in Dometic Marine application
 
   @First1 @sanity1
   Scenario: Verifying application Settings screen functionality

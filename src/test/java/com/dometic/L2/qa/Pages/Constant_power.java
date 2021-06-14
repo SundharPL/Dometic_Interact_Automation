@@ -72,7 +72,7 @@ public class Constant_power {
     public static final String L2Powerpagepower_stop_button_access_id="com.dometicapp:id/powerScreen-stopButton";
 
     //Version 103 Access_id and data
-    public static final String BATTERIES_header_text_access_id="com.dometicapp:id/setting-selectedLanguage";
+    public static final String BATTERIES_header_text_access_id="com.dometicapp:id/header-TitleText";
     public static final String BATTERIES_header_text="BATTERIES";
     public static final String powerScreen_batteryCarousel_circle_Engine1_access_id="com.dometicapp:id/powerScreen-batteryCarousel-circle-0";
     public static final String powerScreen_batteryCarousel_circle_Engine1_text="Engine-1";

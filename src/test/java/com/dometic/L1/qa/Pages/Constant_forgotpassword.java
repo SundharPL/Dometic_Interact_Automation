@@ -28,7 +28,7 @@ public class Constant_forgotpassword extends Baseclass{
     public static final String ForgetPassword_forgot_checkinMin_access_id="com.dometicapp:id/forgot-checkinMin";
     public static final String ForgetPassword_forgot_checkinMin_expected="next 15 minutes.";
     public static final String ForgetPassword_forgot_email_label_access_id="com.dometicapp:id/forgot-email";
-    public static final String ForgetPassword_forgot_email_label_expected="E-mail (case sensitive)";
+    public static final String ForgetPassword_forgot_email_label_expected="E-mail";
     public static final String ForgetPassword_forgot_email_label_German__expected="Email";
     //-------------------Needed Accessibility Id-----------------//
     public static final String ForgetPassword_send_button_access_id="";

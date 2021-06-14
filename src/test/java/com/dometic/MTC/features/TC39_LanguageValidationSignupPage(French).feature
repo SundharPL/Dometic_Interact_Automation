@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Signup Screen Language validation(French) in Dometic Marine application
 
   @First1 @sanity1
   Scenario: Empty Email and Enter the password and verify password(French Language)

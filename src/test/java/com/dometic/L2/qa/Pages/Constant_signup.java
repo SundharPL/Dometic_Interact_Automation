@@ -1,6 +1,6 @@
 package com.dometic.L2.qa.Pages;
 
-import com.dometic.L1.qa.util.Baseclass;
+import com.dometic.L2.qa.util.Baseclass;
 
 public class Constant_signup extends Baseclass{
 
@@ -22,6 +22,9 @@ public class Constant_signup extends Baseclass{
     public static final String Signup_term_and_condition_popup="//*[@resource-id='android:id/button1']";
     public static final String Signup_login_link_access_id="com.dometicapp:id/login-signUpText";
     public static final String Signup_blank_verify_password_field="";
+    public static final String Signup_invalidemail_message_access_id="com.dometicapp:id/signUp-invalidemail-message";
+    public static final String Signup_invalidemail_message_email_must_be_a_valid_email_address="The email must be a valid email address.";
+
     //-------------------Needed Accessibility Id-----------------//
     public static final String SignUp_info_button_access_id="";
     public static final String SignUp_checkBox_terms_condition_access_id="";

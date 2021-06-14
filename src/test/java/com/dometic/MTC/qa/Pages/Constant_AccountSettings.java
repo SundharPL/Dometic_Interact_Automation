@@ -41,6 +41,15 @@ public class Constant_AccountSettings {
     public static final String appSettings_unitText_Access_Id="com.dometicapp:id/setting-unitText";
     public static final String appSettings_selectedUnit_Access_Id="com.dometicapp:id/setting-selectedUnit";
     public static final String appSettings_versionText_Access_Id="com.dometicapp:id/setting-versionText";
+    public static final String appSettings_language_header_TitleText_Access_Id="com.dometicapp:id/header-TitleText";
+    public static final String appSettings_Back_Button_Access_Id="com.dometicapp:id/tiles-backImage";
+    public static final String appSettings_Language_English_CardTitle_Access_Id="com.dometicapp:id/language-english-cardTitle";
+    public static final String appSettings_Language_German_CardTitle_Access_Id="com.dometicapp:id/language-german-cardTitle";
+    public static final String appSettings_Language_Spanish_CardTitle_Access_Id="com.dometicapp:id/language-spanish-cardTitle";
+    public static final String appSettings_Language_French_CardTitle_Access_Id="com.dometicapp:id/language-french-cardTitle";
+    public static final String appSettings_Unit_header_TitleText_Access_Id="com.dometicapp:id/header-TitleText";
+    public static final String appSettings_Unit_Metric_Access_Id="com.dometicapp:id/unitSelection-metric-cardTitle";
+    public static final String appSettings_Unit_Imperial_Access_Id="com.dometicapp:id/unitSelection-imperial-cardTitle";
 
     //------------------New Access id------------------------------//
     public static final String profile_LandingPage_edit_button_Access_Id = "com.dometicapp:id/sidemenu-viewEditButtonText";
@@ -108,4 +117,13 @@ public class Constant_AccountSettings {
     public static final String appSettings_temperatureContainer="Temperature";
     public static final String appSettings_unitText="Units";
     public static final String appSettings_versionText="App version";
+    public static final String appSettings_language_header_TitleText="LANGUAGE";
+    public static final String appSettings_Language_English_CardTitle_Text="English";
+    public static final String appSettings_Language_German_CardTitle_Text="German";
+    public static final String appSettings_Language_Spanish_CardTitle_Text="Spanish (US)";
+    public static final String appSettings_Language_French_CardTitle_Text="French";
+    public static final String appSettings_Unit_header_TitleText_Text="UNIT";
+    public static final String appSettings_Unit_Metric_Text="Metric";
+    public static final String appSettings_Unit_Imperial_Text="Imperial";
+
 }

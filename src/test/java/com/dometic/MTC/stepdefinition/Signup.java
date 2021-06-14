@@ -1,6 +1,8 @@
 package com.dometic.MTC.stepdefinition;
 
 import com.aventstack.extentreports.GherkinKeyword;
+import com.dometic.L1.qa.Pages.Constant_login;
+import com.dometic.MTC.qa.Pages.Constant_AccountSettings;
 import com.dometic.MTC.qa.util.Baseclass;
 import com.google.common.collect.ImmutableMap;
 import cucumber.api.java.en.And;
@@ -201,5 +203,134 @@ public class Signup extends Baseclass{
             Thread.sleep(2000);
             Taponbutton(signup_obj.Signup_OK_xpath);
         }
+    }
+
+    @Then("Email field is required Error message is displayed.")
+    public void emailFieldIsRequiredErrorMessageIsDisplayed() throws Throwable {
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(signup_obj.Signup_invalidemail_message_access_id);
+        if(elementsByAccessibilityId.size()!=0){
+            asserttextValidationAccessibility(signup_obj.Signup_invalidemail_message_expected,signup_obj.Signup_invalidemail_message_access_id);
+        }
+    }
+
+    @Then("The password field is required Error message is displayed.")
+    public void thePasswordFieldIsRequiredErrorMessageIsDisplayed() throws Throwable {
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(signup_obj.Signup_invalidSecurePwd_message_access_id);
+        if(elementsByAccessibilityId.size()!=0){
+            asserttextValidationAccessibility(signup_obj.Signup_invalidSecurePwd_message_expected,signup_obj.Signup_invalidSecurePwd_message_access_id);
+        }
+    }
+
+    @Then("Doesn't match Error message is displayed.")
+    public void doesnTMatchErrorMessageIsDisplayed() throws Throwable {
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(signup_obj.Signup_showVerifyPasswordError_access_id);
+        if(elementsByAccessibilityId.size()!=0){
+            asserttextValidationAccessibility(signup_obj.Signup_showVerifyPasswordError_Doesnt_match,signup_obj.Signup_showVerifyPasswordError_access_id);
+        }
+    }
+
+    @Then("The verify password field is required Error message is displayed.")
+    public void theVerifyPasswordFieldIsRequiredErrorMessageIsDisplayed() throws Throwable {
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(signup_obj.Signup_showVerifyPasswordError_access_id);
+        if(elementsByAccessibilityId.size()!=0){
+            asserttextValidationAccessibility(signup_obj.Signup_showVerifyPasswordError_expected,signup_obj.Signup_showVerifyPasswordError_access_id);
+        }
+    }
+
+    @Then("The email must be a valid email address Error message is displayed.")
+    public void theEmailMustBeAValidEmailAddressErrorMessageIsDisplayed() throws Throwable {
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(signup_obj.Signup_invalidemail_message_access_id);
+        if(elementsByAccessibilityId.size()!=0){
+            asserttextValidationAccessibility(signup_obj.Signup_invalidemail_message_email_must_be_a_valid_email_address,signup_obj.Signup_invalidemail_message_access_id);
+        }
+    }
+
+    @Then("The password doesn't satisfy the conditions Error message is displayed.")
+    public void thePasswordDoesnTSatisfyTheConditionsErrorMessageIsDisplayed() throws Throwable {
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(signup_obj.Signup_invalidSecurePwd_message_access_id);
+        if(elementsByAccessibilityId.size()!=0){
+            asserttextValidationAccessibility(signup_obj.Signup_The_password_doesnt_satisify_the_conditions_expected,signup_obj.Signup_invalidSecurePwd_message_access_id);
+        }
+    }
+
+    @Then("I enter an password below {int} characters in Password Field in Signup Page.")
+    public void iEnterAnPasswordBelowCharactersInPasswordFieldInSignupPage(int arg0) throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an password below 8 characters in Password Field in Signup Page");
+        Thread.sleep(1000);
+        TaponbuttonaccessabilityID(signup_obj.SignUp_password_textField_access_id);
+        Thread.sleep(1000);
+        cleartextaccessabilityId(signup_obj.SignUp_password_textField_access_id);
+        //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
+        entertextaccessabilityId(signup_obj.Signup_below_8_Character,signup_obj.SignUp_password_textField_access_id);
+        Thread.sleep(1000);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
+    }
+
+    @Then("I enter an password below {int} characters in confirm Password Field in Signup Page.")
+    public void iEnterAnPasswordBelowCharactersInConfirmPasswordFieldInSignupPage(int arg0) throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an password below 8 characters in confirm Password Field in Signup Page");
+        Thread.sleep(1000);
+        TaponbuttonaccessabilityID(signup_obj.SignUp_verifyPassword_text_field_access_id);
+        Thread.sleep(1000);
+        cleartextaccessabilityId(signup_obj.SignUp_verifyPassword_text_field_access_id);
+        //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
+        entertextaccessabilityId(signup_obj.Signup_below_8_Character,signup_obj.SignUp_verifyPassword_text_field_access_id);
+        Thread.sleep(1000);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
+    }
+
+    @Then("I enter an password above {int} characters in Password Field in Signup Page.")
+    public void iEnterAnPasswordAboveCharactersInPasswordFieldInSignupPage(int arg0) throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an password above 8 characters in Password Field in Signup Page");
+        Thread.sleep(1000);
+        TaponbuttonaccessabilityID(signup_obj.SignUp_password_textField_access_id);
+        Thread.sleep(1000);
+        cleartextaccessabilityId(signup_obj.SignUp_password_textField_access_id);
+        //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
+        entertextaccessabilityId(signup_obj.Signup_above_8_Character,signup_obj.SignUp_password_textField_access_id);
+        Thread.sleep(1000);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
+    }
+
+    @Then("I enter an password above {int} characters in confirm Password Field in Signup Page.")
+    public void iEnterAnPasswordAboveCharactersInConfirmPasswordFieldInSignupPage(int arg0) throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an password below 8 characters in confirm Password Field in Signup Page");
+        Thread.sleep(1000);
+        TaponbuttonaccessabilityID(signup_obj.SignUp_verifyPassword_text_field_access_id);
+        Thread.sleep(1000);
+        cleartextaccessabilityId(signup_obj.SignUp_verifyPassword_text_field_access_id);
+        //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
+        entertextaccessabilityId(signup_obj.Signup_above_8_Character,signup_obj.SignUp_verifyPassword_text_field_access_id);
+        Thread.sleep(1000);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
+    }
+
+    @Then("I enter an Emoji's in Email Field in Signup Page.")
+    public void iEnterAnEmojiSInEmailFieldInSignupPage() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Emoji's in Email Field in Signup Page");
+        Thread.sleep(1000);
+        TaponbuttonaccessabilityID(signup_obj.SignUp_email_text_field_access_id);
+        Thread.sleep(1000);
+        cleartextaccessabilityId(signup_obj.SignUp_email_text_field_access_id);
+        //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
+        String emojis = Constant_AccountSettings.grinning_face_with_smiling_eyes + Constant_AccountSettings.face_with_tears_of_joy+
+                Constant_AccountSettings.smiling_face_with_open_mouth_and_cold_sweat+Constant_AccountSettings.smiling_face_with_open_mouth_and_tightly_closed_eyes+
+                Constant_AccountSettings.winking_face;
+        entertextaccessabilityId(emojis,signup_obj.SignUp_email_text_field_access_id);
+        Thread.sleep(1000);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
+    }
+
+    @Then("I enter an Special Character in Email Field in Signup Page.")
+    public void iEnterAnSpecialCharacterInEmailFieldInSignupPage() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an Special Character in Email Field in Signup Page");
+        Thread.sleep(1000);
+        TaponbuttonaccessabilityID(signup_obj.SignUp_email_text_field_access_id);
+        Thread.sleep(1000);
+        cleartextaccessabilityId(signup_obj.SignUp_email_text_field_access_id);
+        //  entertext(login_obj.ValidUser,login_obj.Login_Email_Xpath);
+        entertextaccessabilityId(Constant_login.email_SpecialCharacter,signup_obj.SignUp_email_text_field_access_id);
+        Thread.sleep(1000);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
     }
 }

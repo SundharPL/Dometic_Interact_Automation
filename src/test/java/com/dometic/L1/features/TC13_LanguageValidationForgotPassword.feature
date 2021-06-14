@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Forgot Password Screen Language validation in Dometic LMC/ERIBA application
 
   @First1 @sanity1
   Scenario: Validating application German Language in login page

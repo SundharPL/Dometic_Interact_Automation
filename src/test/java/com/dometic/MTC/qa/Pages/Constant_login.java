@@ -23,7 +23,12 @@ public class Constant_login extends Baseclass {
         public static final String Login_forget_password_text_expected="Forgot password?";
         public static final String Login_Dont_have_an_account_text_expected="Don't have an account?";
         public static final String Login_Sign_Up_text_expected="Sign Up";
-
+        public static final String Login_invalidEmail_message_access_id="com.dometicapp:id/login-invalidEmail-message";
+        public static final String Login_invalidsecurePwd_message_access_id="com.dometicapp:id/login-invalidsecurePwd-message";
+        public static final String Login_invalidEmail_message_expected="The email field is required.";
+        public static final String Login_invalidsecurePwd_message_expected="The password field is required.";
+        public static final String Login_invalidsecurePwd_message_The_password_must_be_at_least_5_characters="The password must be at least 8 characters.";
+        public static final String email_SpecialCharacter="!@#$%^&*()_+";
 
         //----------------------Accessibility_id--------------------------------------//
         public static final String Login_Allow_popup_access_id="com.android.permissioncontroller:id/permission_allow_button";

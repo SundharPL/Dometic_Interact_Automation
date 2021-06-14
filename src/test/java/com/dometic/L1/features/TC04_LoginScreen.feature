@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Login screen in Dometic LMC/ERIBA application
 
 
   @First1 @sanity1
@@ -32,7 +32,7 @@ Feature: Testing an Dometic LMC application
     Then I enter Valid Email in Login Page
     Then I enter an Invalid Password in Login Page
     Then I Tap on Login button in Login Page
-    Then The password must be at least 5 characters. Error message is displayed in login page
+    Then The password must be at least 8 characters. Error message is displayed in login page
 
   @sanity1
   Scenario: Login with Valid email and blank password
@@ -55,10 +55,30 @@ Feature: Testing an Dometic LMC application
     Then I Tap on Login button in Login Page
     Then Error message is displayed
 
-  @sanity
+  @sanity1
+  Scenario:  Verifying application Login Functionality with invalid credentials(Checking text field allowing Emoji's)
+    Then I enter an Emoji's in Email Field in Login Page
+    Then I enter Valid Password in Login Page
+    Then I Tap on Login button in Login Page
+    Then The email must be a valid email address Error message is displayed
+
+  @sanity1
+  Scenario:  Verifying application Login Functionality with invalid credentials(Checking text field allowing Special Character)
+    Then I enter an Special Character in Email Field in Login Page
+    Then I enter Valid Password in Login Page
+    Then I Tap on Login button in Login Page
+    Then The email must be a valid email address Error message is displayed
+
+  @sanity1
   Scenario: Verifying application Login Functionality with valid credentials
     Then I enter Valid Email in Login Page
     Then I enter Valid Password in Login Page
     Then I Tap on an Login button in Login Page
     Then  I Wait short period for Page to Load
-    Then I verify successfully navigated to On boarding screen
+    Then I verify successfully navigated to DashBoard screen
+    Then I verify if user has navigated to the homescreen.
+    Then I verify if an empty homescreen is displayed.
+    Then I Tap on hamburger menu in landing screen.
+    Then I Wait short period for Page to Load
+    Then I Tap on Logout in Settings screen.
+    Then I Wait short period for Page to Load

@@ -1,4 +1,4 @@
-Feature: Testing Login page in Dometic LMC application
+Feature: Verifying application Splash screen in Dometic LMC/ERIBA application
 
   @First @sanity
   Scenario: Launching the application

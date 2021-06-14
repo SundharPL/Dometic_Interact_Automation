@@ -7,12 +7,16 @@ import com.dometic.L1.qa.Pages.Constant_climate_heater;
 import com.dometic.L1.qa.Pages.Constant_landingscreen;
 import com.dometic.L1.qa.util.Baseclass;
 import cucumber.api.java.en.Then;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.List;
 
 public class LanguageValidationLandingPage extends Baseclass {
@@ -38,6 +42,15 @@ public class LanguageValidationLandingPage extends Baseclass {
 
     @Then("I verify Climate Klimaanlage text is displayed in landing screen")
     public void iVerifyClimateKlimaanlageTextIsDisplayedInLandingScreen() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Climate Aircondition text is displayed in landing screen");
+        String text = driver.findElementByAccessibilityId(Constant_Language.LandingPage_German_Climate_Air_conditioner_OFF_Heater_access_id).getText();
+        if (text.equalsIgnoreCase(Constant_Language.Climate_heater_Heizung_German_text_expected)) {
+            System.out.println("Text comparison is Successful");
+        } else if (text.equalsIgnoreCase(Constant_Language.Climate_aircondition_Klimaanlage_German_text_expected)) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Text comparison is Successful");
+        }
         List<AndroidElement> elements = driver.findElementsByAccessibilityId(Constant_Language.Climate_heater_Heizung_German_text_access_id);
         if(elements.size()!=0){
             TaponbuttonaccessabilityID(Constant_Language.Climate_German_Klima_text_access_id);
@@ -65,12 +78,20 @@ public class LanguageValidationLandingPage extends Baseclass {
 
     @Then("I verify Klima is displayed in Landing screen")
     public void iVerifyKlimaIsDisplayedInLandingScreen() throws Throwable {
+        List<AndroidElement> accessibilityId = driver.findElementsByAccessibilityId(Constant_Language.Climate_German_Klima_outside_text_access_id);
+        while (accessibilityId.size() == 0) {
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(350, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(200, 600)).release().perform();
+            System.out.println("Swipe the Klima Tile");
+            break;
+        }
         asserttextAccessibility(Constant_Language.Climate_German_Klima_text_expected,Constant_Language.Climate_German_Klima_text_access_id);
     }
 
     @Then("I verify Klima draußen text is displayed in Landing screen")
     public void iVerifyKlimaDraußenTextIsDisplayedInLandingScreen() throws Throwable {
-        asserttextAccessibility(Constant_Language.Climate_German_Klima_outside_text_text_expected,Constant_Language.Climate_German_Klima_outside_text_access_id);
+        asserttextValidationAccessibility(Constant_Language.Climate_German_Klima_outside_text_text_expected,Constant_Language.Climate_German_Klima_outside_text_access_id);
     }
 
     @Then("I verify Energie Tile is displayed in Landing screen")
@@ -109,7 +130,15 @@ public class LanguageValidationLandingPage extends Baseclass {
     @Then("I verify Panzer Grauwassertank percentage is displayed in landing screen")
     public void iVerifyPanzerGrauwassertankPercentageIsDisplayedInLandingScreen() {
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_landingscreen.LandingPage_Tank_GreywaterTank_percentage_access_id));
-//        Basestepdefinition.verticalSwipe(0.3,0.7,0.5);
+        Basestepdefinition.verticalSwipe(0.3, 0.7, 0.5);
+        List<AndroidElement> accessibilityId = driver.findElementsByAccessibilityId(Constant_Language.FreshWater_German_Frischwassertank_text_access_id);
+        while (accessibilityId.size() == 0) {
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(150, 1075)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(350, 1075)).release().perform();
+            System.out.println("Swipe the Tank Screen");
+            break;
+        }
     }
 
     @Then("I verify Klima Climate fan icon is displayed in landing screen")
@@ -133,5 +162,13 @@ public class LanguageValidationLandingPage extends Baseclass {
     public void iVerifyKlimaUnitInOutsideIsDisplayedInLandingScreen() {
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Language.Climate_German_Klima1_mainContent_access_id));
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Language.Climate_German_Klima1_unit_access_id));
+        List<AndroidElement> accessibilityId = driver.findElementsByAccessibilityId(Constant_Language.Climate_German_Klima_mainContent_access_id);
+        while (accessibilityId.size() == 0) {
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(200, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(350, 600)).release().perform();
+            System.out.println("Swipe the Tank Tile");
+            break;
+        }
     }
 }

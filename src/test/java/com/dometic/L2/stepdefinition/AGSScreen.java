@@ -183,7 +183,7 @@ public class AGSScreen extends Baseclass {
     @Then("I verify TIME UNDER title")
     public void iVerifyTIMEUNDERTitle() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify TIME UNDER title");
-        asserttextAccessibility(Constant_AGS.AGSPage_timeUnder_Title_text,Constant_AGS.AGSPage_startVoltage_headingText_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_timeUnder_Title_text,Constant_AGS.AGSPage_timeUnder_headingText_access_id);
         /**
          * Globally declared list for TIME UNDER**/
         timeUnder=new ArrayList<>();
@@ -299,7 +299,7 @@ public class AGSScreen extends Baseclass {
     @Then("I Tap on apply button in Time Under")
     public void iTapOnApplyButtonInTimeUnder() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on apply button in Time Under");
-        TaponbuttonaccessabilityID(Constant_AGS.AGSPage_startVoltage_applyButton_access_id);
+        TaponbuttonaccessabilityID(Constant_AGS.AGSPage_timeUnder_applyButton_access_id);
     }
 
     @Then("I Tap on Run Time")
@@ -334,7 +334,7 @@ public class AGSScreen extends Baseclass {
     @Then("I Tap on apply button in Run Time")
     public void iTapOnApplyButtonInRunTime() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on apply button in Run Time");
-        TaponbuttonaccessabilityID(Constant_AGS.AGSPage_startVoltage_applyButton_access_id);
+        TaponbuttonaccessabilityID(Constant_AGS.AGSPage_runTime_applyButton_access_id);
     }
 
     @Then("I validate updated Run Time value is applied in AGS Screen")

@@ -1,12 +1,12 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Landing Screen in Dometic Marine application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Landing Screen functionality
     Then I Tap on the access this location pop up
     Then I Tap on LATER Button
     Then I Tap on cancel button in Upgrade Firmware
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Bottom Layout screen with ViewOption(Tile View-All Devices) functionality
     Then I Wait short period for Page to Load
     Then I Tap on View option button in landing screen
@@ -29,7 +29,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Home option in Bottom layout
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Bottom Layout screen with ViewOption(Tile View-Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Connected Devices
@@ -50,7 +50,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Home option in Bottom layout
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Bottom Layout screen with ViewOption(Tile View-Non Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Non Connected Devices
@@ -71,7 +71,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Home option in Bottom layout
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Bottom Layout screen with ViewOption(List View-All Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on List View Options
@@ -93,7 +93,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Home option in Bottom layout
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Bottom Layout screen with ViewOption(List View-Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Connected Devices
@@ -114,7 +114,7 @@ Feature: Testing an Dometic LMC application
     Then I Wait short period for Page to Load
     Then I Tap on Home option in Bottom layout
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Bottom Layout screen with ViewOption(List View-Non Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Non Connected Devices

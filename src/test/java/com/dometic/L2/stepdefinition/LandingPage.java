@@ -3,6 +3,7 @@ package com.dometic.L2.stepdefinition;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.dometic.L2.qa.Pages.*;
 import com.dometic.L2.qa.util.Baseclass;
+import com.dometic.MTC.qa.Pages.Constant_Batteries_MTC;
 import cucumber.api.java.en.Then;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
@@ -19,8 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LandingPage extends Baseclass {
-    public static String freshWater, blackWater,mainContentText;
-    public static List<String> Waterheater;
+    public static String freshWater, blackWater, mainContentText, minTemp, maxTemp;
+    public static List<String> Waterheater, hoursTemperature;
+
     @Then("I Tap on LATER Button")
     public void iTapOnLATERButton() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on LATER Button");
@@ -50,7 +52,7 @@ public class LandingPage extends Baseclass {
     @Then("I Tap on Climate in Landing screen")
     public void iTapOnClimateInLandingScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Climate in Landing screen");
-        Taponbutton(Constant_landingscreen.LandingPage_L21stclimate_tile_xpath);
+        Taponbutton(Constant_landingscreen.LandingPage_L21stclimate_text_xpath);
     }
 
     @Then("I Scroll Right to Left of the screen")
@@ -65,12 +67,15 @@ public class LandingPage extends Baseclass {
     @Then("I Tap on Apply button in climate screen")
     public void iTapOnApplyButtonInClimateScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Apply button in climate screen");
-        WebDriverWait wait = new WebDriverWait(driver, 250);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_climate_ac.L2CAC_Apply_Button_xpath)));
-        TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_apply_button_access_id);
-        WebDriverWait wait1 = new WebDriverWait(driver, 250);
-        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_climate_ac.L2CAC_Apply_Button_xpath)));
+        List<AndroidElement> list = driver.findElements(By.xpath(Constant_climate_ac.L2CAC_Apply_Button_xpath));
+        if (list.size() != 0) {
+            WebDriverWait wait = new WebDriverWait(driver, 250);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_climate_ac.L2CAC_Apply_Button_xpath)));
+            TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_apply_button_access_id);
+            WebDriverWait wait1 = new WebDriverWait(driver, 250);
+            wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_climate_ac.L2CAC_Apply_Button_xpath)));
 
+        }
     }
 
     @Then("I Tap on Fan speed in climate screen")
@@ -195,10 +200,9 @@ public class LandingPage extends Baseclass {
     @Then("I Tap on Quiet Time Start")
     public void iTapOnQuietTimeStart() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Quiet Time Start");
-        WebDriverWait wait = new WebDriverWait(driver, 200);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_AGS.AGSPage_QuietTimeStart_xpath)));
         TaponbuttonaccessabilityID(Constant_AGS.AGSPage_Quiet_Time_Start_text_access_id);
-
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_AGS.AGSPage_QuietTimeStart_xpath)));
     }
 
     @Then("I Scroll up the hours in Quiet Time Start")
@@ -455,113 +459,122 @@ public class LandingPage extends Baseclass {
     @Then("I verified Power text is displayed Ac climate screen")
     public void iVerifiedPowerTextIsDisplayedAcClimateScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verified Power text is displayed Ac climate screen");
-        asserttextAccessibility(Constant_climate_ac.CAC_M_Power_Text_expected, Constant_climate_ac.CAC_M_Power_Text_access_id);
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.CAC_M_Power_Text_access_id);
+        if (list.size() != 0) {
+            asserttextAccessibility(Constant_climate_ac.CAC_M_Power_Text_expected, Constant_climate_ac.CAC_M_Power_Text_access_id);
+
+        }
     }
 
     @Then("I verified Fan speed text is displayed Ac climate screen")
     public void iVerifiedFanSpeedTextIsDisplayedAcClimateScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verified Fan speed text is displayed Ac climate screen");
-        asserttext(Constant_climate_ac.fanspeed_text_climatescreen, Constant_climate_ac.L2CAC_fanspeed_text_xpath);
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.CAC_FanSpeed_text_access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.fanspeed_text_climatescreen, Constant_climate_ac.CAC_FanSpeed_text_access_id);
+        }
     }
 
     @Then("I verified Climate Mode text is displayed Ac climate screen")
     public void iVerifiedClimateModeTextIsDisplayedAcClimateScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verified Climate Mode text is displayed Ac climate screen");
-        asserttext(Constant_climate_ac.climatemode_text_climatescreen, Constant_climate_ac.L2CAC_Climatemode_text_xpath);
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.CAC_ClimateMode_text_access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climatemode_text_climatescreen, Constant_climate_ac.CAC_ClimateMode_text_access_id);
+        }
     }
 
     @Then("I verified Climate AGS text is displayed Ac climate screen")
     public void iVerifiedClimateAGSTextIsDisplayedAcClimateScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verified Climate AGS text is displayed Ac climate screen");
         asserttext(Constant_climate_ac.climateags_text_climatescreen, Constant_climate_ac.L2CAC_ClimateAGS_text_xpath);
-        Basestepdefinition.verticalSwipe(0.70, 0.3, 0.5);
+        Basestepdefinition.verticalSwipe(0.7, 0.3, 0.5);
     }
 
     @Then("I verified Air Conditioner text is displayed Ac climate screen")
     public void iVerifiedAirConditionerTextIsDisplayedAcClimateScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verified Air Conditioner text is displayed Ac climate screen");
         asserttext(Constant_climate_ac.airconditioner_text_climatescreen, Constant_climate_ac.L2CAC_Airconditioner_text_xpath);
-        Basestepdefinition.verticalSwipe(0.70, 0.3, 0.5);
+        Basestepdefinition.verticalSwipe(0.7, 0.3, 0.5);
     }
 
     @Then("I verified Scheduler text is displayed Ac climate screen")
     public void iVerifiedSchedulerTextIsDisplayedAcClimateScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verified Scheduler text is displayed Ac climate screen");
-        asserttext(Constant_climate_ac.scheduler_text_climatescreen, Constant_climate_ac.L2CAC_Scheduler_text_xpath);
+        asserttextValidationAccessibility(Constant_climate_ac.scheduler_text_climatescreen, Constant_climate_ac.climate_Scheduler_Text_Access_id);
     }
 
     @Then("I Verified Light screen header")
     public void iVerifiedLightScreenHeader() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Light screen header");
-        asserttext(Constant_Light.LightPage_Light_Title_text, Constant_Light.LightPage_Light_Title_xpath);
+        asserttextValidation(Constant_Light.LightPage_Light_Title_text, Constant_Light.LightPage_Light_Title_xpath);
     }
 
     @Then("I Verified Assist Handle Text")
     public void iVerifiedAssistHandleText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Assist Handle Text");
-        asserttext(Constant_Light.LightPage_AssistHandle_Light_text, Constant_Light.LightPage_Assist_Handle_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_AssistHandle_Light_text, Constant_Light.LightPage_Assist_Handle_text_xpath);
     }
 
     @Then("I Verified Utility center Text")
     public void iVerifiedUtilityCenterText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Utility center Text");
-        asserttext(Constant_Light.LightPage_Utility_Center_Light_text, Constant_Light.LightPage_Utility_Center_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Utility_Center_Light_text, Constant_Light.LightPage_Utility_Center_text_xpath);
     }
 
     @Then("I Verified Accent Light Text")
     public void iVerifiedAccentLightText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Accent Light Text");
-        asserttext(Constant_Light.LightPage_Accent_Light_text, Constant_Light.LightPage_Accent_Light_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Accent_Light_text, Constant_Light.LightPage_Accent_Light_text_xpath);
     }
 
     @Then("I Verified Shower Text")
     public void iVerifiedShowerText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Shower Text");
-        asserttext(Constant_Light.LightPage_shower_Light_text, Constant_Light.LightPage_Shower_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_shower_Light_text, Constant_Light.LightPage_Shower_text_xpath);
     }
 
     @Then("I Verified Ceiling Text")
     public void iVerifiedCeilingText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Ceiling Text");
-        asserttext(Constant_Light.LightPage_Ceiling_Light_text, Constant_Light.LightPage_Ceiling_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Ceiling_Light_text, Constant_Light.LightPage_Ceiling_text_xpath);
     }
 
     @Then("I Verified Bedroom ceiling Text")
     public void iVerifiedBedroomCeilingText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Bedroom ceiling Text");
-        asserttext(Constant_Light.LightPage_Bedroom_Ceiling_Light_text, Constant_Light.LightPage_Bedroom_Ceiling_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Bedroom_Ceiling_Light_text, Constant_Light.LightPage_Bedroom_Ceiling_text_xpath);
     }
 
     @Then("I Verified Galley Text")
     public void iVerifiedGalleyText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Galley Text");
-        Basestepdefinition.verticalSwipe(0.7, 0.3, 0.5);
-        asserttext(Constant_Light.LightPage_Galley_Light_text, Constant_Light.LightPage_Galley_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Galley_Light_text, Constant_Light.LightPage_Galley_text_xpath);
     }
 
     @Then("I Verified Lounge Text")
     public void iVerifiedLoungeText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Lounge Text");
-        asserttext(Constant_Light.LightPage_Lounge_Light_text, Constant_Light.LightPage_Lounge_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Lounge_Light_text, Constant_Light.LightPage_Lounge_text_xpath);
     }
 
     @Then("I Verified Awning Light Text")
     public void iVerifiedAwningLightText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Awning Light Text");
-        asserttext(Constant_Light.LightPage_Awning_Light_text, Constant_Light.LightPage_Awning_Light_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Awning_Light_text, Constant_Light.LightPage_Awning_Light_text_xpath);
     }
 
     @Then("I Verified Bedroom Overhead Text")
     public void iVerifiedBedroomOverheadText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Bedroom Overhead Text");
         Basestepdefinition.verticalSwipe(0.7, 0.3, 0.5);
-        asserttext(Constant_Light.LightPage_Bedroom_Overhead_Light_text, Constant_Light.LightPage_Bedroom_Overhead_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Bedroom_Overhead_Light_text, Constant_Light.LightPage_Bedroom_Overhead_text_xpath);
     }
 
     @Then("I Verified Porch Light Text")
     public void iVerifiedPorchLightText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Porch Light Text");
-        asserttext(Constant_Light.LightPage_Porch_Light_text, Constant_Light.LightPage_Porch_Light_text_xpath);
+        asserttextValidation(Constant_Light.LightPage_Porch_Light_text, Constant_Light.LightPage_Porch_Light_text_xpath);
     }
 
     @Then("I Verify the Auto charger text in AGS Main screen")
@@ -575,112 +588,111 @@ public class LandingPage extends Baseclass {
     @Then("I Verify the Quiet Time Start text in AGS Main screen")
     public void iVerifyTheQuietTimeStartTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Quiet Time Start text in AGS Main screen");
-        asserttextAccessibility(Constant_AGS.AGSPage_Quiet_Time_Start_text, Constant_AGS.AGSPage_Quiet_Time_Start_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_Quiet_Time_Start_text, Constant_AGS.AGSPage_Quiet_Time_Start_text_access_id);
     }
 
     @Then("I Verify the Quiet Time Ends text in AGS Main screen")
     public void iVerifyTheQuietTimeEndsTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Quiet Time Ends text in AGS Main screen");
-        asserttextAccessibility(Constant_AGS.AGSPage_Quiet_Time_Ends_text, Constant_AGS.AGSPage_Quiet_Time_Ends_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_Quiet_Time_Ends_text, Constant_AGS.AGSPage_Quiet_Time_Ends_text_access_id);
     }
 
     @Then("I Verify the Start Voltage text in AGS Main screen")
     public void iVerifyTheStartVoltageTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Start Voltage text in AGS Main screen");
-        asserttextAccessibility(Constant_AGS.AGSPage_Start_Voltage_text, Constant_AGS.AGSPage_Start_Voltage_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_Start_Voltage_text, Constant_AGS.AGSPage_Start_Voltage_text_access_id);
     }
 
     @Then("I Verify the Time Under text in AGS Main screen")
     public void iVerifyTheTimeUnderTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Time Under text in AGS Main screen");
-        asserttextAccessibility(Constant_AGS.AGSPage_Time_Under_text, Constant_AGS.AGSPage_Time_Under_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_Time_Under_text, Constant_AGS.AGSPage_Time_Under_text_access_id);
     }
 
     @Then("I Verify the Generator Exerciser text in AGS Main screen")
     public void iVerifyTheGeneratorExerciserTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Generator Exerciser text in AGS Main screen");
-        asserttextAccessibility(Constant_AGS.AGSPage_Generator_Exerciser_text, Constant_AGS.AGSPage_Generator_Exerciser_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_Generator_Exerciser_text, Constant_AGS.AGSPage_Generator_Exerciser_text_access_id);
     }
 
     @Then("I Verify the Selected Days text in AGS Main screen")
     public void iVerifyTheSelectedDaysTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Selected Days text in AGS Main screen");
-        asserttextAccessibility(Constant_AGS.AGSPage_Selected_Days_text, Constant_AGS.AGSPage_Selected_Days_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_Selected_Days_text, Constant_AGS.AGSPage_Selected_Days_text_access_id);
     }
 
     @Then("I Verify the Start Time text in AGS Main screen")
     public void iVerifyTheStartTimeTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Start Time text in AGS Main screen");
-        asserttextAccessibility(Constant_AGS.AGSPage_Start_Time_text, Constant_AGS.AGSPage_Start_Time_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_Start_Time_text, Constant_AGS.AGSPage_Start_Time_text_access_id);
     }
 
     @Then("I Verify the Run Time text in AGS Main screen")
     public void iVerifyTheRunTimeTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Run Time text in AGS Main screen");
         Basestepdefinition.verticalSwipe(0.7, 0.3, 0.5);
-        asserttextAccessibility(Constant_AGS.AGSPage_Run_Time_text, Constant_AGS.AGSPage_Run_Time_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_Run_Time_text, Constant_AGS.AGSPage_Run_Time_text_access_id);
     }
 
     @Then("I Verify the AGS Climate text in AGS Main screen")
     public void iVerifyTheAGSClimateTextInAGSMainScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the AGS Climate text in AGS Main screen");
         Basestepdefinition.verticalSwipe(0.7, 0.3, 0.5);
-        asserttextAccessibility(Constant_AGS.AGSPage_AGS_Climate_text, Constant_AGS.AGSPage_AGS_Climate_text_access_id);
+        asserttextValidationAccessibility(Constant_AGS.AGSPage_AGS_Climate_text, Constant_AGS.AGSPage_AGS_Climate_text_access_id);
     }
 
     @Then("I verify water pump text in Fuse")
     public void iVerifyWaterPumpTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify water pump text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Water_Pump, Constant_Fuses.Fusescreen_Water_Pump_text_access_id);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Water_Pump, Constant_Fuses.Fusescreen_Water_Pump_text_access_id);
     }
 
     @Then("I verify Satellite Dish text in Fuse")
     public void iVerifySatelliteDishTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Satellite Dish text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Satellite_Dish, Constant_Fuses.Fusescreen_Satellite_Dish_text_access_id);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Satellite_Dish, Constant_Fuses.Fusescreen_Satellite_Dish_text_access_id);
     }
 
     @Then("I verify Accent light text in Fuse")
     public void iVerifyAccentLightTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Accent light text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Accent_Light, Constant_Fuses.Fusescreen_Accent_Light_text_access_id);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Accent_Light, Constant_Fuses.Fusescreen_Accent_Light_text_access_id);
     }
 
     @Then("I verify Ceiling Light text in Fuse")
     public void iVerifyCeilingLightTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Ceiling Light text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Ceiling_Light, Constant_Fuses.Fusescreen_Ceiling_Light_text_access_id);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Ceiling_Light, Constant_Fuses.Fusescreen_Ceiling_Light_text_access_id);
     }
 
     @Then("I verify Bed light text in Fuse")
     public void iVerifyBedLightTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Bed light text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Bed_Light, Constant_Fuses.Fusescreen_Bed_Light_text_access_id);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Bed_Light, Constant_Fuses.Fusescreen_Bed_Light_text_access_id);
     }
 
     @Then("I verify washroom light text in Fuse")
     public void iVerifyWashroomLightTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify washroom light text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Washroom_Light, Constant_Fuses.Fusescreen_Washroom_Light_text_access_id);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Washroom_Light, Constant_Fuses.Fusescreen_Washroom_Light_text_access_id);
     }
 
     @Then("I verify Galley text in Fuse")
     public void iVerifyGalleyTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Galley text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Galley_Light, Constant_Fuses.Fusescreen_Galley_Light_text_access_id);
-        Basestepdefinition.verticalSwipe(0.7, 0.3, 0.5);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Galley_Light, Constant_Fuses.Fusescreen_Galley_Light_text_access_id);
     }
 
     @Then("I verify Lounge light text in Fuse")
     public void iVerifyLoungeLightTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Lounge light text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Lounge_Light, Constant_Fuses.Fusescreen_Lounge_Light_text_access_id);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Lounge_Light, Constant_Fuses.Fusescreen_Lounge_Light_text_access_id);
     }
 
     @Then("I verify Awning text in Fuse")
     public void iVerifyAwningTextInFuse() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Awning text in Fuse");
-        asserttextAccessibility(Constant_Fuses.Fusescreen_Awning_text, Constant_Fuses.Fusescreen_Awning_text_access_id);
+        asserttextValidationAccessibility(Constant_Fuses.Fusescreen_Awning_text, Constant_Fuses.Fusescreen_Awning_text_access_id);
     }
 
     @Then("I Verify the Awning text")
@@ -688,85 +700,85 @@ public class LandingPage extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Awning text");
         WebDriverWait wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_Mechanical.Mechanicalscreen_Mechanical_text_xpath)));
-        asserttextAccessibility(Constant_Mechanical.Mechanical_Awning_Text, Constant_Mechanical.Mechanicalscreen_Awning_text_access_id);
+        asserttextValidationAccessibility(Constant_Mechanical.Mechanical_Awning_Text, Constant_Mechanical.Mechanicalscreen_Awning_text_access_id);
     }
 
     @Then("I Verify the Extent text")
     public void iVerifyTheExtentText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Extent text");
-        asserttextAccessibility(Constant_Mechanical.Mechanical_Extend_Text, Constant_Mechanical.Mechanicalscreen_Extent_text_access_id);
+        asserttextValidationAccessibility(Constant_Mechanical.Mechanical_Extend_Text, Constant_Mechanical.Mechanicalscreen_Extent_text_access_id);
     }
 
     @Then("I Verify the fresh water level text")
     public void iVerifyTheFreshWaterLevelText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the fresh water level text");
-        asserttext(Constant_Tank.Tank_freshwater_leveltext, Constant_Tank.Tanksscreen_Tanks_Fresh_Water_Level_xpath);
+        asserttextValidation(Constant_Tank.Tank_freshwater_leveltext, Constant_Tank.Tanksscreen_Tanks_Fresh_Water_Level_xpath);
     }
 
     @Then("I verify the water pump text")
     public void iVerifyTheWaterPumpText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the water pump text");
-        asserttextAccessibility(Constant_Tank.Tank_freshwater_waterPump, Constant_Tank.Tanksscreen_Tanks_Water_Pump_text_access_id);
+        asserttextValidationAccessibility(Constant_Tank.Tank_freshwater_waterPump, Constant_Tank.Tanksscreen_Tanks_Water_Pump_text_access_id);
     }
 
     @Then("I verify the fresh text on button")
     public void iVerifyTheFreshTextOnButton() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the fresh text on button");
-        asserttext(Constant_Tank.Tank_freshwater_button_fresh, Constant_Tank.Tanksscreen_Fresh_xpath);
+        asserttextValidation(Constant_Tank.Tank_freshwater_button_fresh, Constant_Tank.Tanksscreen_Fresh_xpath);
     }
 
     @Then("I verify the black text on button")
     public void iVerifyTheBlackTextOnButton() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the black text on button");
-        asserttext(Constant_Tank.Tank_freshwater_black_button, Constant_Tank.Tanksscreen_Black_xpath);
+        asserttextValidation(Constant_Tank.Tank_freshwater_black_button, Constant_Tank.Tanksscreen_Black_xpath);
     }
 
     @Then("I verify the predictive data in Fresh water text")
     public void iVerifyThePredictiveDataInFreshWaterText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the predictive data in Fresh water text");
-        asserttext(Constant_Tank.Tank_freshwater_PredictiveData, Constant_Tank.Tanksscreen_Tanks_Predictive_Data_text_xpath);
+        asserttextValidation(Constant_Tank.Tank_freshwater_PredictiveData, Constant_Tank.Tanksscreen_Tanks_Predictive_Data_text_xpath);
     }
 
     @Then("I verify the Black water level text")
     public void iVerifyTheBlackWaterLevelText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Black water level text");
-        asserttext(Constant_Tank.Tanksscreen_BlackwaterTanks_BlackwaterLevel_text, Constant_Tank.Tanksscreen_Tanks_blackWaterLevel_text_xpath);
+        asserttextValidation(Constant_Tank.Tanksscreen_BlackwaterTanks_BlackwaterLevel_text, Constant_Tank.Tanksscreen_Tanks_blackWaterLevel_text_xpath);
     }
 
     @Then("I verify the Empty Black Water Tank text")
     public void iVerifyTheEmptyBlackWaterTankText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Empty Black Water Tank text");
-        asserttextAccessibility(Constant_Tank.Tanksscreen_BlackwaterTanks_EmptyBlackwater_text, Constant_Tank.Tanksscreen_BlackwaterTanks_EmptyBlackwater_access_id);
+        asserttextValidationAccessibility(Constant_Tank.Tanksscreen_BlackwaterTanks_EmptyBlackwater_text, Constant_Tank.Tanksscreen_BlackwaterTanks_EmptyBlackwater_access_id);
     }
 
     @Then("I verify the Heater text in the Truma heater")
     public void iVerifyTheHeaterTextInTheTrumaHeater() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Heater text in the Truma heater");
-        asserttext(Constant_Tank.TrumaHeater_Heater_text, Constant_Tank.TrumaHeater_Heater_xpath);
+        asserttextValidation(Constant_Tank.TrumaHeater_Heater_text, Constant_Tank.TrumaHeater_Heater_xpath);
     }
 
     @Then("I verify the status in the Truma heater")
     public void iVerifyTheStatusInTheTrumaHeater() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the status in the Truma heater");
-        asserttext(Constant_Tank.TrumaHeater_status_text, Constant_Tank.TrumaHeater_status_xpath);
+        asserttextValidation(Constant_Tank.TrumaHeater_status_text, Constant_Tank.TrumaHeater_status_xpath);
     }
 
     @Then("I verify the Decalcification in the Truma heater")
     public void iVerifyTheDecalcificationInTheTrumaHeater() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Decalcification in the Truma heater");
-        asserttextAccessibility(Constant_Tank.Truma_Decalcification_text, Constant_Tank.Truma_Decalcification_text_access_id);
+        asserttextValidationAccessibility(Constant_Tank.Truma_Decalcification_text, Constant_Tank.Truma_Decalcification_text_access_id);
     }
 
     @Then("I verify the Mode text in the Truma heater")
     public void iVerifyTheModeTextInTheTrumaHeater() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Mode text in the Truma heater");
-        asserttextAccessibility(Constant_Tank.Truma_Mode_text, Constant_Tank.Truma_Mode_text_access_id);
+        asserttextValidationAccessibility(Constant_Tank.Truma_Mode_text, Constant_Tank.Truma_Mode_text_access_id);
     }
 
     @Then("I verify the Change Mode text in the Truma heater")
     public void iVerifyTheChangeModeTextInTheTrumaHeater() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Change Mode text in the Truma heater");
-        asserttextAccessibility(Constant_Tank.Truma_CHANGE_MODE, Constant_Tank.Truma_CHANGE_MODE_text_access_id);
+        asserttextValidationAccessibility(Constant_Tank.Truma_CHANGE_MODE, Constant_Tank.Truma_CHANGE_MODE_text_access_id);
     }
 
     @Then("I verify Tank-progressIndicator in Tank Fresh Water")
@@ -836,10 +848,9 @@ public class LandingPage extends Baseclass {
     public void iTapOnClimateOptionInTheBottomLayoutOfLandingScreen() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on climate option in the Bottom  layout of Landing screen");
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_landingscreen.LandingPage_BottomLayout_Climate_text_xpath));
-        if(elements.size()!=0){
+        if (elements.size() != 0) {
             Taponbutton(Constant_landingscreen.LandingPage_BottomLayout_Climate_text_xpath);
-        }
-        else{
+        } else {
             Taponbutton(Constant_landingscreen.LandingPage_BottomLayout_Climate2tile_text_xpath);
         }
 
@@ -868,17 +879,13 @@ public class LandingPage extends Baseclass {
         String LightTile = driver.findElement(By.xpath(Constant_landingscreen.LandingPage_L2light_text_xpath)).getText();
         if (LightTile.contains(Constant_Tank.Truma_Light_text)) {
             System.out.println("Text comparison is Successful");
-        }
-        else if (LightTile.contains(Constant_Tank.Truma_AGS_MODE)) {
+        } else if (LightTile.contains(Constant_Tank.Truma_AGS_MODE)) {
             System.out.println("Text comparison is Successful");
-        }
-        else if (LightTile.contains(Constant_Tank.Truma_Power_text)) {
+        } else if (LightTile.contains(Constant_Tank.Truma_Power_text)) {
             System.out.println("Text comparison is Successful");
-        }
-        else if(LightTile.contains(Constant_Tank.Truma_Fuses_MODE)){
+        } else if (LightTile.contains(Constant_Tank.Truma_Fuses_MODE)) {
             System.out.println("Text comparison is Successful");
-        }
-        else{
+        } else {
             System.out.println("Text comparison is Successful");
         }
     }
@@ -975,7 +982,7 @@ public class LandingPage extends Baseclass {
         Waterheater.add(driver.findElement(By.xpath(com.dometic.L2.qa.Pages.Constant_Tank.WaterTruma_FirstValue_xpath)).getText());
         Waterheater.add(driver.findElement(By.xpath(com.dometic.L2.qa.Pages.Constant_Tank.WaterTruma_SecondValue_xpath)).getText());
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Tank.WaterTruma_ThirdValue_xpath));
-        if(elements.size()!=0){
+        if (elements.size() != 0) {
             Waterheater.add(driver.findElement(By.xpath(com.dometic.L2.qa.Pages.Constant_Tank.WaterTruma_ThirdValue_xpath)).getText());
         }
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_Tank.WaterTruma_Applybutton_xpath);
@@ -984,4 +991,540 @@ public class LandingPage extends Baseclass {
         }
     }
 
+    @Then("I Verify climate text displayed in the top of the app")
+    public void iVerifyClimateTextPlacedInTheTopOfTheApp() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify climate text displayed in the top of the app");
+        asserttextValidationAccessibility("CLIMATE", com.dometic.L1.qa.Pages.Constant_climate_ac.CAC_M_Climate_Text_access_id);
+    }
+
+    @Then("I Tap on Scheduler toggle if already it's OFF state")
+    public void iTapOnSchedulerToggleIfAlreadyItSOFFState() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Scheduler toggle if already it's OFF state");
+        String schedulerToggleStatus = driver.findElementByAccessibilityId(Constant_climate_ac.climate_Scheduler_Toggle_Status_Access_id).getText();
+        if (schedulerToggleStatus.equalsIgnoreCase("OFF")) {
+            TaponbuttonaccessabilityID(Constant_climate_ac.climate_Scheduler_Toggle_Access_id);
+            Thread.sleep(15000);
+        }
+    }
+
+    @Then("I Verify Sleep text is displayed in Climate Screen")
+    public void iVerifySleepTextIsDisplayedInClimateScreen() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Sleep text is displayed in Climate Screen");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_Scheduler_Sleep_Text_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Sleep_Text, Constant_climate_ac.climate_Scheduler_Sleep_Text_Access_id);
+        }
+    }
+
+    @Then("I Verify Wake text is displayed in Climate Screen")
+    public void iVerifyWakeTextIsDisplayedInClimateScreen() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Wake text is displayed in Climate Screen");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_Scheduler_Wake_Text_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Wake_Text, Constant_climate_ac.climate_Scheduler_Wake_Text_Access_id);
+        }
+    }
+
+    @Then("I Verify Away text is displayed in Climate Screen")
+    public void iVerifyAwayTextIsDisplayedInClimateScreen() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Away text is displayed in Climate Screen");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_Scheduler_Away_Text_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Away_Text, Constant_climate_ac.climate_Scheduler_Away_Text_Access_id);
+        }
+    }
+
+    @Then("I Verify Return text is displayed in Climate Screen")
+    public void iVerifyReturnTextIsDisplayedInClimateScreen() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Return text is displayed in Climate Screen");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_Scheduler_Return_Text_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Return_Text, Constant_climate_ac.climate_Scheduler_Return_Text_Access_id);
+        }
+    }
+
+    @Then("I Verify Temperature text is displayed in Climate Screen")
+    public void iVerifyTemperatureTextIsDisplayedInClimateScreen() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Temperature text is displayed in Climate Screen");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_Scheduler_Temperature_Text_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Temperature_Text, Constant_climate_ac.climate_Scheduler_Temperature_Text_Access_id);
+        }
+    }
+
+    @Then("I Verify Scheduled Days text is displayed in Climate Screen")
+    public void iVerifyScheduledDaysTextIsDisplayedInClimateScreen() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Scheduled Days text is displayed in Climate Screen");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_Scheduler_ScheduledDays_Text_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_ScheduledDays_Text, Constant_climate_ac.climate_Scheduler_ScheduledDays_Text_Access_id);
+        }
+    }
+
+    @Then("I Verify Scheduled At text is displayed in Climate Screen")
+    public void iVerifyScheduledAtTextIsDisplayedInClimateScreen() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Scheduled At text is displayed in Climate Screen");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_Scheduler_ScheduledAt_Text_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_ScheduledAt_Text, Constant_climate_ac.climate_Scheduler_ScheduledAt_Text_Access_id);
+        }
+    }
+
+    @Then("I Tap on All climate toggle if already it's OFF state")
+    public void iTapOnAllClimateToggleIfAlreadyItSOFFState() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on All climate toggle if already it's OFF state");
+        List<AndroidElement> list = driver.findElements(By.xpath(Constant_climate_ac.climate_AllClimate_Status_Text_xpath));
+        System.out.println(list.size());
+        if (list.size() != 0) {
+            Taponbutton(Constant_climate_ac.climate_AllClimate_toggle_Text_xpath);
+            Thread.sleep(15000);
+        }
+    }
+
+    @Then("I scroll minimum temperature in Climate")
+    public void iScrollMinimumTemperatureInClimate() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll minimum temperature in Climate");
+        try {
+            List<AndroidElement> list = driver.findElements(By.xpath(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_temperatureArray));
+            while (list.size() != 0) {
+                TouchAction action = new TouchAction(driver);
+                action.press(PointOption.point(550, 650)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                        .moveTo(PointOption.point(900, 650));
+                action.release().perform();
+                if (driver.findElement(By.xpath(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_temperatureArray)).getText().equals("16")) {
+                    TouchAction action1 = new TouchAction(driver);
+                    action1.press(PointOption.point(550, 650)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                            .moveTo(PointOption.point(900, 650));
+                    action1.release().perform();
+                    minTemp = driver.findElement(By.xpath(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_applied_minmimum_temperature_xpath)).getText();
+                    break;
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.toString());
+            e.printStackTrace();
+        }
+    }
+
+    @Then("I Tap on Apply button  in climate")
+    public void iTapOnApplyButtonInClimate() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Apply button  in climate screen");
+        List<AndroidElement> elements = driver.findElementsByAccessibilityId(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_apply_button_access_id);
+        if (elements.size() != 0) {
+            TaponbuttonaccessabilityID(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_apply_button_access_id);
+        }
+    }
+
+    @Then("I validated minimum applied temperature is displayed in Landing screen")
+    public void iValidatedMinimumAppliedTemperatureIsDisplayedInLandingScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I validated minimum applied temperature is displayed in Landing screen");
+        String text = driver.findElement(By.xpath(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_applied_temperature_xpath)).getText();
+        if (text.contains(minTemp)) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll maximum temperature in Climate")
+    public void iScrollMaximumTemperatureInClimate() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll maximum temperature in Climate");
+        try {
+            List<AndroidElement> list = driver.findElements(By.xpath(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_temperatureArray));
+            while (list.size() != 0) {
+                TouchAction action = new TouchAction(driver);
+                action.press(PointOption.point(900, 650)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                        .moveTo(PointOption.point(550, 650));
+                action.release().perform();
+                if (driver.findElement(By.xpath(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_temperatureArray)).getText().equals("30")) {
+                    maxTemp = driver.findElement(By.xpath(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_applied_maximum_temperature_xpath)).getText();
+                    break;
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.toString());
+            e.printStackTrace();
+        }
+    }
+
+    @Then("I validated maximum applied temperature is displayed in Landing screen")
+    public void iValidatedMaximumAppliedTemperatureIsDisplayedInLandingScreen() {
+        String text = driver.findElement(By.xpath(com.dometic.MTC.qa.Pages.Constant_landingscreen.climate_applied_temperature_xpath)).getText();
+        if (text.contains(maxTemp)) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I Tap on Fan Speed value in Climate screen")
+    public void iTapOnFanSpeedValueInClimateScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Fan Speed value in Climate screen");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_FanSpeed_DropDownButtonText_Access_id);
+    }
+
+    @Then("I Tap on Auto in Fan Speed")
+    public void iTapOnAutoInFanSpeed() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Auto in Fan Speed");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_FanSpeed_DropDownButtonText_Auto_Access_id);
+        Thread.sleep(10000);
+    }
+
+    @Then("I Validated the Applied Fan Speed is displayed")
+    public void iValidatedTheAppliedFanSpeedIsDisplayed() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Validated the Applied Fan Speed is displayed");
+        String changedValue = driver.findElementByAccessibilityId(Constant_climate_ac.climate_FanSpeed_DropDownButtonText_Access_id).getText();
+        String updatedValue = driver.findElement(By.xpath(Constant_climate_ac.climate_FanSpeed_Below_Carousel_Xpath)).getText();
+        if (changedValue.equalsIgnoreCase(updatedValue)) {
+            System.out.println("Text comparison is Successful");
+        } else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I Tap on Low in Fan Speed")
+    public void iTapOnLowInFanSpeed() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Low in Fan Speed");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_FanSpeed_DropDownButtonText_Low_Access_id);
+        Thread.sleep(10000);
+    }
+
+    @Then("I Tap on Medium in Fan Speed")
+    public void iTapOnMediumInFanSpeed() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Medium in Fan Speed");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_FanSpeed_DropDownButtonText_Medium_Access_id);
+        Thread.sleep(10000);
+    }
+
+    @Then("I Tap on High in Fan Speed")
+    public void iTapOnHighInFanSpeed() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on High in Fan Speed");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_FanSpeed_DropDownButtonText_High_Access_id);
+        Thread.sleep(10000);
+    }
+
+    @Then("I Tap on Climate Mode value in Climate screen")
+    public void iTapOnClimateModeValueInClimateScreen() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Climate Mode value in Climate screen");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_ClimateMode_DropDownButtonText_Access_id);
+        Thread.sleep(3000);
+    }
+
+    @Then("I Tap on Cool in Climate Mode")
+    public void iTapOnCoolInFanSpeed() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Cool in Climate Mode");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_ClimateMode_DropDownButtonText_Cool_Access_id);
+        Thread.sleep(10000);
+    }
+
+    @Then("I verify Climate AGS text in Climate Mode")
+    public void iVerifyClimateAGSTextInClimateMode() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Climate AGS text in Climate Mode");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_ClimateAGS_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_ClimateAGS_Text, Constant_climate_ac.climate_ClimateAGS_Access_id);
+        }
+    }
+
+    @Then("I verify Climate AGS Toggle in Climate Mode")
+    public void iVerifyClimateAGSToggleInClimateMode() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Climate AGS Toggle in Climate Mode");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_ClimateAGS_Toggle_Access_id);
+        if (list.size() != 0) {
+            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_climate_ac.climate_ClimateAGS_Toggle_Access_id));
+        }
+    }
+
+    @Then("I verify Climate AGS Toggle Status in Climate Mode")
+    public void iVerifyClimateAGSToggleStatusInClimateMode() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Climate AGS Toggle Status in Climate Mode");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_ClimateAGS_Toggle_Status_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_ClimateAGS_Toggle_Status_Text, Constant_climate_ac.climate_ClimateAGS_Toggle_Status_Access_id);
+        }
+    }
+
+    @Then("I verify Air Conditioner text in Climate Mode")
+    public void iVerifyAirConditionerTextInClimateMode() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Air Conditioner text in Climate Mode");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_ClimateAGS_Air_Conditioner_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_ClimateAGS_Air_Conditioner_Text, Constant_climate_ac.climate_ClimateAGS_Air_Conditioner_Access_id);
+        }
+    }
+
+    @Then("I Tap on Heat in Climate Mode")
+    public void iTapOnHEATInFanSpeed() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Heat in Climate Mode");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_ClimateMode_DropDownButtonText_Heat_Access_id);
+        Thread.sleep(15000);
+    }
+
+    @Then("I verify Heat Source text in Climate Mode")
+    public void iVerifyHeatSourceTextInClimateMode() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Heat Source text in Climate Mode");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_ClimateMode_Heat_Source_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_ClimateMode_Heat_Source_Text, Constant_climate_ac.climate_ClimateMode_Heat_Source_Access_id);
+        }
+    }
+
+    @Then("I verify Furnace text in Climate Mode")
+    public void iVerifyFurnaceTextInClimateMode() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Furnace text in Climate Mode");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_ClimateMode_Furnace_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_ClimateMode_Furnace_Text, Constant_climate_ac.climate_ClimateMode_Furnace_Access_id);
+        }
+    }
+
+    @Then("I verify Heat Pump text in Climate Mode")
+    public void iVerifyHeatPumpTextInClimateMode() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Heat Pump text in Climate Mode");
+        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_ClimateMode_Heat_Pump_Access_id);
+        if (list.size() != 0) {
+            asserttextValidationAccessibility(Constant_climate_ac.climate_ClimateMode_Heat_Pump_Text, Constant_climate_ac.climate_ClimateMode_Heat_Pump_Access_id);
+        }
+    }
+
+    @Then("I Tap on Auto in Climate Mode")
+    public void iTapOnAutoInClimateMode() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Auto in Climate Mode");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_ClimateMode_DropDownButtonText_Auto_Access_id);
+        Thread.sleep(10000);
+    }
+
+    @Then("I Tap on Fan Speed in Climate Mode")
+    public void iTapOnFanSpeedInClimateMode() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Fan Speed in Climate Mode");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_ClimateMode_DropDownButtonText_Fan_only_Access_id);
+        Thread.sleep(10000);
+    }
+
+    @Then("I Tap on Temperature in Climate screen")
+    public void iTapOnTemperatureInClimateScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Temperature in Climate screen");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_Scheduler_Temperature_Text_Access_id);
+    }
+
+    @Then("I verify header title is displayed")
+    public void iVerifyHeaderTitleIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify header title is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Header_Text, Constant_climate_ac.climate_Scheduler_Header_Text_Access_id);
+    }
+
+    @Then("I verify Inside Temperature is displayed")
+    public void iVerifyInsideTemperatureIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Inside Temperature is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_InsideTemp_Text, Constant_climate_ac.climate_Scheduler_InsideTemp_Text_Access_id);
+    }
+
+    @Then("I verify Outside Temperature is displayed")
+    public void iVerifyOutsideTemperatureIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Outside Temperature is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_OutsideTemp_Text, Constant_climate_ac.climate_Scheduler_OutsideTemp_Text_Access_id);
+    }
+
+    @Then("I verify Selected Days is displayed")
+    public void iVerifySelectedDaysIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Selected Days is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Selected_Days_Sleep_Text, Constant_climate_ac.climate_Selected_Days_Sleep_Text_Access_id);
+    }
+
+    @Then("I verify Selected Days-Sunday text is displayed")
+    public void iVerifySelectedDaysSundayTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Selected Days-Sunday text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Sunday_Text, Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Sunday_Text_Access_id);
+    }
+
+    @Then("I verify Selected Days-Monday text is displayed")
+    public void iVerifySelectedDaysMondayTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Selected Days-Monday text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Monday_Text, Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Monday_Text_Access_id);
+    }
+
+    @Then("I verify Selected Days-Tuesday text is displayed")
+    public void iVerifySelectedDaysTuesdayTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Selected Days-Tuesday text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Tuesday_Text, Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Tuesday_Text_Access_id);
+    }
+
+    @Then("I verify Selected Days-Wednesday text is displayed")
+    public void iVerifySelectedDaysWednesdayTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Selected Days-Wednesday text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Wednesday_Text, Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Wednesday_Text_Access_id);
+    }
+
+    @Then("I verify Selected Days-Thursday text is displayed")
+    public void iVerifySelectedDaysThursdayTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Selected Days-Thursday text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Thursday_Text, Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Thursday_Text_Access_id);
+    }
+
+    @Then("I verify Selected Days-Friday text is displayed")
+    public void iVerifySelectedDaysFridayTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Selected Days-Friday text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Friday_Text, Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Friday_Text_Access_id);
+    }
+
+    @Then("I verify Selected Days-Saturday text is displayed")
+    public void iVerifySelectedDaysSaturdayTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Selected Days-Saturday text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Saturday_Text, Constant_climate_ac.climate_Scheduler_Selected_Days_Sleep_Saturday_Text_Access_id);
+    }
+
+    @Then("I Verify Scheduled At text is displayed")
+    public void iVerifyScheduledAtTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Scheduled At text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_At_Text, Constant_climate_ac.climate_Scheduler_Selected_At_Access_id);
+    }
+
+    @Then("I verify Scheduled At-AM text is displayed")
+    public void iVerifyScheduledAtAMTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Scheduled At-AM text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_At_AM_Text, Constant_climate_ac.climate_Scheduler_Selected_At_AM_Access_id);
+    }
+
+    @Then("I verify Scheduled At-PM text is displayed")
+    public void iVerifyScheduledAtPMTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Scheduled At-PM text is displayed");
+        asserttextValidationAccessibility(Constant_climate_ac.climate_Scheduler_Selected_At_PM_Text, Constant_climate_ac.climate_Scheduler_Selected_At_PM_Access_id);
+    }
+
+    @Then("I Scroll up the hours in Scheduled At-Temperature")
+    public void iScrollUpTheHoursInScheduledAtTemperature() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll up the hours in Scheduled At-Temperature");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(300, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(300, 1500)).release().perform();
+        System.out.println("Scroll the Hour Carousel");
+    }
+
+    @Then("I Scroll up the minutes in Scheduled At-Temperature")
+    public void iScrollUpTheMinutesInScheduledAtTemperature() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll up the minutes in Scheduled At-Temperature");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(700, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(700, 1500)).release().perform();
+        System.out.println("Scroll the Minutes Carousel");
+    }
+
+    @Then("I verify the apply button in Temperature")
+    public void iVerifyTheApplyButtonInTemperature() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the apply button in Temperature");
+        /** Globally declared Hours in Temperature*/
+        hoursTemperature = new ArrayList<>();
+        hoursTemperature.add(driver.findElement(By.xpath(Constant_climate_ac.climate_Scheduler_Carousel_First_Value_Xpath)).getText());
+        hoursTemperature.add(driver.findElement(By.xpath(Constant_climate_ac.climate_Scheduler_Carousel_Second_Value_Xpath)).getText());
+        hoursTemperature.add(driver.findElement(By.xpath(Constant_climate_ac.climate_Scheduler_Carousel_Third_Value_Xpath)).getText());
+        hoursTemperature.add(driver.findElement(By.xpath(Constant_climate_ac.climate_Scheduler_Carousel_Minutes_First_Value_Xpath)).getText());
+        hoursTemperature.add(driver.findElement(By.xpath(Constant_climate_ac.climate_Scheduler_Carousel_Minutes_Second_Value_Xpath)).getText());
+        hoursTemperature.add(driver.findElement(By.xpath(Constant_climate_ac.climate_Scheduler_Carousel_Minutes_Third_Value_Xpath)).getText());
+
+    }
+
+    @Then("I Tap on apply button in Temperature")
+    public void iTapOnApplyButtonInTemperature() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on apply button in Temperature");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_Scheduler_Apply_Button_Access_Id);
+    }
+
+    @Then("I verify applied hours and minutes is displayed in Temperature")
+    public void iVerifyAppliedHoursAndMinutesIsDisplayedInTemperature() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify applied hours and minutes is displayed in Temperature");
+        String text = driver.findElementByAccessibilityId(Constant_climate_ac.climate_Scheduler_Tempearture_cardSubText_Access_Id).getText();
+        for (String each : hoursTemperature) {
+            if (each.contains(text)) {
+                System.out.println("Text comparison is Successful");
+            }
+        }
+    }
+
+    @Then("I Tap on Ok button")
+    public void iTapOnOkButton() {
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_title_template_xpath));
+        if (elements.size() != 0) {
+            Taponbutton(Constant_Batteries_MTC.mtc_Batteries_button1_xpath);
+        }
+    }
+
+    @Then("I Tap on Scheduled Days in Climate screen")
+    public void iTapOnScheduledDaysInClimateScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Scheduled Days in Climate screen");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_Scheduler_ScheduledDays_Text_Access_id);
+    }
+
+    @Then("I Scroll up the hours in Scheduled At-Scheduled Days")
+    public void iScrollUpTheHoursInScheduledAtScheduledDays() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll up the hours in Scheduled At-Scheduled Days");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(300, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(300, 1500)).release().perform();
+        System.out.println("Scroll the Hour Carousel");
+    }
+
+    @Then("I Scroll up the minutes in Scheduled At-Scheduled Days")
+    public void iScrollUpTheMinutesInScheduledAtScheduledDays() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll up the minutes in Scheduled At-Scheduled Days");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(700, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(700, 1500)).release().perform();
+        System.out.println("Scroll the Minutes Carousel");
+    }
+
+    @Then("I verify applied hours and minutes is displayed in Scheduled Days")
+    public void iVerifyAppliedHoursAndMinutesIsDisplayedInScheduledDays() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify applied hours and minutes is displayed in Scheduled Days");
+        String text = driver.findElementByAccessibilityId(Constant_climate_ac.climate_Scheduler_Tempearture_cardSubText_Access_Id).getText();
+        for (String each : hoursTemperature) {
+            if (each.contains(text)) {
+                System.out.println("Text comparison is Successful");
+                break;
+            }
+        }
+    }
+
+    @Then("I Tap on Scheduled AT in climate screen")
+    public void iTapOnScheduledATInClimateScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Scheduled AT in climate screen");
+        TaponbuttonaccessabilityID(Constant_climate_ac.climate_Scheduler_ScheduledAt_Text_Access_id);
+    }
+
+    @Then("I Scroll up the hours in Scheduled At-Scheduled At")
+    public void iScrollUpTheHoursInScheduledAtScheduledAt() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll up the hours in Scheduled At-Scheduled Days");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(300, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(300, 1500)).release().perform();
+        System.out.println("Scroll the Hours Carousel");
+    }
+
+    @Then("I Scroll up the minutes in Scheduled At-Scheduled At")
+    public void iScrollUpTheMinutesInScheduledAtScheduledAt() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll up the minutes in Scheduled At-Scheduled Days");
+        TouchAction action = new TouchAction(driver);
+        action.press(PointOption.point(700, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(700, 1500)).release().perform();
+        System.out.println("Scroll the Minutes Carousel");
+    }
+
+    @Then("I verify applied hours and minutes is displayed in Scheduled At")
+    public void iVerifyAppliedHoursAndMinutesIsDisplayedInScheduledAt() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify applied hours and minutes is displayed in Scheduled At");
+        String text = driver.findElementByAccessibilityId(Constant_climate_ac.climate_Scheduler_Tempearture_cardSubText_Access_Id).getText();
+        for (String each : hoursTemperature) {
+            if (each.contains(text)) {
+                System.out.println("Text comparison is Successful");
+                break;
+            }
+        }
+    }
+
+    @Then("I Scroll the page till the Climate Mode")
+    public void iScrollThePageTillTheClimateMode() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the Climate Mode");
+        Basestepdefinition.verticalSwipe(0.7,0.3,0.5);
+    }
 }

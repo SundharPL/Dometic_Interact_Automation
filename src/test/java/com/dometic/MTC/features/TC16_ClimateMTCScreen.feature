@@ -1,9 +1,10 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Climate Screen in Dometic Marine application
 
   @First1 @sanity1
   Scenario: Verifying application Climate screen UI
     Then I Tap on Climate in Landing screen
     Then I Wait short period for Page to Load
+    Then I Verify climate text displayed in the top of the app
     Then I verified inside text is displayed in Ac climate screen
     Then I verified outside text is displayed in Ac climate screen
     Then I Tap on All climate toggle if already it's OFF state

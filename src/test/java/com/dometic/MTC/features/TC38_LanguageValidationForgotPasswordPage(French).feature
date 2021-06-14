@@ -1,4 +1,4 @@
-Feature: Testing an Dometic LMC application
+Feature: Verifying application Forgot Password Screen Language validation(French) in Dometic Marine application
 
   @First1 @sanity1
   Scenario: Validating application French Language in login page

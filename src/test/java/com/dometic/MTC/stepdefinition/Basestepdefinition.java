@@ -73,8 +73,8 @@ public class Basestepdefinition extends Baseclass {
     public void i_swipe_the_right_left_screen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I swipe the screen right to left");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(1200, 700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(700, 700));
+        action.press(PointOption.point(900, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(500, 600));
         action.release().perform();
     }
 
@@ -82,8 +82,8 @@ public class Basestepdefinition extends Baseclass {
     public void iScrollUpTheScreen() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(730, 1950)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(730, 1400)).release().perform();
+        action.press(PointOption.point(530, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1550)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 

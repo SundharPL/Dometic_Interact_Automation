@@ -42,6 +42,18 @@ public class MechanicalAwning extends Baseclass {
     @And("I verify Close button text in Mechanical screen")
     public void iVerifyCloseButtonTextInMechanicalScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Close button text in Mechanical screen");
-        asserttext(Constant_Mechanical.Mechanicalscreen_Close_button_text,Constant_Mechanical.Mechanicalscreen_Close_button_xpath);
+        asserttextValidation(Constant_Mechanical.Mechanicalscreen_Close_button_text,Constant_Mechanical.Mechanicalscreen_Close_button_xpath);
+    }
+
+    @Then("I verify Mechanical Header text")
+    public void iVerifyMechanicalHeaderText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Mechanical Header text");
+        asserttextValidation(Constant_Mechanical.Mechanical_Text,Constant_Mechanical.Mechanicalscreen_Mechanical_text_xpath);
+    }
+
+    @Then("I verify Awning text")
+    public void iVerifyAwningText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Awning text");
+        asserttextValidationAccessibility(Constant_Mechanical.Mechanical_Awning_Text,Constant_Mechanical.Mechanicalscreen_Awning_text_access_id);
     }
 }

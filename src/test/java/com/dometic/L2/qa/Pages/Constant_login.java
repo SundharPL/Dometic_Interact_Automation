@@ -7,8 +7,10 @@ public class Constant_login extends Baseclass {
         public static final String Login_pagetitle = "com.dometicapp:id/login-welcomeText";
         public static final String Login_Email = "com.dometicapp:id/login-emailTextfield";
         public static final String Login_Password = "com.dometicapp:id/login-securePwdfield";
-        public static final String ValidUser = "ramesht39@yopmail.com";
+        public static final String ValidUser = "ramesht20@yopmail.com";
         public static final String Validpassword = "Dom@1234";
+        public static final String new_user_email = "testdometic@yopmail.com";
+        public static final String new_user_password = "Dom@1234";
         public static final String invaliduser1 = "dsasdddfd@gmail.com";
         public static final String loginbutton = "com.dometicapp:id/login-loginButton";
         public static final String ForgotPassword = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView";
@@ -21,6 +23,12 @@ public class Constant_login extends Baseclass {
         public static final String Login_forget_password_text_expected="Forgot password?";
         public static final String Login_Dont_have_an_account_text_expected="Don't have an account?";
         public static final String Login_Sign_Up_text_expected="Sign Up";
+        public static final String Login_invalidEmail_message_access_id="com.dometicapp:id/login-invalidEmail-message";
+        public static final String Login_invalidEmail_message_expected="The email field is required.";
+        public static final String Login_invalidsecurePwd_message_access_id="com.dometicapp:id/login-invalidsecurePwd-message";
+        public static final String Login_invalidsecurePwd_message_expected="The password field is required.";
+        public static final String Login_invalidsecurePwd_message_The_password_must_be_at_least_5_characters="The password must be at least 8 characters.";
+        public static final String email_SpecialCharacter="!@#$%^&*()_+";
 
 
         //----------------------Accessibility_id--------------------------------------//
