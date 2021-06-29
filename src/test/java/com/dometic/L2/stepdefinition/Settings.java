@@ -375,4 +375,9 @@ public class Settings extends Baseclass {
         System.out.println("Text comparison is Successful");
         Taponbutton(com.dometic.L1.qa.Pages.Constant_settings.Settings_Logout_xpath);
     }
+    @Then("I Tap on Logout in Settings screen")
+    public void iTapOnLogoutInSettingsScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Logout in Settings screen");
+        TaponbuttonaccessabilityID(com.dometic.MTC.qa.Pages.Constant_settings.Settings_Logout_text_access_id);
+    }
 }

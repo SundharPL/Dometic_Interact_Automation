@@ -1,5 +1,6 @@
 package com.dometic.SDB.stepdefinition;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.dometic.SDB.qa.util.Baseclass;
 import cucumber.api.Scenario;
@@ -35,7 +36,7 @@ public class Hooks extends Baseclass {
 
     public Properties loadProperties() throws IOException {
         prop = new Properties();
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources_MTC/globalData.properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources_SDB/globalData.properties");
         prop.load(fis);
         return prop;
     }
@@ -54,7 +55,7 @@ public class Hooks extends Baseclass {
         cap.setCapability("appPackage", appPackage);
         String appActivity = prop.getProperty("appActivity_MTC");
         cap.setCapability("appActivity", appActivity);
-        cap.setCapability("app", System.getProperty("user.dir") + "/src/test/java/com/dometic/MTC/application/Interact_v1.6(122).apk");
+        cap.setCapability("app", System.getProperty("user.dir") + "/src/test/java/com/dometic/SDB/application/InteractApp_Android_1.6(132).apk");
         String fullReset = prop.getProperty("fullReset_MTC");
         cap.setCapability("fullReset", fullReset);
         try {
@@ -150,32 +151,52 @@ public class Hooks extends Baseclass {
 
     @Before
     public void InitializeStep(Scenario scenario) {
-
         System.out.println("before step");
         ScenarioDef = base.features.createNode(scenario.getName());
-
-
     }
 
+//    @Before("@First")
+//    public void Init(Scenario scenario) {
+//        System.out.println("Scenario Starts");
+//
+//        System.out.println(scenario.getId());
+//        String[] featureName = scenario.getId().split("/");
+//        featureName_report = featureName[featureName.length - 1].split(".feature")[0];
+//        scenarioName = scenario.getName();
+//
+//
+//        extentTest = extent.createTest(featureName_report);
+//        features = extent.createTest(featureName_report);
+//
+//        //ScenarioDef = base.features.createNode(scenarioName);
+//    }
     @Before("@First")
     public void Init(Scenario scenario) {
-        System.out.println("Scenario Starts");
+//        System.out.println("Scenario Starts");
+//
+//        System.out.println(scenario.getId());
+//        String[] featureName = scenario.getId().split("/");
+//        featureName_report = featureName[featureName.length - 1].split(".feature")[0];
+//        scenarioName = scenario.getName();
+//
+//
+//        extentTest = extent.createTest(featureName_report);
+//        features = extent.createTest(featureName_report);
 
+        System.out.println("Scenario Starts");
         System.out.println(scenario.getId());
         String[] featureName = scenario.getId().split("/");
-        featureName_report = featureName[featureName.length - 1].split(".feature")[0];
+        featureName_report = featureName[featureName.length - 1].split(".feature")[0].split("_")[1];
         scenarioName = scenario.getName();
-
-
-        extentTest = extent.createTest(featureName_report);
+       extentTest = extent.createTest(featureName_report);
         features = extent.createTest(featureName_report);
-
-        //ScenarioDef = base.features.createNode(scenarioName);
+//        ScenarioDef = base.features.createNode(scenarioName);
     }
 
-    //
+
     @After
     public void StatusLogScenario(Scenario scenario) {
+        System.out.println(scenario.getStatus().name());
         System.out.println(scenario.getStatus().name());
         if (scenario.getStatus().name() == "PASSED") {
             extentTest.log(Status.PASS, scenario.getName());

@@ -106,7 +106,7 @@ public class LoginScreen extends Baseclass {
     public void assert_Welcome() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Welcome! Text is displayed in login screen");
         System.out.println("Please change the status into Test Environment");
-        Thread.sleep(20000);
+        Thread.sleep(30000);
         asserttextAccessibility(login_obj.Login_welcome_text_expected, login_obj.Login_pagetitle);
     }
 
@@ -245,7 +245,13 @@ public class LoginScreen extends Baseclass {
         //   Taponbutton(login_obj.Login_login_button_xpath);
         TaponbuttonaccessabilityID(login_obj.loginbutton);
         Thread.sleep(3000);
-
+        List<AndroidElement> list = driver.findElements(By.xpath(Constant_OnboardingPage.Onboarding_only_this_time_xpath));
+        if(list.size()!=0){
+            WebDriverWait wait = new WebDriverWait(driver, 300);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_OnboardingPage.Onboarding_only_this_time_xpath)));
+            Thread.sleep(2000);
+            Taponbutton(Constant_OnboardingPage.Onboarding_only_this_time_xpath);
+        }
     }
 
     @Then("I enter an Emoji's in Email Field in Login Page")

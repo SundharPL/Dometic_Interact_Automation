@@ -19,6 +19,8 @@ import java.util.List;
 
 public class TankMTC extends Baseclass {
     public static List<String> alertTankLevelAbove, alertSetLatency, warningsTankLevelAbove, warningsSetLatency;
+    public static String tank_current_carousel_value;
+    public static int tank_current_carousel_value_number, iteration_count;
 
     @Then("Then I Tap on Tank Fuel tile in Landing Screen")
     public void thenITapOnTankFuelTileInLandingScreen() {
@@ -374,6 +376,118 @@ public class TankMTC extends Baseclass {
         if (elements.size() != 0) {
             Taponbutton(Constant_Tank_MTC.mtc_Tank_Warnings_toggle_xpath);
             Thread.sleep(10000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert-Tank Level Above")
+    public void iScrollToTheMaximumCarouselValueInAlertTankLevelAbove() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Alert-Tank Level Above carousel");
+        TouchAction action = new TouchAction(driver);
+        tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Alert_Tank_level_applied_value_Access_id).getText();
+        tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
+        iteration_count = ((100 - tank_current_carousel_value_number) / 5);
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 1730)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1600)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Alert-Tank Level Above")
+    public void iScrollToTheMinimumCarouselValueInAlertTankLevelAbove() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Alert-Tank Level Above carousel");
+        TouchAction action = new TouchAction(driver);
+        tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Alert_Tank_level_applied_value_Access_id).getText();
+        tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
+        iteration_count =  ((tank_current_carousel_value_number - 0)/5);
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1730)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert-Set Latency\\(Tank screen)")
+    public void iScrollToTheMaximumCarouselValueInAlertSetLatencyTankScreen() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Alert-Set Latency (Tank screen) carousel");
+        TouchAction action = new TouchAction(driver);
+        tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Alert_Set_Latency_access_id).getText();
+        tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
+        iteration_count =  ((60 - tank_current_carousel_value_number));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1870 )).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1725 )).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Alert-Set Latency\\(Tank screen)")
+    public void iScrollToTheMinimumCarouselValueInAlertSetLatencyTankScreen() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Alert-Set Latency(Tank screen) carousel");
+        TouchAction action = new TouchAction(driver);
+        tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Alert_Set_Latency_access_id).getText();
+        tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
+        iteration_count =  ((tank_current_carousel_value_number - 0));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1870)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Warnings-Tank Level Above")
+    public void iScrollToTheMaximumCarouselValueInWarningsTankLevelAbove() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Warnings-Tank Level Above carousel");
+        TouchAction action = new TouchAction(driver);
+        tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Warning_Tank_Level_Applied_Value_access_id).getText();
+        tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
+        iteration_count =  ((100 - tank_current_carousel_value_number)/5);
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1575 )).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1450 )).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Warnings-Tank Level Above")
+    public void iScrollToTheMinimumCarouselValueInWarningsTankLevelAbove() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum in Warnings-Tank Level Above carousel");
+        TouchAction action = new TouchAction(driver);
+        tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Warning_Tank_Level_Applied_Value_access_id).getText();
+        tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
+        iteration_count =  ((tank_current_carousel_value_number - 0)/5);
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1450 )).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1575 )).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Warnings-Set Latency\\(Tank screen)")
+    public void iScrollToTheMaximumCarouselValueInWarningsSetLatencyTankScreen() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Warnings-Set Latency(Tank screen) carousel");
+        TouchAction action = new TouchAction(driver);
+        tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Warning_Set_Latency_Applied_Value_access_id).getText();
+        tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
+        iteration_count =  ((100 - tank_current_carousel_value_number));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1715)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1575)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value Warnings-Set Latency\\(Tank screen)")
+    public void iScrollToTheMinimumCarouselValueWarningsSetLatencyTankScreen() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Warnings-Set Latency(Tank screen) carousel");
+        TouchAction action = new TouchAction(driver);
+        tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Warning_Set_Latency_Applied_Value_access_id).getText();
+        tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
+        iteration_count =  ((tank_current_carousel_value_number - 0));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(495, 1575 )).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(495, 1715 )).release().perform();
+            Thread.sleep(1000);
         }
     }
 }

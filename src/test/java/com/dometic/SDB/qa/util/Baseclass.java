@@ -12,6 +12,7 @@ import org.testng.Assert;
 public class Baseclass {
     public static ExtentReports extent;
     public static ExtentTest extentTest;
+    public static ExtentTest test;
     public static ExtentTest ScenarioDef;
     public static ExtentTest features;
     public static String ReportLocation = System.getProperty("user.dir") + "/target/cucumber-reports/advanced-reports/Extentreport_SDB/";

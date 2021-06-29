@@ -15,6 +15,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Map;
 
 public class LandingScreen extends Baseclass {
     @Then("I entered into Landing screen")
@@ -57,8 +58,8 @@ public class LandingScreen extends Baseclass {
         List<AndroidElement> accessibilityId = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_Climate_outside_unit_maincontent_access_id);
         while (accessibilityId.size() == 0) {
             TouchAction action = new TouchAction(driver);
-            action.press(PointOption.point(350, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                    .moveTo(PointOption.point(200, 600)).release().perform();
+            action.press(PointOption.point(340, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(80, 600)).release().perform();
             System.out.println("Swipe the Climate Tile");
             break;
         }
@@ -86,8 +87,8 @@ public class LandingScreen extends Baseclass {
         List<AndroidElement> accessibilityId = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_Tank_Grey_text_access_id);
         while (accessibilityId.size() == 0) {
             TouchAction action = new TouchAction(driver);
-            action.press(PointOption.point(350, 1075)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                    .moveTo(PointOption.point(150, 1075)).release().perform();
+            action.press(PointOption.point(340, 1075)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(80, 1075)).release().perform();
             System.out.println("Swipe the Tank Tile");
             break;
         }
@@ -105,18 +106,21 @@ public class LandingScreen extends Baseclass {
         } else {
             System.out.println("Text comparison is Successful");
         }
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_landingscreen.LandingPage_Climate_off_xpath));
-        if (elements.size() != 0) {
+        List<AndroidElement> elements = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_Climate_Air_conditioner_OFF_Heater_access_id);
+        if (elements.get(0).getText().equalsIgnoreCase("Aircondition")) {
             TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_climate_tile_access_id);
             WebDriverWait wait = new WebDriverWait(driver, 30);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_climate_ac.CAC_M_climate_powerContainer_xpath)));
-            TaponbuttonaccessabilityID(Constant_climate_ac.CAC_M_Power_Button_access_id);
-            Thread.sleep(4000);
+            String toggleStatus = driver.findElementByAccessibilityId(Constant_climate_ac.CAC_M_Power_Button_access_id).getAttribute("text");
+            if (toggleStatus.equalsIgnoreCase("OFF")) {
+                TaponbuttonaccessabilityID(Constant_climate_ac.CAC_M_Power_Button_access_id);
+                Thread.sleep(10000);
+            }
             TaponbuttonaccessabilityID(Constant_climate_ac.CAC_M_power_Back_Button_access_id);
             Thread.sleep(3000);
         }
-        List<AndroidElement> elementsByAccessibilityId1 = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_Heater_text_access_id);
-        if (elementsByAccessibilityId1.size() != 0) {
+        List<AndroidElement> elements1 = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_Climate_Air_conditioner_OFF_Heater_access_id);
+        if (elements1.get(0).getText().equalsIgnoreCase("Heater")) {
             TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_climate_tile_access_id);
             WebDriverWait wait = new WebDriverWait(driver, 30);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_climate_ac.CAC_M_climate_powerContainer_xpath)));
@@ -124,11 +128,14 @@ public class LandingScreen extends Baseclass {
             TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_acText_access_id);
             WebDriverWait wait1 = new WebDriverWait(driver, 30);
             wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_climate_ac.CAC_M_climate_powerContainer_xpath)));
-            Thread.sleep(4000);
+            Thread.sleep(2000);
             TaponbuttonaccessabilityID(Constant_climate_ac.CAC_M_Power_Button_access_id);
-            Thread.sleep(4000);
-            Taponbutton(Constant_climate_heater.CHeater_power_on_ac_yes_button_xpath);
-            Thread.sleep(3000);
+            Thread.sleep(10000);
+            List<AndroidElement> elements2 = driver.findElements(By.xpath(Constant_climate_heater.CHeater_power_on_ac_yes_button_xpath));
+            if (elements2.size() != 0) {
+                Taponbutton(Constant_climate_heater.CHeater_power_on_ac_yes_button_xpath);
+                Thread.sleep(3000);
+            }
             TaponbuttonaccessabilityID(Constant_climate_ac.CAC_M_power_Back_Button_access_id);
             Thread.sleep(3000);
         }
@@ -177,8 +184,8 @@ public class LandingScreen extends Baseclass {
         List<AndroidElement> accessibilityId = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_Climate_Inside_text_access_id);
         while (accessibilityId.size() == 0) {
             TouchAction action = new TouchAction(driver);
-            action.press(PointOption.point(200, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                    .moveTo(PointOption.point(350, 600)).release().perform();
+            action.press(PointOption.point(175, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(450, 600)).release().perform();
             System.out.println("Swipe the Climate Tile");
             break;
         }
@@ -225,8 +232,8 @@ public class LandingScreen extends Baseclass {
         List<AndroidElement> accessibilityId = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_Tank_FreshwaterTank_text_access_id);
         while (accessibilityId.size() == 0) {
             TouchAction action = new TouchAction(driver);
-            action.press(PointOption.point(150, 1075)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                    .moveTo(PointOption.point(350, 1075)).release().perform();
+            action.press(PointOption.point(175, 1075)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(450, 1075)).release().perform();
             System.out.println("Swipe the Tank Screen");
             break;
         }
@@ -236,5 +243,170 @@ public class LandingScreen extends Baseclass {
     public void iVerifyKlimaUnitIsDisplayedInLandingScreen() {
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Language.Climate_German_Klima_mainContent_access_id));
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Language.Climate_German_Klima_unit_access_id));
+    }
+
+    @Then("I Scroll the page till the last value in AC Mode page")
+    public void scrollThePageTillLastValueInACModePage() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the last value in AC Mode page");
+//        List<AndroidElement> list = driver.findElementsByAccessibilityId(Constant_climate_ac.climate_AC_Last_Value_Access_Id);
+//        while(list.size()==0){
+//            System.out.println(list.size());
+//            TouchAction action = new TouchAction(driver);
+//            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+//                    .moveTo(PointOption.point(530, 1300)).release().perform();
+//            Thread.sleep(2000);
+//            if(list.get(0).getText().equalsIgnoreCase("Dry")){
+//                break;
+//            }
+//        }
+//        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_climate_ac.climate_ACMode_Contains_Value_Xpath));
+//        while(elements.size()!=0){
+//            System.out.println(elements.size());
+//            TouchAction action = new TouchAction(driver);
+//            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+//                    .moveTo(PointOption.point(530, 1300)).release().perform();
+//            Thread.sleep(2000);
+//            if(driver.findElement(By.xpath(Constant_climate_ac.climate_ACMode_Contains_Value_Xpath)).getText().contains("Dry")){
+//                break;
+//            }
+//        }
+//        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_climate_ac.climate_ACMode_Contains_Value_Xpath));
+//        for(AndroidElement eachElements:elements){
+//            TouchAction action = new TouchAction(driver);
+//            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+//                    .moveTo(PointOption.point(530, 1300)).release().perform();
+//            Thread.sleep(2000);
+//            if(eachElements.getText().contains("Dry")){
+//                break;
+//            }
+//        }
+        System.out.println(ClimateScreen.getHighlightedText);
+        Basestepdefinition base=new Basestepdefinition();
+        Map<String, Integer> stringIntegerMap = base.ListStatus(ClimateScreen.getHighlightedText);
+        System.out.println(stringIntegerMap.get("endIndex"));
+        System.out.println(stringIntegerMap.get("Size"));
+        int loopSize = stringIntegerMap.get("Size") - stringIntegerMap.get("endIndex");
+        for(int i=0;i<loopSize;i++){
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(530, 1300)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I Scroll the page till the First value in AC Mode page")
+    public void scrollThePageTillTheFirstValueInACModePage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the First value in AC Mode page");
+        System.out.println(ClimateScreen.getHighlightedText);
+        Basestepdefinition base=new Basestepdefinition();
+        Map<String, Integer> stringIntegerMap = base.ListStatus(ClimateScreen.getHighlightedText);
+        System.out.println(stringIntegerMap.get("startIndex"));
+        System.out.println(stringIntegerMap.get("Size"));
+        Integer loopSize = stringIntegerMap.get("startIndex");
+        for(Integer i=0; i<loopSize; i++){
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(530, 1700)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I Scroll the page till the last value in Fan Speed page")
+    public void iScrollThePageTillTheLastValueInFanSpeedPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the last value in Fan Speed page");
+        Basestepdefinition base=new Basestepdefinition();
+        Map<String, Integer> stringIntegerMap = base.fanSpeedStatus(ClimateScreen.getHighlightedFanSpeed);
+        System.out.println(stringIntegerMap.get("endIndex"));
+        System.out.println(stringIntegerMap.get("Size"));
+        int loopSize = stringIntegerMap.get("Size") - stringIntegerMap.get("endIndex");
+        for(int i=0;i<loopSize;i++){
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(530, 1300)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I Scroll the page till the First value in Fan Speed page")
+    public void iScrollThePageTillTheFirstValueInFanSpeedPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the First value in Fan Speed page");
+        Basestepdefinition base=new Basestepdefinition();
+        Map<String, Integer> stringIntegerMap = base.fanSpeedStatus(ClimateScreen.getHighlightedFanSpeed);
+        Integer loopSize = stringIntegerMap.get("startIndex");
+        for(Integer i=0; i<loopSize; i++){
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(530, 1700)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I verify Apply button is displayed in Heater Climate screen")
+    public void iVerifyApplyButtonIsDisplayedInHeaterClimateScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Apply button is displayed in Heater Climate screen");
+        List<AndroidElement> elements = driver.findElementsByAccessibilityId(Constant_climate_heater.cHeater_M_apply_button_access_id);
+        if (elements.size() != 0) {
+            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_climate_heater.cHeater_M_apply_button_access_id));
+        }
+    }
+
+    @Then("I Scroll the page till the last value in Hot Water Level page")
+    public void iScrollThePageTillTheLastValueInHotWaterLevelPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the last value in Hot Water Level page");
+        Basestepdefinition base=new Basestepdefinition();
+        Map<String, Integer> stringIntegerMap = base.hotWaterLevelStatus(ClimateScreen.getHighlightedhotWaterLevelValue);
+        System.out.println(stringIntegerMap.get("endIndex"));
+        System.out.println(stringIntegerMap.get("Size"));
+        int loopSize = stringIntegerMap.get("Size") - stringIntegerMap.get("endIndex");
+        for(int i=0;i<loopSize;i++){
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(530, 1300)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I Scroll the page till the First value in Hot Water Level page")
+    public void iScrollThePageTillTheFirstValueInHotWaterLevelPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the First value in Hot Water Level page");
+        Basestepdefinition base=new Basestepdefinition();
+        Map<String, Integer> stringIntegerMap = base.hotWaterLevelStatus(ClimateScreen.getHighlightedhotWaterLevelValue);
+        Integer loopSize = stringIntegerMap.get("startIndex");
+        for(Integer i=0; i<loopSize; i++){
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(530, 1700)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I Scroll the page till the last value in Energy page")
+    public void iScrollThePageTillTheLastValueInEnergyPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the last value in Energy page");
+        Basestepdefinition base=new Basestepdefinition();
+        Map<String, Integer> stringIntegerMap = base.energyStatus(ClimateScreen.getHighlightedEnergyValue);
+        System.out.println(stringIntegerMap.get("endIndex"));
+        System.out.println(stringIntegerMap.get("Size"));
+        int loopSize = stringIntegerMap.get("Size") - stringIntegerMap.get("endIndex");
+        for(int i=0;i<loopSize;i++){
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(530, 1300)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I Scroll the page till the First value in Energy page")
+    public void iScrollThePageTillTheFirstValueInEnergyPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the page till the First value in Energy page");
+        Basestepdefinition base=new Basestepdefinition();
+        Map<String, Integer> stringIntegerMap = base.energyStatus(ClimateScreen.getHighlightedEnergyValue);
+        Integer loopSize = stringIntegerMap.get("startIndex");
+        for(Integer i=0; i<loopSize; i++){
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                    .moveTo(PointOption.point(530, 1700)).release().perform();
+            Thread.sleep(1000);
+        }
     }
 }

@@ -217,6 +217,13 @@ public class LoginScreen extends Baseclass {
         //   Taponbutton(login_obj.Login_login_button_xpath);
         TaponbuttonaccessabilityID(login_obj.loginbutton);
         Thread.sleep(3000);
+        List<AndroidElement> list = driver.findElements(By.xpath(com.dometic.L1.qa.Pages.Constant_OnboardingPage.Onboarding_only_this_time_xpath));
+        if(list.size()!=0){
+            WebDriverWait wait = new WebDriverWait(driver, 300);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(com.dometic.L1.qa.Pages.Constant_OnboardingPage.Onboarding_only_this_time_xpath)));
+            Thread.sleep(2000);
+            Taponbutton(com.dometic.L1.qa.Pages.Constant_OnboardingPage.Onboarding_only_this_time_xpath);
+        }
     }
 
     @Then("The Email field is required Error message is displayed in login page")

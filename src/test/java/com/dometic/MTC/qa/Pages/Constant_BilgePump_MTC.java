@@ -4,6 +4,12 @@ public class Constant_BilgePump_MTC {
     // ---------------------Accesibility_Id-----------------------//
     public static final String mtc_Bilge_Pump_Title_Access_ID="com.dometicapp:id/header-TitleText";
     public static final String mtc_Bilge_Pump_status_Access_ID="com.test.circleCarousel-statusValue";
+    public static final String mtc_Bilge_Pump_Max_Cycles_Per_Hour_Applied_Value_access_id = "com.dometicapp:id/bilgePumpScreen-alertMaxCycleHour-cardSubText";
+    public static final String mtc_Bilge_Pump_Max_Daily_Cycles_Applied_Value_access_id = "com.dometicapp:id/bilgePumpScreen-alertMaxCycleDaily-cardSubText";
+    public static final String mtc_Bilge_Pump_Continuous_Applied_Value_access_id = "com.dometicapp:id/bilgePumpScreen-alertContinious-cardSubText";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_Applied_Value_access_id = "com.dometicapp:id/bilgePumpScreen-warningMaxCycleHour-cardSubText";
+    public static final String mtc_Bilge_Pump_Warnings_Max_Daily_Cycles_Applied_Value_access_id = "com.dometicapp:id/bilgePumpScreen-warningMaxCycleDaily-cardSubText";
+    public static final String mtc_Bilge_Pump_Warnings_Continuous_Applied_Value_access_id = "com.dometicapp:id/bilgePumpScreen-warningContinuous-cardSubText";
 
 
     //---------------------------xPath----------------------------//

@@ -19,6 +19,7 @@ Feature: Verifying application View Options Screen Language validation(French) i
     Then I Tap on All Devices
     Then I Tap on Cancel Button
 
+
   @sanity1
   Scenario: Verifying application ViewOption(Tile View-Connected Devices) functionality
     Then I Tap on View option button in landing screen

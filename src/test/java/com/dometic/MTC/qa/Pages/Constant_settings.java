@@ -55,6 +55,24 @@ public class Constant_settings {
     public static final String Settings_appSettings_text_access_id="com.dometicapp:id/sidemenu-appSettings-text";
     public static final String Settings_Logout_text_access_id="com.dometicapp:id/sidemenu-logout-text";
     public static final String Settings_Version_16_text_access_id="com.dometicapp:id/sidemenu-versionText";
+    public static final String Device_management_header_text_tile = "com.dometicapp:id/header-TitleText";
+    public static final String Device_management_slide_menu_right_icon_access_id = "com.dometicapp:id/DeviceManagement-deviceName";
+    public static final String Device_management_Vessel_tile_lable_access_id = "com.dometicapp:id/deviceManagement-vesseltitleLabel";
+    public static final String Device_management_Vessel_Name_lable_access_id = "com.dometicapp:id/deviceManagement-vesselNameLabel";
+    public static final String Device_management_Hull_Id_Number_aceess_id = "com.dometicapp:id/deviceManagement-hullIdLabel";
+    public static final String Device_management_Edit_vessel_title_access_id = "com.dometicapp:id/deviceManagement-editVessel-cardTitle";
+    public static final String Device_management_Edit_vessel_card_icon_access_id = "com.dometicapp:id/deviceManagement-editVessel-cardIcon";
+    public static final String Device_management_advanced_Title_Text_access_id = "com.dometicapp:id/deviceManagement-advancedTitleText";
+    public static final String Device_management_check_updates_card_title_access_id = "com.dometicapp:id/deviceManagement-checkForUpdates-cardTitle";
+    public static final String Device_management_check_updates_card_icon_access_id = "com.dometicapp:id/deviceManagement-checkForUpdates-cardIcon";
+    public static final String Device_management_unregister_Delete_cardTitle_access_id = "com.dometicapp:id/deviceManagement-unregisterDelete-cardTitle";
+    public static final String Device_management_unregister_Delete_right_icon_access_id = "com.dometicapp:id/deviceManagement-unregisterDelete-cardIcon";
+
+    public static final String Device_management_edit_page_back_button_access_id = "com.dometicapp:id/tiles-backImage";
+    public static final String Device_management_edit_page_header_text_tile_access_id = "com.dometicapp:id/header-TitleText";
+    public static final String Device_management_edit_vessel_name_lable_access_id = "com.dometicapp:id/editVessel-vesselNameLabel";
+    public static final String Device_management_edit_mac_address_access_id = "com.dometicapp:id/editVessel-hullIdLabel";
+    public static final String Device_management_edit__save_button_access_id = "com.dometicapp:id/editVessel-saveButtonText";
 
 
 
@@ -100,7 +118,7 @@ public class Constant_settings {
     public static final String Settings_Zone_Management_Zone_name_already_present_xpath="//*[@text='Zone name already present']";
     public static final String Settings_Zone_Management_ZoneNumber_dialog_saveButton_xpath="//*[@content-desc='com.dometicapp:id/ZoneNumber-dialog-saveButton']";
     public static final String Settings_Zone_Management_ZoneNumber_dialog_cancelButton_xpath="//*[@content-desc='com.dometicapp:id/ZoneNumber-dialog-cancelButton']";
-
+    public static final String Device_management_edit_page_Cancel_Button_Xpath="//*[@content-desc='com.dometicapp:id/header-rightButton']";
     // ----------------------Data-----------------------------//
     public static final String Settings_viewEditButtonText="View/Edit Account";
     public static final String Settings_home_text="Home";
@@ -109,5 +127,17 @@ public class Constant_settings {
     public static final String Settings_appSettings_text="App Settings";
     public static final String Settings_Logout_text="Logout";
     public static final String Settings_Version_16_text="Version 1.6";
+    public static final String Device_management_header_text = "DEVICE MANAGEMENT";
+    public static final String Device_management_Vessel_tile_label = "VESSEL INFORMATION";
+    public static final String Device_management_Vessel_Name_label = "Name";
+    public static final String Device_management_Hull_Id_Number ="Hull ID Number";
+    public static final String Device_management_Edit_vessel_title = "Edit vessel";
+    public static final String Device_management_advanced_Title_Text = "ADVANCED";
+    public static final String Device_management_check_updates_card_title = "Check updates";
+    public static final String Device_management_unregister_Delete_cardTitle = "Unregister/Delete/Offboard";
+    public static final String Device_management_edit_page_header_text = "EDIT";
+    public static final String Device_management_edit_vessel_name_label = "Name";
+    public static final String Device_management_edit_mac_address = "Mac Address";
+    public static final String Device_management_edit_save_button = "Save";
 
 }

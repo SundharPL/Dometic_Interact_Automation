@@ -1,6 +1,6 @@
 Feature: Verifying application Tank Fresh Water Screen in Dometic USLTV application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Tank Fresh Water screen UI
     Then I Tap on Tank Fresh Water in Landing screen
     Then I Wait short period for Page to Load

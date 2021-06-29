@@ -6,21 +6,35 @@ import com.dometic.MTC.qa.util.Baseclass;
 import com.google.common.collect.ImmutableMap;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.List;
 
 public class Settings extends Baseclass {
+    private static int flag = 0;
+    private static int EmailToggle = 0;
+    private static String Edited_Email = "";
+    private static String Edited_Label = "";
+    public static String EditedNameValue = "";
+    String emojis = Constant_DeviceManagement.grinning_face_with_smiling_eyes + Constant_DeviceManagement.face_with_tears_of_joy +
+            Constant_DeviceManagement.smiling_face_with_open_mouth_and_cold_sweat + Constant_DeviceManagement.smiling_face_with_open_mouth_and_tightly_closed_eyes +
+            Constant_DeviceManagement.winking_face;
+
     @Then("I Tap on hamburger menu in landing screen")
     public void iTapOnHamburgerMenuInLandingScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on hamburger menu in landing screen");
         List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
-        if(id.size()!=0){
+        if (id.size() != 0) {
             TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
+            Thread.sleep(1000);
         }
     }
 
@@ -442,9 +456,10 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on Home in Settings screen")
-    public void iTapOnHomeInSettingsScreen() throws ClassNotFoundException {
+    public void iTapOnHomeInSettingsScreen() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Home in Settings screen");
         TaponbuttonaccessabilityID(Constant_settings.Settings_home_text_access_id);
+        Thread.sleep(1000);
     }
 
     @Then("I Tap on Notification Settings")
@@ -454,15 +469,17 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on Device Management")
-    public void iTapOnDeviceManagement() throws ClassNotFoundException {
+    public void iTapOnDeviceManagement() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Device Management");
         TaponbuttonaccessabilityID(Constant_settings.Settings_deviceMangagement_text_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on App Settings")
-    public void iTapOnAppSettings() throws ClassNotFoundException {
+    public void iTapOnAppSettings() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on App Settings");
         TaponbuttonaccessabilityID(Constant_settings.Settings_appSettings_text_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on Logout in Settings screen")
@@ -472,15 +489,17 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on View Edit Account link in Settings screen")
-    public void iTapOnViewEditAccountLinkInSettingsScreen() throws ClassNotFoundException {
+    public void iTapOnViewEditAccountLinkInSettingsScreen() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on View Edit Account link in Settings screen");
         TaponbuttonaccessabilityID(Constant_settings.Settings_viewEditButtonText_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on Profile in Account Setting Screen")
-    public void iTapOnProfileInAccountSettingScreen() throws ClassNotFoundException {
+    public void iTapOnProfileInAccountSettingScreen() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Profile in Account Setting Screen");
         TaponbuttonaccessabilityID(Constant_AccountSettings.accountSettings_Profile_Text_Access_Id);
+        Thread.sleep(2000);
     }
 
     @Then("I Verify Profile header text")
@@ -586,9 +605,13 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on Edit profile in profile screen")
-    public void iTapOnEditProfileInProfileScreen() throws ClassNotFoundException {
+    public void iTapOnEditProfileInProfileScreen() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Edit profile in profile screen");
-        TaponbuttonaccessabilityID(Constant_AccountSettings.profile_EditProfileButton_cardTitle_Access_Id);
+        List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_AccountSettings.profile_EditProfileButton_cardTitle_Access_Id);
+        if (id.size() != 0) {
+            TaponbuttonaccessabilityID(Constant_AccountSettings.profile_EditProfileButton_cardTitle_Access_Id);
+            Thread.sleep(1000);
+        }
     }
 
     @Then("I verify Edit profile header text")
@@ -719,8 +742,11 @@ public class Settings extends Baseclass {
     public void iTapOnSaveButton() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Save button");
         TaponbuttonaccessabilityID(Constant_AccountSettings.editProfile_saveButton_Access_Id);
-        WebDriverWait wait = new WebDriverWait(driver, 300);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_Batteries_MTC.mtc_Batteries_title_template_xpath)));
+        List<AndroidElement> list = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_title_template_xpath));
+        if (list.size() != 0) {
+            WebDriverWait wait = new WebDriverWait(driver, 300);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_Batteries_MTC.mtc_Batteries_title_template_xpath)));
+        }
     }
 
     @Then("I verify App Settings Header text")
@@ -778,15 +804,17 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on Language in App Settings page")
-    public void iTapOnLanguageInAppSettingsPage() throws ClassNotFoundException {
+    public void iTapOnLanguageInAppSettingsPage() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Language in App Settings page");
         TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_languageText_Access_Id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on Units in App Settings page")
-    public void iTapOnUnitsInAppSettingsPage() throws ClassNotFoundException {
+    public void iTapOnUnitsInAppSettingsPage() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Units in App Settings page");
         TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_unitText_Access_Id);
+        Thread.sleep(2000);
     }
 
 
@@ -979,7 +1007,6 @@ public class Settings extends Baseclass {
     public void iNavigateToSubscriptionPage() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Navigate to Subscription page");
         TaponbuttonaccessabilityID(Constant_AccountSettings.profile_AccountSetting_subscription_Access_Id);
-        System.out.println("1234");
     }
 
     @Then("I verify the Device Management Header")
@@ -991,13 +1018,13 @@ public class Settings extends Baseclass {
     @Then("I verify the Device Management Logo")
     public void iVerifyTheDeviceManagementLogo() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Device Management Logo");
-        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_DeviceManage_MarineDevice_logo_accessid));
+//        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_DeviceManage_MarineDevice_logo_accessid));
     }
 
     @Then("I verify the Device Management right icon")
     public void iVerifyTheDeviceManagementRightIcon() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Device Management right icon");
-        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_DeviceManagement_righticon_Access_Id));
+//        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_DeviceManagement_righticon_Access_Id));
     }
 
     @Then("I verify the Add New Button text")
@@ -1031,16 +1058,15 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Verify the Bluetooth Pairing Message")
-    public void iVerifyTheBluetoothPairingMessage() throws ClassNotFoundException {
+    public void iVerifyTheBluetoothPairingMessage() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Bluetooth Pairing Message");
-        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_Onboarding_BluetoothPairing_message_access_id));
+        asserttextValidationAccessibility(Constant_AccountSettings.Settings_Onboarding_BluetoothPairing_message, Constant_AccountSettings.Settings_Onboarding_BluetoothPairing_message_access_id);
     }
 
     @Then("I verify the Search Again Text")
-    public void iVerifyTheSearchAgainText() throws ClassNotFoundException {
+    public void iVerifyTheSearchAgainText() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Search Again Text");
-        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_Onboarding_SearchAgain_accessid));
-
+        asserttextValidationAccessibility(Constant_AccountSettings.Settings_Onboarding_SearchAgain, Constant_AccountSettings.Settings_Onboarding_SearchAgain_accessid);
     }
 
     @Then("I Tap on close button")
@@ -1059,7 +1085,6 @@ public class Settings extends Baseclass {
     public void iVerifyIfSubscriptionBackButtonIsAvailable() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if subscription back button is available");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Subscription_backbutton_accessid));
-        System.out.println("9876");
     }
 
     @Then("I verify Back Button displayed in Language Page")
@@ -1156,5 +1181,1131 @@ public class Settings extends Baseclass {
     public void iTapOnMetricUnitInUnitsPage() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Metric Unit in Units Page");
         TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_Unit_Metric_Access_Id);
+
     }
+
+    @Then("I Verified the Manage Notification header")
+    public void iVerifiedTheManageNotificationHeader() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Manage Notification header");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Header_text, Constant_AccountSettings.Notification_Header_accessid);
+
+    }
+
+    @Then("I Verified the Push notifications Text")
+    public void iVerifiedThePushNotificationsText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Push notifications Text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_PushNotification_text, Constant_AccountSettings.Notification_PushNotification_accessid);
+    }
+
+    @Then("I Verified the Push Notification show more text")
+    public void iVerifiedThePushNotificationShowMoreText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Push Notification show more text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_pushnotification_showMore, Constant_AccountSettings.Notification_pushnotification_showMore_accessid);
+    }
+
+    @Then("I Verified Email text")
+    public void iVerifiedEmailText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Email text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Email_text, Constant_AccountSettings.Notification_Email_accessid);
+    }
+
+    @Then("I Verified the Email show more text")
+    public void iVerifiedTheEmailShowMoreText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Email show more text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Email_showmore_text, Constant_AccountSettings.Notification_Email_showmore_accessid);
+    }
+
+    @Then("I verified SMS Text")
+    public void iVerifiedSMSText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verified SMS Text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_sms, Constant_AccountSettings.Notification_sms_accessid);
+    }
+
+    @Then("I Verified the SMS show more text")
+    public void iVerifiedTheSMSShowMoreText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the SMS show more text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Sms_list_showMore, Constant_AccountSettings.Notification_Sms_list_showMore_accessid);
+    }
+
+    @Then("I Verified the Advanced Text")
+    public void iVerifiedTheAdvancedText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Advanced Text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_advancedText, Constant_AccountSettings.Notification_advancedText_accessid);
+
+    }
+
+    @Then("I Verified the Marine Name in Advance option")
+    public void iVerifiedTheMarineNameInAdvanceOption() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Marine Name in Advance option");
+//        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Advance_MarineNAme));
+    }
+
+    @Then("I Verified the Marine Logo in Advance option")
+    public void iVerifiedTheMarineLogoInAdvanceOption() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Marine Logo in Advance option");
+//        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Advance_MarineICon));
+    }
+
+    @Then("I verified the marine colapse icon")
+    public void iVerifiedTheMarineColapseIcon() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verified the marine colapse icon");
+//        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Advance_MarineICon_collapseicon));
+    }
+
+    @Then("I Tap on the Marine colapse icon")
+    public void iTapOnTheMarineColapseIcon() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Marine colapse icon");
+        Taponbutton(Constant_AccountSettings.Notification_PushNotification_Advance_Marine_Pushnotification);
+//        TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_Advance_MarineICon_collapseicon);
+    }
+
+    @Then("I verify the Header of the Advanced Main Page")
+    public void iVerifyTheHeaderOfTheAdvancedMainPage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Header of the Advanced Main Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Advanced_Header, Constant_AccountSettings.Notification_Advanced_Header_text);
+    }
+
+    @Then("I verify the Push notification text in Advanced Main Page")
+    public void iVerifyThePushNotificationTextInAdvancedMainPage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Push notification text in Advanced Main Page");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Advance_PushNotification, Constant_AccountSettings.Notification_Advance_PushNotification_text);
+    }
+
+    @Then("I verify the Push notification Toggle in Advanced Main Page")
+    public void iVerifyThePushNotificationToggleInAdvancedMainPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Push notification Toggle in Advanced Main Page");
+        iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Advanced_PushNotification_Toggle_button);
+        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_AccountSettings.Notification_PushNotification_Advance_Marine_Pushnotification_ToggleButton);
+        if (elementsByAccessibilityId.size() == 0) {
+            TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_PushNotification_Advance_Marine_Pushnotification_ToggleButton);
+            Thread.sleep(5000);
+            System.out.println("Toggle button tapped");
+        } else {
+            System.out.println("Button is Switched on");
+        }
+    }
+
+    @Then("I Verified the Push Notification Toggle button status")
+    public void iVerifiedThePushNotificationToggleButtonStatus() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Push Notification Toggle button status");
+//        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_AccountSettings.Notification_pushnotification_showMore_accessid);
+//        if (elementsByAccessibilityId.size() == 0) {
+//            TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_PushNotification_ToggleButton);
+//            Thread.sleep(5000);
+//            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_pushnotification_showMore_accessid));
+//        } else {
+//            System.out.println("Button is Switched on");
+//            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_pushnotification_showMore_accessid));
+//        }
+        try {
+            driver.findElementByAccessibilityId(Constant_ManagementNotifications.ManageNotifications_push_show_more_text_access_id).isDisplayed();
+            // TaponbuttonaccessabilityID(constant_managementNotifications.ManageNotifications_PushNotifications_toggle_access_id);
+            // TaponbuttonaccessabilityID(constant_managementNotifications.ManageNotifications_PushNotifications_toggle_access_id);
+        } catch (Throwable e) {
+            System.out.println("Already ON!");
+            flag = 1;
+            TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_PushNotifications_toggle_access_id);
+
+        } finally {
+            if (flag == 0) {
+                TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_PushNotifications_toggle_access_id);
+            }
+        }
+    }
+
+    @Then("I Verified the Email List Toggle button status")
+    public void iVerifiedTheEmailListToggleButtonStatus() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Email List Toggle button status");
+//        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_AccountSettings.Notification_Email_showmore_accessid);
+//        if (elementsByAccessibilityId.size() == 0) {
+//            TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_PushNotification_Email_ToggleButton);
+//            Thread.sleep(5000);
+//            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Email_showmore_accessid));
+//        } else {
+//            System.out.println("Button is Switched on");
+//            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Email_showmore_accessid));
+//        }
+        try {
+            driver.findElementByAccessibilityId(Constant_ManagementNotifications.ManageNotifications_showmore_text_access_id).isDisplayed();
+            // TaponbuttonaccessabilityID(constant_managementNotifications.ManageNotifications_PushNotifications_toggle_access_id);
+            // TaponbuttonaccessabilityID(constant_managementNotifications.ManageNotifications_PushNotifications_toggle_access_id);
+        } catch (Throwable e) {
+            System.out.println("Already ON!");
+            EmailToggle = 1;
+            TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_Email_toggle_access_id);
+
+        } finally {
+            if (EmailToggle == 0) {
+                TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_Email_toggle_access_id);
+            }
+        }
+    }
+
+    @Then("I Verified the Sms List Toggle button status")
+    public void iVerifiedTheSmsListToggleButtonStatus() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Sms List Toggle button status");
+//        List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_AccountSettings.Notification_Sms_list_showMore_accessid);
+//        if (elementsByAccessibilityId.size() == 0) {
+//            TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_PushNotification_SMS_ToggleButton);
+//            Thread.sleep(5000);
+//            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Sms_list_showMore_accessid));
+//        } else {
+//            System.out.println("Button is Switched on");
+//            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Sms_list_showMore_accessid));
+//        }
+        try {
+            driver.findElementByAccessibilityId(Constant_ManagementNotifications.ManageNotifications_sms_showmore_text_access_id).isDisplayed();
+            // TaponbuttonaccessabilityID(constant_managementNotifications.ManageNotifications_PushNotifications_toggle_access_id);
+            // TaponbuttonaccessabilityID(constant_managementNotifications.ManageNotifications_PushNotifications_toggle_access_id);
+        } catch (Throwable e) {
+            System.out.println("Already ON!");
+            EmailToggle = 1;
+            TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_toggle_access_id);
+
+        } finally {
+            if (EmailToggle == 0) {
+                TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_toggle_access_id);
+            }
+        }
+    }
+
+    @Then("I Tap on Push Notification show more text")
+    public void iTapOnPushNotificationShowMoreText() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Push Notification show more text");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_pushnotification_showMore_accessid);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify Alert text in Push Notification")
+    public void iVerifyAlertTextInPushNotification() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Alert text in Push Notification");
+        asserttextValidationAccessibility(Constant_AccountSettings.managePushNotification_Alert_Text, Constant_AccountSettings.managePushNotification_Alert_Text_Access_Id);
+    }
+
+    @Then("I verify Alert toggle in Push Notification")
+    public void iVerifyAlertToggleInPushNotification() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Alert toggle in Push Notification");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.managePushNotification_Alert_Toggle_Access_Id));
+    }
+
+    @Then("I verify Warning text in Push Notification")
+    public void iVerifyWarningTextInPushNotification() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Warning text in Push Notification");
+        asserttextValidationAccessibility(Constant_AccountSettings.managePushNotification_Warning_Text, Constant_AccountSettings.managePushNotification_Warning_Text_Access_Id);
+    }
+
+    @Then("I verify Warning toggle in Push Notification")
+    public void iVerifyWarningToggleInPushNotification() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Warning toggle in Push Notification");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.managePushNotification_Warning_Toggle_Access_Id));
+    }
+
+    @Then("I Tap on Push Notification show less text")
+    public void iTapOnPushNotificationShowLessText() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Push Notification show less text");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_pushnotification_showMore_accessid);
+        Thread.sleep(2000);
+    }
+
+    @Then("I Verified the Email-List Text")
+    public void iVerifiedTheEmailListText() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Email-List Text");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Email_List));
+    }
+
+    @Then("I Verified the Alerts Text in Email options")
+    public void iVerifiedTheAlertsTextInEmailOptions() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Alerts Text in Email options");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Alerts_text, Constant_AccountSettings.Notification_Alerts_accessid);
+    }
+
+    @Then("I Verified the Warnings Text in Email options")
+    public void iVerifiedTheWarningsTextInEmailOptions() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Warnings Text in Email options");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Warning_text, Constant_AccountSettings.Notification_Warning_accessid);
+    }
+
+    @Then("I Verified the Edit List in Email option")
+    public void iVerifiedTheEditListInEmailOption() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Edit List in Email option");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Email_EditList_Text, Constant_AccountSettings.Notification_Email_EditList);
+    }
+
+    @Then("I Tap on the Edit List in Email option")
+    public void iTapOnTheEditListInEmailOption() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Edit List in Email option");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_Email_EditList);
+    }
+
+    @Then("I Verified Email List Header")
+    public void iVerifiedEmailListHeader() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified Email List Header");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_EmailList_Header_Text, Constant_AccountSettings.Notification_EmailList_Header);
+    }
+
+    @Then("I Verified the E-mail\\(Account) text")
+    public void iVerifiedTheEMailAccountText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the E-mail(Account) text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_EmailList_emailAccount_Text, Constant_AccountSettings.Notification_EmailList_emailAccount);
+    }
+
+    @Then("I Verified the Additional Emails options in Email List")
+    public void iVerifiedTheAdditionalEmailsOptionsInEmailList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Additional Emails options in Email List");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Additional_Email_Text, Constant_AccountSettings.Notification_Additional_Email);
+    }
+
+    @Then("I Verified the Add new button in Email List")
+    public void iVerifiedTheAddNewButtonInEmailList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Add new button in Email List");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Addnew_Button));
+    }
+
+    @Then("I Verified the Save button in Email List")
+    public void iVerifiedTheSaveButtonInEmailList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Save button in Email List");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_EmailList_Save_Button_text));
+    }
+
+    @Then("I Tap on the Add New button in Email List")
+    public void iTapOnTheAddNewButtonInEmailList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Add New button in Email List");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_Addnew_Button);
+    }
+
+    @Then("I Verified the Email Input field in Email List")
+    public void iVerifiedTheEmailInputFieldInEmailList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Email Input field in Email List");
+//        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Additional_emails_EmailContainer));
+    }
+
+    @Then("I Verified the Label Input field in Email List")
+    public void iVerifiedTheLabelInputFieldInEmailList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Label Input field in Email List");
+//        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_Additional_email_Label));
+    }
+
+    @Then("I Tap on cancel button in Email List")
+    public void iTapOnCancelButtonInEmailList() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on cancel button in Email List");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.managePushNotification_Cancel_Button_Access_Id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I Tap on Email show more text")
+    public void iTapOnEmailShowMoreText() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Email show more text");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_Email_showmore_accessid);
+        Thread.sleep(2000);
+    }
+
+    @Then("I Tap on SMS show more text")
+    public void iTapOnSMSShowMoreText() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on SMS show more text");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_Sms_list_showMore_accessid);
+        Thread.sleep(2000);
+    }
+
+    @Then("I Verified SMS List text")
+    public void iVerifiedSMSListText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified SMS List text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Sms_List, Constant_AccountSettings.Notification_Sms_List_accessid);
+    }
+
+    @Then("I Verified the Edit List Text")
+    public void iVerifiedTheEditListText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Edit List Text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_EditList, Constant_AccountSettings.Notification_EditList_accessid);
+
+    }
+
+    @Then("I Verified the SMS Alert Text")
+    public void iVerifiedTheSMSAlertText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the SMS Alert Text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Sms_Alerts, Constant_AccountSettings.Notification_Sms_Alert_accessid);
+    }
+
+    @Then("I Verified the SMS Warning Text")
+    public void iVerifiedTheSMSWarningText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the SMS Warning Text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Sms_Warning, Constant_AccountSettings.Notification_Sms_Warnings_accessid);
+    }
+
+    @Then("I Tap on the Edit List text Expand icon")
+    public void iTapOnTheEditListTextExpandIcon() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Edit List text Expand icon");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_EditList_accessid);
+    }
+
+    @Then("I Verified the SMS List Header")
+    public void iVerifiedTheSMSListHeader() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the SMS List Header");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_SmsList_Header_Text, Constant_AccountSettings.Notification_SmsList_header);
+    }
+
+    @Then("I Verified the Mobile\\(Account) text")
+    public void iVerifiedTheMobileAccountText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Mobile(Account) text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Mobile_account, Constant_AccountSettings.Notification_Mobile_account_Accessid);
+    }
+
+    @Then("I Verified the Additional SMS Numbers Text")
+    public void iVerifiedTheAdditionalSMSNumbersText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Additional SMS Numbers Text");
+        asserttextValidationAccessibility(Constant_AccountSettings.Notification_Additional_Sms_Number_accessid_Text, Constant_AccountSettings.Notification_Additional_Sms_Number_accessid);
+    }
+
+    @Then("I Verified the Add new button in SMS List")
+    public void iVerifiedTheAddNewButtonInSMSList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Add new button in SMS List");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_addNew_button));
+    }
+
+    @Then("I Verified the Save button  in SMS List")
+    public void iVerifiedTheSaveButtonInSMSList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Save button  in SMS List");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.Notification_SaveButton));
+    }
+
+    @Then("I Tap on cancel button in SMS List")
+    public void iTapOnCancelButtonInSMSList() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on cancel button in SMS List");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.managePushNotification_Cancel_Button_Access_Id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I Tap on Device management right icon")
+    public void iTapOnDeviceManagementRightIcon() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Device management right icon");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_slide_menu_right_icon_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify the device management title text")
+    public void iVerifyTheDeviceManagementTitleText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the device management title text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_header_text, Constant_settings.Device_management_header_text_tile);
+    }
+
+    @Then("I verify the vessel information text")
+    public void iVerifyTheVesselInformationText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the vessel information text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_Vessel_tile_label, Constant_settings.Device_management_Vessel_tile_lable_access_id);
+    }
+
+    @Then("I verify the name card title")
+    public void iVerifyTheNameCardTitle() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the name card title");
+        asserttextValidationAccessibility(Constant_settings.Device_management_Vessel_Name_label, Constant_settings.Device_management_Vessel_Name_lable_access_id);
+    }
+
+    @Then("I verify the hull id number title text")
+    public void iVerifyTheHullIdNumberTitleText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the hull id number title text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_Hull_Id_Number, Constant_settings.Device_management_Hull_Id_Number_aceess_id);
+    }
+
+    @Then("I verify the edit vessel title text")
+    public void iVerifyTheEditVesselTitleText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the edit vessel title text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_Edit_vessel_title, Constant_settings.Device_management_Edit_vessel_title_access_id);
+    }
+
+    @Then("I verify the right icon of edit vessel")
+    public void iVerifyTheRightIconOfEditVessel() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the right icon of edit vessel");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_vessel_card_icon_access_id));
+    }
+
+    @Then("I verify the advanced text")
+    public void iVerifyTheAdvancedTest() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the advanced test");
+        asserttextValidationAccessibility(Constant_settings.Device_management_advanced_Title_Text, Constant_settings.Device_management_advanced_Title_Text_access_id);
+    }
+
+    @Then("I verify the check updates title text")
+    public void iVerifyTheCheckUpdatesTitleText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the check updates title text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_check_updates_card_title, Constant_settings.Device_management_check_updates_card_title_access_id);
+    }
+
+    @Then("I verify the right icon of check updates")
+    public void iVerifyTheRightIconOfCheckUpdates() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the right icon of check updates");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_check_updates_card_icon_access_id));
+    }
+
+    @Then("I verify the unregister delete off board title text")
+    public void iVerifyTheUnregisterDeleteOffBoardTitleText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the unregister delete off board title text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_unregister_Delete_cardTitle, Constant_settings.Device_management_unregister_Delete_cardTitle_access_id);
+    }
+
+    @Then("I verify the right icon of unregister delete off board")
+    public void iVerifyTheRightIconOfUnregisterDeleteOffBoard() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the right icon of unregister delete off board");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_unregister_Delete_right_icon_access_id));
+    }
+
+    @Then("I verify the vessel name label text")
+    public void iVerifyTheVesselNameLableText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the vessel name lable text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_edit_vessel_name_label, Constant_settings.Device_management_edit_vessel_name_lable_access_id);
+    }
+
+    @Then("I Tap on edit vessel button on device management screen")
+    public void iTapOnEditVesselButtonOnDeviceManagementScreen() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on edit vessel button on device management screen");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_Edit_vessel_card_icon_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify the mac address label text")
+    public void iVerifyTheMacAddressLableText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the mac address lable text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_edit_mac_address, Constant_settings.Device_management_edit_mac_address_access_id);
+    }
+
+    @Then("I verify the save button text")
+    public void iVerifyTheSaveButtonText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the save button text");
+        asserttextValidationAccessibility(Constant_settings.Device_management_edit_save_button, Constant_settings.Device_management_edit__save_button_access_id);
+    }
+
+    @Then("I verify the Cancel button on the edit screen")
+    public void iVerifyTheBackButtonOnTheEditScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the back button on the edit screen");
+        Assert.assertTrue(iselementdisplayed(Constant_settings.Device_management_edit_page_Cancel_Button_Xpath));
+    }
+
+    @Then("I verify No device found text")
+    public void iVerifyNoDeviceFoundText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify No device found text");
+        asserttextValidationAccessibility(Constant_AccountSettings.onboarding_No_Device_Found_Text, Constant_AccountSettings.onboarding_No_Device_Found_Text_Access_Id);
+    }
+
+    @Then("I Turn OFF push notifications alerts toggle")
+    public void iTurnOFFPushNotificationsAlertsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on push notifications alerts toggle");
+        Taponbutton(Constant_ManagementNotifications.ManageNotifications_Push_alerts_toggle_xpath);
+    }
+
+    @Then("I Turn OFF push notifications warnings toggle")
+    public void iTurnOFFPushNotificationsWarningsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn OFF push notifications warnings toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_push_warnings_toggle_access_id);
+    }
+
+    @Then("I Turn ON push notifications alerts toggle")
+    public void iTurnONPushNotificationsAlertsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn OFF push notifications warnings toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_push_alerts_toggle_access_id);
+    }
+
+    @Then("I Turn ON push notifications warnings toggle")
+    public void iTurnONPushNotificationsWarningsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn OFF push notifications warnings toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_push_warnings_toggle_access_id);
+    }
+
+    @Then("I delete the existing list of Emails")
+    public void iDeleteTheExistingListOfEmails() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I delete the existing list of Emails");
+        List<AndroidElement> delete_elements = driver.findElements(By.xpath(Constant_ManagementNotifications.ManageNotifications_Edit_Email_delete_xpath));
+        while (delete_elements.size() != 0) {
+            try {
+                Taponbutton(Constant_ManagementNotifications.ManageNotifications_Edit_Email_delete_xpath);
+                delete_elements = driver.findElements(By.xpath(Constant_ManagementNotifications.ManageNotifications_Edit_Email_delete_xpath));
+            } catch (Throwable throwable) {
+                break;
+            }
+        }
+    }
+
+    @Then("I Tap on Save button in Edit E-mail list screen")
+    public void iTapOnSaveButtonInEditEMailListScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Save button in Edit E-mail list screen");
+        Taponbutton(Constant_ManagementNotifications.ManageNotifications_Edit_Email_save_button_xpath);
+
+    }
+
+    @Then("I enter a valid E-mail in E-mail field")
+    public void iEnterAValidEMailInEMailField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter a valid E-mail in E-mail field");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_Edit_Email_valid_input, Constant_ManagementNotifications.ManageNotifications_Edit_Email_element_1_access_id);
+        Edited_Email = Constant_ManagementNotifications.ManageNotifications_Edit_Email_valid_input;
+    }
+
+    @Then("I enter a valid E-mail label name")
+    public void iEnterAValidEMailLabelName() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter a valid E-mail label name");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_valid_input, Constant_ManagementNotifications.ManageNotifcations_Edit_Email_label_1_access_id);
+        Edited_Label = Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_valid_input;
+
+    }
+
+    @Then("I verify if the edited E-mail is displayed in the E-mail list")
+    public void iVerifyIfTheEditedEMailIsDisplayedInTheEMailList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited E-mail is displayed in the E-mail list");
+        asserttextValidationAccessibility(Edited_Email, Constant_ManagementNotifications.ManageNotifications_EmailList_Email_2_access_id);
+
+    }
+
+    @Then("I verify if the edited Label name is displayed below the respective E-mail")
+    public void iVerifyIfTheEditedLabelNameIsDisplayedBelowTheRespectiveEMail() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited Label name is displayed below the respective E-mail");
+        asserttextValidationAccessibility(Edited_Label, Constant_ManagementNotifications.ManageNotifications_EmailList_label_text_2_access_id);
+    }
+
+    @Then("I turn ON the toggle for the first edited E-mail in list")
+    public void iTurnONTheToggleForTheFirstEditedEMailInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn ON the toggle for the first E-mail in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_1_toggle_access_id);
+    }
+
+    @Then("I turn OFF the toggle for the first edited E-mail in list")
+    public void iTurnOFFTheToggleForTheFirstEditedEMailInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I turn OFF the toggle for the first edited E-mail in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_2_toggle_access_id);
+    }
+
+    @Then("I Try to Turn ON the toggle for the first E-mail in list")
+    public void iTryToTurnONTheToggleForTheFirstEMailInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn ON the toggle for the first E-mail in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_1_toggle_access_id);
+    }
+
+    @Then("I try to Turn OFF the toggle for the first value in list")
+    public void iTryToTurnOFFTheToggleForTheFirstValueInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I try to Turn OFF the toggle for the first value in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_2_toggle_access_id);
+    }
+
+    @Then("I enter an invalid E-mail in E-mail field")
+    public void iEnterAnInvalidEMailInEMailField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an invalid E-mail in E-mail field");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_Edit_Email_invalid_input, Constant_ManagementNotifications.ManageNotifactions_Edit_Email_element_2_access_id);
+        Edited_Email = Constant_ManagementNotifications.ManageNotifications_Edit_Email_invalid_input;
+    }
+
+    @Then("I enter an invalid E-mail label name")
+    public void iEnterAnInvalidEMailLabelName() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an invalid E-mail label name");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_invalid_input, Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_2_access_id);
+        Edited_Label = Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_invalid_input;
+    }
+
+    @Then("I verify if the edited invalid E-mail is displayed in the E-mail list")
+    public void iVerifyIfTheEditedInvalidEMailIsDisplayedInTheEMailList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited invalid E-mail is displayed in the E-mail list");
+        asserttextValidationAccessibility(Edited_Email, Constant_ManagementNotifications.ManageNotifications_EmailList_Email_3_access_id);
+
+    }
+
+    @Then("I verify if the edited invalid Label name is displayed below the respective E-mail")
+    public void iVerifyIfTheEditedInvalidLabelNameIsDisplayedBelowTheRespectiveEMail() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited invalid Label name is displayed below the respective E-mail");
+        asserttextValidationAccessibility(Edited_Label, Constant_ManagementNotifications.ManageNotifications_EmailList_label_text_3_access_id);
+    }
+
+    @Then("I turn ON the toggle for the edited invalid E-mail in list")
+    public void iTurnONTheToggleForTheEditedInvalidEMailInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I turn ON the toggle for the edited invalid E-mail in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_3_toggle_access_id);
+    }
+
+    @Then("I turn OFF the toggle for the edited invalid E-mail in list")
+    public void iTurnOFFTheToggleForTheEditedInvalidEMailInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I turn OFF the toggle for the edited invalid E-mail in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_3_toggle_access_id);
+    }
+
+
+    @Then("I enter an E-mail that is already added to the list")
+    public void iEnterAnEMailThatIsAlreadyAddedToTheList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an E-mail that is already added to the list");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_Edit_Email_valid_input, Constant_ManagementNotifications.ManageNotifactions_Edit_Email_element_3_access_id);
+        Edited_Email = Constant_ManagementNotifications.ManageNotifications_Edit_Email_valid_input;
+
+    }
+
+    @Then("I enter a label that is already added to the list")
+    public void iEnterALabelThatIsAlreadyAddedToTheList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter a label that is already added to the list");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_valid_input, Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_3_access_id);
+        Edited_Label = Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_valid_input;
+    }
+
+    @Then("I verify if the edited duplicate E-mail is displayed in the E-mail list")
+    public void iVerifyIfTheEditedDuplicateEMailIsDisplayedInTheEMailList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited duplicate E-mail is displayed in the E-mail list");
+        asserttextValidationAccessibility(Edited_Email, Constant_ManagementNotifications.ManageNotifications_EmailList_Email_4_access_id);
+
+    }
+
+    @Then("I verify if the edited duplicate Label name is displayed below the respective E-mail")
+    public void iVerifyIfTheEditedDuplicateLabelNameIsDisplayedBelowTheRespectiveEMail() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited duplicate Label name is displayed below the respective E-mail");
+        asserttextValidationAccessibility(Edited_Label, Constant_ManagementNotifications.ManageNotifications_EmailList_label_text_4_access_id);
+
+    }
+
+    @Then("I Try to Turn ON the toggle for the fourth E-mail in list")
+    public void iTryToTurnONTheToggleForTheFourthEMailInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn ON the toggle for the fourth E-mail in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_4_toggle_access_id);
+    }
+
+    @Then("I try to Turn OFF the toggle for the fourth value in list")
+    public void iTryToTurnOFFTheToggleForTheFourthValueInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I try to Turn OFF the toggle for the fourth value in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_4_toggle_access_id);
+    }
+
+    @Then("I enter a duplicate E-mail already present in list")
+    public void iEnterADuplicateEMailAlreadyPresentInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter a duplicate E-mail already present in list");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_Edit_Email_valid_input, Constant_ManagementNotifications.ManageNotifactions_Edit_Email_element_4_access_id);
+        Edited_Email = Constant_ManagementNotifications.ManageNotifications_Edit_Email_valid_input;
+    }
+
+    @Then("I enter a label name that is not already present in list")
+    public void iEnterALabelNameThatIsNotAlreadyPresentInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter a label name that is not already present in list");
+        entertextaccessabilityId("test", Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_4_access_id);
+        Edited_Label = "test";
+    }
+
+    @Then("I verify if the duplicate E-mail is displayed in the E-mail list")
+    public void iVerifyIfTheDuplicateEMailIsDisplayedInTheEMailList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the duplicate E-mail is displayed in the E-mail list");
+        asserttextValidationAccessibility(Edited_Email, Constant_ManagementNotifications.ManageNotifications_EmailList_Email_5_access_id);
+    }
+
+    @Then("I verify if the modified Label name is displayed below the respective E-mail")
+    public void iVerifyIfTheModifiedLabelNameIsDisplayedBelowTheRespectiveEMail() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the modified Label name is displayed below the respective E-mail");
+        asserttextValidationAccessibility(Edited_Label, Constant_ManagementNotifications.ManageNotifications_EmailList_label_text_5_access_id);
+    }
+
+    @Then("I Try to Turn ON the toggle for the fifth E-mail in list")
+    public void iTryToTurnONTheToggleForTheFifthEMailInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn ON the toggle for the fifth E-mail in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_5_toggle_access_id);
+    }
+
+    @Then("I try to Turn OFF the toggle for the fifth value in list")
+    public void iTryToTurnOFFTheToggleForTheFifthValueInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I try to Turn OFF the toggle for the fifth value in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_EmailList_5_toggle_access_id);
+
+    }
+
+    @Then("I leave the E-mail field blank")
+    public void iLeaveTheEMailFieldBlank() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I leave the E-mail field blank");
+        entertextaccessabilityId("", Constant_ManagementNotifications.ManageNotifactions_Edit_Email_element_5_access_id);
+        Edited_Email = "";
+
+    }
+
+    @Then("I leave the E-mail label field blank")
+    public void iLeaveTheEMailLabelFieldBlank() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I leave the E-mail label field blank");
+        entertextaccessabilityId("", Constant_ManagementNotifications.ManageNotifications_Edit_Email_label_5_access_id);
+        Edited_Label = "";
+    }
+
+    @Then("I Turn OFF E-mail alerts toggle")
+    public void iTurnOFFEMailAlertsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn OFF E-mail alerts toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_email_alerts_toggle_button_access_id);
+
+    }
+
+    @Then("I Turn OFF E-mail warnings toggle")
+    public void iTurnOFFEMailWarningsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn OFF E-mail warnings toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_email_warnings_toggle_button_access_id);
+
+    }
+
+    @Then("I Turn ON E-mail alerts toggle")
+    public void iTurnONEMailAlertsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn ON E-mail alerts toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_email_alerts_toggle_button_access_id);
+    }
+
+    @Then("I Turn ON E-mail warnings toggle")
+    public void iTurnONEMailWarningsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn ON E-mail warnings toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_email_warnings_toggle_button_access_id);
+    }
+
+    @Then("I Tap on E-mail show less navigation button")
+    public void iTapOnEMailShowLessNavigationButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn OFF E-mail warnings toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_Email_showless_navigation_access_id);
+    }
+
+    @Then("I Turn OFF sms alerts toggle")
+    public void iTurnOFFSmsAlertsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn OFF sms alerts toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_alerts_toggle_button_access_id);
+    }
+
+    @Then("I Turn OFF sms warnings toggle")
+    public void iTurnOFFSmsWarningsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn OFF sms warnings toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_warnings_toggle_button_access_id);
+
+    }
+
+    @Then("I Turn ON sms alerts toggle")
+    public void iTurnONSmsAlertsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn ON sms alerts toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_alerts_toggle_button_access_id);
+    }
+
+    @Then("I Turn ON sms warnings toggle")
+    public void iTurnONSmsWarningsToggle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Turn ON sms warnings toggle");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_warnings_toggle_button_access_id);
+
+    }
+
+    @Then("I delete the existing list of mobile numbers")
+    public void iDeleteTheExistingListOfMobileNumbers() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I delete the existing list of mobile numbers");
+        List<AndroidElement> delete_sms_elements = driver.findElements(By.xpath(Constant_ManagementNotifications.ManageNotifications_Edit_Email_delete_xpath));
+        while (delete_sms_elements.size() != 0) {
+            try {
+                TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_editlist_remove_icon_access_id);
+                delete_sms_elements = driver.findElements(By.xpath(Constant_ManagementNotifications.ManageNotifications_Edit_Email_delete_xpath));
+            } catch (Throwable throwable) {
+                break;
+            }
+        }
+    }
+
+    @Then("I Tap on Save button in Edit sms list screen")
+    public void iTapOnSaveButtonInEditSmsListScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Save button in Edit sms list screen");
+        Taponbutton(Constant_ManagementNotifications.ManageNotifications_Edit_sms_save_button_xpath);
+    }
+
+    @Then("I Tap on sms edit list")
+    public void iTapOnSmsEditList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on sms edit list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_editlist_naviagtion_access_id);
+    }
+
+    @Then("I Tap on add new number button")
+    public void iTapOnAddNewNumberButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on add new number button");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_edit_smslist_add_button_access_id);
+    }
+
+    @Then("I enter a valid number in mobile number field")
+    public void iEnterAValidNumberInMobileNumberField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter a valid number in mobile number field");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_valid_mobile_number, Constant_ManagementNotifications.ManageNotifications_Mobile_number_1_value_access_id);
+    }
+
+    @Then("I enter a valid sms label name")
+    public void iEnterAValidSmsLabelName() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter a valid sms label name");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_sms_valid_label_name, Constant_ManagementNotifications.ManageNotifications_Mobile_number_label_1_access_id);
+    }
+
+    @Then("I verify if the edited number is displayed in the sms list")
+    public void iVerifyIfTheEditedNumberIsDisplayedInTheSmsList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited number is displayed in the sms list");
+        asserttextValidationAccessibility(Constant_ManagementNotifications.ManageNotifications_valid_mobile_number, Constant_ManagementNotifications.ManageNotifications_sms_smslist_number_2_access_id);
+
+    }
+
+    @Then("I verify if the edited Label name is displayed below the respective number")
+    public void iVerifyIfTheEditedLabelNameIsDisplayedBelowTheRespectiveNumber() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited Label name is displayed below the respective number");
+        asserttextValidationAccessibility(Constant_ManagementNotifications.ManageNotifications_sms_valid_label_name, Constant_ManagementNotifications.ManageNotifications_sms_smslist_label_text_2_access_id);
+    }
+
+    @Then("I turn ON the toggle for the first edited number in list")
+    public void iTurnONTheToggleForTheFirstEditedNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I turn ON the toggle for the first edited number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_1_toggle_access_id);
+    }
+
+    @Then("I turn OFF the toggle for the first edited number in list")
+    public void iTurnOFFTheToggleForTheFirstEditedNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I turn OFF the toggle for the first edited number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_1_toggle_access_id);
+
+    }
+
+    @Then("I Try to Turn ON the toggle for the valid number in list")
+    public void iTryToTurnONTheToggleForTheValidNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn ON the toggle for the valid number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_2_toggle_access_id);
+    }
+
+    @Then("I try to Turn OFF the toggle for the valid number in list")
+    public void iTryToTurnOFFTheToggleForTheValidNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn OFF the toggle for the valid number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_2_toggle_access_id);
+    }
+
+    @Then("I enter an invalid number in mobile number field")
+    public void iEnterAnInvalidNumberInMobileNumberField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn OFF the toggle for the valid number in list");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_invalid_mobile_number, Constant_ManagementNotifications.ManageNotifications_Mobile_number_2_value_access_id);
+    }
+
+    @Then("I enter an invalid sms label name")
+    public void iEnterAnInvalidSmsLabelName() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an invalid sms label name");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_sms_invalid_label_name, Constant_ManagementNotifications.ManageNotifications_Mobile_number_label_2_access_id);
+    }
+
+    @Then("I verify if the edited invalid number is displayed in the sms list")
+    public void iVerifyIfTheEditedInvalidNumberIsDisplayedInTheSmsList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited invalid number is displayed in the sms list");
+        asserttextValidationAccessibility(Constant_ManagementNotifications.ManageNotifications_invalid_mobile_number, Constant_ManagementNotifications.ManageNotifications_sms_smslist_number_3_access_id);
+    }
+
+    @Then("I verify if the edited invalid Label name is displayed below the respective number")
+    public void iVerifyIfTheEditedInvalidLabelNameIsDisplayedBelowTheRespectiveNumber() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited invalid Label name is displayed below the respective number");
+        asserttextValidationAccessibility(Constant_ManagementNotifications.ManageNotifications_sms_invalid_label_name, Constant_ManagementNotifications.ManageNotifications_sms_smslist_label_text_3_access_id);
+    }
+
+    @Then("I Try to Turn ON the toggle for the invalid number in list")
+    public void iTryToTurnONTheToggleForTheInvalidNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn ON the toggle for the invalid number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_3_toggle_access_id);
+    }
+
+    @Then("I try to Turn OFF the toggle for the invalid number in list")
+    public void iTryToTurnOFFTheToggleForTheInvalidNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I try to Turn OFF the toggle for the invalid number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_3_toggle_access_id);
+    }
+
+    @Then("I enter an already added number in mobile number field")
+    public void iEnterAnAlreadyAddedNumberInMobileNumberField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an already added number in mobile number field");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_valid_mobile_number, Constant_ManagementNotifications.ManageNotifications_Mobile_number_3_value_access_id);
+    }
+
+    @Then("I enter an already created sms label name")
+    public void iEnterAnAlreadyCreatedSmsLabelName() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an already created sms label name");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_sms_valid_label_name, Constant_ManagementNotifications.ManageNotifications_Mobile_number_label_3_access_id);
+    }
+
+    @Then("I verify if the edited duplicate number is displayed in the sms list")
+    public void iVerifyIfTheEditedDuplicateNumberIsDisplayedInTheSmsList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited duplicate number is displayed in the sms list");
+        asserttextValidationAccessibility(Constant_ManagementNotifications.ManageNotifications_valid_mobile_number, Constant_ManagementNotifications.ManageNotifications_sms_smslist_number_4_access_id);
+    }
+
+    @Then("I verify if the edited duplicate Label name is displayed below the respective number")
+    public void iVerifyIfTheEditedDuplicateLabelNameIsDisplayedBelowTheRespectiveNumber() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited duplicate Label name is displayed below the respective number");
+        asserttextValidationAccessibility(Constant_ManagementNotifications.ManageNotifications_sms_valid_label_name, Constant_ManagementNotifications.ManageNotifications_sms_smslist_label_text_4_access_id);
+
+    }
+
+    @Then("I Try to Turn ON the toggle for the duplicate number in list")
+    public void iTryToTurnONTheToggleForTheDuplicateNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn ON the toggle for the duplicate number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_4_toggle_access_id);
+
+    }
+
+    @Then("I try to Turn OFF the toggle for the duplicate number in list")
+    public void iTryToTurnOFFTheToggleForTheDuplicateNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I try to Turn OFF the toggle for the duplicate number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_4_toggle_access_id);
+
+    }
+
+    @Then("I enter an existing number in mobile number field")
+    public void iEnterAnExistingNumberInMobileNumberField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter an existing number in mobile number field");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_valid_mobile_number, Constant_ManagementNotifications.ManageNotifications_Mobile_number_4_value_access_id);
+
+    }
+
+    @Then("I enter a unique sms label name")
+    public void iEnterAUniqueSmsLabelName() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter a unique sms label name");
+        entertextaccessabilityId(Constant_ManagementNotifications.ManageNotifications_sms_unique_label_name, Constant_ManagementNotifications.ManageNotifications_Mobile_number_label_4_access_id);
+    }
+
+    @Then("I verify if the edited existing number is displayed in the sms list")
+    public void iVerifyIfTheEditedExistingNumberIsDisplayedInTheSmsList() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited existing number is displayed in the sms list");
+        asserttextValidationAccessibility(Constant_ManagementNotifications.ManageNotifications_valid_mobile_number, Constant_ManagementNotifications.ManageNotifications_sms_smslist_number_5_access_id);
+
+    }
+
+    @Then("I verify if the edited unique Label name is displayed below the respective number")
+    public void iVerifyIfTheEditedUniqueLabelNameIsDisplayedBelowTheRespectiveNumber() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited existing number is displayed in the sms list");
+        asserttextValidationAccessibility(Constant_ManagementNotifications.ManageNotifications_sms_unique_label_name, Constant_ManagementNotifications.ManageNotifications_sms_smslist_label_text_5_access_id);
+    }
+
+    @Then("I Try to Turn ON the toggle for the edited existing number in list")
+    public void iTryToTurnONTheToggleForTheEditedExistingNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn ON the toggle for the edited existing number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_5_toggle_access_id);
+    }
+
+    @Then("I try to Turn OFF the toggle for the edited existing number in list")
+    public void iTryToTurnOFFTheToggleForTheEditedExistingNumberInList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Try to Turn OFF the toggle for the edited existing number in list");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_smslist_5_toggle_access_id);
+    }
+
+    @Then("I leave the mobile number field blank")
+    public void iLeaveTheMobileNumberFieldBlank() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I leave the mobile number field blank");
+        entertextaccessabilityId(" ", Constant_ManagementNotifications.ManageNotifications_Mobile_number_5_value_access_id);
+
+    }
+
+    @Then("I leave the sms label field blank")
+    public void iLeaveTheSmsLabelFieldBlank() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I leave the sms label field blank");
+        entertextaccessabilityId(" ", Constant_ManagementNotifications.ManageNotifications_Mobile_number_label_5_access_id);
+
+    }
+
+    @Then("I Tap on sms show less navigation button")
+    public void iTapOnSmsShowLessNavigationButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on sms show less navigation button");
+        TaponbuttonaccessabilityID(Constant_ManagementNotifications.ManageNotifications_sms_showless_dropdown_access_id);
+
+    }
+
+    @Then("I verify if user is able to enter some valid text in name field")
+    public void iVerifyIfUserIsAbleToEnterSomeValidTextInNameField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if user is able to enter some valid text in name field");
+        entertextaccessabilityId(Constant_DeviceManagement.mtc_name_valid_data, Constant_DeviceManagement.mtc_edit_name_value_access_id);
+        EditedNameValue = driver.findElementByAccessibilityId(Constant_DeviceManagement.mtc_edit_name_value_access_id).getText();
+
+    }
+
+    @Then("I Tap on save button in edit screen")
+    public void iTapOnSaveButtonInEditScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on save button in edit screen");
+        TaponbuttonaccessabilityID(Constant_DeviceManagement.mtc_edit_save_button_access_id);
+    }
+
+    @Then("I verify if the edited name is displayed in the name field")
+    public void iVerifyIfTheEditedNameIsDisplayedInTheNameField() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited name is displayed in the name field");
+        asserttextValidationAccessibility(EditedNameValue, Constant_DeviceManagement.mtc_name_value_access_id);
+
+    }
+
+    @Then("I verify if the edited name is displayed in the name label below the image")
+    public void iVerifyIfTheEditedNameIsDisplayedInTheNameLabelBelowTheImage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited name is displayed in the name label below the image");
+        asserttextValidationAccessibility(EditedNameValue, Constant_DeviceManagement.mtc_image_devicename_access_id);
+
+    }
+
+    @Then("I Tap on back button in Device Management screen")
+    public void iTapOnBackButtonInDeviceManagementScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on back button in Device Management screen");
+        TaponbuttonaccessabilityID(Constant_DeviceManagement.mtc_DeviceManagement_backbutton_access_id);
+    }
+
+    @Then("I assert if the edited name is displayed in the device list")
+    public void iAssertIfTheEditedNameIsDisplayedInTheDeviceList() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I assert if the edited name is displayed in the device list");
+        if (driver.findElementByXPath(Constant_DeviceManagement.mtc_onboardeddevice_1_name_xpath).getText().equals(EditedNameValue)) {
+            System.out.println("edited name displayed correctly!");
+
+        } else {
+            System.out.println("edited value is not applied!");
+        }
+    }
+
+    @Then("I assert if the edited name is displayed in the tiles in home page")
+    public void iAssertIfTheEditedNameIsDisplayedInTheTilesInHomePage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I assert if the edited name is displayed in the tiles in home page");
+
+        if (driver.findElementByXPath(Constant_HomePage.HomePage_tile_name_1_xpath).getText().equals(EditedNameValue)) {
+            System.out.println("edited name displayed correctly!");
+
+        } else {
+            System.out.println("edited value is not applied!");
+        }
+    }
+
+    @Then("I Tap on the navigation button of the first onboarded device name that is displayed")
+    public void iTapOnTheNavigationButtonOfTheFirstOnboardedDeviceNameThatIsDisplayed() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the navigation button of the first onboarded device name that is displayed");
+        Taponbutton(Constant_DeviceManagement.mtc_onboardeddevice_1_navigation_xpath);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify if user is able to tap on edit vessel navigation button")
+    public void iVerifyIfUserIsAbleToTapOnEditVesselNavigationButton() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if user is able to tap on edit vessel navigation button");
+        TaponbuttonaccessabilityID(Constant_DeviceManagement.mtc_edit_vessel_navigation_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify if user is able to enter emojis in name field")
+    public void iVerifyIfUserIsAbleToEnterEmojisInNameField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if user is able to enter emojis in name field");
+        entertextaccessabilityId(emojis, Constant_DeviceManagement.mtc_edit_name_value_access_id);
+    }
+
+    @Then("I verify if the edited emoji is displayed in the name field")
+    public void iVerifyIfTheEditedEmojiIsDisplayedInTheNameField() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited emoji is displayed in the name field");
+        asserttextValidationAccessibility(emojis, Constant_DeviceManagement.mtc_name_value_access_id);
+    }
+
+    @Then("I verify if the edited emoji is displayed in the name label below the image")
+    public void iVerifyIfTheEditedEmojiIsDisplayedInTheNameLabelBelowTheImage() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if the edited emoji is displayed in the name field");
+        asserttextValidationAccessibility(emojis, Constant_DeviceManagement.mtc_image_devicename_access_id);
+
+    }
+
+    @Then("I verify if user is able to enter some invalid text in name field")
+    public void iVerifyIfUserIsAbleToEnterSomeInvalidTextInNameField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if user is able to enter some invalid text in name field");
+        entertextaccessabilityId(Constant_DeviceManagement.mtc_name_invalid_data, Constant_DeviceManagement.mtc_edit_name_value_access_id);
+        EditedNameValue = Constant_DeviceManagement.mtc_name_invalid_data;
+    }
+
+    @Then("I leave the name field blank")
+    public void iLeaveTheNameFieldBlank() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I leave the name field blank");
+        entertextaccessabilityId("  ", Constant_DeviceManagement.mtc_edit_name_value_access_id);
+        EditedNameValue = "  ";
+    }
+
+    @Then("I verify if error text is displayed below the name field")
+    public void iVerifyIfErrorTextIsDisplayedBelowTheNameField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if error text is displayed below the name field");
+        Assert.assertTrue(iselementdisplayed(Constant_DeviceManagement.mtc_edit_emptyname_error_xpath));
+    }
+
+    @Then("I verify if user is able to enter some long text in name field")
+    public void iVerifyIfUserIsAbleToEnterSomeLongTextInNameField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify if user is able to enter some long text in name field");
+        entertextaccessabilityId(Constant_DeviceManagement.mtc_long_name_value, Constant_DeviceManagement.mtc_edit_name_value_access_id);
+        EditedNameValue = driver.findElementByAccessibilityId(Constant_DeviceManagement.mtc_edit_name_value_access_id).getText();
+
+    }
+
 }

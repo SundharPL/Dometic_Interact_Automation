@@ -19,7 +19,7 @@ public class Settings extends Baseclass {
     public void iTapOnHamburgerMenuInLandingScreen() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on hamburger menu in landing screen");
         List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
-        if(id.size()!=0){
+        if (id.size() != 0) {
             TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
         }
     }
@@ -454,9 +454,10 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on Device Management")
-    public void iTapOnDeviceManagement() throws ClassNotFoundException {
+    public void iTapOnDeviceManagement() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Device Management");
         TaponbuttonaccessabilityID(Constant_settings.Settings_deviceMangagement_text_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on App Settings")
@@ -1156,5 +1157,344 @@ public class Settings extends Baseclass {
     public void iTapOnMetricUnitInUnitsPage() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Metric Unit in Units Page");
         TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_Unit_Metric_Access_Id);
+    }
+
+    @Then("I tap on the right icon for SDB")
+    public void iTapOnTheRightIconForSDB() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the right icon for SDB");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_edit_vessel_card_right_icon_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify the edit card tile name")
+    public void iVerifyTheEditCardTileName() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the edit card tile name");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_edit_vessel_card_title_text_access_id));
+        Thread.sleep(2000);
+    }
+
+    @Then("I tap on vessel edit card button")
+    public void iTapOnVesselEditCardButton() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on vessel edit card button");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_edit_vessel_card_right_icon_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify the vessel name card title")
+    public void iVerifyTheVesselNameCardTitle() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the vessel name card title");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_vessel_save_button_access_id));
+    }
+
+    @Then("I tap on back button on edit screen")
+    public void iTapOnBackButtonOnEditScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on back button on edit screen");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_Edit_page_back_button_access_id);
+    }
+
+    @Then("I tap on back button on device management main screen")
+    public void iTapOnBackButtonOnDeviceManagementMainScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on back button on device management main screen");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_screen_back_button_accessid);
+    }
+
+    @Then("I tap on back button on device management device selection page")
+    public void iTapOnBackButtonOnDeviceManagementDeviceSelectionPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on back button on device management device selection page");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_device_selection_back_button_access_id);
+    }
+
+    @Then("I enter the name for edit vessel")
+    public void iEnterTheNameForEditVessel() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the name for edit vessel");
+        cleartextaccessabilityId(Constant_settings.Device_management_device_selection_something);
+        entertextaccessabilityId(Constant_settings.Device_manegement_edit_name_text, Constant_settings.Device_management_device_selection_something);
+    }
+
+    @Then("I tap on save button in edit vessel screen")
+    public void iTapOnSaveButtonInEditVesselScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on save button in edit vessel screen");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_Edit_vessel_save_button_access_id);
+    }
+
+    @Then("I tap on guest pin list right icon button")
+    public void iTapOnGuestPinListRightIconButton() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on guest pin list right icon button");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_Get_pin_list_right_icon_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify the back button for guest pin list page")
+    public void iVerifyTheBackButtonForGuestPinListPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the back button for guest pin list page");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_guest_pin_list_back_symbol_access_id));
+    }
+
+    @Then("I verify the guest pin header text")
+    public void iVerifyTheGuestPinHeaderText() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the guest pin header text");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_guest_pin_list_header_text_access_id));
+    }
+
+    @Then("I verify the edit header text")
+    public void iVerifyTheEditHeaderText() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the edit header text");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_Guest_list_header_text_access_id));
+    }
+
+    @Then("I tap on the edit text")
+    public void iTapOnTheEditText() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the edit text");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_guest_pin_list_edit_button_text_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify the close symbol on edit guest list page")
+    public void iVerifyTheCloseSymbolOnEditGuestListPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the close symbol on edit guest list page");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_Guest_list_close_button_text_access_id));
+    }
+
+    @Then("I verify the add button symbol on edit guest list page")
+    public void iVerifyTheAddButtonSymbolOnEditGuestListPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the add button symbol on edit guest list page");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_Guest_list_add_button_access_id));
+    }
+
+    @Then("I tap on the add button symbol on edit guest list page")
+    public void iTapOnTheAddButtonSymbolOnEditGuestListPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the add button symbol on edit guest list page");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_Edit_Guest_list_add_button_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I verify the edit pin header text")
+    public void iVerifyTheEditPinHeaderText() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the edit pin header text");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_pin_header_text_tile_access_id));
+    }
+
+    @Then("I verify the close symbol on edit pin page")
+    public void iVerifyTheCloseSymbolOnEditPinPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the close symbol on edit pin page");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_pin_close_button_access_id));
+    }
+
+    @Then("I verify the pin name text")
+    public void iVerifyThePinNameText() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the pin name text");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_pin_Pin_name_access_id));
+    }
+
+    @Then("I verify the pin code text")
+    public void iVerifyThePinCodeText() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the pin code text");
+        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_settings.Device_management_Edit_pin_code_access_id));
+    }
+
+    @Then("I verify the Mail box text")
+    public void iVerifyTheMailBoxText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Mail box text");
+        asserttextValidation(Constant_settings.Device_manegement_Mail_id, Constant_settings.Device_management_mail_box_xpath);
+
+    }
+
+    @Then("I verify the Mail box toggle button")
+    public void iVerifyTheMailBoxToggleButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Mail box toggle button");
+        Assert.assertTrue(iselementdisplayed(Constant_settings.Device_management_mail_box_toggel_button_xpath));
+    }
+
+    @Then("I verify the refrigerated compartment text")
+    public void iVerifyTheRefrigeratedCompartmentText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the refrigerated compartment text");
+        asserttextValidation(Constant_settings.Device_manegement_refrigerated, Constant_settings.Device_manegement_refrigerated_text_xpth);
+    }
+
+    @Then("I verify the refrigerated compartment toggle button")
+    public void iVerifyTheRefrigeratedCompartmentToggleButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the refrigerated compartment toggle button");
+        Assert.assertTrue(iselementdisplayed(Constant_settings.Device_manegement_refrigerated_toggel_button_xpath));
+    }
+
+    @Then("I tap on the close button symbol on edit pin page")
+    public void iTapOnTheCloseButtonSymbolOnEditPinPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the close button symbol on edit pin page");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_Edit_pin_close_button_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I tap on the close button symbol on guest list page")
+    public void iTapOnTheCloseButtonSymbolOnGuestListPage() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the close button symbol on guest list page");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_Edit_Guest_list_close_button_text_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I tap on the guest list right icon")
+    public void iTapOnTheGuestListRightIcon() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the guest list right icon");
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_guest_pin_list_back_symbol_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter the name for pin name")
+    public void iEnterTheNameForPinName() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the name for pin name");
+        cleartextaccessabilityId(Constant_settings.Device_manegement_edit_name_text_enter_access_id);
+        entertextaccessabilityId(Constant_settings.Device_manegement_edit_pin_name_text, Constant_settings.Device_manegement_edit_name_text_enter_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter the pincode")
+    public void iEnterThePincode() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the pincode");
+        cleartextaccessabilityId(Constant_settings.Device_manegement_edit_pin_code_enter_access_id);
+        entertextaccessabilityId(Constant_settings.Device_manegement_edit_pin_number, Constant_settings.Device_manegement_edit_pin_code_enter_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I tap on the save button for edit pin")
+    public void iTapOnTheSaveButtonForEditPin() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the save button for edit pin");
+        TaponbuttonaccessabilityID(Constant_settings.Device_manegement_edit_pin_page_save_button_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter the combination for name field")
+    public void iEnterTheCombinationForNameField() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the combination for name field");
+        cleartextaccessabilityId(Constant_settings.Device_manegement_edit_name_text_enter_access_id);
+        entertextaccessabilityId(Constant_settings.Device_management_edit_pin_name_special_charater, Constant_settings.Device_manegement_edit_name_text_enter_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter the combination for pincode")
+    public void iEnterTheCombinationForPincode() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the combination for pincode");
+        cleartextaccessabilityId(Constant_settings.Device_manegement_edit_pin_code_enter_access_id);
+        entertextaccessabilityId(Constant_settings.Device_manegement_edit_pin_combination, Constant_settings.Device_manegement_edit_pin_code_enter_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter the long length for name field")
+    public void iEnterTheLongLengthForNameField() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the long length for name field");
+        cleartextaccessabilityId(Constant_settings.Device_manegement_edit_name_text_enter_access_id);
+        entertextaccessabilityId(Constant_settings.Device_management_edit_pin_name_long_lenght_charater, Constant_settings.Device_manegement_edit_name_text_enter_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter the long length for pincode")
+    public void iEnterTheLongLengthForPincode() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the long length for pincode");
+        cleartextaccessabilityId(Constant_settings.Device_manegement_edit_pin_code_enter_access_id);
+        entertextaccessabilityId(Constant_settings.Device_manegement_edit_pin_long_lenght_combination, Constant_settings.Device_manegement_edit_pin_code_enter_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter the short for name field")
+    public void iEnterTheShortForNameField() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the short for name field");
+        cleartextaccessabilityId(Constant_settings.Device_manegement_edit_name_text_enter_access_id);
+        entertextaccessabilityId(Constant_settings.Device_management_edit_pin_name_short_lenght, Constant_settings.Device_manegement_edit_name_text_enter_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter the short for pincode")
+    public void iEnterTheShortForPincode() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the short for pincode");
+        cleartextaccessabilityId(Constant_settings.Device_manegement_edit_pin_code_enter_access_id);
+        entertextaccessabilityId(Constant_settings.Device_management_edit_pin_short_lenght, Constant_settings.Device_manegement_edit_pin_code_enter_access_id);
+        Thread.sleep(2000);
+    }
+
+    @Then("I Tap on the Master PIN option")
+    public void iTapOnTheMasterPINOption() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Master PIN option");
+        TaponbuttonaccessabilityID(Constant_AccountSettings.DeviceManagement_MasterPin_accessid);
+    }
+
+    @Then("I Tap on the alert popup Enter button")
+    public void iTapOnTheAlertPopupEnterButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the alert popup Enter button");
+        Taponbutton(Constant_AccountSettings.DeviceManagement_SDB_PasswordAlertField_EnterButton_xpath);
+    }
+
+    @Then("I tap on Alert Ok button")
+    public void iTapOnAlertOkButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on Alert Ok button");
+        Taponbutton(Constant_AccountSettings.DeviceManagement_SDBDevice_wrongPassword_alert_OkButton_xpath);
+    }
+
+    @Then("I enter the wrong password in the Password field")
+    public void iEnterTheWrongPasswordInThePasswordField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the wrong password in the Password field");
+        entertext(Constant_AccountSettings.DeviceManagement_SDB_password_requiredInValid_password, Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_PasswordRequired_inputField_xpath);
+
+    }
+
+    @Then("I enter the correct password")
+    public void iEnterTheCorrectPassword() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I enter the correct password");
+        entertext(Constant_AccountSettings.DeviceManagement_SDB_password_requiredValid_password, Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_PasswordRequired_inputField_xpath);
+    }
+
+    @Then("I Tap on the set master pin Input Field")
+    public void iTapOnTheSetMasterPinInputField() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the set master pin Input Field");
+        Taponbutton(Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_SetMasterPin_InputField_xpath);
+    }
+
+    @Then("I Enter the PIN as {int} Digit")
+    public void iEnterThePINAsDigit(int arg0) throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Enter the PIN as 4 Digit");
+        cleartext(Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_SetMasterPin_InputField_xpath);
+        Thread.sleep(3000);
+        entertext(Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_SetMasterPin_ValidPassword, Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_SetMasterPin_InputField_xpath);
+
+    }
+
+    @Then("I Verify the Text Message for Re-Enter PIN")
+    public void iVerifyTheTextMessageForReEnterPIN() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Text Message for Re-Enter PIN");
+        iselementdisplayed(Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_SetMasterPin_Reenter_Message_xpath);
+    }
+
+    @Then("I Re-Enter the PIN as {int} Digit")
+    public void iReEnterThePINAsDigit(int arg0) throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Re-Enter the PIN as 4 Digit");
+        entertext(Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_SetMasterPin_ValidPassword, Constant_AccountSettings.DeviceManagement_SDBDevice_masterPin_SetMasterPin_InputField_xpath);
+
+    }
+
+    @Then("I Verified the Master PIN Password popup")
+    public void iVerifiedTheMasterPINPasswordPopup() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verified the Master PIN Password popup");
+        iselementdisplayed(Constant_AccountSettings.DeviceManagement_SDB_password_required_text_xpath);
+    }
+
+    @Then("I verify the Master PIn Header")
+    public void iVerifyTheMasterPInHeader() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the Master PIn Header");
+        iselementdisplayedaccessabilityId(Constant_AccountSettings.Settings_DeviceManagement_MasterPIN_Header);
+    }
+
+    @Then("I Verify the Set Master Pin text")
+    public void iVerifyTheSetMasterPinText() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the Set Master Pin text");
+        iselementdisplayed(Constant_AccountSettings.Settings_DeviceManagement_SetMasterPIN_text_xpath);
+    }
+
+    @Then("I Verify the text {string}")
+    public void iVerifyTheText(String arg0) throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify the text Pin Must be 4 digit");
+        iselementdisplayed(Constant_AccountSettings.Settings_DeviceManagement_SEtMasterPIN_Message_xpath);
+    }
+
+    @Then("I have tap on the close button in master Pin Main screen")
+    public void iHaveTapOnTheCloseButtonInMasterPinMainScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I have tap on the close button in master Pin Main screen");
+        Taponbutton(Constant_AccountSettings.DeviceManagement_SDBDevice_MasterPin_Closebutton_xpath);
     }
 }

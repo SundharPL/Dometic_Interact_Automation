@@ -57,6 +57,40 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
     Then I Tap on Back Button
 
   @sanity1
+  Scenario: Verifying application Bilge Pump screen(Alert-Max Cycle Hour) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Max Cycle Hour
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the maximum carousel value in Alert-Max Cycle Hour
+#    Then I Verify Apply button in Alert-Max Cycle Hour
+#    Then I Tap on Apply button in Alert-Max Cycle Hour
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied value in Alert-Max Cycle Hour is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Alert-Max Cycle Hour) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Max Cycle Hour
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the minimum carousel value in Alert-Max Cycle Hour
+#    Then I Verify Apply button in Alert-Max Cycle Hour
+#    Then I Tap on Apply button in Alert-Max Cycle Hour
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied value in Alert-Max Cycle Hour is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
   Scenario: Verifying application Bilge Pump screen(Alert-Max Cycle Hour) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen
@@ -72,6 +106,41 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
     Then I Validate Applied value in Alert-Max Cycle Hour is displayed
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
+
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Alert-Max Daily Cycle) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Max Daily Cycle
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the maximum carousel value in Alert-Max Daily Cycle
+#    Then I Verify Apply button in Alert-Max Daily Cycle
+#    Then I Tap on Apply button in Alert-Max Daily Cycle
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied value in Alert-Max Daily Cycle is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Alert-Max Daily Cycle) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Max Daily Cycle
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the minimum carousel value in Alert-Max Daily Cycle
+#    Then I Verify Apply button in Alert-Max Daily Cycle
+#    Then I Tap on Apply button in Alert-Max Daily Cycle
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied value in Alert-Max Daily Cycle is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
 
   @sanity1
   Scenario: Verifying application Bilge Pump screen(Alert-Max Daily Cycle) Functionality
@@ -91,6 +160,40 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
     Then I Tap on Back Button
 
   @sanity1
+  Scenario: Verifying application Bilge Pump screen(Alert-Continuous) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Continuous
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the maximum carousel value in Alert-Continuous
+#    Then I Verify Apply button in Alert-Continuous
+#    Then I Tap on Apply button in Alert-Continuous
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied value in Alert-Continuous is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Alert-Continuous) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Continuous
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the minimum carousel value in Alert-Continuous
+#    Then I Verify Apply button in Alert-Continuous
+#    Then I Tap on Apply button in Alert-Continuous
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied value in Alert-Continuous is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
   Scenario: Verifying application Bilge Pump screen(Alert-Continuous) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen
@@ -106,6 +209,46 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
     Then I Validate Applied value in Alert-Continuous is displayed
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Warnings-Max Cycle Hour) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Max Cycle Hour
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the maximum carousel value in Warnings-Max Cycle Hour
+#    Then I Verify Apply button in Warnings-Max Cycle Hour
+#    Then I Tap on Apply button in Warnings-Max Cycle Hour
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Max Cycle Hour is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Warnings-Max Cycle Hour) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Max Cycle Hour
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the minimum carousel value in Warnings-Max Cycle Hour
+#    Then I Verify Apply button in Warnings-Max Cycle Hour
+#    Then I Tap on Apply button in Warnings-Max Cycle Hour
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Max Cycle Hour is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
 
   @sanity1
   Scenario: Verifying application Bilge Pump screen(Warnings-Max Cycle Hour) Functionality
@@ -128,6 +271,46 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
     Then I Tap on Back Button
 
   @sanity1
+  Scenario: Verifying application Bilge Pump screen(Warnings-Max Daily Cycle) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Max Daily Cycle
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the maximum carousel value in Warnings-Max Daily Cycle
+#    Then I Verify Apply button in Warnings-Max Daily Cycle
+#    Then I Tap on Apply button in Warnings-Max Daily Cycle
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Max Daily Cycle is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Warnings-Max Daily Cycle)Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Max Daily Cycle
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the minimum carousel value in Warnings-Max Daily Cycle
+#    Then I Verify Apply button in Warnings-Max Daily Cycle
+#    Then I Tap on Apply button in Warnings-Max Daily Cycle
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Max Daily Cycle is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
   Scenario: Verifying application Bilge Pump screen(Warnings-Max Daily Cycle) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen
@@ -146,6 +329,47 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
     Then I Validate Applied minutes in Warnings-Max Daily Cycle is displayed
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
+
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Warnings-Continuous) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Continuous
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the maximum carousel value in Warnings-Continuous
+#    Then I Verify Apply button in Warnings-Continuous
+#    Then I Tap on Apply button in Warnings-Continuous
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Continuous is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Bilge Pump screen(Warnings-Continuous) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Bilge Pump tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Continuous
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the minimum carousel value in Warnings-Continuous
+#    Then I Verify Apply button in Warnings-Continuous
+#    Then I Tap on Apply button in Warnings-Continuous
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Continuous is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
 
   @sanity1
   Scenario: Verifying application Bilge Pump screen(Warnings-Continuous) Functionality

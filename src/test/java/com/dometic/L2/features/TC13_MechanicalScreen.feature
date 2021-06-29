@@ -1,6 +1,6 @@
 Feature: Verifying application Mechanical Screen in Dometic USLTV application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Mechanical screen functionality
     Then I Tap on Mechanical in Landing screen
     Then I Wait short period for Page to Load

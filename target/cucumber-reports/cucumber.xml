@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="107.64737">
-<testcase classname="Verifying application Splash screen in Dometic Marine application" name="Launching the application" time="26.895574">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="16" time="491.441147">
+<testcase classname="Verifying application Splash screen in Dometic Marine application" name="Launching the application" time="20.608494">
 <system-out><![CDATA[Given I Launch the application..............................................passed
 Then I Wait short period for Page to Load...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Verifying application Splash screen in Dometic Marine application" name="Verifying application Splash screen Functionality" time="20.354932">
+<testcase classname="Verifying application Splash screen in Dometic Marine application" name="Verifying application Splash screen Functionality" time="24.066809">
 <system-out><![CDATA[Then I Tap on Allow button in Permission popup in Login Page................passed
 Then I Wait short period for Page to Load...................................passed
 Then I verify Welcome Text is displaying in Login Page......................passed
@@ -12,21 +12,7 @@ Then I Verify Page title is displayed in Login Page.........................pass
 Then I Wait short period for Page to Load...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Verifying application Login Screen in Dometic Marine application" name="Verifying application Login Functionality with valid credentials" time="33.307448">
-<system-out><![CDATA[Then I enter Valid Email in Login Page......................................passed
-Then I enter Valid Password in Login Page...................................passed
-Then I Tap on an Login button in Login Page.................................passed
-Then I Wait short period for Page to Load...................................passed
-Then I verify successfully navigated to Dash Board screen...................passed
-Then I verify if user has navigated to the homescreen.......................passed
-Then I verify if an empty homescreen is displayed...........................passed
-Then I Tap on hamburger menu in landing screen..............................passed
-Then I Wait short period for Page to Load...................................passed
-Then I Tap on Logout in Settings screen.....................................passed
-Then I Wait short period for Page to Load...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Verifying application DashBoard Screen in Dometic Marine application" name="Verifying application DashBoard screen functionality" time="27.089416">
+<testcase classname="Verifying application DashBoard Screen in Dometic Marine application" name="Verifying application DashBoard screen functionality" time="58.186064">
 <system-out><![CDATA[Then I enter Valid Email....................................................passed
 Then I enter Valid Password.................................................passed
 Then I Tap on an Login button...............................................passed
@@ -36,6 +22,223 @@ Then I Wait short period for Page to Load...................................pass
 Then I Tap on Marine Tile...................................................passed
 Then I Wait short period for Page to Load...................................passed
 Then I Wait until Landing screen is displayed...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Landing Screen in Dometic Marine application" name="Verifying application Landing Screen functionality" time="41.475051">
+<system-out><![CDATA[Then I Tap on the access this location pop up...............................passed
+Then I Tap on LATER Button..................................................passed
+Then I Tap on cancel button in Upgrade Firmware.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Security Screen in Dometic Marine application" name="Verifying application Security screen UI" time="29.182257">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I verify Security Header text is displayed.............................passed
+Then I verify Security Arm Icon is displayed................................passed
+Then I verify Security current status is displayed..........................passed
+Then I verify Arm button is displayed.......................................passed
+Then I verify Arm button label is displayed.................................passed
+Then I Verify Geo Fencing text is displayed in Security screen..............passed
+Then I Verify Geo Fencing-toggle status is displayed in Security screen.....passed
+Then I Verify Geo Fencing-toggle is displayed in Security screen............passed
+Then I Tap on Gio Fencing Radius from center toggle if it's already in OFF state.passed
+Then I Verify Geo Fencing Radius from center text is displayed in Security screen.passed
+Then I Verify Geo Fencing Radius from center Expand Icon is displayed in Security screen.passed
+Then I Verify Geo Fencing Alert Latency text is displayed in Security screen.passed
+Then I Verify Geo Fencing Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Scroll up the page...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Door Window Alert toggle if it's already in OFF state.........passed
+Then I Verify Door Window Alert text is displayed in Security screen........passed
+Then I Verify Door Window Alert-toggle status is displayed in Security screen.passed
+Then I Verify Door Window Alert-toggle is displayed in Security screen......passed
+Then I Verify Door Window Alert Alert Latency text is displayed in Security screen.passed
+Then I Verify Door Window Alert Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Scroll up the page...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Theft Alert toggle if it's already in OFF state...............passed
+Then I Verify Theft Alert text is displayed in Security screen..............passed
+Then I Verify Theft Alert-toggle status is displayed in Security screen.....passed
+Then I Verify Theft Alert-toggle is displayed in Security screen............passed
+Then I Verify Theft Alert Alert Latency text is displayed in Security screen.passed
+Then I Verify Theft Alert Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Security Screen in Dometic Marine application" name="Verifying application Security screen(Gio Fencing-Radius From Center) Functionality" time="38.731712">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Radius from center in Gio Fencing Security....................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the screen in Radius from center in Gio Fencing............passed
+Then I verify apply button is displayed in Radius from center in Gio Fencing.passed
+Then I Tap on Apply button in Radius from center in Gio Fencing.............passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Radius from center in Gio Fencing.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Security Screen in Dometic Marine application" name="Verifying application Updating unit functionality(Metric to Imperial and Meter to Yard) Functionality" time="27.273072">
+<system-out><![CDATA[Then I Tap on Security Tile on landing screen...............................passed
+Then I get the value from Radius from center container in Security tile.....passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on hamburger menu in landing screen..............................passed
+Then I Tap on App Settings..................................................passed
+Then I Tap on Units in App Settings page....................................passed
+Then I Tap on Imperial Unit in Units Page...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I validated Yard value from radius from center container in Security tile.passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Security Screen in Dometic Marine application" name="Verifying application Updating unit functionality(Imperial to Metric and Yard to Meter) Functionality" time="27.245829">
+<system-out><![CDATA[Then I Tap on Security Tile on landing screen...............................passed
+Then I get the yard value from Radius from center container in Security tile.passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on hamburger menu in landing screen..............................passed
+Then I Tap on App Settings..................................................passed
+Then I Tap on Units in App Settings page....................................passed
+Then I Tap on Metric Unit in Units Page.....................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I validated Meter value from radius from center container in Security tile.passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Security Screen in Dometic Marine application" name="Verifying application Security screen(Gio Fencing-Alert Latency) Functionality" time="28.873334">
+<system-out><![CDATA[Then I Tap on Security Tile on landing screen...............................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Alert Latency in Gio Fencing Security.........................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the screen in Alert Latency in Gio Fencing.................passed
+Then I verify apply button is displayed in Alert Latency in Gio Fencing.....passed
+Then I Tap on Apply button in Alert Latency in Gio Fencing..................passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Alert Latency in Gio Fencing.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Security Screen in Dometic Marine application" name="Verifying application Security screen(Door/Window Alert-Alert Latency) Functionality" time="39.552843">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I Tap on Alert Latency in Door Window Alert Security...................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Scroll up the screen in Alert Latency in Door Window Alert...........passed
+Then I verify apply button is displayed in Alert Latency in Door Window Alert.passed
+Then I Tap on Apply button in Alert Latency in Door Window Alert............passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Alert Latency in Door Window Alert.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Security Screen in Dometic Marine application" name="Verifying application Security screen(Theft Alert-Alert Latency) Functionality" time="32.045527">
+<system-out><![CDATA[Then I Tap on Security Tile on landing screen...............................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Alert Latency in Theft Alert Security.........................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Scroll up the screen in Alert Latency in Theft Alert.................passed
+Then I verify apply button is displayed in Alert Latency in Theft Alert.....passed
+Then I Tap on Apply button in Alert Latency in Theft Alert..................passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Alert Latency in Theft Alert.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application" name="Verifying application Tracking(Gio Fencing) screen UI" time="16.677184">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tracking tile.................................................passed
+Then I Verify Tracking Header title.........................................passed
+Then I Verify Boat Location text is displayed...............................passed
+Then I Verify Latitude text is displayed....................................passed
+Then I Verify Longitude text is displayed...................................passed
+Then I Verify Geo Fencing text is displayed.................................passed
+Then I Verify Geo Fencing-toggle status is displayed........................passed
+Then I Verify Geo Fencing-toggle is displayed...............................passed
+Then I Tap on Gio Fencing toggle if it's already in OFF state...............passed
+Then I Scroll up the page...................................................passed
+Then I Verify Radius from center text is displayed..........................passed
+Then I Verify Radius from center expandIcon is displayed....................passed
+Then I Verify Alert Latency text is displayed...............................passed
+Then I Verify Alert Latency expandIcon is displayed.........................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application" name="Verifying application Tracking(Gio Fencing) screen Functionality" time="24.528655">
+<system-out><![CDATA[Then I Tap on Radius from center............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Scroll up the screen in Radius from center...........................passed
+Then I Verify Apply button in Radius from center............................passed
+Then I Tap on Apply button in Radius from center............................passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Radius from center.........passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application" name="Verifying application Updating unit functionality(Metric to Imperial and Meter to Yard) Functionality" time="27.433979">
+<system-out><![CDATA[Then I Tap on Tracking tile.................................................passed
+Then I get the value from Radius from center container......................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on hamburger menu in landing screen..............................passed
+Then I Tap on App Settings..................................................passed
+Then I Tap on Units in App Settings page....................................passed
+Then I Tap on Imperial Unit in Units Page...................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tracking tile.................................................passed
+Then I validated Yard value from radius from center container...............passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application" name="Verifying application Updating unit functionality(Imperial to Metric and Yard to Meter) Functionality" time="27.467872">
+<system-out><![CDATA[Then I Tap on Tracking tile.................................................passed
+Then I get the yard value from Radius from center container.................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on hamburger menu in landing screen..............................passed
+Then I Tap on App Settings..................................................passed
+Then I Tap on Units in App Settings page....................................passed
+Then I Tap on Metric Unit in Units Page.....................................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tracking tile.................................................passed
+Then I validated Meter value from radius from center container..............passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application" name="Verifying application Tracking(Alert Latency) screen Functionality" time="28.092465">
+<system-out><![CDATA[Then I Tap on Tracking tile.................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap On Alert Latency.................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Scroll up the screen in Alert Latency................................passed
+Then I Verify Apply button in Alert Latency.................................passed
+Then I Tap on Apply button in Alert Latency.................................passed
+Then I Wait for Page to Load................................................passed
+Then I validated applied minutes is displayed in Alert Latency..............passed
+Then I Tap on Back Button...................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

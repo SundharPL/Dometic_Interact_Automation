@@ -46,23 +46,37 @@ Feature: Verifying application Batteries Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-#  @sanity
-#  Scenario: Verifying application Batteries screen(Alert-Battery Voltage Below) Maximum carousel Functionality
+  @sanity1
+  Scenario: Verifying application Batteries screen(Alert-Battery Voltage Below) Carousel boundary maximum values Functionality
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Batteries tile on landing screen
-#    Then I Wait short period for Page to Load
 #    Then I Scroll up the page
-#    Then I Wait short period for Page to Load
 #    Then I Tap on Alert-Battery Voltage Below
-#    Then I Wait short period for Page to Load
-#    Then I scroll up to the maximum value Alert-Battery Voltage Below
+#    Then I scroll up to maximum value in Alert-Battery Voltage Below carousel
+#    Then I Verify Apply button in Alert-Battery Voltage Below
 #    Then I Tap on Apply button in Alert-Battery Voltage Below
+#    Then I Tap on Ok button
 #    Then I Wait for Page to Load
 #    Then I Validate Applied voltage is displayed
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
   @sanity1
+  Scenario: Verifying application Batteries screen(Alert-Battery Voltage Below) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Batteries tile on landing screen
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Battery Voltage Below
+#    Then I scroll up to minimum value in Alert-Battery Voltage Below carousel
+#    Then I Verify Apply button in Alert-Battery Voltage Below
+#    Then I Tap on Apply button in Alert-Battery Voltage Below
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied voltage is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity
   Scenario: Verifying application Batteries screen(Alert-Battery Voltage Below) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Batteries tile on landing screen
@@ -80,6 +94,36 @@ Feature: Verifying application Batteries Screen in Dometic Marine application
     Then I Tap on Back Button
 
   @sanity1
+  Scenario: Verifying application Batteries screen(Alert-Set Latency) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Batteries tile on landing screen
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Set Latency
+#    Then I scroll to the maximum carousel value in Alert-Set Latency
+#    Then I Verify Apply button in Alert-Set Latency
+#    Then I Tap on Apply button in Alert-Set Latency
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Alert-Set Latency is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Batteries screen(Alert-Set Latency) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Batteries tile on landing screen
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Set Latency
+#    Then I scroll to the minimum carousel value in Alert-Set Latency
+#    Then I Verify Apply button in Alert-Set Latency
+#    Then I Tap on Apply button in Alert-Set Latency
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Alert-Set Latency is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity
   Scenario: Verifying application Batteries screen(Alert-Set Latency) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Batteries tile on landing screen
@@ -96,15 +140,49 @@ Feature: Verifying application Batteries Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
+
   @sanity1
+  Scenario: Verifying application Batteries screen(Warnings-Battery Voltage Below) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Batteries tile on landing screen
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Battery Voltage Below
+#    Then I Scroll up the page
+#    Then I scroll to the maximum carousel value in Warnings-Battery Voltage Below
+#    Then I Verify Apply button in Warnings-Battery Voltage Below
+#    Then I Tap on Apply button in Warnings-Battery Voltage Below
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Battery Voltage Below is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Batteries screen(Warnings-Battery Voltage Below) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Batteries tile on landing screen
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Battery Voltage Below
+#    Then I Scroll up the page
+#    Then I scroll to the minimum carousel value in Warnings-Battery Voltage Below
+#    Then I Verify Apply button in Warnings-Battery Voltage Below
+#    Then I Tap on Apply button in Warnings-Battery Voltage Below
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Battery Voltage Below is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+
+  @sanity
   Scenario: Verifying application Batteries screen(Warnings-Battery Voltage Below) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Batteries tile on landing screen
-    Then I Wait short period for Page to Load
     Then I Scroll up the page
     Then I Wait short period for Page to Load
     Then I Tap on Warnings-Battery Voltage Below
-    Then I Wait short period for Page to Load
     Then I Scroll up the page
     Then I scroll up the screen in Warnings-Battery Voltage Below
     Then I Verify Apply button in Warnings-Battery Voltage Below
@@ -116,7 +194,46 @@ Feature: Verifying application Batteries Screen in Dometic Marine application
     Then I Tap on Back Button
 
   @sanity1
-  Scenario: Verifying application Batteries screen(Warnings-Battery Voltage Below) Functionality
+  Scenario: Verifying application Batteries screen(Warnings-Set Latency) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Batteries tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Set Latency
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I scroll to the maximum carousel value in Warnings-Set Latency
+#    Then I Verify Apply button in Warnings-Set Latency
+#    Then I Tap on Apply button in Warnings-Set Latency
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Set Latency is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Batteries screen(Warnings-Set Latency) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Batteries tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Set Latency
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I scroll to the minimum carousel value in Warnings-Set Latency
+#    Then I Verify Apply button in Warnings-Set Latency
+#    Then I Tap on Apply button in Warnings-Set Latency
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Set Latency is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+
+  @sanity
+  Scenario: Verifying application Batteries screen(Warnings-Set Latency) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Batteries tile on landing screen
     Then I Wait short period for Page to Load

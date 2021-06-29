@@ -3,6 +3,7 @@ Feature: Verifying application Landing Screen Language validation in Dometic LMC
   @First1 @sanity1
   Scenario: Verifying application German Language in Landing screen
     Then I Entered into Landing screen
+    Then I Tap on Climate CTA in Landing screen
     Then I verify Klima Tile is displayed in Landing screen
     Then I verify Climate Klimaanlage text is displayed in landing screen
     Then I verify Klima unit is displayed in landing screen

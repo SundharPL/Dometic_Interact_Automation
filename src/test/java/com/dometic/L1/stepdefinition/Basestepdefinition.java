@@ -14,6 +14,10 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 //import io.appium.java_client.android.AndroidDriver;
 
@@ -75,16 +79,16 @@ public class Basestepdefinition extends Baseclass {
     @Then("I scroll up the screen")
     public void iScrollUpTheScreen() {
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(530, 1700)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1550)).release().perform();
+        action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1300)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
     @Then("I scroll down the screen")
     public void iScrollDownTheScreen() {
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(530, 1550)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1700)).release().perform();
+        action.press(PointOption.point(530, 1300)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1500)).release().perform();
         System.out.println("Scrolling down the Page");
     }
 
@@ -147,6 +151,96 @@ public class Basestepdefinition extends Baseclass {
                 break;
             }
         }
+    }
+
+    public static Map<String, Integer> ListStatus(String status){
+        int endValue = 0,startValue=0;
+        List<String> list=new ArrayList();
+        list.add("Cool");
+        list.add("Heat");
+        list.add("Fan");
+        list.add("Auto");
+        list.add("Dry");
+        int size = list.size();
+        for (int i=0;i<list.size();i++){
+            if(list.get(i).equalsIgnoreCase(status)){
+                startValue=list.indexOf(status);
+                endValue = list.indexOf(status);
+                endValue++;
+            }
+        }
+        Map<String, Integer> coordinates = new HashMap<>();
+        coordinates.put("endIndex",endValue);
+        coordinates.put("startIndex",startValue);
+        coordinates.put("Size",size);
+        return coordinates;
+    }
+
+    public static Map<String, Integer> fanSpeedStatus(String status){
+        int endValue = 0,startValue=0;
+        List<String> list=new ArrayList();
+        list.add("Low");
+        list.add("Medium");
+        list.add("High");
+        list.add("Max");
+        list.add("Auto");
+        int size = list.size();
+        for (int i=0;i<list.size();i++){
+            if(list.get(i).equalsIgnoreCase(status)){
+                startValue=list.indexOf(status);
+                endValue = list.indexOf(status);
+                endValue++;
+            }
+        }
+        Map<String, Integer> coordinates = new HashMap<>();
+        coordinates.put("endIndex",endValue);
+        coordinates.put("startIndex",startValue);
+        coordinates.put("Size",size);
+        return coordinates;
+    }
+
+    public static Map<String, Integer> hotWaterLevelStatus(String status){
+        int endValue = 0,startValue=0;
+        List<String> list=new ArrayList();
+        list.add("Off");
+        list.add("Eco");
+        list.add("Hot");
+        int size = list.size();
+        for (int i=0;i<list.size();i++){
+            if(list.get(i).equalsIgnoreCase(status)){
+                startValue=list.indexOf(status);
+                endValue = list.indexOf(status);
+                endValue++;
+            }
+        }
+        Map<String, Integer> coordinates = new HashMap<>();
+        coordinates.put("endIndex",endValue);
+        coordinates.put("startIndex",startValue);
+        coordinates.put("Size",size);
+        return coordinates;
+    }
+
+    public static Map<String, Integer> energyStatus(String status){
+        int endValue = 0,startValue=0;
+        List<String> list=new ArrayList();
+        list.add("Gas");
+        list.add("Gas+el 900W");
+        list.add("Gas+el 1800W");
+        list.add("El 900W");
+        list.add("El 1800W");
+        int size = list.size();
+        for (int i=0;i<list.size();i++){
+            if(list.get(i).equalsIgnoreCase(status)){
+                startValue=list.indexOf(status);
+                endValue = list.indexOf(status);
+                endValue++;
+            }
+        }
+        Map<String, Integer> coordinates = new HashMap<>();
+        coordinates.put("endIndex",endValue);
+        coordinates.put("startIndex",startValue);
+        coordinates.put("Size",size);
+        return coordinates;
     }
 }
 

@@ -4,7 +4,7 @@ public class Constant_climate_ac {
     // ------------Accessibility_id------------------//
     public static final String CAC_M_Climate_Text_access_id="com.dometicapp:id/header-TitleText";
     public static final String CAC_M_Climate_Text_expetecd="CLIMATE";
-    public static final String CAC_M_Climate_0_mainContent="com.dometicapp:id/tiles-Climate-0-mainContent";
+    public static final String CAC_M_Climate_0_mainContent="com.dometicapp:id/tile-climate-mainCardText-0";
     public static final String CAC_M_Inside_Text_access_id =  "com.dometicapp:id/climate-insideTemp";
     public static final String CAC_M_Outside_Text_access_id = "com.dometicapp:id/climate-outsideTemp";
     public static final String CAC_M_Inside_Value_access_id = "com.dometicapp:id/climate-insideTempValue";
@@ -94,7 +94,14 @@ public class Constant_climate_ac {
     public static final String CAC_powerScreen_currentContainer="com.dometicapp:id/powerScreen-currentContainer";
     public static final String CAC_powerScreen_timeContainer="com.dometicapp:id/powerScreen-timeContainer";
     public static final String CAC_powerScreen_powerSourceContainer="com.dometicapp:id/powerScreen-powerSourceContainer";
-
+    public static final String climate_AC_Last_Value_Access_Id="com.dometicapp:id/acMode-acmodeItemValue-4";
+    public static final String climate_AC_First_Value_Access_Id="com.dometicapp:id/acMode-acmodeItemValue-0";
+    public static final String climate_AC_Fan_Speed_Last_Value_Access_Id="com.dometicapp:id/fanSpeed-fanSpeedItemValue-3";
+    public static final String climate_AC_Fan_Speed_First_Value_Access_Id="com.dometicapp:id/fanSpeed-fanSpeedItemValue-0";
+    public static final String climate_Heater_Last_Value_Access_Id="com.dometicapp:id/waterHeater-waterHeaterItemValue-2";
+    public static final String climate_Heater_First_Value_Access_Id="com.dometicapp:id/waterHeater-waterHeaterItemValue-0";
+    public static final String climate_Heater_Energy_Last_Value_Access_Id="com.dometicapp:id/energyHeater-energyHeaterItemValue-4";
+    public static final String climate_Heater_Energy_First_Value_Access_Id="com.dometicapp:id/energyHeater-energyHeaterItemValue-0";
 
     //-----------------Needed Accessibility Id------------------//
     public static final String CAC_M_Title_access_id ="";
@@ -161,7 +168,7 @@ public class Constant_climate_ac {
     public static final String WHT_Battery_Current_xpath="//android.view.ViewGroup[@content-desc='com.dometicapp:id/powerScreen-currentContainer']";
     public static final String WHT_Time_xpath= "//android.view.ViewGroup[@content-desc='com.dometicapp:id/powerScreen-timeContainer']";
     public static final String WHT_PowerSource="//android.view.ViewGroup[@content-desc='com.dometicapp:id/powerScreen-powerSourceContainer']";
-    public static final String CAC_FanSpeed_icon_xpath="//android.widget.ImageView[@content-desc='com.dometicapp:id/climate-fanIcon']";
+    public static final String CAC_FanSpeed_icon_xpath="//*[@content-desc='com.dometicapp:id/climate-fanIcon']";
     public static final String CAC_M_AC_FanSpeed_Text_xpath="//*[@content-desc='com.dometicapp:id/climate-fanSpeedText']";
     public static final String CAC_AC_common_value_xpath="//*[contains(@content-desc,'com.dometicapp:id/acMode-acmodeItemValue-')]";
     public static final String CAC_Fanspeed_common_value_xpath="//*[contains(@content-desc,'com.dometicapp:id/fanSpeed-fanSpeedItemValue-')]";
@@ -171,4 +178,6 @@ public class Constant_climate_ac {
     public static final String CAC_FAN_first_value_xpath="(//*[@content-desc='com.dometicapp:id/fanSpeed-fanSpeedValue']//following::android.widget.TextView)[1]";
     public static final String CAC_FAN_second_value_xpath="(//*[@content-desc='com.dometicapp:id/fanSpeed-fanSpeedValue']//following::android.widget.TextView)[2]";
     public static final String CAC_FAN_third_value_xpath="(//*[@content-desc='com.dometicapp:id/fanSpeed-fanSpeedValue']//following::android.widget.TextView)[3]";
+    public static final String climate_ACMode_Contains_Value_Xpath="//*[contains(@content-desc,'com.dometicapp:id/acMode-acmodeItemValue-')]";
+    public static final String climate_ACMode_Bounds_Value_Xpath="//*[@bounds='[54,1436][1026,1617]']";
 }

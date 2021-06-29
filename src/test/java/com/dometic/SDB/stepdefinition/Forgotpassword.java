@@ -48,7 +48,7 @@ public class Forgotpassword extends Baseclass {
         TaponbuttonaccessabilityID(forgotpassword_obj.Forgot_password_send);
     }
 
-    @Then("I verify Forgot your password text is displayedd in Forgot password Page")
+    @Then("I verify Forgot your password text is displayed in Forgot password Page")
     public void iVerifyForgotYourPasswordTextIsDisplayeddInForgotPasswordPage() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Forgot your password text is displayedd in Forgot password Page");
         TaponbuttonaccessabilityID(Constant_login.Login_forgot_password_link_access_id);

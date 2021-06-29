@@ -100,8 +100,56 @@ public class Constant_settings {
     public static final String Settings_Zone_Management_Zone_name_already_present_xpath="//*[@text='Zone name already present']";
     public static final String Settings_Zone_Management_ZoneNumber_dialog_saveButton_xpath="//*[@content-desc='com.dometicapp:id/ZoneNumber-dialog-saveButton']";
     public static final String Settings_Zone_Management_ZoneNumber_dialog_cancelButton_xpath="//*[@content-desc='com.dometicapp:id/ZoneNumber-dialog-cancelButton']";
-
-    // ----------------------Data-----------------------------//
+    // --------------Accessibility_id SDB Device management-------------------//
+    public static final String hamburger_button_selection_access_id="com.dometicapp:id/header-menuButton";
+    public static final String Device_management_hamburger_selection_access_id= "com.dometicapp:id/sidemenu-deviceMangagement-text";
+    public static final String Device_management_header_text_tile_access_id="com.dometicapp:id/header-TitleText";
+    public static final String Device_management_right_icon_xpath="(//*[@content-desc='com.dometicapp:id/DeviceManagement-rightIcon'])[1]";
+    public static final String Device_management_product_information_text_tile_access_id="com.dometicapp:id/deviceManagement-vesseltitleLabel";
+    public static final String Device_management_vessel_name_lable_access_id="com.dometicapp:id/deviceManagement-vesselNameLabel";
+    public static final String Device_management_edit_vessel_card_title_text_access_id="com.dometicapp:id/deviceManagement-editVessel-cardTitle";
+    public static final String Device_management_edit_vessel_card_right_icon_access_id="com.dometicapp:id/deviceManagement-editVessel-cardIcon";
+    public static final String Device_management_pin_codes_card_title_access_id="com.dometicapp:id/deviceManagement-pinCodeTitleText";
+    public static final String Device_management_master_pin_card_title_text_access_id="com.dometicapp:id/deviceManagement-masterPin-cardTitle";
+    public static final String Device_management_master_pin_card_right_icon_access_id="com.dometicapp:id/deviceManagement-masterPin-cardIcon";
+    public static final String Device_management_Get_pin_list_card_title_access_id="com.dometicapp:id/deviceManagement-guestPin-cardTitle";
+    public static final String Device_management_Get_pin_list_right_icon_access_id="com.dometicapp:id/deviceManagement-guestPin-cardIcon";
+    public static final String Device_management_advanced_title_text_access_id="com.dometicapp:id/deviceManagement-advancedTitleText";
+    public static final String Device_management_cooler_setting_card__title_access_id="com.dometicapp:id/deviceManagement-coolerSetting-cardTitle";
+    public static final String Device_management_cooler_setting_text_right_icon_access_id="com.dometicapp:id/deviceManagement-coolerSetting-cardIcon";
+    public static final String Device_management_check_updates_card_title_access_id="com.dometicapp:id/deviceManagement-checkForUpdates-cardTitle";
+    public static final String Device_management_check_updates_right_icon_access_id="com.dometicapp:id/deviceManagement-checkForUpdates-cardIcon";
+    public static final String Device_management_Unregister_delete_off_boards_text_access_id="com.dometicapp:id/deviceManagement-unregisterDelete-cardTitle";
+    public static final String Device_management_Unregister_delete_off_boards_right_icon_access_id="com.dometicapp:id/deviceManagement-unregisterDelete-cardIcon";
+    public static final String Device_management_Edit_vessel_Edit_text_tile_access_id="com.dometicapp:id/header-TitleText";
+    public static final String Device_management_Edit_vessel_name_text_access_id="com.dometicapp:id/editVessel-vesselNameLabel";
+    public static final String Device_management_Edit_vessel_save_button_access_id="com.dometicapp:id/editVessel-saveButtonText";
+    public static final String Device_management_Edit_page_back_button_access_id="com.dometicapp:id/tiles-backImage";
+    public static final String Device_management_screen_back_button_accessid="com.dometicapp:id/tiles-backImage";
+    public static final String Device_management_device_selection_back_button_access_id="com.dometicapp:id/tiles-backImage";
+    public static final String Device_management_device_selection_something="com.dometicapp:id/editVessel-vesselNameValue";
+    //----------------------SDB Guest pin list-----------------//
+    public static final String Device_management_guest_pin_list_header_text_access_id="com.dometicapp:id/header-TitleText";
+    public static final String Device_management_guest_pin_list_edit_button_text_access_id="com.dometicapp:id/header-rightButtonText";
+    public static final String Device_management_guest_pin_list_back_symbol_access_id="com.dometicapp:id/header-leftButtonImage";
+    public static final String Device_management_Edit_Guest_list_header_text_access_id="com.dometicapp:id/header-TitleText";
+    public static final String Device_management_Edit_Guest_list_close_button_text_access_id="com.dometicapp:id/header-leftButtonImage";
+    public static final String Device_management_Edit_Guest_list_add_button_access_id="com.dometicapp:id/editGuestListScreen-addPinButtonImage";
+    public static final String Device_management_Edit_Guest_list_add_new_text_xpath="//android.view.ViewGroup[@content-desc='com.dometicapp:id/editGuestListScreen-addPinButton]/android.widget.TextView'";
+    public static final String Device_management_Edit_pin_header_text_tile_access_id="com.dometicapp:id/header-TitleText";
+    public static final String Device_management_Edit_pin_close_button_access_id="com.dometicapp:id/header-leftButtonImage";
+    public static final String Device_management_Edit_pin_Pin_name_access_id="com.dometicapp:id/addGuestPinScreen-pinNameLabel";
+    public static final String Device_management_Edit_pin_code_access_id="com.dometicapp:id/addGuestPinScreen-pinCodeLabel";
+    public static final String Device_management_mail_box_xpath="(//*[@content-desc='com.dometicapp:id/addGuestPinScreen-deviceName-0'])[1]";
+    public static final String Device_management_mail_box_toggel_button_xpath="(//*[@content-desc='com.dometicapp:id/addGuestPinScreen-deviceName-0'])[2]";
+    public static final String Device_manegement_refrigerated_text_xpth="(//*[@content-desc='com.dometicapp:id/addGuestPinScreen-deviceName-1'])[1]";
+    public static final String Device_manegement_refrigerated_toggel_button_xpath="(//*[@content-desc='com.dometicapp:id/addGuestPinScreen-deviceName-1'])[2]";
+    public static final String Device_manegement_edit_name_text_enter_access_id="com.dometicapp:id/addGuestPinScreen-pinNameValue";
+    public static final String Device_manegement_edit_pin_code_enter_access_id="com.dometicapp:id/addGuestPinScreen-pinCodeValue";
+    public static final String Device_manegement_edit_pin_page_save_button_access_id="com.dometicapp:id/addGuestPinScreen-saveButton";
+    public static final String Device_manegement_first_guestpin_toggel_button="com.dometicapp:id/guestListScreen-deviceButton-0";
+    public static final String Device_manegement_second_guestpin_toggel_button="com.dometicapp:id/guestListScreen-deviceButton-1";
+    // -------------------Data-----------------------------//
     public static final String Settings_viewEditButtonText="View/Edit Account";
     public static final String Settings_home_text="Home";
     public static final String Settings_notificationSettings_text="Notification Settings";
@@ -109,5 +157,15 @@ public class Constant_settings {
     public static final String Settings_appSettings_text="App Settings";
     public static final String Settings_Logout_text="Logout";
     public static final String Settings_Version_16_text="Version 1.6";
-
+    public static final String Device_manegement_Mail_id="Mail box";
+    public static final String Device_manegement_refrigerated="Refrigerated compartment";
+    public static final String Device_manegement_edit_name_text="Dometic1234";
+    public static final String Device_manegement_edit_pin_name_text="Dometic";
+    public static final String Device_manegement_edit_pin_number="12345";
+    public static final String Device_management_edit_pin_name_special_charater="Dome@234##)";
+    public static final String Device_manegement_edit_pin_combination="12345";
+    public static final String Device_management_edit_pin_name_long_lenght_charater="Dome@234##124&8987teqqg787abcdefg)";
+    public static final String Device_manegement_edit_pin_long_lenght_combination="34679";
+    public static final String Device_management_edit_pin_name_short_lenght="Dome";
+    public static final String Device_management_edit_pin_short_lenght="12345";
 }

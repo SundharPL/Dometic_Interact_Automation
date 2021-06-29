@@ -5,7 +5,7 @@ import com.dometic.MTC.qa.util.ExtentReportUtil;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import static com.dometic.MTC.qa.util.Baseclass.extentTest;
+import static com.dometic.MTC.qa.util.Baseclass.*;
 
 public class NGTestListener implements ITestListener {
     ExtentReportUtil extentReportUtil = new ExtentReportUtil();
