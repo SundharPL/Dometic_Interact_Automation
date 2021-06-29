@@ -14,7 +14,6 @@ import org.testng.Assert;
 public class LanguageValidationClimatePage extends Baseclass {
     @Then("I Tap on Klima tile in landing screen")
     public void iTapOnKlimaTileInLandingScreen() {
-        Basestepdefinition.verticalSwipe(0.3,0.7,0.5);
         WebDriverWait wait=new WebDriverWait(driver,50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_Language.Climate_German_Klima_text_xpath)));
         Taponbutton(Constant_Language.Climate_German_Klima_text_xpath);

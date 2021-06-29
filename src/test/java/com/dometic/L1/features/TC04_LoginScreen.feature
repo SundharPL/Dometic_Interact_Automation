@@ -1,7 +1,6 @@
 Feature: Verifying application Login screen in Dometic LMC/ERIBA application
 
-
-  @First1 @sanity1
+  @First @sanity
   Scenario:  Verifying application Login Page
     Then I verify Welcome! Text is displayed in login screen
     Then I verify Log In Text is displayed in login screen
@@ -12,7 +11,7 @@ Feature: Verifying application Login screen in Dometic LMC/ERIBA application
     Then I verify Sign Up link is displayed in login page
     Then I verify Login CTA is displayed in login page
 
-  @sanity1
+  @sanity
   Scenario: Login with blank email and blank password field
     Then I verify black email in email text field
     Then I verify black password in password text field
@@ -20,56 +19,56 @@ Feature: Verifying application Login screen in Dometic LMC/ERIBA application
     Then The Email field is required Error message is displayed in login page
     Then The Password field is required Error message is displayed in login page
 
-  @sanity1
+  @sanity
   Scenario: Login with Invalid Email with valid password
     Then I enter Invalid Email in Login Page
     Then I enter Valid Password in Login Page
     Then I Tap on Login button in Login Page
     Then Error message is displayed
 
-  @sanity1
+  @sanity
   Scenario: Login with Valid email and invalid password
     Then I enter Valid Email in Login Page
     Then I enter an Invalid Password in Login Page
     Then I Tap on Login button in Login Page
     Then The password must be at least 8 characters. Error message is displayed in login page
 
-  @sanity1
+  @sanity
   Scenario: Login with Valid email and blank password
     Then I enter Valid Email in Login Page
     Then I verify black password in password text field
     Then I Tap on Login button in Login Page
     Then The Password field is required Error message is displayed in login page
 
-  @sanity1
+  @sanity
   Scenario: Login with empty email and valid password
     Then I verify black email in email text field
     Then I enter Valid Password in Login Page
     Then I Tap on Login button in Login Page
     Then The Email field is required Error message is displayed in login page
 
-  @sanity1
+  @sanity
   Scenario:  Verifying application Login Functionality with invalid credentials
     Then I enter Invalid Email in Login Page
     Then I enter an Invalid Password in Login Page
     Then I Tap on Login button in Login Page
     Then Error message is displayed
 
-  @sanity1
+  @sanity
   Scenario:  Verifying application Login Functionality with invalid credentials(Checking text field allowing Emoji's)
     Then I enter an Emoji's in Email Field in Login Page
     Then I enter Valid Password in Login Page
     Then I Tap on Login button in Login Page
     Then The email must be a valid email address Error message is displayed
 
-  @sanity1
+  @sanity
   Scenario:  Verifying application Login Functionality with invalid credentials(Checking text field allowing Special Character)
     Then I enter an Special Character in Email Field in Login Page
     Then I enter Valid Password in Login Page
     Then I Tap on Login button in Login Page
     Then The email must be a valid email address Error message is displayed
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Login Functionality with valid credentials
     Then I enter Valid Email in Login Page
     Then I enter Valid Password in Login Page

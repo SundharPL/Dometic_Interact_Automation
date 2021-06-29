@@ -5,7 +5,7 @@ Feature: Verifying application Splash screen in Dometic LMC/ERIBA application
     Given I Launch the application
     Then I Wait short period for Page to Load
 
-  @sanity
+  @First @sanity
   Scenario: Verifying application Splash screen Functionality
     Then I Tap on Allow button in Permission popup in Login Page
     Then I Wait short period for Page to Load

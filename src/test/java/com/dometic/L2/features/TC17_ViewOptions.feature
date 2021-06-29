@@ -1,6 +1,6 @@
 Feature: Verifying application ViewOptions Screen in Dometic USLTV application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application ViewOption(Tile View-All Devices) functionality
     Then I validate View option button in landing screen
     Then I Tap on View option button in landing screen
@@ -9,38 +9,38 @@ Feature: Verifying application ViewOptions Screen in Dometic USLTV application
     Then I Tap on All Devices
     Then I Tap on Cancel Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application ViewOption(Tile View-Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Connected Devices
     Then I Tap on Cancel Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application ViewOption(Tile View-Non Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Non Connected Devices
     Then I Tap on Cancel Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application ViewOption(List View-All Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on List View Options
     Then I Tap on All Devices
     Then I Tap on Cancel Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application ViewOption(List View-Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Connected Devices
     Then I Tap on Cancel Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application ViewOption(List View-Non Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Non Connected Devices
     Then I Tap on Cancel Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application ViewOption functionality after Logout
     Then I Tap on View option button in landing screen
     Then I Tap on Connected Devices

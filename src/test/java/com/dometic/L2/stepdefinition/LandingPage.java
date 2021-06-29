@@ -294,8 +294,10 @@ public class LandingPage extends Baseclass {
     @Then("I Tap on Back Button")
     public void i_Tap_on_Back_Button() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Back Button");
-        // TaponbuttonaccessabilityID(Constant_climate_ac.CAC_M_power_Back_Button_access_id);
-        driver.pressKeyCode(AndroidKeyCode.BACK);
+        List<AndroidElement> id = driver.findElementsByAccessibilityId(com.dometic.MTC.qa.Pages.Constant_climate_ac.CAC_M_power_Back_Button_access_id);
+        if(id.size()!=0){
+            driver.pressKeyCode(AndroidKeyCode.BACK);
+        }
     }
 
     @Then("I Verify the power main screen header")

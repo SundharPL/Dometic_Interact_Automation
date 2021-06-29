@@ -54,7 +54,7 @@ public class Hooks extends Baseclass{
         String appActivity = prop.getProperty("appActivity");
         cap.setCapability("appActivity", appActivity);
 //        String app = prop.getProperty("app");
-        cap.setCapability("app", System.getProperty("user.dir") + "/src/test/java/com/dometic/L1/application/Interact_v1.6(122).apk");
+        cap.setCapability("app", System.getProperty("user.dir") + "/src/test/java/com/dometic/L1/application/InteractApp_Android_1.6(132).apk");
         String fullReset = prop.getProperty("fullReset");
         cap.setCapability("fullReset", fullReset);
         try {
@@ -109,7 +109,7 @@ public void InitializeStep(Scenario scenario)
     public void Init(Scenario scenario)
     {
         System.out.println("Scenario starts");
-
+        System.out.println(scenario.getName());
         System.out.println(scenario.getId());
         String[] featureName = scenario.getId().split("/");
         featureName_report = featureName[featureName.length-1].split(".feature")[0];

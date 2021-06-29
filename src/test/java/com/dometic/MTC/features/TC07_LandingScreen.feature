@@ -1,6 +1,6 @@
 Feature: Verifying application Landing Screen in Dometic Marine application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Landing Screen functionality
     Then I Tap on the access this location pop up
     Then I Tap on LATER Button

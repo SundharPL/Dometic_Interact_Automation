@@ -1,6 +1,6 @@
 Feature: Verifying application Light Screen in Dometic USLTV application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Light screen UI
     Then I Tap on Light in Landing screen
     Then I Wait short period for Page to Load

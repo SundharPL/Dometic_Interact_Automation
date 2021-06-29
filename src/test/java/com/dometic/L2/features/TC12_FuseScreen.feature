@@ -1,12 +1,12 @@
 Feature: Verifying application Fuse Screen in Dometic USLTV application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Fuses screen applying all the fuse(Maximum) Functionality
     Then I validate Maximum Fuses is turn ON State
     Then I Wait short period for Page to Load
     Then I validate All Fuse is OK text is displayed in Landing page
 
-  @sanity
+  @First @sanity
   Scenario: Verifying application Fuses screen UI
     Then I Tap on Fuses in Landing Screen
     Then I verify water pump text in Fuse

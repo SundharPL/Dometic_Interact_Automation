@@ -10,6 +10,7 @@ public class Constant_landingscreen {
     public static final String LandingPage_add_product_text_access_id="com.dometicapp:id/scanBle-addProduct";
     public static final String LandingPage_back_button_access_id="com.dometicapp:id/gateway-backButtonImage";
     public static final String LandingPage_title_access_id="";
+    public static final String LandingPage_Aircondition_Header_OFF_Status_access_id="com.dometicapp:id/tile-climate-mainCardSubText-0";
     public static final String LandingPage_serialNumber_inputBox_access_id="com.dometicapp:id/gateway-serialNumberField";
     public static final String LandingPage_serialNumber_format_text_access_id="com.dometicapp:id/gateway-serialFormat";
     public static final String LandingPage_QR_code_scanner_access_id="com.dometicapp:id/gateway-qrIcon";

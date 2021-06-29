@@ -1,11 +1,11 @@
 Feature: Verifying application Landing Screen in Dometic USLTV application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Landing Screen functionality
     Then I Tap on LATER Button
     Then I Tap on cancel button in Upgrade Firmware
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bottom Layout screen functionality
     Then I Verify the All option in the Bottom layout of Landing screen
     Then I Verify the Device option in the Bottom  layout of Landing screen
@@ -26,7 +26,7 @@ Feature: Verifying application Landing Screen in Dometic USLTV application
     Then I Wait short period for Page to Load
     Then I Tap on All option in the Bottom layout of Landing screen
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bottom Layout screen with ViewOption(Tile View-All Devices) functionality
     Then I Wait short period for Page to Load
     Then I Tap on View option button in landing screen
@@ -53,7 +53,7 @@ Feature: Verifying application Landing Screen in Dometic USLTV application
     Then I Wait short period for Page to Load
     Then I Tap on All option in the Bottom layout of Landing screen
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bottom Layout screen with ViewOption(Tile View-Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Connected Devices
@@ -77,7 +77,7 @@ Feature: Verifying application Landing Screen in Dometic USLTV application
     Then I Wait short period for Page to Load
     Then I Tap on All option in the Bottom layout of Landing screen
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bottom Layout screen with ViewOption(Tile View-Non Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Non Connected Devices
@@ -96,7 +96,7 @@ Feature: Verifying application Landing Screen in Dometic USLTV application
     Then I Wait short period for Page to Load
     Then I Tap on All option in the Bottom layout of Landing screen
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bottom Layout screen with ViewOption(List View-All Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on List View Options
@@ -120,7 +120,7 @@ Feature: Verifying application Landing Screen in Dometic USLTV application
     Then I Wait short period for Page to Load
     Then I Tap on All option in the Bottom layout of Landing screen
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bottom Layout screen with ViewOption(List View-Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Connected Devices
@@ -143,7 +143,7 @@ Feature: Verifying application Landing Screen in Dometic USLTV application
     Then I Wait short period for Page to Load
     Then I Tap on All option in the Bottom layout of Landing screen
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bottom Layout screen with ViewOption(List View-Non Connected Devices) functionality
     Then I Tap on View option button in landing screen
     Then I Tap on Non Connected Devices

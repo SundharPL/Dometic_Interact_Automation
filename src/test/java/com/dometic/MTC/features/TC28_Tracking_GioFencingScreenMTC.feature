@@ -4,7 +4,6 @@ Feature: Verifying application Tracking(Gio Fencing) Screen in Dometic Marine ap
   Scenario: Verifying application Tracking(Gio Fencing) screen UI
     Then I Wait short period for Page to Load
     Then I Tap on Tracking tile
-    Then I Wait short period for Page to Load
     Then I Verify Tracking Header title
     Then I Verify Boat Location text is displayed
     Then I Verify Latitude text is displayed
@@ -32,6 +31,43 @@ Feature: Verifying application Tracking(Gio Fencing) Screen in Dometic Marine ap
     Then I validated applied minutes is displayed in Radius from center
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
+
+  @sanity1
+  Scenario: Verifying application Updating unit functionality(Metric to Imperial and Meter to Yard) Functionality
+    Then I Tap on Tracking tile
+    Then I get the value from Radius from center container
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I Tap on hamburger menu in landing screen
+    Then I Tap on App Settings
+    Then I Tap on Units in App Settings page
+    Then I Tap on Imperial Unit in Units Page
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I Tap on Tracking tile
+    Then I validated Yard value from radius from center container
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+
+  @sanity1
+  Scenario: Verifying application Updating unit functionality(Imperial to Metric and Yard to Meter) Functionality
+    Then I Tap on Tracking tile
+    Then I get the yard value from Radius from center container
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I Tap on hamburger menu in landing screen
+    Then I Tap on App Settings
+    Then I Tap on Units in App Settings page
+    Then I Tap on Metric Unit in Units Page
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+    Then I Tap on Tracking tile
+    Then I validated Meter value from radius from center container
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
+
+  @sanity1
+  Scenario: Verifying application Tracking(Alert Latency) screen Functionality
     Then I Tap on Tracking tile
     Then I Wait short period for Page to Load
     Then I Tap On Alert Latency

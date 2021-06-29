@@ -17,7 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BilgePump extends Baseclass {
-    public static List<String> alertMaxCycleHour,alertMaxDailyCycle,alertContinuous,warningsMaxCycleHour,warningsMaxDailyCycle,warningsContinuous;
+    public static List<String> alertMaxCycleHour, alertMaxDailyCycle, alertContinuous, warningsMaxCycleHour, warningsMaxDailyCycle, warningsContinuous;
+    public static String bilge_pump_current_carousel_value;
+    public static int bilge_pump_current_carousel_value_number, iteration_count;
 
     @Then("I Tap on Bilge Pump tile on landing screen")
     public void iTapOnBilgePumpTileOnLandingScreen() {
@@ -32,7 +34,7 @@ public class BilgePump extends Baseclass {
     @Then("I verify Bilge Pump status")
     public void iVerifyBilgePumpStatus() {
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_status_Access_ID);
-        if(elementsByAccessibilityId.size()!=0){
+        if (elementsByAccessibilityId.size() != 0) {
             Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_status_Access_ID));
         }
     }
@@ -175,7 +177,7 @@ public class BilgePump extends Baseclass {
     @Then("I Verify Apply button in Alert-Max Daily Cycle")
     public void iVerifyApplyButtonInAlertMaxDailyCycle() {
         /** Globally declared Alert-Max Daily Cycle Values **/
-        alertMaxDailyCycle=new ArrayList<>();
+        alertMaxDailyCycle = new ArrayList<>();
         alertMaxDailyCycle.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Alerts_Max_Daily_Cycle_First_Value_Xpath)).getText());
         alertMaxDailyCycle.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Alerts_Max_Daily_Cycle_SecondValue_xpath)).getText());
         alertMaxDailyCycle.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Alerts_Max_Daily_Cycle_ThirdValue_xpath)).getText());
@@ -211,7 +213,7 @@ public class BilgePump extends Baseclass {
     @Then("I Verify Apply button in Alert-Continuous")
     public void iVerifyApplyButtonInAlertContinuous() {
         /** Globally declared Alert-Continuous Values **/
-        alertContinuous=new ArrayList<>();
+        alertContinuous = new ArrayList<>();
         alertContinuous.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Alerts_Continuous_First_Value_Xpath)).getText());
         alertContinuous.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Alerts_Continuous_SecondValue_xpath)).getText());
         alertContinuous.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Alerts_Continuous_ThirdValue_xpath)).getText());
@@ -248,7 +250,7 @@ public class BilgePump extends Baseclass {
     @Then("I Verify Apply button in Warnings-Max Cycle Hour")
     public void iVerifyApplyButtonInWarningsMaxCycleHour() {
         /** Globally declared Warnings-Max Cycle Hour Values **/
-        warningsMaxCycleHour=new ArrayList<>();
+        warningsMaxCycleHour = new ArrayList<>();
         warningsMaxCycleHour.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_First_Value_Xpath)).getText());
         warningsMaxCycleHour.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_SecondValue_xpath)).getText());
         warningsMaxCycleHour.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_ThirdValue_xpath)).getText());
@@ -284,7 +286,7 @@ public class BilgePump extends Baseclass {
     @Then("I Verify Apply button in Warnings-Max Daily Cycle")
     public void iVerifyApplyButtonInWarningsMaxDailyCycle() {
         /** Globally declared Warnings-Max Daily Cycle Values **/
-        warningsMaxDailyCycle=new ArrayList<>();
+        warningsMaxDailyCycle = new ArrayList<>();
         warningsMaxDailyCycle.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Daily_Cycle_First_Value_Xpath)).getText());
         warningsMaxDailyCycle.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Daily_Cycle_SecondValue_xpath)).getText());
         warningsMaxDailyCycle.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Daily_Cycle_ThirdValue_xpath)).getText());
@@ -319,7 +321,7 @@ public class BilgePump extends Baseclass {
 
     @Then("I Verify Apply button in Warnings-Continuous")
     public void iVerifyApplyButtonInWarningsContinuous() {
-        warningsContinuous=new ArrayList<>();
+        warningsContinuous = new ArrayList<>();
         warningsContinuous.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Continuous_First_Value_Xpath)).getText());
         warningsContinuous.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Continuous_SecondValue_xpath)).getText());
         warningsContinuous.add(driver.findElement(By.xpath(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Continuous_ThirdValue_xpath)).getText());
@@ -358,6 +360,179 @@ public class BilgePump extends Baseclass {
         if (elements.size() != 0) {
             Taponbutton(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_toggle_xpath);
             Thread.sleep(10000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert-Max Cycle Hour")
+    public void iScrollToTheMaximumCarouselValueInAlertMaxCycleHour() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Alert-Max Cycle Hour carousel");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Cycles_Per_Hour_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count = ((60 - bilge_pump_current_carousel_value_number));
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(500, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(500, 1325)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Alert-Max Cycle Hour")
+    public void iScrollToTheMinimumCarouselValueInAlertMaxCycleHour() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Alert-Max Cycle Hour carousel");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Cycles_Per_Hour_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((bilge_pump_current_carousel_value_number - 1));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(500, 1325)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(500, 1450 )).release().perform();
+            System.out.println("Scrolling up the Page");
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert-Max Daily Cycle")
+    public void iScrollToTheMaximumCarouselValueInAlertMaxDailyCycle() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Alert-Max Daily Cycle");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Daily_Cycles_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((200 - bilge_pump_current_carousel_value_number ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(535, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(535, 1475)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Alert-Max Daily Cycle")
+    public void iScrollToTheMinimumCarouselValueInAlertMaxDailyCycle() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Alert-Max Daily Cycle");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Daily_Cycles_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((bilge_pump_current_carousel_value_number - 1 ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(540, 1475)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(540, 1600)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert-Continuous")
+    public void iScrollToTheMaximumCarouselValueInAlertContinuous() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Alert-Continuous carousel");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Continuous_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((60 - bilge_pump_current_carousel_value_number ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1625)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Alert-Continuous")
+    public void iScrollToTheMinimumCarouselValueInAlertContinuous() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Alert-Continuous carousel");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Continuous_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((bilge_pump_current_carousel_value_number - 0 ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1625)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1750)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Warnings-Max Cycle Hour")
+    public void iScrollToTheMaximumCarouselValueInWarningsMaxCycleHour() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Warnings-Max Cycle Hour");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((60 - bilge_pump_current_carousel_value_number ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1325)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Warnings-Max Cycle Hour")
+    public void iScrollToTheMinimumCarouselValueInWarningsMaxCycleHour() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Warnings-Max Cycle Hour");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Daily_Cycles_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((bilge_pump_current_carousel_value_number - 1 ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1325)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1450)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Warnings-Max Daily Cycle")
+    public void iScrollToTheMaximumCarouselValueInWarningsMaxDailyCycle() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Warnings-Max Daily Cycle");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Daily_Cycles_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((200 - bilge_pump_current_carousel_value_number ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1375)).release().perform();
+            System.out.println("Scrolling down the Page");
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Warnings-Max Daily Cycle")
+    public void iScrollToTheMinimumCarouselValueInWarningsMaxDailyCycle() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Warnings-Max Daily Cycle");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Daily_Cycles_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((bilge_pump_current_carousel_value_number - 1 ));
+        for (int i = 0; i <iteration_count ; i++) {
+            action.press(PointOption.point(530, 1375)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1575)).release().perform();
+            System.out.println("Scrolling down the Page");
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Warnings-Continuous")
+    public void iScrollToTheMaximumCarouselValueInWarningsContinuous() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum value in Warnings-Continuous");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Continuous_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((60 - bilge_pump_current_carousel_value_number ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1600)).release().perform();
+            System.out.println("Scrolling down the Page");
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Warnings-Continuous")
+    public void iScrollToTheMinimumCarouselValueInWarningsContinuous() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Warnings-Continuous");
+        TouchAction action = new TouchAction(driver);
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Continuous_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
+        iteration_count =  ((bilge_pump_current_carousel_value_number - 0 ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1725)).release().perform();
+            System.out.println("Scrolling up the Page");
+            Thread.sleep(1000);
         }
     }
 }

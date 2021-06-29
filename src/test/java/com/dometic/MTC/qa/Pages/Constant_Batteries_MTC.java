@@ -17,6 +17,11 @@ public class Constant_Batteries_MTC {
     public static final String mtc_Batteries_title_template_ID="android:id/title_template";
     public static final String mtc_Batteries_button1_ID="android:id/button1";
     public static final String mtc_Batteries_Header_Text_Access_ID="com.dometicapp:id/header-TitleText";
+    public static final String mtc_Alerts_Battery_Voltage_Below_Applied_Value_access_id = "com.dometicapp:id/batteryScreen-alertsBatteryBelowVoltage-cardSubText";
+    public static final String mtc_Alerts_SetLatency_Applied_Value_access_id = "com.dometicapp:id/batteryScreen-alertSetLatency-cardSubText";
+    public static final String mtc_Warnings_Battery_Voltage_Below_Applied_value_access_id = "com.dometicapp:id/batteryScreen-warningsBatteryBelowVoltage-cardSubText";
+    public static final String mtc_Warnings_Set_Latency_Applied_Value_access_id = "com.dometicapp:id/batteryScreen-warningSetLatency-cardSubText";
+
     // ---------------------NeededAccesibility_Id-----------------------//
     public static final String mtc_Climate_Tile_AllClimateText_Access_ID="";
     public static final String mtc_Climate_Tile_Power_toggle_Status_Access_ID="";

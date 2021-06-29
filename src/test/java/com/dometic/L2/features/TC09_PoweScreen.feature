@@ -10,7 +10,7 @@ Feature: Verifying application Power Screen in Dometic USLTV application
 #    Then I Validated Power-progressIndicator Percentage is displayed in Landing screen
 #    Then I Wait short period for Page to Load
 
-  @First1  @sanity1
+  @First  @sanity
   Scenario: Verifying application Power screen(Batteries) UI
     Then I Tap on the Power in Landing screen
     Then I Wait short period for Page to Load

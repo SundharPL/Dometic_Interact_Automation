@@ -1,6 +1,6 @@
 Feature: Verifying application Climate Screen in Dometic LMC/ERIBA application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Climate screen functionality
     Then I Tap on Climate CTA in Landing screen
     Then I Verify climate text displayed in the top of the app
@@ -25,7 +25,7 @@ Feature: Verifying application Climate Screen in Dometic LMC/ERIBA application
     Then I verify AC Mode in climate screen
     Then I verify AC Fan Speed in climate screen
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Climate screen scroll up-to Maximum temperature functionality
     Then I Wait short period for Page to Load
     Then I scroll maximum temperature in Climate AC
@@ -35,7 +35,7 @@ Feature: Verifying application Climate Screen in Dometic LMC/ERIBA application
     Then I Wait for Page to Load
     Then I validate applied temperature is displayed in temperature
 
-  @sanity1
+  @sanity
   Scenario: Verifying applied Climate Maximum temperature displayed on Ac Mode
     Then I Wait short period for Page to Load
     Then I Tap on Ac Mode in Climate screen
@@ -43,7 +43,7 @@ Feature: Verifying application Climate Screen in Dometic LMC/ERIBA application
     Then I Wait for Page to Load
     Then I Tap on Back Button in Ac Mode
 
-  @sanity1
+  @sanity
   Scenario: Verifying applied Climate Maximum temperature displayed on Ac Fan Speed
     Then I Wait short period for Page to Load
     Then I Tap on AC Fan Speed in climate screen
@@ -51,13 +51,13 @@ Feature: Verifying application Climate Screen in Dometic LMC/ERIBA application
     Then I Wait for Page to Load
     Then I Tap on Back Button in Ac Fan Speed
 
-  @sanity1
+  @sanity
   Scenario: Verifying applied Climate Maximum temperature displayed on Climate Tile
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
     Then I validate applied maximum temperature is displayed in Climate Tile
     Then I Wait short period for Page to Load
-    Then I Tap on Climate CTA in Landing screen
+
 
 
 

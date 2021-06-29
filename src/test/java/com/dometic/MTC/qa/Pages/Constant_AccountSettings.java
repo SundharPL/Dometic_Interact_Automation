@@ -50,7 +50,13 @@ public class Constant_AccountSettings {
     public static final String appSettings_Unit_header_TitleText_Access_Id="com.dometicapp:id/header-TitleText";
     public static final String appSettings_Unit_Metric_Access_Id="com.dometicapp:id/unitSelection-metric-cardTitle";
     public static final String appSettings_Unit_Imperial_Access_Id="com.dometicapp:id/unitSelection-imperial-cardTitle";
-
+    public static final String managePushNotification_Alert_Text_Access_Id="com.dometicapp:id/notification-pushNotificationAlertText";
+    public static final String managePushNotification_Alert_Toggle_Access_Id="com.dometicapp:id/notification-pushNotificationAlertSwitch";
+    public static final String managePushNotification_Warning_Text_Access_Id="com.dometicapp:id/notification-pushNotificationWarningText";
+    public static final String managePushNotification_Warning_Toggle_Access_Id="com.dometicapp:id/notification-pushNotificationWarningSwitch";
+    public static final String managePushNotification_Cancel_Button_Access_Id="com.dometicapp:id/editList-header-backButton";
+    public static final String Notification_Header_accessid = "com.dometicapp:id/header-TitleText";
+    public static final String onboarding_No_Device_Found_Text_Access_Id="com.dometicapp:id/onBoarding-noDeviceTitle";
     //------------------New Access id------------------------------//
     public static final String profile_LandingPage_edit_button_Access_Id = "com.dometicapp:id/sidemenu-viewEditButtonText";
     public static final String profile_AccountSetting_Header_Access_Id = "com.dometicapp:id/header-TitleText";
@@ -73,6 +79,44 @@ public class Constant_AccountSettings {
     public static final String Settings_Onboarding_close_button = "com.dometicapp:id/onBoarding-closeImage";
     public static final String Subscription_title_accessid = "com.dometicapp:id/header-TitleText";
     public static final String Subscription_backbutton_accessid =  "com.dometicapp:id/tiles-backImage";
+    public static final String Notification_PushNotification_accessid = "com.dometicapp:id/notification-pushNotificationContainer-cardTitle";
+    public static final String Notification_Email_accessid = "com.dometicapp:id/notification-emailContainer-cardTitle";
+    public static final String Notification_sms_accessid = "com.dometicapp:id/notification-smsContainer-cardTitle";
+    public static final String Notification_advancedText_accessid = "com.dometicapp:id/notification-advanceText";
+    public static final String Notification_pushnotification_showMore_accessid = "com.dometicapp:id/notification-pushNotificationShowMore-cardTitle";
+    public static final String Notification_Email_showmore_accessid = "com.dometicapp:id/notification-emailShowMore-cardTitle";
+    public static final String Notification_Sms_list_showMore_accessid = "com.dometicapp:id/notification-smsShowMore-cardTitle";
+    public static final String Notification_Sms_List_accessid = "com.dometicapp:id/notification-smsList-title";
+    public static final String Notification_EditList_accessid = "com.dometicapp:id/notification-smsList-subTitle";
+    public static final String Notification_Sms_Alert_accessid = "com.dometicapp:id/notification-smsNotificationAlertText";
+    public static final String Notification_Sms_Warnings_accessid = "com.dometicapp:id/notification-smsNotificationWarningText";
+    public static final String Notification_Mobile_account_Accessid = "com.dometicapp:id/editList-mainAccount-title-text";
+    public static final String Notification_Additional_Sms_Number_accessid = "com.dometicapp:id/editList-aditionalAccounts-title-text";
+    public static final String Notification_addNew_button = "com.dometicapp:id/editList-addElement-icon";
+    public static final String Notification_SaveButton = "com.dometicapp:id/editList-save-button-text";
+    public static final String Notification_Advance_MarineNAme = "com.dometicapp:id/notification-AdvancedNotificationSetings-Marine-name";
+    public static final String Notification_Advance_MarineICon = "AdvancedNotificationSetings-Marine-icon";
+    public static final String Notification_Advance_MarineICon_collapseicon = "com.dometicapp:id/notification-AdvancedNotificationSetings-Marine-iconCollapse";
+    public static final String Notification_Advanced_Header_text = "com.dometicapp:id/header-TitleText";
+    public static final String Notification_Advance_PushNotification_text = "devicePushNotificationsElement-Text";
+    public static final String Notification_Advanced_PushNotification_Toggle_button = "devicePushNotificationsElement-Switch";
+    public static final String Notification_Email_List = "com.dometicapp:id/notification-emailList-title";
+    public static final String Notification_Alerts_accessid = "com.dometicapp:id/notification-emailNotificationAlertText";
+    public static final String Notification_Warning_accessid = "com.dometicapp:id/notification-emailNotificationWarningContainerText";
+    public static final String Notification_EmailList_Header = "com.dometicapp:id/header-TitleText";
+    public static final String Notification_EmailList_emailAccount = "com.dometicapp:id/editList-mainAccount-title-text";
+    public static final String Notification_Additional_Email = "com.dometicapp:id/editList-aditionalAccounts-title-text";
+    public static final String Notification_Addnew_Button = "com.dometicapp:id/editList-addElement-icon";
+    public static final String Notification_EmailList_Save_Button_text = "com.dometicapp:id/editList-save-button-text";
+    public static final String Notification_Additional_emails_EmailContainer = "com.dometicapp:id/editListElement1-subtitleInput";
+    public static final String Notification_Additional_email_Label = "com.dometicapp:id/editListElement1-titleInput";
+    public static final String Notification_remove_emailList_icon = "";
+    public static final String Notification_Email_EditList = "com.dometicapp:id/notification-emailList-subTitle";
+    public static final String Notification_PushNotification_ToggleButton ="com.dometicapp:id/notification-pushNotificationContainer-switchComponent";
+    public static final String Notification_PushNotification_SMS_ToggleButton ="com.dometicapp:id/notification-smsContainer-switchComponent";
+    public static final String Notification_PushNotification_Email_ToggleButton ="com.dometicapp:id/notification-emailContainer-switchComponent";
+    public static final String Notification_PushNotification_Advance_Marine_Pushnotification_ToggleButton="devicePushNotificationsElement-Switch";
+    public static final String Notification_PushNotification_Advance_Marine_Pushnotification="//*[contains(@content-desc,'com.dometicapp:id/notification-AdvancedNotificationSetings-')]";
     // ----------------------xpath----------------------//
 
 
@@ -125,5 +169,37 @@ public class Constant_AccountSettings {
     public static final String appSettings_Unit_header_TitleText_Text="UNIT";
     public static final String appSettings_Unit_Metric_Text="Metric";
     public static final String appSettings_Unit_Imperial_Text="Imperial";
+    public static final String managePushNotification_Alert_Text="Alerts";
+    public static final String managePushNotification_Warning_Text="Warnings";
+    public static final String Notification_Email_EditList_Text="Edit list";
+    public static final String Notification_EmailList_Header_Text="E-MAIL LIST";
+    public static final String Notification_EmailList_emailAccount_Text="E-MAIL (ACCOUNT)";
+    public static final String Notification_Additional_Email_Text="ADDITIONAL E-MAILS";
+    public static final String Notification_SmsList_Header_Text="SMS LIST";
+    public static final String Notification_Additional_Sms_Number_accessid_Text="ADDITIONAL SMS NUMBERS";
+
+    public static final String Notification_Header_text = "MANAGE NOTIFICATIONS";
+    public static final String Notification_PushNotification_text = "Push notifications";
+    public static final String Notification_Email_text = "E-mail";
+    public static final String Notification_sms = "SMS";
+    public static final String Notification_advancedText = "ADVANCED";
+    public static final String Notification_pushnotification_showMore = "Show more";
+    public static final String Notification_Email_showmore_text = "Show more";
+    public static final String Notification_Sms_list_showMore = "Show more";
+    public static final String Notification_Sms_List = "SMS LIST";
+    public static final String Notification_EditList = "Edit list";
+    public static final String Notification_Sms_Alerts = "Alerts";
+    public static final String Notification_Sms_Warning = "Warnings";
+    public static final String Notification_SmsList_header = "com.dometicapp:id/header-TitleText";
+    public static final String Notification_smsList_Close_button = "Need access id";
+    public static final String Notification_Mobile_account = "MOBILE (ACCOUNT)";
+    public static final String Notification_Warning_text = "Warnings";
+    public static final String Notification_Alerts_text = "Alerts";
+    public static final String Notification_Additional_Sms_Number = "ADDITIONAL SMS NUMBERS";
+    public static final String Notification_Advance_PushNotification="Push notifications";
+    public static final String Notification_Advanced_Header="ADVANCED";
+    public static final String Settings_Onboarding_SearchAgain="Search again";
+    public static final String Settings_Onboarding_BluetoothPairing_message="Please activate Bluetooth pairing on your device.";
+    public static final String onboarding_No_Device_Found_Text="No device found";
 
 }

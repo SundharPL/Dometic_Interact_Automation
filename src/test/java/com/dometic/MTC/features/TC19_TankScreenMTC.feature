@@ -35,6 +35,40 @@ Feature: Verifying application Tank Screen in Dometic Marine application
     Then I Tap on Back Button
 
   @sanity1
+  Scenario: Verifying application Tank screen(Alert-Tank Level Above) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Tank tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Tank Level Above
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the maximum carousel value in Alert-Tank Level Above
+#    Then I Verify Apply button in Alert-Tank Level Above
+#    Then I Tap on Apply button in Alert-Tank Level Above
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied percentage in Tank Level Above is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Tank screen(Alert-Tank Level Above) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Tank tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Tank Level Above
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the minimum carousel value in Alert-Tank Level Above
+#    Then I Verify Apply button in Alert-Tank Level Above
+#    Then I Tap on Apply button in Alert-Tank Level Above
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied percentage in Tank Level Above is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
   Scenario: Verifying application Tank screen(Alert-Tank Level Above) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Tank tile on landing screen
@@ -50,6 +84,40 @@ Feature: Verifying application Tank Screen in Dometic Marine application
     Then I Validate Applied percentage in Tank Level Above is displayed
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Tank screen(Alert-Set Latency) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Tank tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Set Latency
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the maximum carousel value in Alert-Set Latency(Tank screen)
+#    Then I Verify Apply button in Alert-Set Latency(Tank screen)
+#    Then I Tap on Apply button in Alert-Set Latency(Tank screen)
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Alert-Set Latency(Tank screen) is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Tank screen(Alert-Set Latency) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Tank tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Tap on Alert-Set Latency
+#    Then I Wait short period for Page to Load
+#    Then I scroll to the minimum carousel value in Alert-Set Latency(Tank screen)
+#    Then I Verify Apply button in Alert-Set Latency(Tank screen)
+#    Then I Tap on Apply button in Alert-Set Latency(Tank screen)
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Alert-Set Latency(Tank screen) is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
 
   @sanity1
   Scenario: Verifying application Tank screen(Alert-Set Latency) Functionality
@@ -69,6 +137,44 @@ Feature: Verifying application Tank Screen in Dometic Marine application
     Then I Tap on Back Button
 
   @sanity1
+  Scenario: Verifying application Tank screen(Warnings-Tank Level Above) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Tank tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Tank Level Above
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I scroll to the maximum carousel value in Warnings-Tank Level Above
+#    Then I Verify Apply button in Warnings-Tank Level Above
+#    Then I Tap on Apply button in Warnings-Tank Level Above
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Tank Level Above is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Tank screen(Warnings-Tank Level Above) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Tank tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Tank Level Above
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I scroll to the minimum carousel value in Warnings-Tank Level Above
+#    Then I Verify Apply button in Warnings-Tank Level Above
+#    Then I Tap on Apply button in Warnings-Tank Level Above
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Tank Level Above is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
   Scenario: Verifying application Tank screen(Warnings-Tank Level Above) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Tank tile on landing screen
@@ -86,6 +192,44 @@ Feature: Verifying application Tank Screen in Dometic Marine application
     Then I Validate Applied minutes in Warnings-Tank Level Above is displayed
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Tank screen(Warnings-Set Latency) Carousel boundary maximum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Tank tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Set Latency
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I scroll to the maximum carousel value in Warnings-Set Latency(Tank screen)
+#    Then I Verify Apply button in Warnings-Set Latency(Tank screen)
+#    Then I Tap on Apply button in Warnings-Set Latency(Tank screen)
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Set Latency(Tank screen) is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
+
+  @sanity1
+  Scenario: Verifying application Tank screen(Warnings-Set Latency) Carousel boundary minimum values Functionality
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Tank tile on landing screen
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Warnings-Set Latency
+#    Then I Wait short period for Page to Load
+#    Then I Scroll up the page
+#    Then I scroll to the minimum carousel value Warnings-Set Latency(Tank screen)
+#    Then I Verify Apply button in Warnings-Set Latency(Tank screen)
+#    Then I Tap on Apply button in Warnings-Set Latency(Tank screen)
+#    Then I Tap on Ok button
+#    Then I Wait for Page to Load
+#    Then I Validate Applied minutes in Warnings-Set Latency(Tank screen) is displayed
+#    Then I Wait short period for Page to Load
+#    Then I Tap on Back Button
 
   @sanity1
   Scenario: Verifying application Tank screen(Warnings-Set Latency) Functionality

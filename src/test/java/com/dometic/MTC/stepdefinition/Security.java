@@ -17,11 +17,14 @@ import java.util.List;
 
 public class Security extends Baseclass {
     public static List<String> gioFencingRadiusFromCenter, gioFencingAlertLatency,doorWindowAlertLatency,theftAlertLatency;
-
+    public static Double radiuscenterYardValue,radiuscenterYardUpdatedValue,radiuscenterValue,radiuscenterUpdatedValue;
+    public static String security_current_carousel_value;
+    public static int security_current_carousel_value_number, iteration_count;
     @Then("I Tap on Security Tile on landing screen")
-    public void iTapOnSecurityTileOnLandingScreen() throws ClassNotFoundException {
+    public void iTapOnSecurityTileOnLandingScreen() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Security Tile on landing screen");
         TaponbuttonaccessabilityID(Constant_Security.security_titleView_Access_ID);
+        Thread.sleep(3000);
     }
 
     @Then("I verify Security Header text is displayed")
@@ -387,6 +390,151 @@ public class Security extends Baseclass {
             System.out.println("Text comparison is Successful");
         } else {
             System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I get the value from Radius from center container in Security tile")
+    public void iGetTheValueFromRadiusFromCenterContainerInSecurityTile() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Security Tile on landing screen");
+        radiuscenterValue = Double.parseDouble(driver.findElementByAccessibilityId(Constant_Security.security_geofencingRadius_cardSubText_Access_ID).getText());
+    }
+
+    @Then("I validated Yard value from radius from center container in Security tile")
+    public void iValidatedYardValueFromRadiusFromCenterContainerInSecurityTile() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Security Tile on landing screen");
+        radiuscenterUpdatedValue = Double.parseDouble(driver.findElementByAccessibilityId(Constant_Security.security_geofencingRadius_cardSubText_Access_ID).getText());
+        double updatedValue = radiuscenterValue * 1.09;
+        System.out.println(updatedValue);
+        System.out.println(radiuscenterUpdatedValue);
+        if(updatedValue==radiuscenterUpdatedValue){
+            System.out.println("Text comparison is Successful");
+        }
+        else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I get the yard value from Radius from center container in Security tile")
+    public void iGetTheYardValueFromRadiusFromCenterContainerInSecurityTile() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Security Tile on landing screen");
+        radiuscenterYardValue = Double.parseDouble(driver.findElementByAccessibilityId(Constant_Security.security_geofencingRadius_cardSubText_Access_ID).getText());
+    }
+
+    @Then("I validated Meter value from radius from center container in Security tile")
+    public void iValidatedMeterValueFromRadiusFromCenterContainerInSecurityTile() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Security Tile on landing screen");
+        radiuscenterYardUpdatedValue = Double.parseDouble(driver.findElementByAccessibilityId(Constant_Security.security_geofencingRadius_cardSubText_Access_ID).getText());
+        double updatedValue = radiuscenterYardValue * 0.91;
+        System.out.println(updatedValue);
+        System.out.println(radiuscenterYardUpdatedValue);
+        if(updatedValue==radiuscenterYardUpdatedValue){
+            System.out.println("Text comparison is Successful");
+        }
+        else {
+            System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Radius from center in Gio Fencing")
+    public void iScrollToTheMaximumCarouselValueInRadiusFromCenterInGioFencing() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll to the maximum Radius from center in Gio Fencing carousel");
+        TouchAction action = new TouchAction(driver);
+        security_current_carousel_value = driver.findElementByAccessibilityId(Constant_Security.security_geofencingRadius_cardSubText_Access_ID).getText();
+        security_current_carousel_value_number = Integer.parseInt(security_current_carousel_value);
+        iteration_count =  ((1000 - security_current_carousel_value_number ))/10;
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1500)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1375)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Radius from center in Gio Fencing")
+    public void iScrollToTheMinimumCarouselValueInRadiusFromCenterInGioFencing() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll to the minimum Radius from center in Gio Fencing carousel");
+        TouchAction action = new TouchAction(driver);
+        security_current_carousel_value = driver.findElementByAccessibilityId(Constant_Security.security_geofencingRadius_cardSubText_Access_ID).getText();
+        security_current_carousel_value_number = Integer.parseInt(security_current_carousel_value);
+        iteration_count =  ((security_current_carousel_value_number - 10 ))/10;
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1375)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1500)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert Latency in Gio Fencing")
+    public void iScrollToTheMaximumCarouselValueInAlertLatencyInGioFencing() {
+        //Code required
+    }
+
+    @Then("I scroll to the minimum carousel value in Alert Latency in Gio Fencing")
+    public void iScrollToTheMinimumCarouselValueInAlertLatencyInGioFencing() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll to the minimum value in Alert Latency Gio Fencing carousel");
+        TouchAction action = new TouchAction(driver);
+        security_current_carousel_value = driver.findElementByAccessibilityId(Constant_Security.security_geofencingLatency_cardSubText_Access_ID).getText();
+        security_current_carousel_value_number = Integer.parseInt(security_current_carousel_value);
+        iteration_count =  ((security_current_carousel_value_number - 1 ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1525)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1650)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert Latency in Door Window Alert")
+    public void iScrollToTheMaximumCarouselValueInAlertLatencyInDoorWindowAlert() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll to the maximum value in Alert Latency in Door Window Alert");
+        TouchAction action = new TouchAction(driver);
+        security_current_carousel_value = driver.findElementByAccessibilityId(Constant_Security.security_door_alertLatency_cardSubText_Access_ID).getText();
+        security_current_carousel_value_number = Integer.parseInt(security_current_carousel_value);
+        iteration_count =  ((300 - security_current_carousel_value_number ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1325)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1200)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Alert Latency in Door Window Alert")
+    public void iScrollToTheMinimumCarouselValueInAlertLatencyInDoorWindowAlert() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll to the minimum value in Alert Latency in Door Window Alert");
+        TouchAction action = new TouchAction(driver);
+        security_current_carousel_value = driver.findElementByAccessibilityId(Constant_Security.security_door_alertLatency_cardSubText_Access_ID).getText();
+        security_current_carousel_value_number = Integer.parseInt(security_current_carousel_value);
+        iteration_count =  ((security_current_carousel_value_number - 1 ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1200)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1325)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert Latency in Theft Alert")
+    public void iScrollToTheMaximumCarouselValueInAlertLatencyInTheftAlert() throws InterruptedException, ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll to the maximum value in Alert Latency in Theft Alert");
+        TouchAction action = new TouchAction(driver);
+        security_current_carousel_value = driver.findElementByAccessibilityId(Constant_Security.security_theftAlertLatency_cardSubText_Access_ID).getText();
+        security_current_carousel_value_number = Integer.parseInt(security_current_carousel_value);
+        iteration_count =  ((300 - security_current_carousel_value_number ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1600)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("II scroll to the minimum carousel value in Alert Latency in Theft Alert")
+    public void iiScrollToTheMinimumCarouselValueInAlertLatencyInTheftAlert() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll to the minimum value in Alert Latency in Theft Alert");
+        TouchAction action = new TouchAction(driver);
+        security_current_carousel_value = driver.findElementByAccessibilityId(Constant_Security.security_theftAlertLatency_cardSubText_Access_ID).getText();
+        security_current_carousel_value_number = Integer.parseInt(security_current_carousel_value);
+        iteration_count =  ((security_current_carousel_value_number - 1 ));
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 17172531)).release().perform();
+            Thread.sleep(1000);
         }
     }
 }

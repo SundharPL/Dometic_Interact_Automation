@@ -1,6 +1,6 @@
 Feature: Verifying application Power Screen Language validation in Dometic LMC/ERIBA application
 
-  @First @sanity1
+  @First1 @sanity1
   Scenario: Verifying application German Language Energie tile in landing screen
     Then I Tap energy tile in landing screen
     Then I verify ENERGIE text displayed in the top of the app

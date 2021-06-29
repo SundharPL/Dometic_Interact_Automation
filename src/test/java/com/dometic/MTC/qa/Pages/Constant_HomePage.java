@@ -8,5 +8,5 @@ public class Constant_HomePage {
 
     //----------xpath------------//
     public static final String homePage_Tile_Xpath="//*[@content-desc='com.dometicapp:id/Dashboard-outerCard']";
-
+    public static final String HomePage_tile_name_1_xpath="(//android.widget.TextView[@content-desc='com.dometicapp:id/Dashboard-cardText'])[1]";
 }

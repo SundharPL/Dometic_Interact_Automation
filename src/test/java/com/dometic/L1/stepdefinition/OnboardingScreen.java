@@ -42,10 +42,10 @@ public class OnboardingScreen extends Baseclass {
     @Then("I Tap on Yes button")
     public void iTapOnYesButton() throws Throwable  {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Yes button");
-        WebDriverWait wait=new WebDriverWait(driver,200);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_OnboardingPage.Onboarding_YES_Button_xpath)));
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_OnboardingPage.Onboarding_YES_Button_xpath));
         if(elements.size()!=0){
+            WebDriverWait wait=new WebDriverWait(driver,200);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_OnboardingPage.Onboarding_YES_Button_xpath)));
             Taponbutton(Constant_OnboardingPage.Onboarding_YES_Button_xpath);
         }
     }
@@ -116,8 +116,11 @@ public class OnboardingScreen extends Baseclass {
 
     @Then("I Wait until Landing screen is displayed.")
     public void iWaitUntilLandingScreenIsDisplayed() throws ClassNotFoundException {
-        WebDriverWait wait = new WebDriverWait(driver, 500);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.LandingPage_LATER_button_xpath)));
+        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_landingscreen.LandingPage_LATER_button_xpath));
+        if(elements.size()!=0){
+            WebDriverWait wait = new WebDriverWait(driver, 50);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_landingscreen.LandingPage_LATER_button_xpath)));
+        }
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Wait until Landing screen is displayed");
         System.out.println("Navigated to Landing screen successfully");
     }

@@ -1,6 +1,6 @@
 Feature: Verifying application AGS Screen in Dometic USLTV application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application AGS screen UI
     Then I Tap on AGS in Landing Screen
     Then I Verify the Auto charger text in AGS Main screen

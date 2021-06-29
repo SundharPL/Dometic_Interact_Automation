@@ -126,4 +126,30 @@ public class Constant_AccountSettings {
     public static final String appSettings_Unit_Metric_Text="Metric";
     public static final String appSettings_Unit_Imperial_Text="Imperial";
 
+    // ----------------------Objects created by Rishu----------------------//
+    public static final String DeviceManagement_MasterPin_accessid="com.dometicapp:id/deviceManagement-masterPin-cardTitle";
+    public static final String DeviceManagement_SDB_password_required_text_xpath="//*[@text='Password Required']";
+    public static final String DeviceManagement_SDB_password_requiredInValid_password="4678";
+    public static final String DeviceManagement_SDB_password_requiredValid_password="5678";
+    public static final String DeviceManagement_SDB_PasswordAlertField_EnterButton_xpath="//*[@text='ENTER']";
+    public static final String DeviceManagement_SDB_PasswordAlertField_CancelButton_xpath="//*[@text='CANCEL']";
+    public static final String DeviceManagement_SDBDevice_wrongPassword_alert="android:id/alertTitle";
+    public static final String DeviceManagement_SDBDevice_wrongPassword_alert_text="Alert";
+    public static final String DeviceManagement_SDBDevice_wrongPassword_alert_OkButton_xpath="//*[@text='OK']";
+    public static final String DeviceManagement_SDBDevice_masterPin_PasswordRequired_inputField_xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.EditText";
+    public static final String DeviceManagement_SDBDevice_MasterPin_Closebutton_xpath="//android.view.ViewGroup[@content-desc=\"com.dometicapp:id/header-rightButton\"]/android.widget.TextView";
+    public static final String DeviceManagement_SDBDevice_masterPin_SetMasterPin_Reenter_Message_xpath="//*[@text='Re-enter your PIN']";
+    public static final String DeviceManagement_SDBDevice_masterPin_SetMasterPin_InputField_xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.EditText";
+    public static final String DeviceManagement_SDBDevice_masterPin_SetMasterPin_invalidPassword="123";
+    public static final String DeviceManagement_SDBDevice_masterPin_SetMasterPin_ValidPassword="2345";
+    public static final String Settings_DeviceManagement_Accessid ="com.dometicapp:id/sidemenu-deviceMangagement-text";
+    public static final String Settings_DeviceManagement_MasterPIN_Header="com.dometicapp:id/header-TitleText";
+    public static final String Settings_DeviceManagement_SetMasterPIN_text_xpath="//*[@text='SET MASTER PIN']";
+    public static final String Settings_DeviceManagement_SEtMasterPIN_Message_xpath="//*[@text='PIN must be 4 digits']";
+    public static final String SDB_MainScreen_Doo_access_toggle_one_xpath="";
+    public static final String SDB_MainScreen_Doo_access_toggle_two_xpath="";
+    public static final String SDB_MainScreen_Doo_access_TemperatureScroller_xpath="";
+    public static final String SDB_MainScreen_Doo_access_minusButton_xpath="//*[@content-desc='undefined-leftButton']";
+    public static final String SDB_MainScreen_Doo_access_Plusbutton_xpath="//*[@content-desc='undefined-rightButtonIcon']";
+
 }
