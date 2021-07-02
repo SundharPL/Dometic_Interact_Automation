@@ -1,6 +1,6 @@
 Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Bilge Pump screen UI
     Then I Tap on Bilge Pump tile on landing screen
     Then I verify Bilge Pump header text
@@ -90,7 +90,7 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bilge Pump screen(Alert-Max Cycle Hour) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen
@@ -142,7 +142,7 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bilge Pump screen(Alert-Max Daily Cycle) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen
@@ -193,7 +193,7 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bilge Pump screen(Alert-Continuous) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen
@@ -250,7 +250,7 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bilge Pump screen(Warnings-Max Cycle Hour) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen
@@ -310,7 +310,7 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bilge Pump screen(Warnings-Max Daily Cycle) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen
@@ -371,7 +371,7 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Bilge Pump screen(Warnings-Continuous) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Bilge Pump tile on landing screen

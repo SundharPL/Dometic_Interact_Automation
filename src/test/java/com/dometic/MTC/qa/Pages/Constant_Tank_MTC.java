@@ -4,12 +4,14 @@ public class Constant_Tank_MTC {
     // ---------------------Accesibility_Id-----------------------//
     public static final String mtc_Tank_Title_Access_ID = "com.dometicapp:id/header-TitleText";
     public static final String mtc_Tank_Alert_Tank_Level_Above_Access_ID = "com.dometicapp:id/Tank-alertTankLevelAbove-cardTitle";
+    public static final String mtc_Tank_Alert_Tank_Level_Below_Access_ID = "com.dometicapp:id/Tank-alertTankLevelAbove-cardTitle";
     public static final String mtc_Tank_Warning_Tank_Level_Above_Access_ID = "com.dometicapp:id/Tank-warningTankLevelAbove-cardTitle";
+    public static final String mtc_Tank_Warning_Tank_Level_Below_Access_ID = "com.dometicapp:id/Tank-warningTankLevelAbove-cardTitle";
     public static final String mtc_Tank_Alert_Tank_level_applied_value_Access_id = "com.dometicapp:id/Tank-alertTankLevelAbove-cardSubText";
     public static final String mtc_Tank_Alert_Set_Latency_access_id = "com.dometicapp:id/Tank-alertSetLatency-cardSubText";
     public static final String mtc_Tank_Warning_Tank_Level_Applied_Value_access_id = "com.dometicapp:id/Tank-warningTankLevelAbove-cardSubText";
     public static final String mtc_Tank_Warning_Set_Latency_Applied_Value_access_id = "com.dometicapp:id/Tank-warningSetLatency-cardSubText";
-
+    public static final String mtc_Tank_Grey_Water_Access_Id="com.dometicapp:id/Tank-circleCarousel-tankName-text-1";
 
     //---------------------------xPath----------------------------//
     public static final String mtc_Tank_Tile_Xpath = "//*[@text='Tank']";
@@ -48,4 +50,5 @@ public class Constant_Tank_MTC {
     public static final String mtc_Tank_Alerts_Tank_Level_Above = "Tank Level Above";
     public static final String mtc_Tank_Alerts_Tank_Level_Below = "Tank Level Below";
     public static final String mtc_Tank_Alerts_Set_Latency = "Latency";
+    public static final String mtc_Tank_Grey_Water_Text="Grey Water";
 }

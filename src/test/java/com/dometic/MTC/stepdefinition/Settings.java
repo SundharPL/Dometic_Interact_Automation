@@ -463,9 +463,10 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on Notification Settings")
-    public void iTapOnNotificationSettings() throws ClassNotFoundException {
+    public void iTapOnNotificationSettings() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Notification Settings");
         TaponbuttonaccessabilityID(Constant_settings.Settings_notificationSettings_text_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on Device Management")
@@ -1432,9 +1433,10 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on the Edit List in Email option")
-    public void iTapOnTheEditListInEmailOption() throws ClassNotFoundException {
+    public void iTapOnTheEditListInEmailOption() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Edit List in Email option");
         TaponbuttonaccessabilityID(Constant_AccountSettings.Notification_Email_EditList);
+        Thread.sleep(2000);
     }
 
     @Then("I Verified Email List Header")
@@ -2308,4 +2310,9 @@ public class Settings extends Baseclass {
 
     }
 
+    @Then("I Tap on Cancel button")
+    public void iTapOnCancelButton() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Cancel button");
+        Taponbutton(Constant_settings.Device_management_edit_page_Cancel_Button_Xpath);
+    }
 }

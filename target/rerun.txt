@@ -1,0 +1,2 @@
+src/test/java/com/dometic/L1/features/TC11_ViewOption.feature:44
+src/test/java/com/dometic/L1/features/TC12_Settings.feature:42

@@ -1,6 +1,6 @@
 Feature: Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Tracking(Gio Fencing) screen UI
     Then I Wait short period for Page to Load
     Then I Tap on Tracking tile
@@ -19,7 +19,7 @@ Feature: Verifying application Tracking(Gio Fencing) Screen in Dometic Marine ap
     Then I Verify Alert Latency expandIcon is displayed
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Tracking(Gio Fencing) screen Functionality
     Then I Tap on Radius from center
     Then I Wait short period for Page to Load
@@ -32,7 +32,7 @@ Feature: Verifying application Tracking(Gio Fencing) Screen in Dometic Marine ap
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Updating unit functionality(Metric to Imperial and Meter to Yard) Functionality
     Then I Tap on Tracking tile
     Then I get the value from Radius from center container
@@ -49,7 +49,7 @@ Feature: Verifying application Tracking(Gio Fencing) Screen in Dometic Marine ap
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Updating unit functionality(Imperial to Metric and Yard to Meter) Functionality
     Then I Tap on Tracking tile
     Then I get the yard value from Radius from center container
@@ -66,7 +66,7 @@ Feature: Verifying application Tracking(Gio Fencing) Screen in Dometic Marine ap
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application Tracking(Alert Latency) screen Functionality
     Then I Tap on Tracking tile
     Then I Wait short period for Page to Load
