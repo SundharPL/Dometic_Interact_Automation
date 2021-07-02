@@ -175,7 +175,6 @@ Feature: Verifying application Batteries Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-
   @sanity
   Scenario: Verifying application Batteries screen(Warnings-Battery Voltage Below) Functionality
     Then I Wait short period for Page to Load
@@ -230,7 +229,6 @@ Feature: Verifying application Batteries Screen in Dometic Marine application
 #    Then I Validate Applied minutes in Warnings-Set Latency is displayed
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
-
 
   @sanity
   Scenario: Verifying application Batteries screen(Warnings-Set Latency) Functionality

@@ -50,7 +50,6 @@ Feature: Verifying application View Options Screen in Dometic LMC/ERIBA applicat
     Then I enter Valid Email.
     Then I enter Valid Password.
     Then I Tap on an Login button.
-    Then I entered into On boarding screen
     Then I Wait short period for Page to Load
     Then I entered into Home Page.
     Then I Wait short period for Page to Load
@@ -62,5 +61,8 @@ Feature: Verifying application View Options Screen in Dometic LMC/ERIBA applicat
     Then I Tap on Tile View Options
     Then I Tap on Connected Devices
     Then I Tap on Cancel Button
+    Then I Wait short period for Page to Load
+    Then I Tap on hamburger menu in landing screen
+    Then I Tap on Logout in Settings screen
 
 

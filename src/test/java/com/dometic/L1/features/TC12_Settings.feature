@@ -38,7 +38,7 @@ Feature: Verifying application Settings Screen in Dometic LMC/ERIBA application
   Scenario: Verify Version Functionality
     Then I verify Version is displayed
 
-  @sanity
+  @sanity1
   Scenario: Verify Logout Functionality
     Then I verify Log out is displayed
 #    Then I Tap on Logout in Settings

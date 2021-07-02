@@ -111,8 +111,10 @@ Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA applic
     Then I Wait for Page to Load
     Then I validate Energy value is displayed in AC climate screen
     Then I verify Back Button displayed in left corner of the climate screen
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Climate-Heater screen functionality and scroll up-to minimum temperature
     Then I Wait short period for Page to Load
     Then I scroll minimum temperature in Climate Heater
@@ -122,7 +124,7 @@ Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA applic
     Then I Wait short period for Page to Load
     Then I validate applied temperature is displayed in Temperature field
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Minimum temperature displayed on Hot Water Level
     Then I Wait short period for Page to Load
     Then I Tap on Hot Water Level in Heater climate screen
@@ -130,7 +132,7 @@ Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA applic
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Minimum temperature displayed on Energy
     Then I Wait short period for Page to Load
     Then I Tap on Energy in Heater climate screen
@@ -138,7 +140,7 @@ Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA applic
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Minimum temperature displayed on Climate Tile
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
@@ -146,7 +148,7 @@ Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA applic
     Then I Wait short period for Page to Load
     Then I Tap on Climate CTA in Landing screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Climate-Heater screen functionality and scroll up-to Maximum temperature
     Then I Wait short period for Page to Load
     Then I scroll maximum temperature in Climate Heater
@@ -156,7 +158,7 @@ Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA applic
     Then I Wait short period for Page to Load
     Then I validate applied maximum temperature is displayed in Temperature field
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Maximum temperature displayed on Hot Water Level
     Then I Wait short period for Page to Load
     Then I Tap on Hot Water Level in Heater climate screen
@@ -164,7 +166,7 @@ Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA applic
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Maximum temperature displayed on Energy
     Then I Wait short period for Page to Load
     Then I Tap on Energy in Heater climate screen
@@ -175,7 +177,7 @@ Feature: Verifying application Climate Screen-Heater in Dometic LMC/ERIBA applic
     Then I verify Back Button displayed in left corner of the climate screen
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying applied Climate-Heater Maximum temperature displayed on Climate Tile
     Then I Wait short period for Page to Load
     Then I validate applied maximum heater temperature is displayed in Climate Tile

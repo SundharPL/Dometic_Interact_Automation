@@ -16,7 +16,7 @@ Feature: Verifying application Power screen in Dometic LMC/ERIBA application
     Then I verify powerSource value is displayed
     Then I verify Back Button displayed in left corner of the Power house battery screen
     Then I Tap on Back Button in Power house battery screen
-
+    Then I Wait short period for Page to Load
 
 
 

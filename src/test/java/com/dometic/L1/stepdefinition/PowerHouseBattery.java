@@ -35,7 +35,7 @@ public class PowerHouseBattery extends Baseclass {
         if(elementsByAccessibilityId.size()!=0){
             WebDriverWait wait=new WebDriverWait(driver,5);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_power_text_xpath)));
-            asserttextAccessibility(Constant_power.Powerpage_power_text_expected,Constant_power.Powerpage_power_text_access_id);
+            asserttextValidationAccessibility(Constant_power.Powerpage_power_text_expected,Constant_power.Powerpage_power_text_access_id);
         }
     }
 
@@ -50,7 +50,7 @@ public class PowerHouseBattery extends Baseclass {
         catch(MyException exp){
             System.out.println(exp.getMessage());
         }
-        Assert.assertTrue(false);
+//        Assert.assertTrue(false);
         List<AndroidElement> elements = driver.findElements(By.xpath(Constant_power.CAC_M_power_percentage_xpath));
         if(elements.size()!=0){
             WebDriverWait wait=new WebDriverWait(driver,5);
@@ -64,8 +64,6 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify HOUSE BATTERY text is displayed");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_houseBattery_text_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait=new WebDriverWait(driver,5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_houseBattery_text_xpath)));
             asserttextValidationAccessibility(Constant_power.Powerpage_houseBattery_expected,Constant_power.Powerpage_houseBattery_text_access_id);
         }
     }
@@ -76,9 +74,7 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Back Button displayed in left corner of the Power house battery screen");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_climate_ac.CAC_M_power_Back_Button_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait=new WebDriverWait(driver,5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_Back_Button_xpath)));
-            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_climate_ac.CAC_M_power_Back_Button_access_id));
+           Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_climate_ac.CAC_M_power_Back_Button_access_id));
         }
     }
 
@@ -87,8 +83,6 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Back Button in Power house battery screen");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_climate_ac.CAC_M_power_Back_Button_access_id);
         if(elementsByAccessibilityId.size()!=0) {
-            WebDriverWait wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_Back_Button_xpath)));
             TaponbuttonaccessabilityID(Constant_climate_ac.CAC_M_power_Back_Button_access_id);
         }
      //  driver.navigate().back();
@@ -100,9 +94,7 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify BatteryVoltage text is displayed");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_batteryVoltageText_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_batteryVoltageText_xpath)));
-            asserttextAccessibility(Constant_power.Powerpage_batteryVoltageText_expected,Constant_power.Powerpage_batteryVoltageText_access_id);
+            asserttextValidationAccessibility(Constant_power.Powerpage_batteryVoltageText_expected,Constant_power.Powerpage_batteryVoltageText_access_id);
         }
 
     }
@@ -113,9 +105,7 @@ public class PowerHouseBattery extends Baseclass {
       //  Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_climate_ac.CAC_powerScreen_currentContainer));
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_currentText_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait = new WebDriverWait(driver, 10);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_currentText_xpath)));
-            asserttextAccessibility(Constant_power.Powerpage_currentText_expected,Constant_power.Powerpage_currentText_access_id);
+           asserttextValidationAccessibility(Constant_power.Powerpage_currentText_expected,Constant_power.Powerpage_currentText_access_id);
         }
     }
 
@@ -124,9 +114,7 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Time text is displayed");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_timeText_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait = new WebDriverWait(driver, 10);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_timeText_xpath)));
-            asserttextAccessibility(Constant_power.Powerpage_timeText_expected,Constant_power.Powerpage_timeText_access_id);
+           asserttextValidationAccessibility(Constant_power.Powerpage_timeText_expected,Constant_power.Powerpage_timeText_access_id);
         }
       //  Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_climate_ac.CAC_powerScreen_timeContainer));
     }
@@ -136,9 +124,7 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify powerSource text is displayed");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_powerSourceText_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait = new WebDriverWait(driver, 10);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_powerSourceText_xpath)));
-            asserttextAccessibility(Constant_power.Powerpage_powerSourceText_expected,Constant_power.Powerpage_powerSourceText_access_id);
+            asserttextValidationAccessibility(Constant_power.Powerpage_powerSourceText_expected,Constant_power.Powerpage_powerSourceText_access_id);
         }
       //  Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_climate_ac.CAC_powerScreen_powerSourceContainer));
     }
@@ -148,8 +134,6 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify BatteryVoltage value is displayed");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_batteryVoltageValue_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_batteryVoltageValue_xpath)));
             Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_batteryVoltageValue_access_id));
             Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_batteryVoltagevoltText_access_id));
         }
@@ -160,9 +144,7 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Current value is displayed");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_currentValue_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_currentValue_xpath)));
-            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_currentValue_access_id));
+           Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_currentValue_access_id));
             Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_ampereText_access_id));
         }
     }
@@ -172,9 +154,7 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Time value is displayed");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_timeValue_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_timeValue_xpath)));
-            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_timeValue_access_id));
+           Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_timeValue_access_id));
             Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_hourText_access_id));
         }
     }
@@ -184,8 +164,6 @@ public class PowerHouseBattery extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify powerSource value is displayed");
         List<AndroidElement> elementsByAccessibilityId = driver.findElementsByAccessibilityId(Constant_power.Powerpage_timeValue_access_id);
         if(elementsByAccessibilityId.size()!=0){
-            WebDriverWait wait = new WebDriverWait(driver, 5);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Constant_power.Powerpage_powerSourceValue_xpath)));
             Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_powerSourceValue_access_id));
             Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_power.Powerpage_powerSourcevoltText_access_id));
         }

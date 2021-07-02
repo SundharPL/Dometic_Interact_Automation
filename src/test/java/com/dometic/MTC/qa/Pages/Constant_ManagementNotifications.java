@@ -110,10 +110,6 @@ public class Constant_ManagementNotifications {
     public static final String ManageNotifications_Advanced_screen_title_access_id = "com.dometicapp:id/header-TitleText";
     public static final String ManageNotifications_Advanced_screen_back_button_xpath = "//android.widget.Button[@content-desc=\" , back\"]/android.view.ViewGroup";
 
-
-    public static final String ManageNotifications_Push_toggle_xpath = "//android.view.ViewGroup[@content-desc=\"com.dometicapp:id/notification-pushNotificationContainer-switchComponent\"]/android.view.ViewGroup";
-    public static final String ManageNotifications_Push_alerts_toggle_xpath =  "//android.view.ViewGroup[@content-desc=\"com.dometicapp:id/notification-pushNotificationAlertSwitch\"]/android.view.ViewGroup";
-
     public static final String ManageNotifications_Edit_Email_add_new_button_access_id = "com.dometicapp:id/editList-addElement-icon";
     public static final String ManageNotifications_Edit_Email_element_1_access_id = "com.dometicapp:id/editListElement1-subtitleInput";
     public static final String ManageNotifcations_Edit_Email_label_1_access_id = "com.dometicapp:id/editListElement1-titleInput";
@@ -136,5 +132,15 @@ public class Constant_ManagementNotifications {
     public static final String ManageNotifications_Edit_Email_delete_xpath = "//*[contains(@content-desc,'-removeIcon')]";
     public static final String ManageNotifications_Edit_sms_save_button_xpath = "(//android.view.ViewGroup[@content-desc=\"com.dometicapp:id/editList-save-button\"])[2]";
     public static final String ManageNotifications_Edit_sms_close_button_xpath = "//android.view.ViewGroup[@content-desc=\"com.dometicapp:id/editList-header-backButton\"]/android.widget.TextView";
+    public static final String ManageNotifications_sms_showmore_text_xpath="(//*[@content-desc='undefined-cardTitle'])[3]";
+    public static final String ManageNotifications_Email_showmore_text_xpath="(//*[@content-desc='undefined-cardTitle'])[2]";
+    public static final String ManageNotifications_Email_toggle_xpath="(//*[@content-desc='undefined-switchComponent'])[1]";
+    public static final String ManageNotifications_Push_toggle_xpath = "//android.view.ViewGroup[@content-desc=\"com.dometicapp:id/notification-pushNotificationContainer-switchComponent\"]/android.view.ViewGroup";
+    public static final String ManageNotifications_Push_alerts_toggle_xpath =  "(//*[@content-desc='undefinedSwitch'])[1]";
+    public static final String ManageNotifications_sms_toggle_xpath="(//*[@content-desc='undefined-switchComponent'])[2]";
+    public static final String managePushNotification_Alert_Text_xpath="(//*[@content-desc='undefinedText'])[1]";
+    public static final String managePushNotification_Alert_Toggle_xpath="(//*[@content-desc='undefinedSwitch'])[1]";
+    public static final String managePushNotification_Warning_Text_xpath="(//*[@content-desc='undefinedText'])[2]";
+    public static final String managePushNotification_Warning_Toggle_xpath="(//*[@content-desc='undefinedSwitch'])[2]";
 
 }

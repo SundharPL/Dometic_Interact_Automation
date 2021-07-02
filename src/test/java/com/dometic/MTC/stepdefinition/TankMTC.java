@@ -165,8 +165,9 @@ public class TankMTC extends Baseclass {
     }
 
     @Then("I Tap on Tank tile on landing screen")
-    public void iTapOnTankTileOnLandingScreen() {
+    public void iTapOnTankTileOnLandingScreen() throws InterruptedException {
         Taponbutton(Constant_Tank_MTC.mtc_Tank_Tile_Xpath);
+        Thread.sleep(2000);
     }
 
     @Then("I verify Tank header text")
@@ -175,7 +176,7 @@ public class TankMTC extends Baseclass {
     }
 
     @Then("I Tap on Alert-Tank Level Above")
-    public void iTapOnAlertTankLevelAbove() {
+    public void iTapOnAlertTankLevelAbove() throws InterruptedException {
         Taponbutton(Constant_Tank_MTC.mtc_Tank_Alerts_Tank_Level_Above_xpath);
     }
 
@@ -399,8 +400,8 @@ public class TankMTC extends Baseclass {
         TouchAction action = new TouchAction(driver);
         tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Alert_Tank_level_applied_value_Access_id).getText();
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
-        iteration_count =  ((tank_current_carousel_value_number - 0)/5);
-        for (int i = 0; i < iteration_count ; i++) {
+        iteration_count = ((tank_current_carousel_value_number - 0) / 5);
+        for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(530, 1730)).release().perform();
             Thread.sleep(1000);
@@ -413,10 +414,10 @@ public class TankMTC extends Baseclass {
         TouchAction action = new TouchAction(driver);
         tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Alert_Set_Latency_access_id).getText();
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
-        iteration_count =  ((60 - tank_current_carousel_value_number));
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(530, 1870 )).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1725 )).release().perform();
+        iteration_count = ((60 - tank_current_carousel_value_number));
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 1870)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1725)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -427,8 +428,8 @@ public class TankMTC extends Baseclass {
         TouchAction action = new TouchAction(driver);
         tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Alert_Set_Latency_access_id).getText();
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
-        iteration_count =  ((tank_current_carousel_value_number - 0));
-        for (int i = 0; i < iteration_count ; i++) {
+        iteration_count = ((tank_current_carousel_value_number - 0));
+        for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(530, 1870)).release().perform();
             Thread.sleep(1000);
@@ -441,10 +442,10 @@ public class TankMTC extends Baseclass {
         TouchAction action = new TouchAction(driver);
         tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Warning_Tank_Level_Applied_Value_access_id).getText();
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
-        iteration_count =  ((100 - tank_current_carousel_value_number)/5);
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(530, 1575 )).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1450 )).release().perform();
+        iteration_count = ((100 - tank_current_carousel_value_number) / 5);
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1450)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -455,10 +456,10 @@ public class TankMTC extends Baseclass {
         TouchAction action = new TouchAction(driver);
         tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Warning_Tank_Level_Applied_Value_access_id).getText();
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
-        iteration_count =  ((tank_current_carousel_value_number - 0)/5);
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(530, 1450 )).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1575 )).release().perform();
+        iteration_count = ((tank_current_carousel_value_number - 0) / 5);
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1575)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -469,8 +470,8 @@ public class TankMTC extends Baseclass {
         TouchAction action = new TouchAction(driver);
         tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Warning_Set_Latency_Applied_Value_access_id).getText();
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
-        iteration_count =  ((100 - tank_current_carousel_value_number));
-        for (int i = 0; i < iteration_count ; i++) {
+        iteration_count = ((100 - tank_current_carousel_value_number));
+        for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(530, 1715)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(530, 1575)).release().perform();
             Thread.sleep(1000);
@@ -483,11 +484,30 @@ public class TankMTC extends Baseclass {
         TouchAction action = new TouchAction(driver);
         tank_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Warning_Set_Latency_Applied_Value_access_id).getText();
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
-        iteration_count =  ((tank_current_carousel_value_number - 0));
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(495, 1575 )).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(495, 1715 )).release().perform();
+        iteration_count = ((tank_current_carousel_value_number - 0));
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1715)).release().perform();
             Thread.sleep(1000);
         }
+    }
+
+    @Then("I Scroll the screen till grey water")
+    public void iScrollTheScreenTillGreyWater() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the screen till grey water");
+        List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Grey_Water_Access_Id);
+        while (id.size() != 0) {
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(1000, 530)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(400, 530)).release().perform();
+            Thread.sleep(2000);
+            break;
+        }
+    }
+
+    @Then("I verify Tank Grey Water Tank text is displayed")
+    public void iVerifyTankGreyWaterTankTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Tank Grey Water Tank text is displayed");
+        asserttextValidationAccessibility(Constant_Tank_MTC.mtc_Tank_Grey_Water_Text, Constant_Tank_MTC.mtc_Tank_Grey_Water_Access_Id);
     }
 }

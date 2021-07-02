@@ -9,7 +9,7 @@ public class Constant_login extends Baseclass {
         public static final String Login_Password = "com.dometicapp:id/login-securePwdfield";
         public static final String ValidUser = "testdom2user@gmail.com";
         public static final String Validpassword = "Dom@1234";
-        public static final String new_user_email = "testdometic@yopmail.com";
+        public static final String new_user_email = "testdom2user@gmail.com";
         public static final String new_user_password = "Dom@1234";
         public static final String invaliduser1 = "dsasdddfd@gmail.com";
         public static final String email_SpecialCharacter="!@#$%^&*()_+";

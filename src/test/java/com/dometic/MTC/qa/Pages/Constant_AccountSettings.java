@@ -118,8 +118,16 @@ public class Constant_AccountSettings {
     public static final String Notification_PushNotification_Advance_Marine_Pushnotification_ToggleButton="devicePushNotificationsElement-Switch";
     public static final String Notification_PushNotification_Advance_Marine_Pushnotification="//*[contains(@content-desc,'com.dometicapp:id/notification-AdvancedNotificationSetings-')]";
     // ----------------------xpath----------------------//
-
-
+    public static final String managePushNotification_Alert_Text_xpath="(//*[@content-desc='undefinedText'])[1]";
+    public static final String managePushNotification_Alert_Toggle_xpath="(//*[@content-desc='undefinedSwitch'])[1]";
+    public static final String managePushNotification_Warning_Text_xpath="(//*[@content-desc='undefinedText'])[2]";
+    public static final String managePushNotification_Warning_Toggle_xpath="(//*[@content-desc='undefinedSwitch'])[2]";
+    public static final String Notification_Email_xpath="(//*[@content-desc='undefined-cardTitle'])[1]";
+    public static final String Notification_Email_showmore_xpath="(//*[@content-desc='undefined-cardTitle'])[2]";
+    public static final String Notification_Email_List_xpath="//*[@text='E-MAIL LIST']";
+    public static final String Notification_Alerts_xpath = "(//*[@content-desc='undefinedText'])[1]";
+    public static final String Notification_Warning_xpath = "(//*[@content-desc='undefinedText'])[2]";
+    public static final String Notification_Email_EditList_xpath="//*[@text='E-MAIL LIST']";
     // ----------------------Data----------------------//
     public static final String profile_AccountSetting_Header = "ACCOUNT SETTINGS";
     public static final String profile_AccountSettings_Setting_tex = "";
