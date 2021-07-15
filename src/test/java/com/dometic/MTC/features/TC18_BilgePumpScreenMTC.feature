@@ -1,7 +1,7 @@
 Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 
   @First @sanity
-  Scenario: Verifying application Bilge Pump screen UI
+  Scenario: Verifying application Bilge Pump screen UI implementation
     Then I Tap on Bilge Pump tile on landing screen
     Then I verify Bilge Pump header text
     Then I verify Bilge Pump status
@@ -167,7 +167,7 @@ Feature: Verifying application Bilge Pump Screen in Dometic Marine application
 #    Then I Scroll up the page
 #    Then I Tap on Continuous
 #    Then I Wait short period for Page to Load
-#    Then I scroll to the maximum carousel value in Alert-Continuous
+    Then I scroll to the maximum carousel value in Alert-Continuous
 #    Then I Verify Apply button in Alert-Continuous
 #    Then I Tap on Apply button in Alert-Continuous
 #    Then I Tap on Ok button

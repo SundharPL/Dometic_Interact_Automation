@@ -211,8 +211,8 @@ public class Batteries extends Baseclass {
     public void iScrollUpTheScreenInAlertBatteryVoltageBelow() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(500, 1735)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(500, 1580)).release().perform();
+        action.press(PointOption.point(500, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(500, 900)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -247,8 +247,8 @@ public class Batteries extends Baseclass {
     public void iScrollUpTheScreenInAlertSetLatency() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(530, 1870)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1725)).release().perform();
+        action.press(PointOption.point(530, 1200)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1050)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -415,8 +415,8 @@ public class Batteries extends Baseclass {
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
         iteration_count =  ((25.9 - current_carousel_value_number)*10);
         for (float i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(540, 1735)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(540, 1580)).release().perform();
+            action.press(PointOption.point(540, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(540, 900)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -428,8 +428,8 @@ public class Batteries extends Baseclass {
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
         iteration_count =  ((current_carousel_value_number - 5.0)*10);
         for (float i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(540, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(540, 1750)).release().perform();
+            action.press(PointOption.point(540, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(540, 1050)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -442,8 +442,8 @@ public class Batteries extends Baseclass {
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
         iteration_count =  ((60.0 - current_carousel_value_number));
         for (float i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(540, 1870)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(540, 1725)).release().perform();
+            action.press(PointOption.point(540, 1200)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(540, 1050)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -456,8 +456,8 @@ public class Batteries extends Baseclass {
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
         iteration_count =  ((current_carousel_value_number - 0.0));
         for (float i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(540, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(540, 1870)).release().perform();
+            action.press(PointOption.point(540, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(540, 1200)).release().perform();
             Thread.sleep(1000);
         }
     }

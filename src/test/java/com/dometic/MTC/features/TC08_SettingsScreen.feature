@@ -29,8 +29,8 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Tap on hamburger menu in landing screen
     Then I Wait short period for Page to Load
     Then I Tap on Device Management
+    Then I Tap on back button in Device Management screen
     Then I Wait short period for Page to Load
-    Then I Tap on Back Button
     Then I Tap on hamburger menu in landing screen
     Then I Wait short period for Page to Load
     Then I Tap on App Settings
@@ -432,6 +432,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I assert if the edited name is displayed in the device list
     Then I Tap on back button in Device Management screen
+    Then I Wait short period for Page to Load
     Then I Tap on hamburger menu in landing screen
     Then I Tap on Home in Settings screen
     Then I assert if the edited name is displayed in the tiles in home page

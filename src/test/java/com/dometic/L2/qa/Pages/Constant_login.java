@@ -7,7 +7,7 @@ public class Constant_login extends Baseclass {
         public static final String Login_pagetitle = "com.dometicapp:id/login-welcomeText";
         public static final String Login_Email = "com.dometicapp:id/login-emailTextfield";
         public static final String Login_Password = "com.dometicapp:id/login-securePwdfield";
-        public static final String ValidUser = "ramesht20@yopmail.com";
+        public static final String ValidUser = "ramesht39@yopmail.com";
         public static final String Validpassword = "Dom@1234";
         public static final String new_user_email = "testdometic@yopmail.com";
         public static final String new_user_password = "Dom@1234";

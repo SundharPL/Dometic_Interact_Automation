@@ -29,7 +29,7 @@ Feature: Verifying application Fuse Screen in Dometic USLTV application
     Then I Wait short period for Page to Load
     Then I validate BlownOut text is displayed in Landing page
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Fuses screen tap on any fuse Functionality
     Then I Tap on any of the fuse in Fuse Screen
     Then I Tap on Back Button

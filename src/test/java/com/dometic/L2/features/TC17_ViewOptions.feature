@@ -45,18 +45,20 @@ Feature: Verifying application ViewOptions Screen in Dometic USLTV application
     Then I Tap on View option button in landing screen
     Then I Tap on Connected Devices
     Then I Tap on Cancel Button
-    Then I Tap on hamburger menu in landing screen
-#    Then I Wait short period for Page to Load
-    Then I Tap on Logout
+    Then I Tap on hamburger menu in landing screen.
+    Then I Wait short period for Page to Load
+    Then I Tap on Logout in Settings screen.
 #    Then I Tap on Logout in Settings
-    Then I enter Valid Email in Login Page
-    Then I enter Valid Password in Login Page
-    Then I Tap on Login Button in Login Page
-    Then I entered into On boarding screen
-    Then  I Wait short period for Page to Load
-    Then I Tap on Yes button
-    Then I Entered into Landing Page
-    Then  I Wait short period for Page to Load
+    Then I enter Valid Email.
+    Then I enter Valid Password.
+    Then I Tap on an Login button.
+    Then I Wait short period for Page to Load
+    Then I entered into Home Page.
+    Then I Wait short period for Page to Load
+    Then I Tap on Marine Tile.
+    Then I Wait short period for Page to Load
+    Then I Wait until Landing screen is displayed.
+    Then I Wait short period for Page to Load
     Then I Tap on View option button in landing screen
     Then I Tap on Tile View Options
     Then I Tap on Connected Devices

@@ -47,7 +47,7 @@ Feature: Verifying application Login Screen in Dometic Marine application
     Then I Tap on Login button in Login Page
     Then The Email field is required Error message is displayed in login page
 
-  @sanity1
+  @sanity
   Scenario:  Verifying application Login Functionality with invalid credentials
     Then I enter Invalid Email in Login Page
     Then I enter an Invalid Password in Login Page
@@ -62,7 +62,7 @@ Feature: Verifying application Login Screen in Dometic Marine application
     Then The email must be a valid email address Error message is displayed
 
   @sanity
-  Scenario:  Verifying application Login Functionality with invalid credentials(Checking text field allowing Special Character)
+  Scenario: Verifying application Login Functionality with invalid credentials(Checking text field allowing Special Character)
     Then I enter an Special Character in Email Field in Login Page
     Then I enter Valid Password in Login Page
     Then I Tap on Login button in Login Page
