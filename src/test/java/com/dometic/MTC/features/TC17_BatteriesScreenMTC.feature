@@ -1,7 +1,7 @@
 Feature: Verifying application Batteries Screen in Dometic Marine application
 
   @First @sanity
-  Scenario: Verifying application Batteries screen UI
+  Scenario: Verifying application Batteries screen UI implementation
     Then I Wait short period for Page to Load
     Then I Tap on Batteries tile on landing screen
     Then I verify Batteries header text

@@ -357,8 +357,7 @@ public class AGSScreen extends Baseclass {
     @Then("I Tap on the Auto Charger toggle whether toggle in OFF state")
     public void iTapOnTheAutoChargerToggleWhetherToggleInOFFState() throws InterruptedException, ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Auto Charger toggle whether toggle in OFF state");
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_AGS.AGSPage_AGS_Auto_Charger_OFF_State_xpath));
-        if(elements.size()!=0){
+        if(driver.findElementByAccessibilityId(Constant_AGS.AGSPage_Auto_Charger_switchText_access_id).getText().equalsIgnoreCase("OFF")){
             Thread.sleep(2000);
             TaponbuttonaccessabilityID(Constant_AGS.AGSPage_Auto_Charger_switchText_access_id);
             Thread.sleep(2000);
@@ -370,8 +369,7 @@ public class AGSScreen extends Baseclass {
     @Then("I Tap on the Generator Exerciser toggle whether toggle in OFF state")
     public void iTapOnTheGeneratorExerciserToggleWhetherToggleInOFFState() throws InterruptedException, ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on the Generator Exerciser toggle whether toggle in OFF state");
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_AGS.AGSPage_AGS_Generator_Exerciser_OFF_State_xpath));
-        if(elements.size()!=0){
+        if(driver.findElementByAccessibilityId(Constant_AGS.AGSPage_Generator_Exerciser_switchText_access_id).getText().equalsIgnoreCase("OFF")){
             Thread.sleep(2000);
             TaponbuttonaccessabilityID(Constant_AGS.AGSPage_Generator_Exerciser_switchText_access_id);
             Thread.sleep(2000);

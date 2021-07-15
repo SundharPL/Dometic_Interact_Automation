@@ -9,9 +9,13 @@ Feature: Verifying application Tank Fresh Water Screen in Dometic USLTV applicat
     Then I verify the fresh text on button
 #    Then I verify the black text on button
     Then I verify the predictive data in Fresh water text
+    Then I Tap on Back Button
+    Then I Wait short period for Page to Load
 
   @sanity1
   Scenario: Verifying application Tank Fresh Water screen functionality
+    Then I Tap on Tank Fresh Water in Landing screen
+    Then I Wait short period for Page to Load
     Then I verify Tank-progressIndicator in Tank Fresh Water
     Then I Tap on Back Button
     Then I Wait short period for Page to Load

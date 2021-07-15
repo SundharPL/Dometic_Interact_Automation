@@ -220,8 +220,8 @@ public class TankMTC extends Baseclass {
     public void iScrollUpTheScreenInAlertTankLevelAbove() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Tank Level Above");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(530, 1730)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(500, 1600)).release().perform();
+        action.press(PointOption.point(530, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(500, 900)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -256,8 +256,8 @@ public class TankMTC extends Baseclass {
     public void iScrollUpTheScreenInAlertSetLatencyTankScreen() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(530, 1870)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1725)).release().perform();
+        action.press(PointOption.point(530, 1200)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1050)).release().perform();
         System.out.println("Scrolling up the Page");
 
     }
@@ -388,8 +388,8 @@ public class TankMTC extends Baseclass {
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
         iteration_count = ((100 - tank_current_carousel_value_number) / 5);
         for (int i = 0; i < iteration_count; i++) {
-            action.press(PointOption.point(530, 1730)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1600)).release().perform();
+            action.press(PointOption.point(530, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 900)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -402,8 +402,8 @@ public class TankMTC extends Baseclass {
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
         iteration_count = ((tank_current_carousel_value_number - 0) / 5);
         for (int i = 0; i < iteration_count; i++) {
-            action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1730)).release().perform();
+            action.press(PointOption.point(530, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1050)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -416,8 +416,8 @@ public class TankMTC extends Baseclass {
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
         iteration_count = ((60 - tank_current_carousel_value_number));
         for (int i = 0; i < iteration_count; i++) {
-            action.press(PointOption.point(530, 1870)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1725)).release().perform();
+            action.press(PointOption.point(530, 1200)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1050)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -430,8 +430,8 @@ public class TankMTC extends Baseclass {
         tank_current_carousel_value_number = Integer.parseInt(tank_current_carousel_value);
         iteration_count = ((tank_current_carousel_value_number - 0));
         for (int i = 0; i < iteration_count; i++) {
-            action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1870)).release().perform();
+            action.press(PointOption.point(530, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1200)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -509,5 +509,23 @@ public class TankMTC extends Baseclass {
     public void iVerifyTankGreyWaterTankTextIsDisplayed() throws Throwable {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Tank Grey Water Tank text is displayed");
         asserttextValidationAccessibility(Constant_Tank_MTC.mtc_Tank_Grey_Water_Text, Constant_Tank_MTC.mtc_Tank_Grey_Water_Access_Id);
+    }
+
+    @Then("I verify Tank Black Water Tank text is displayed")
+    public void iVerifyTankBlackWaterTankTextIsDisplayed() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify Tank Black Water Tank text is displayed");
+        asserttextValidationAccessibility(Constant_Tank_MTC.mtc_Tank_Black_Water_Text,Constant_Tank_MTC.mtc_Tank_Black_Water_Access_Id);
+    }
+
+    @Then("I Scroll the screen till Black Water")
+    public void iScrollTheScreenTillBlackWater() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the screen till Black Water");
+        List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_Tank_MTC.mtc_Tank_Grey_Water_Access_Id);
+        for(int i=0;i<2;i++) {
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(1000, 530)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(400, 530)).release().perform();
+            Thread.sleep(2000);
+        }
     }
 }

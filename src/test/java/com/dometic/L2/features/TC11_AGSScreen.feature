@@ -18,7 +18,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Quiet Time Start(AM) functionality
     Then I Tap on AGS in Landing Screen
     Then I Wait short period for Page to Load
@@ -36,7 +36,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I validate updated Quiet Time Start time is applied in AGS Screen
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Quiet Time Start(PM) functionality
     Then I Tap on Quiet Time Start
     Then I verify QUITE TIME START title
@@ -50,7 +50,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I validate updated Quiet Time Start time is applied in AGS Screen
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Quiet Time Ends(AM) functionality
     Then I Tap on Quiet Time Ends
     Then I verify QUITE TIME ENDS title
@@ -64,7 +64,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I validate updated Quiet Time Ends time is applied in AGS Screen
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Quiet Time Ends(PM) functionality
     Then I Tap on Quiet Time Ends
     Then I verify QUITE TIME ENDS title
@@ -78,7 +78,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I validate updated Quiet Time Ends time is applied in AGS Screen
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Start Voltage functionality
     Then I Tap on Start Voltage
     Then I verify START VOLTAGE title
@@ -89,7 +89,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I validate updated Start Voltage is applied in AGS Screen
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Time Under functionality
     Then I Tap on Time Under
     Then I verify TIME UNDER title
@@ -100,7 +100,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I validate updated Time Under value is applied in AGS Screen
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Start Time(AM) functionality
     Then I Scroll up the screen in AGS
     Then I Tap on Start Time
@@ -115,7 +115,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I validate updated Start Time value is applied in AGS Screen
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Start Time(PM) functionality
     Then I Tap on Start Time
     Then I verify START TIME title
@@ -129,7 +129,7 @@ Feature: Verifying application AGS Screen in Dometic USLTV application
     Then I validate updated Start Time value is applied in AGS Screen
     Then I Wait short period for Page to Load
 
-  @sanity1
+  @sanity
   Scenario: Verifying application AGS screen Run Time functionality
     Then I Scroll up the screen in AGS
     Then I Tap on Run Time

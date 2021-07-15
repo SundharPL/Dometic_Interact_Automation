@@ -8,6 +8,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
@@ -2223,7 +2224,13 @@ public class Settings extends Baseclass {
     @Then("I Tap on back button in Device Management screen")
     public void iTapOnBackButtonInDeviceManagementScreen() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on back button in Device Management screen");
-        TaponbuttonaccessabilityID(Constant_DeviceManagement.mtc_DeviceManagement_backbutton_access_id);
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+//        List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_DeviceManagement.mtc_DeviceManagement_backbutton_access_id);
+//        System.out.println(id.size());
+//        if (id.size() != 0) {
+//            TaponbuttonaccessabilityID(Constant_DeviceManagement.mtc_DeviceManagement_backbutton_access_id);
+
+//        }
     }
 
     @Then("I assert if the edited name is displayed in the device list")
@@ -2315,4 +2322,5 @@ public class Settings extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Cancel button");
         Taponbutton(Constant_settings.Device_management_edit_page_Cancel_Button_Xpath);
     }
+
 }

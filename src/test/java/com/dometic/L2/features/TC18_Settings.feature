@@ -1,10 +1,10 @@
 Feature: Verifying application Settings Screen in Dometic USLTV application
 
-  @First1 @sanity1
+  @First @sanity
   Scenario: Verifying application Settings screen functionality
-    Then I verify hamburger menu in landing screen
-    Then I Tap on hamburger menu in landing screen
-    Then I Tap on Logout in Settings screen
+    Then I Tap on hamburger menu in landing screen.
+    Then I Wait short period for Page to Load
+    Then I Tap on Logout in Settings screen.
 #    Then I Verify SETTINGS Text displayed in the top of the app
 
   @sanity1

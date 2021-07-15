@@ -12,9 +12,10 @@ public class Constant_Tank_MTC {
     public static final String mtc_Tank_Warning_Tank_Level_Applied_Value_access_id = "com.dometicapp:id/Tank-warningTankLevelAbove-cardSubText";
     public static final String mtc_Tank_Warning_Set_Latency_Applied_Value_access_id = "com.dometicapp:id/Tank-warningSetLatency-cardSubText";
     public static final String mtc_Tank_Grey_Water_Access_Id="com.dometicapp:id/Tank-circleCarousel-tankName-text-1";
+    public static final String mtc_Tank_Black_Water_Access_Id="com.dometicapp:id/Tank-circleCarousel-tankName-text-2";
 
     //---------------------------xPath----------------------------//
-    public static final String mtc_Tank_Tile_Xpath = "//*[@text='Tank']";
+    public static final String mtc_Tank_Tile_Xpath = "//*[contains(@text,'Tank')]";
     public static final String mtc_Tank_Alerts_Tank_Level_Above_xpath = "(//*[contains(@text,'Tank Level ')])[1]";
     public static final String mtc_Tank_Alerts_Set_Latency_xpath = "(//*[@text='Latency'])[1]";
     public static final String mtc_Tank_Warnings_Tank_Level_Above_xpath = "(//*[contains(@text,'Tank Level ')])[2]";
@@ -51,4 +52,5 @@ public class Constant_Tank_MTC {
     public static final String mtc_Tank_Alerts_Tank_Level_Below = "Tank Level Below";
     public static final String mtc_Tank_Alerts_Set_Latency = "Latency";
     public static final String mtc_Tank_Grey_Water_Text="Grey Water";
+    public static final String mtc_Tank_Black_Water_Text="Black Water";
 }

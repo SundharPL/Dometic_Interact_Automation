@@ -133,8 +133,8 @@ public class BilgePump extends Baseclass {
     public void iScrollUpTheScreenInAlertMaxCycleHour() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Cycle Hour");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(500, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(500, 1325)).release().perform();
+        action.press(PointOption.point(500, 750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(500, 600)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -169,8 +169,8 @@ public class BilgePump extends Baseclass {
     public void iScrollUpTheScreenInAlertMaxDailyCycle() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Daily Cycle");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1475)).release().perform();
+        action.press(PointOption.point(530, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 750)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -205,8 +205,8 @@ public class BilgePump extends Baseclass {
     public void iScrollUpTheScreenInAlertContinuous() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Daily Cycle");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(530, 1750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1625)).release().perform();
+        action.press(PointOption.point(530, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 900)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -371,8 +371,8 @@ public class BilgePump extends Baseclass {
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
         iteration_count = ((60 - bilge_pump_current_carousel_value_number));
         for (int i = 0; i < iteration_count; i++) {
-            action.press(PointOption.point(500, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(500, 1325)).release().perform();
+            action.press(PointOption.point(500, 750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(500, 600)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -385,8 +385,8 @@ public class BilgePump extends Baseclass {
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
         iteration_count =  ((bilge_pump_current_carousel_value_number - 1));
         for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(500, 1325)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(500, 1450 )).release().perform();
+            action.press(PointOption.point(500, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(500, 750)).release().perform();
             System.out.println("Scrolling up the Page");
             Thread.sleep(1000);
         }
@@ -400,8 +400,8 @@ public class BilgePump extends Baseclass {
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
         iteration_count =  ((200 - bilge_pump_current_carousel_value_number ));
         for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(535, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(535, 1475)).release().perform();
+            action.press(PointOption.point(535, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(535, 750)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -414,8 +414,8 @@ public class BilgePump extends Baseclass {
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
         iteration_count =  ((bilge_pump_current_carousel_value_number - 1 ));
         for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(540, 1475)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(540, 1600)).release().perform();
+            action.press(PointOption.point(540, 750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(540, 900)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -428,8 +428,8 @@ public class BilgePump extends Baseclass {
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
         iteration_count =  ((60 - bilge_pump_current_carousel_value_number ));
         for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(530, 1750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1625)).release().perform();
+            action.press(PointOption.point(530, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 900)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -442,8 +442,8 @@ public class BilgePump extends Baseclass {
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
         iteration_count =  ((bilge_pump_current_carousel_value_number - 0 ));
         for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(530, 1625)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1750)).release().perform();
+            action.press(PointOption.point(530, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1050)).release().perform();
             Thread.sleep(1000);
         }
     }
