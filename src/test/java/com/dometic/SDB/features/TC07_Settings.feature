@@ -52,7 +52,8 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I Wait short period for Page to Load
     Then I verify if the edited name is displayed under device management device selection page
     Then I tap on back button on device management device selection page
-    Then I Wait short period for Page to Load
+    Then I Tap on hamburger menu in landing screen
+    Then I Tap on Home in Settings screen
     Then I verify if the edited name is displayed in the home page tile
 
   @sanity
@@ -82,7 +83,6 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I Tap on hamburger menu in landing screen
     Then I Tap on Device Management
     Then I Tap on SDB
-    Then I Wait for Page to Load
     Then I Tap on the Master PIN option
     Then I Verified the Master PIN Password popup
     Then I enter the correct password
@@ -125,16 +125,12 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     #Then I Hide the Device Keypad
     #Then I Wait for Page to Load
     Then I Enter the PIN as 4 Digit
-    Then I Wait for Page to Load
     Then I Verify the Text Message for Re-Enter PIN
     Then I Re-Enter the PIN as 4 Digit
-    Then I Wait for Page to Load
+    Then I Wait short period for Page to Load
 
   @sanity
   Scenario: Verifying the guest pin list UI
-    Then I Tap on hamburger menu in landing screen
-    Then I Tap on Device Management
-    Then I tap on the right icon for SDB
     Then I tap on guest pin list right icon button
     Then I verify the back button for guest pin list page
     Then I verify the guest pin header text
@@ -153,17 +149,11 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I verify the refrigerated compartment toggle button
     Then I tap on the close button symbol on edit pin page
     Then I tap on the close button symbol on guest list page
-    Then I tap on the guest list right icon
-    Then I tap on back button on device management main screen
     Then I Wait short period for Page to Load
-    Then I tap on back button on device management device selection page
-    Then I Wait short period for Page to Load
+    Then I Tap on Back Button in guest List Page
 
   @sanity
-  Scenario: Verifying the guest pin list functionlity
-    Then I Tap on hamburger menu in landing screen
-    Then I Tap on Device Management
-    Then I tap on the right icon for SDB
+  Scenario: Verifying the guest pin list functionality
     Then I tap on guest pin list right icon button
     Then I tap on the edit text
     Then I tap on the add button symbol on edit guest list page
@@ -200,17 +190,11 @@ Feature: Verifying application Setting Screen in Dometic SDB application
   @sanity
   Scenario: Verifying the cooler setting UI implementation
     Then I Tap on hamburger menu in landing screen
-    Then I Wait for Page to Load
     Then I Tap on Device Management
-    Then I Wait short period for Page to Load
     Then I Tap on SDB
-    Then I Wait short period for Page to Load
     Then I Verify the main cooler setting text
-    Then I Wait for Page to Load
     Then I tap on right icon of cooler setting
-    Then I Wait for Page to Load
     Then I verify the header text for cooler settings
-    Then I Wait for Page to Load
     Then I verify the cooler status card title
     Then I verify the cooler satus toggle button
     Then I verify the scheduler card title
@@ -229,11 +213,8 @@ Feature: Verifying application Setting Screen in Dometic SDB application
 
   @sanity
   Scenario: Verifying the app setting UI
-    Then I Wait short period for Page to Load
     Then I Tap on hamburger menu in landing screen
-    Then I Wait for Page to Load
     Then I tap on the app setting text
-    Then I Wait short period for Page to Load
     Then I verify Version is displayed
     Then I verify the app setting card title
     Then I verify the language name card title
@@ -244,19 +225,14 @@ Feature: Verifying application Setting Screen in Dometic SDB application
   Scenario: Verify Version Functionality
     Then I verify Version is displayed
     Then I Tap on Back Button
-    #Then I Tap on Back Button
+    Then I Wait short period for Page to Load
 
   @sanity
   Scenario: Verify profile setting UI
-    Then I Wait for Page to Load
     Then I Tap on hamburger menu in landing screen
-    Then I Wait for Page to Load
     Then I verify View Edit Account text is displayed
-    Then I Wait for Page to Load
     Then I Tap on App view and edit account
-    Then I Wait for Page to Load
     Then I Tap on profile setting right icon
-    Then I Wait for Page to Load
     Then I verify the personal information text
     Then I verify the name text
     Then I verify the email text
@@ -271,28 +247,20 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I verify Password text
     Then I verify the renew text
     Then I verify the right icon button
-    Then I Tap on Back Button
-    Then I Tap on Back Button
+    Then I Tap on Back Button in profile screen
+    Then I Tap on Back Button in account settings screen
 
   @sanity
   Scenario: Verifying application Settings screen-App Settings screen
     Then I Wait short period for Page to Load
     Then I Tap on hamburger menu in landing screen
-    Then I Wait for Page to Load
     Then I tap on the app setting text
-    Then I Wait short period for Page to Load
     Then I Tap on Language in App Settings page
-    Then I Wait short period for Page to Load
     Then I verify Back Button displayed in Language Page
     Then I verify Language Header Text in Language Page
     Then I Verify Language English Text in Language Page
     Then I Verify Language German Text in Language Page
-    Then I Tap on Back Button
-    Then I Verify Temperature unit text is displayed
-    Then I update Temperature Unit in Settings
-    Then I verify Version is displayed
-    #Then I Tap on Back Button
-
+    Then I Tap on Back Button in Language Screen
 
   @sanity
   Scenario: Verify Temperature Functionality
@@ -304,9 +272,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I Wait short period for Page to Load
     Then I verify Languages text is displayed
     Then I Tap on Language in App Settings page
-    Then I Wait short period for Page to Load
     Then I update on the German language
-    Then I Wait short period for Page to Load
     And I verify on Language text updated with German translation
     Then I Wait short period for Page to Load
     Then I Tap on Language in App Settings page
@@ -315,9 +281,9 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I verify on Language text updated with english translation
     Then I Verify the selected english language selection
     Then I Wait short period for Page to Load
-    Then I Tap on Back Button
+    Then I Tap on Back Button in App Settings screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying Push Notification UI in Manage Notification screen
     Then I Tap on hamburger menu in landing screen
     Then I Tap on Notification Settings
@@ -339,7 +305,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I click show less
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying Email UI in Manage Notification screen
 #      Then I Tap on hamburger menu in landing screen
 #      Then I Tap on Notification Settings
@@ -374,7 +340,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I verify Warnings toggle button for Email
     Then I click show less in Email
 
-  @sanity
+  @sanity1
   Scenario: Verifying SMS UI in Manage Notification screen
 #    Then I Tap on hamburger menu in landing screen
 #    Then I Tap on Notification Settings
@@ -413,7 +379,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     #Then I Wait short period for Page to Load
 
 
-  @sanity
+  @sanity1
   Scenario: Verify if user is able to click on Manage Notifications option
     Then I Tap on hamburger menu in landing screen
     Then I Tap on Notification Settings
@@ -422,7 +388,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I flip the state of Push Notifications toggle button
 
 
-  @sanity
+  @sanity1
   Scenario: Verify alerts warnings functionality in push notifications
     Then I Tap on push notifications show more dropdown
     Then I Wait short period for Page to Load
@@ -438,7 +404,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I Wait short period for Page to Load
 
 
-  @sanity
+  @sanity1
   Scenario: Verify E-mail toggle functionality
     Then I flip the state of E-mail toggle button
     Then I Wait short period for Page to Load
@@ -447,7 +413,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I Tap on E-mail show more text
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Edit E-mail list functionality - valid inputs
     #Then I Scroll up the page
     Then I Wait short period for Page to Load
@@ -476,7 +442,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I try to Turn OFF the toggle for the first value in list
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Edit E-mail list functionality - two same E-mail ID's
     Then I Scroll up the page
     Then I Tap on E-mail edit list
@@ -495,7 +461,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I try to Turn OFF the toggle for the fourth value in list
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Edit E-mail list functionality - duplicate email and different label
     Then I Scroll up the page
     Then I Tap on E-mail edit list
@@ -516,7 +482,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I try to Turn OFF the toggle for the fifth value in list
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Edit E-mail list functionality - empty inputs
     Then I Scroll up the page
     Then I Tap on E-mail edit list
@@ -532,7 +498,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     #Then I observe the error text message displayed in Edit Email fields
 
 
-  @sanity
+  @sanity1
   Scenario: Verify E-mail alerts and warnings functionality
     Then I Turn OFF E-mail alerts toggle
     Then I Wait short period for Page to Load
@@ -546,7 +512,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I Tap on E-mail show less navigation button
 
 
-  @sanity
+  @sanity1
   Scenario: Verify sms alerts and warnings functionality
     Then I flip the state of sms toggle button
     Then I Wait short period for Page to Load
@@ -565,7 +531,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I Turn ON sms warnings toggle
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verify sms list functionality - valid inputs
     Then I Scroll up the page
     Then I Tap on sms edit list
@@ -593,7 +559,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I try to Turn OFF the toggle for the valid number in list
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verify sms list functionality - invalid inputs
     Then I Scroll up the page
     Then I Tap on sms edit list
@@ -615,7 +581,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I Wait short period for Page to Load
 
 
-  @sanity
+  @sanity1
   Scenario: Verify sms list functionality - two same mobile numbers
     Then I Tap on sms edit list
     Then I Wait short period for Page to Load
@@ -635,7 +601,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I try to Turn OFF the toggle for the duplicate number in list
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verify sms list functionality - duplicate mobile unique label
     Then I Tap on sms edit list
     Then I Wait short period for Page to Load
@@ -655,7 +621,7 @@ Feature: Verifying application Setting Screen in Dometic SDB application
     Then I try to Turn OFF the toggle for the edited existing number in list
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verify sms list functionality - empty fields
     Then I Tap on sms edit list
     Then I Wait short period for Page to Load

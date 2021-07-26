@@ -1,6 +1,6 @@
 Feature: Verifying application Settings Screen in Dometic Marine application
 
-  @First @sanity
+  @First1 @sanity1
   Scenario: Verifying application Settings screen UI
     Then I verify hamburger menu in landing screen
     Then I Tap on hamburger menu in landing screen
@@ -18,7 +18,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I verify Version 1.6 is displayed
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Functionality
     Then I Tap on Home in Settings screen
     Then I Tap on hamburger menu in landing screen
@@ -342,7 +342,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen(Account settings) UI
     Then I Tap on hamburger menu in landing screen
     Then I Wait short period for Page to Load
@@ -355,7 +355,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Verify the profile text
     Then I Verify the Subscription text
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen(Account settings)Functionality
     Then I Navigate to the Profile page
     Then I Tap on Back Button
@@ -363,7 +363,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Navigate to Subscription page
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen(Subscriptions) UI& Functionality
     Then I verify if subscription title is displayed
     Then I verify if subscription back button is available
@@ -371,7 +371,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario:Verifying application Settings screen(Device Management) UI
     Then I Wait short period for Page to Load
     Then I Tap on hamburger menu in landing screen
@@ -391,7 +391,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I verify the Search Again Text
     Then I Tap on close button
 
-  @sanity
+  @sanity1
   Scenario: Verifying Device management(Vessel Information) UI
     Then I Tap on Device management right icon
     Then I verify the device management title text
@@ -406,7 +406,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I verify the unregister delete off board title text
     Then I verify the right icon of unregister delete off board
 
-  @sanity
+  @sanity1
   Scenario: Verifying the Edit vessel screen UI
     Then I Wait short period for Page to Load
     Then I Tap on edit vessel button on device management screen
@@ -419,7 +419,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Editing a vessel name with an emojis
     Then I Tap on the navigation button of the first onboarded device name that is displayed
     Then I verify if user is able to tap on edit vessel navigation button
@@ -437,7 +437,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Tap on Home in Settings screen
     Then I assert if the edited name is displayed in the tiles in home page
 
-  @sanity
+  @sanity1
   Scenario: Editing a vessel name with an invalid input
     Then I Tap on hamburger menu in landing screen
     Then I Tap on Device Management
@@ -455,7 +455,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I assert if the edited name is displayed in the tiles in home page
 
-  @sanity
+  @sanity1
   Scenario: Editing a vessel name with no input
     Then I Tap on hamburger menu in landing screen
     Then I Tap on Device Management
@@ -468,7 +468,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Wait for Page to Load
     Then I verify if error text is displayed below the name field
 
-  @sanity
+  @sanity1
   Scenario: Editing a vessel name with a very long input
     Then I verify if user is able to enter some long text in name field
     Then I Tap on save button in edit screen
@@ -482,7 +482,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I assert if the edited name is displayed in the tiles in home page
 
-  @sanity
+  @sanity1
   Scenario: Verifying the Edit vessel screen with valid inputs
     Then I Tap on hamburger menu in landing screen
     Then I Tap on Device Management
@@ -500,7 +500,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I assert if the edited name is displayed in the tiles in home page
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen(View/Edit Account) Functionality
 #    Then I Tap on Back Button
     Then I Wait short period for Page to Load
@@ -527,7 +527,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I verify Renew arrow is displayed
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen UI
     Then I Tap on Edit profile in profile screen
     Then I verify Edit profile header text
@@ -543,7 +543,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I verify Address value is displayed in Edit profile screen
     Then I verify Save Button is displayed
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen(Checking text field allowing Empty text) Functionality
     Then I Wait short period for Page to Load
     Then I enter an empty in First name Field in Edit profile screen
@@ -555,7 +555,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I Tap on Ok button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen(Checking text field allowing Emoji's) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Edit profile in profile screen
@@ -575,7 +575,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
 #    Then I Tap on Marine Tile
     Then I Tap on hamburger menu in landing screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen(Checking text field allowing Special Characters) Functionality
     Then I Tap on View Edit Account link in Settings screen
     Then I Tap on Profile in Account Setting Screen
@@ -599,7 +599,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Tap on Profile in Account Setting Screen
     Then I Tap on Edit profile in profile screen
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen Edit profile screen Functionality
     Then I enter an First name in Edit profile screen
     Then I enter an Last name in Edit profile screen
@@ -616,7 +616,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Wait short period for Page to Load
     Then I Tap on Marine Tile
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen App Settings screen UI
     Then I Tap on hamburger menu in landing screen
     Then I Tap on App Settings
@@ -630,7 +630,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I verify selected unit text is displayed
     Then I verify App version text is displayed
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Settings screen-App Settings screen(Set units,Temperature,Language) UI&Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Language in App Settings page
@@ -651,7 +651,7 @@ Feature: Verifying application Settings Screen in Dometic Marine application
     Then I Tap on Back Button
     Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application App Settings screen(Set units,Temperature,Language) Functionality
     Then I Tap on Language in App Settings page
     Then I Tap on German Language in Language Page

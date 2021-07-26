@@ -364,8 +364,7 @@ public class TankMTC extends Baseclass {
 
     @Then("I Tap on Tank Alert toggle if it's already in OFF state")
     public void iTapOnTankAlertToggleIfItSAlreadyInOFFState() throws InterruptedException {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath));
-        if (elements.size() != 0) {
+        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath)).getText().equalsIgnoreCase("OFF")) {
             Taponbutton(Constant_Tank_MTC.mtc_Tank_Alerts_toggle_xpath);
             Thread.sleep(10000);
         }
@@ -373,8 +372,7 @@ public class TankMTC extends Baseclass {
 
     @Then("I Tap on Tank Warnings toggle if it's already in OFF state")
     public void iTapOnTankWarningsToggleIfItSAlreadyInOFFState() throws InterruptedException {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath));
-        if (elements.size() != 0) {
+        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath)).getText().equalsIgnoreCase("OFF")) {
             Taponbutton(Constant_Tank_MTC.mtc_Tank_Warnings_toggle_xpath);
             Thread.sleep(10000);
         }

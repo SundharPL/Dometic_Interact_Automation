@@ -20,6 +20,7 @@ public class Settings extends Baseclass {
     private int flag;
     private int EmailToggle;
     private String Edited_Email, Edited_Label;
+    public static String deviceName;
 
     @Then("I Tap on hamburger menu in landing screen")
     public void iTapOnHamburgerMenuInLandingScreen() throws Throwable {
@@ -27,6 +28,7 @@ public class Settings extends Baseclass {
         List<AndroidElement> id = driver.findElementsByAccessibilityId(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
         if (id.size() != 0) {
             TaponbuttonaccessabilityID(Constant_landingscreen.LandingPage_hamburger_menu_access_id);
+            Thread.sleep(2000);
         }
     }
 
@@ -448,9 +450,10 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on Home in Settings screen")
-    public void iTapOnHomeInSettingsScreen() throws ClassNotFoundException {
+    public void iTapOnHomeInSettingsScreen() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Home in Settings screen");
         TaponbuttonaccessabilityID(Constant_settings.Settings_home_text_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on Notification Settings")
@@ -462,8 +465,10 @@ public class Settings extends Baseclass {
     @Then("I Tap on Device Management")
     public void iTapOnDeviceManagement() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Device Management");
-        TaponbuttonaccessabilityID(Constant_settings.Settings_deviceMangagement_text_access_id);
-        Thread.sleep(2000);
+        if (driver.findElementsByAccessibilityId(Constant_settings.Settings_deviceMangagement_text_access_id).size() != 0) {
+           TaponbuttonaccessabilityID(Constant_settings.Settings_deviceMangagement_text_access_id);
+            Thread.sleep(2000);
+        }
     }
 
     @Then("I Tap on App Settings")
@@ -785,9 +790,10 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on Language in App Settings page")
-    public void iTapOnLanguageInAppSettingsPage() throws ClassNotFoundException {
+    public void iTapOnLanguageInAppSettingsPage() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Language in App Settings page");
         TaponbuttonaccessabilityID(Constant_AccountSettings.appSettings_languageText_Access_Id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on Units in App Settings page")
@@ -1168,8 +1174,10 @@ public class Settings extends Baseclass {
     @Then("I tap on the right icon for SDB")
     public void iTapOnTheRightIconForSDB() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the right icon for SDB");
-        TaponbuttonaccessabilityID(Constant_settings.Device_management_edit_vessel_card_right_icon_access_id);
-        Thread.sleep(2000);
+        if (driver.findElementsByAccessibilityId(Constant_settings.Device_management_edit_vessel_card_right_icon_access_id).size() != 0) {
+            TaponbuttonaccessabilityID(Constant_settings.Device_management_edit_vessel_card_right_icon_access_id);
+            Thread.sleep(2000);
+        }
     }
 
     @Then("I verify the edit card tile name")
@@ -1228,7 +1236,7 @@ public class Settings extends Baseclass {
     @Then("I tap on guest pin list right icon button")
     public void iTapOnGuestPinListRightIconButton() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on guest pin list right icon button");
-        TaponbuttonaccessabilityID(Constant_settings.Device_management_Get_pin_list_right_icon_access_id);
+        TaponbuttonaccessabilityID(Constant_settings.Device_management_Get_pin_list_card_title_access_id);
         Thread.sleep(2000);
     }
 
@@ -1507,26 +1515,29 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on SDB")
-    public void iTapOnSDB() throws ClassNotFoundException {
+    public void iTapOnSDB() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on SDB");
-        Taponbutton(Constant_AccountSettings.Device_Management_sdb_xpath);
+        if (driver.findElements(By.xpath(Constant_AccountSettings.Device_Management_sdb_xpath)).size() != 0) {
+            deviceName = driver.findElement(By.xpath(Constant_AccountSettings.Device_Management_sdb_xpath)).getText();
+            Taponbutton(Constant_AccountSettings.Device_Management_sdb_xpath);
+            Thread.sleep(2000);
+        }
     }
 
     @Then("I verify back button in Device Management screen")
     public void iVerifyBackButtonInDeviceManagementScreen() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify back button in Device Management screen");
-        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.appSettings_Back_Button_Access_Id));
+        if (driver.findElementsByAccessibilityId(Constant_AccountSettings.appSettings_Back_Button_Access_Id).size() != 0) {
+            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_AccountSettings.appSettings_Back_Button_Access_Id));
+        }
         System.out.println("DM Back button is displayed");
     }
 
     @Then("I verify device name")
     public void iVerifyDeviceName() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify device name");
-        String string1 = driver.findElement(By.xpath(Constant_AccountSettings.Device_Management_sdb_xpath)).getText();
         String string2 = driver.findElementByAccessibilityId(Constant_AccountSettings.SDB_Device_Name).getText();
-        System.out.println(string1);
-        System.out.println(string2);
-        if (string1.equals(string2)) {
+        if (deviceName.contains(string2)) {
             System.out.println("Device Name verified");
         } else {
             System.out.println("Device Name mismatching");
@@ -1812,9 +1823,10 @@ public class Settings extends Baseclass {
     }
 
     @Then("I tap on the app setting text")
-    public void iTapOnTheAppSettingText() throws ClassNotFoundException {
+    public void iTapOnTheAppSettingText() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I tap on the app setting text");
         TaponbuttonaccessabilityID(Constant_settings.App_setting_main_text_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I verify the app setting card title")
@@ -1842,15 +1854,17 @@ public class Settings extends Baseclass {
     }
 
     @Then("I Tap on App view and edit account")
-    public void iTapOnAppViewAndEditAccount() throws ClassNotFoundException {
+    public void iTapOnAppViewAndEditAccount() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on App view and edit account");
         TaponbuttonaccessabilityID(Constant_settings.view_and_edit_setting_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on profile setting right icon")
-    public void iTapOnProfileSettingRightIcon() throws ClassNotFoundException {
+    public void iTapOnProfileSettingRightIcon() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on profile setting right icon");
         TaponbuttonaccessabilityID(Constant_settings.profile_settings_right_icon_access_id);
+        Thread.sleep(2000);
     }
 
     @Then("I verify the personal information text")
@@ -1928,10 +1942,10 @@ public class Settings extends Baseclass {
     }
 
     @Then("I update on the German language")
-    public void iUpdateOnTheGermanLanguage() throws ClassNotFoundException {
+    public void iUpdateOnTheGermanLanguage() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I update on the German language");
         TaponbuttonaccessabilityID(Constant_settings.Settings_version_german_language);
-
+        Thread.sleep(200);
     }
 
     @Then("I update on the english language")
@@ -3239,5 +3253,41 @@ public class Settings extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I leave the sms label field blank");
         entertextaccessabilityId(" ", Constant_settings.ManageNotifications_Mobile_number_label_5_access_id);
 
+    }
+
+    @Then("I verify the save button text")
+    public void iVerifyTheSaveButtonText() throws Throwable {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I verify the save button text");
+        asserttextValidationAccessibility(com.dometic.MTC.qa.Pages.Constant_settings.Device_management_edit_save_button, com.dometic.MTC.qa.Pages.Constant_settings.Device_management_edit__save_button_access_id);
+    }
+
+    @Then("I Tap on Back Button in guest List Page")
+    public void iTapOnBackButtonInGuestListPage() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Back Button in guest List Page");
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+    }
+
+    @Then("I Tap on Back Button in profile screen")
+    public void iTapOnBackButtonInProfileScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Back Button in profile screen");
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+    }
+
+    @Then("I Tap on Back Button in account settings screen")
+    public void iTapOnBackButtonInAccountSettingsScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Back Button in account settings screen");
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+    }
+
+    @Then("I Tap on Back Button in Language Screen")
+    public void iTapOnBackButtonInLanguageScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Back Button in Language Screen");
+        driver.pressKeyCode(AndroidKeyCode.BACK);
+    }
+
+    @Then("I Tap on Back Button in App Settings screen")
+    public void iTapOnBackButtonInAppSettingsScreen() throws ClassNotFoundException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Back Button in App Settings screen");
+        driver.pressKeyCode(AndroidKeyCode.BACK);
     }
 }

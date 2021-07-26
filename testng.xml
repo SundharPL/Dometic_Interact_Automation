@@ -22,16 +22,16 @@
 <!--                <class name="com.dometic.L2.androidrunner.L2_runner"/>-->
 <!--            </classes>-->
 <!--        </test> &lt;!&ndash; Test &ndash;&gt;-->
-<!--        <test name="MTC">-->
-<!--            <classes>-->
-<!--                <class name="com.dometic.MTC.androidrunner.MTC_runner"/>-->
-<!--            </classes>-->
-<!--        </test> &lt;!&ndash; Test &ndash;&gt;-->
-    <test name="Smart Delivery Box">
-        <classes>
-            <class name="com.dometic.SDB.androidrunner.SDB_runner"/>
-        </classes>
-    </test> <!-- Test -->
+        <test name="MTC">
+            <classes>
+                <class name="com.dometic.MTC.androidrunner.MTC_runner"/>
+            </classes>
+        </test> <!-- Test -->
+<!--    <test name="Smart Delivery Box">-->
+<!--        <classes>-->
+<!--            <class name="com.dometic.SDB.androidrunner.SDB_runner"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 </suite> <!-- Suite -->
 
 

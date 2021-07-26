@@ -6,7 +6,7 @@ public class Constant_settings {
     public static final String Settings_languageContainer_access_id="com.dometicapp:id/setting-languageContainer";
     public static final String Settings_versionContainer_access_id="com.dometicapp:id/setting-versionContainer";
     public static final String Settings_language_text_access_id="com.dometicapp:id/setting-languageText";
-    public static final String Settings_language_text_expected="Sprachen";
+    public static final String Settings_language_text_expected="Sprache";
     public static final String Settings_language_Spanish_text_expected="Idioma";
     public static final String Settings_temperature_Spanish_text_expected="Unidad de temperatura";
     public static final String Settings_version_Spanish_text_expected="Versión 1.3";

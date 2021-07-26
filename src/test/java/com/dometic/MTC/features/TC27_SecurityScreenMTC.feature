@@ -146,7 +146,7 @@ Feature: Verifying application Security Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Security screen(Gio Fencing-Alert Latency) Functionality
     Then I Tap on Security Tile on landing screen
     Then I Scroll up the page
@@ -192,7 +192,7 @@ Feature: Verifying application Security Screen in Dometic Marine application
 #    Then I Tap on Back Button
 #    Then I Wait short period for Page to Load
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Security screen(Door/Window Alert-Alert Latency) Functionality
     Then I Wait short period for Page to Load
     Then I Tap on Security Tile on landing screen
@@ -238,7 +238,7 @@ Feature: Verifying application Security Screen in Dometic Marine application
 #    Then I Wait short period for Page to Load
 #    Then I Tap on Back Button
 
-  @sanity
+  @sanity1
   Scenario: Verifying application Security screen(Theft Alert-Alert Latency) Functionality
     Then I Tap on Security Tile on landing screen
     Then I Scroll up the page

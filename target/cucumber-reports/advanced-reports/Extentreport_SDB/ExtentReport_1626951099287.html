@@ -1,0 +1,2753 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Dometic_Smart Delivery Box Android Application Automation Testing</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+            
+
+      
+        
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Dometic_Smart Delivery Box Android Application Test Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Jul 22, 2021 04:21:39 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>6</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>226</span> step(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>LaunchScreen</span>
+						<span class='test-time'>Jul 22, 2021 04:21:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 22, 2021 04:21:41 PM</span>
+	<span class='label end-time'>Jul 22, 2021 04:22:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 3s+572ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:22:45 PM</td>
+				<td class='step-details'>
+						Launching the application
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>LaunchScreen</span>
+						<span class='test-time'>Jul 22, 2021 04:21:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 22, 2021 04:21:41 PM</span>
+	<span class='label end-time'>Jul 22, 2021 04:22:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 58s+439ms</span>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1  pass' status='pass' test-id='7'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Launching the application</div>
+			<span class='node-time'>Jul 22, 2021 04:21:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 58s+439ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='9'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Launch the application</div>
+			<span class='node-time'>Jul 22, 2021 04:21:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='11'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:22:40 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>SplashScreen</span>
+						<span class='test-time'>Jul 22, 2021 04:22:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 22, 2021 04:22:45 PM</span>
+	<span class='label end-time'>Jul 22, 2021 04:23:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+526ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:23:06 PM</td>
+				<td class='step-details'>
+						Verifying application Splash screen Functionality
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>SplashScreen</span>
+						<span class='test-time'>Jul 22, 2021 04:22:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 22, 2021 04:22:45 PM</span>
+	<span class='label end-time'>Jul 22, 2021 04:23:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+524ms</span>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1  pass' status='pass' test-id='18'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying application Splash screen Functionality</div>
+			<span class='node-time'>Jul 22, 2021 04:22:45 PM</span>
+			&middot; <span class='node-duration'>0h 0m 16s+524ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='20'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Allow button in Permission popup in Login Page</div>
+			<span class='node-time'>Jul 22, 2021 04:22:45 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='22'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:22:46 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='24'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Welcome Text is displaying in Login Page</div>
+			<span class='node-time'>Jul 22, 2021 04:22:51 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='26'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verify Page title is displayed in Login Page</div>
+			<span class='node-time'>Jul 22, 2021 04:23:01 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='28'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:23:01 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>DashboardScreen</span>
+						<span class='test-time'>Jul 22, 2021 04:23:06 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 22, 2021 04:23:06 PM</span>
+	<span class='label end-time'>Jul 22, 2021 04:23:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+785ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:23:59 PM</td>
+				<td class='step-details'>
+						Verifying application DashBoard screen functionality
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>DashboardScreen</span>
+						<span class='test-time'>Jul 22, 2021 04:23:06 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 22, 2021 04:23:06 PM</span>
+	<span class='label end-time'>Jul 22, 2021 04:23:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 52s+783ms</span>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1  pass' status='pass' test-id='36'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying application DashBoard screen functionality</div>
+			<span class='node-time'>Jul 22, 2021 04:23:06 PM</span>
+			&middot; <span class='node-duration'>0h 0m 52s+783ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='38'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter Valid Email in Login Page</div>
+			<span class='node-time'>Jul 22, 2021 04:23:06 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='40'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter Valid Password in Login Page</div>
+			<span class='node-time'>Jul 22, 2021 04:23:14 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='42'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on an Login button in Login Page</div>
+			<span class='node-time'>Jul 22, 2021 04:23:18 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='44'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:23:28 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='46'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I entered into Home Page</div>
+			<span class='node-time'>Jul 22, 2021 04:23:33 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='48'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:23:33 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='50'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Marine Tile</div>
+			<span class='node-time'>Jul 22, 2021 04:23:38 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='52'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:23:54 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='54'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait until Landing screen is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:23:59 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+</ul>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='59'>
+					<div class='test-heading'>
+						<span class='test-name'>Settings</span>
+						<span class='test-time'>Jul 22, 2021 04:23:59 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 22, 2021 04:23:59 PM</span>
+	<span class='label end-time'>Jul 22, 2021 04:29:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 17s+866ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:24:11 PM</td>
+				<td class='step-details'>
+						Verifying UI for Device Management screen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:24:21 PM</td>
+				<td class='step-details'>
+						Verifying the device management Edit name UI
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:24:42 PM</td>
+				<td class='step-details'>
+						Verify device management Edit name functionality-invalid name
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:24:52 PM</td>
+				<td class='step-details'>
+						Verify device management edit name functionality-blank name
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:25:10 PM</td>
+				<td class='step-details'>
+						Verify device management edit name functionality-valid name
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:25:32 PM</td>
+				<td class='step-details'>
+						Verifying application Device Management Set Master Pin UI
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:25:41 PM</td>
+				<td class='step-details'>
+						Master Pin Password blank field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:25:45 PM</td>
+				<td class='step-details'>
+						Master Pin Password with Wrong password
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:25:47 PM</td>
+				<td class='step-details'>
+						Master Pin Password with Correct password
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:25:58 PM</td>
+				<td class='step-details'>
+						Set Master PIN functionality
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:26:14 PM</td>
+				<td class='step-details'>
+						Verifying the guest pin list UI
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:27:41 PM</td>
+				<td class='step-details'>
+						Verifying the guest pin list functionality
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:28:04 PM</td>
+				<td class='step-details'>
+						Verifying the cooler setting UI implementation
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:28:19 PM</td>
+				<td class='step-details'>
+						Verifying the app setting UI
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:28:35 PM</td>
+				<td class='step-details'>
+						Verify Version Functionality
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:28:56 PM</td>
+				<td class='step-details'>
+						Verify profile setting UI
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:29:08 PM</td>
+				<td class='step-details'>
+						Verifying application Settings screen-App Settings screen
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>4:29:09 PM</td>
+				<td class='step-details'>
+						Verify Temperature Functionality
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:29:17 PM</td>
+				<td class='step-details'>
+						Verify German Language Functionality
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:29:17 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.dometic.SDB.qa.util.Baseclass.asserttextAccessibility(Baseclass.java:87)
+	at com.dometic.SDB.stepdefinition.Settings.iVerifyOnLanguageTextUpdatedWithGermanTranslation(Settings.java:102)
+	at ✽.I verify on Language text updated with German translation(src/test/java/com/dometic/SDB/features/TC07_Settings.feature:276)
+</textarea>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='60'>
+					<div class='test-heading'>
+						<span class='test-name'>Settings</span>
+						<span class='test-time'>Jul 22, 2021 04:23:59 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 22, 2021 04:23:59 PM</span>
+	<span class='label end-time'>Jul 22, 2021 04:29:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 17s+131ms</span>
+</div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1  pass' status='pass' test-id='62'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying UI for Device Management screen</div>
+			<span class='node-time'>Jul 22, 2021 04:23:59 PM</span>
+			&middot; <span class='node-duration'>0h 0m 12s+40ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='64'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:23:59 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='66'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Device Management</div>
+			<span class='node-time'>Jul 22, 2021 04:24:01 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='68'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on SDB</div>
+			<span class='node-time'>Jul 22, 2021 04:24:03 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='70'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the Device Management Header</div>
+			<span class='node-time'>Jul 22, 2021 04:24:06 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='72'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify back button in Device Management screen</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='74'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify device name</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='76'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Product information text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='78'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Name</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='80'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify given device name text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='82'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Edit text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='84'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the edit navigation button</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='86'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify PIN CODES text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='88'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Master pin text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='90'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Master Pin navigation button is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:24:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='92'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Guest PIN list text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='94'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Guest PIN list navigation button is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:24:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='96'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the Advanced text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='98'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Cooler settings text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='100'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify cooler settings navigation button is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:24:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='102'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Check updates text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='104'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Check updates navigation button is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:24:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='106'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Scroll up the page</div>
+			<span class='node-time'>Jul 22, 2021 04:24:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='108'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Unregister,Delete,Off board text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:11 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='110'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Unregister,Delete,Off board navigation button</div>
+			<span class='node-time'>Jul 22, 2021 04:24:11 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='114'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying the device management Edit name UI</div>
+			<span class='node-time'>Jul 22, 2021 04:24:11 PM</span>
+			&middot; <span class='node-duration'>0h 0m 4s+358ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='116'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the edit card tile name</div>
+			<span class='node-time'>Jul 22, 2021 04:24:11 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='118'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on vessel edit card button</div>
+			<span class='node-time'>Jul 22, 2021 04:24:13 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='120'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the vessel name card title</div>
+			<span class='node-time'>Jul 22, 2021 04:24:15 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='122'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the save button text</div>
+			<span class='node-time'>Jul 22, 2021 04:24:15 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='124'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on close button in edit screen</div>
+			<span class='node-time'>Jul 22, 2021 04:24:15 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='126'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:24:16 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='130'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verify device management Edit name functionality-invalid name</div>
+			<span class='node-time'>Jul 22, 2021 04:24:21 PM</span>
+			&middot; <span class='node-duration'>0h 0m 21s+681ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='132'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on vessel edit card button</div>
+			<span class='node-time'>Jul 22, 2021 04:24:21 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='134'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter an invalid name in edit name field</div>
+			<span class='node-time'>Jul 22, 2021 04:24:23 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='136'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on save button in edit screen</div>
+			<span class='node-time'>Jul 22, 2021 04:24:25 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='138'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:24:26 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='140'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify if the edited invalid name is displayed under name field</div>
+			<span class='node-time'>Jul 22, 2021 04:24:31 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='142'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management main screen</div>
+			<span class='node-time'>Jul 22, 2021 04:24:32 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='144'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:24:32 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='146'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify if the edited name is displayed under device management device selection page</div>
+			<span class='node-time'>Jul 22, 2021 04:24:37 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='148'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management device selection page</div>
+			<span class='node-time'>Jul 22, 2021 04:24:37 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='150'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:24:37 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='152'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Home in Settings screen</div>
+			<span class='node-time'>Jul 22, 2021 04:24:40 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='154'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify if the edited name is displayed in the home page tile</div>
+			<span class='node-time'>Jul 22, 2021 04:24:42 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='158'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verify device management edit name functionality-blank name</div>
+			<span class='node-time'>Jul 22, 2021 04:24:42 PM</span>
+			&middot; <span class='node-duration'>0h 0m 8s+887ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='160'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:24:42 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='162'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Device Management</div>
+			<span class='node-time'>Jul 22, 2021 04:24:44 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='164'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on SDB</div>
+			<span class='node-time'>Jul 22, 2021 04:24:47 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='166'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on vessel edit card button</div>
+			<span class='node-time'>Jul 22, 2021 04:24:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='168'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify if the edited name is displayed in the home page tile</div>
+			<span class='node-time'>Jul 22, 2021 04:24:51 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='170'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I assert for the vessel name should not be empty string</div>
+			<span class='node-time'>Jul 22, 2021 04:24:51 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='174'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verify device management edit name functionality-valid name</div>
+			<span class='node-time'>Jul 22, 2021 04:24:52 PM</span>
+			&middot; <span class='node-duration'>0h 0m 18s+513ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='176'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter an valid name in edit name field</div>
+			<span class='node-time'>Jul 22, 2021 04:24:52 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='178'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on save button in edit screen</div>
+			<span class='node-time'>Jul 22, 2021 04:24:54 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+1ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='180'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:24:55 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='182'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify if the edited name is displayed under name field</div>
+			<span class='node-time'>Jul 22, 2021 04:25:00 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='184'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management main screen</div>
+			<span class='node-time'>Jul 22, 2021 04:25:00 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='186'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:25:00 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='188'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify if the edited name is displayed under device management device selection page</div>
+			<span class='node-time'>Jul 22, 2021 04:25:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='190'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management device selection page</div>
+			<span class='node-time'>Jul 22, 2021 04:25:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='192'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:25:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='194'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify if the edited name is displayed in the home page tile</div>
+			<span class='node-time'>Jul 22, 2021 04:25:10 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='198'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying application Device Management Set Master Pin UI</div>
+			<span class='node-time'>Jul 22, 2021 04:25:10 PM</span>
+			&middot; <span class='node-duration'>0h 0m 21s+229ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='200'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:25:10 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='202'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Device Management</div>
+			<span class='node-time'>Jul 22, 2021 04:25:13 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='204'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on SDB</div>
+			<span class='node-time'>Jul 22, 2021 04:25:15 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='206'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the Master PIN option</div>
+			<span class='node-time'>Jul 22, 2021 04:25:17 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='208'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verified the Master PIN Password popup</div>
+			<span class='node-time'>Jul 22, 2021 04:25:17 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='210'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the correct password</div>
+			<span class='node-time'>Jul 22, 2021 04:25:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='212'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the alert popup Enter button</div>
+			<span class='node-time'>Jul 22, 2021 04:25:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='214'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the Master PIn Header</div>
+			<span class='node-time'>Jul 22, 2021 04:25:20 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='216'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verify the Set Master Pin text</div>
+			<span class='node-time'>Jul 22, 2021 04:25:21 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='218'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verify the text Pin Must be 4 digit</div>
+			<span class='node-time'>Jul 22, 2021 04:25:21 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='220'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I have tap on the close button in master Pin Main screen</div>
+			<span class='node-time'>Jul 22, 2021 04:25:21 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='222'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:25:22 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='224'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management main screen</div>
+			<span class='node-time'>Jul 22, 2021 04:25:27 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='226'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:25:27 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='228'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management device selection page</div>
+			<span class='node-time'>Jul 22, 2021 04:25:32 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='232'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Master Pin Password blank field</div>
+			<span class='node-time'>Jul 22, 2021 04:25:32 PM</span>
+			&middot; <span class='node-duration'>0h 0m 8s+999ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='234'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:25:32 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='236'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Device Management</div>
+			<span class='node-time'>Jul 22, 2021 04:25:35 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='238'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on SDB</div>
+			<span class='node-time'>Jul 22, 2021 04:25:37 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='240'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the Master PIN option</div>
+			<span class='node-time'>Jul 22, 2021 04:25:39 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='242'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the alert popup Enter button</div>
+			<span class='node-time'>Jul 22, 2021 04:25:39 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='244'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on Alert Ok button</div>
+			<span class='node-time'>Jul 22, 2021 04:25:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='248'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Master Pin Password with Wrong password</div>
+			<span class='node-time'>Jul 22, 2021 04:25:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 2s+447ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='250'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the Master PIN option</div>
+			<span class='node-time'>Jul 22, 2021 04:25:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='252'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the wrong password in the Password field</div>
+			<span class='node-time'>Jul 22, 2021 04:25:42 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='254'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the alert popup Enter button</div>
+			<span class='node-time'>Jul 22, 2021 04:25:43 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='256'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on Alert Ok button</div>
+			<span class='node-time'>Jul 22, 2021 04:25:44 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='260'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Master Pin Password with Correct password</div>
+			<span class='node-time'>Jul 22, 2021 04:25:45 PM</span>
+			&middot; <span class='node-duration'>0h 0m 1s+632ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='262'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the Master PIN option</div>
+			<span class='node-time'>Jul 22, 2021 04:25:45 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='264'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the correct password</div>
+			<span class='node-time'>Jul 22, 2021 04:25:45 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='266'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the alert popup Enter button</div>
+			<span class='node-time'>Jul 22, 2021 04:25:46 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='270'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Set Master PIN functionality</div>
+			<span class='node-time'>Jul 22, 2021 04:25:47 PM</span>
+			&middot; <span class='node-duration'>0h 0m 5s+978ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='272'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on the set master pin Input Field</div>
+			<span class='node-time'>Jul 22, 2021 04:25:47 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='274'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Enter the PIN as 4 Digit</div>
+			<span class='node-time'>Jul 22, 2021 04:25:48 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='276'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verify the Text Message for Re-Enter PIN</div>
+			<span class='node-time'>Jul 22, 2021 04:25:52 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='278'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Re-Enter the PIN as 4 Digit</div>
+			<span class='node-time'>Jul 22, 2021 04:25:53 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='280'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:25:53 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='284'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying the guest pin list UI</div>
+			<span class='node-time'>Jul 22, 2021 04:25:58 PM</span>
+			&middot; <span class='node-duration'>0h 0m 16s+99ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='286'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on guest pin list right icon button</div>
+			<span class='node-time'>Jul 22, 2021 04:25:58 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='288'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the back button for guest pin list page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:00 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='290'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the guest pin header text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:00 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='292'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the edit header text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:00 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='294'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the edit text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:00 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='296'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the close symbol on edit guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:02 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='298'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the add button symbol on edit guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:02 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='300'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the add button symbol on edit guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:02 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='302'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the edit pin header text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:04 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='304'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the close symbol on edit pin page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:04 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='306'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the pin name text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:04 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='308'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the pin code text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='310'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the Mail box text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='312'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the Mail box toggle button</div>
+			<span class='node-time'>Jul 22, 2021 04:26:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='314'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the refrigerated compartment text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='316'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the refrigerated compartment toggle button</div>
+			<span class='node-time'>Jul 22, 2021 04:26:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='318'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the close button symbol on edit pin page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='320'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the close button symbol on guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='322'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:26:09 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='324'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Back Button in guest List Page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:14 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='328'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying the guest pin list functionality</div>
+			<span class='node-time'>Jul 22, 2021 04:26:14 PM</span>
+			&middot; <span class='node-duration'>0h 1m 22s+312ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='330'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on guest pin list right icon button</div>
+			<span class='node-time'>Jul 22, 2021 04:26:14 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='332'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the edit text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:17 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+1ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='334'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the add button symbol on edit guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='336'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:26:21 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='338'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the name for pin name</div>
+			<span class='node-time'>Jul 22, 2021 04:26:26 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='340'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the pincode</div>
+			<span class='node-time'>Jul 22, 2021 04:26:30 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='342'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the save button for edit pin</div>
+			<span class='node-time'>Jul 22, 2021 04:26:33 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='344'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the edit text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:35 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='346'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the add button symbol on edit guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:37 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='348'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the name for pin name</div>
+			<span class='node-time'>Jul 22, 2021 04:26:40 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='350'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the pincode</div>
+			<span class='node-time'>Jul 22, 2021 04:26:43 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='352'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the save button for edit pin</div>
+			<span class='node-time'>Jul 22, 2021 04:26:47 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='354'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the edit text</div>
+			<span class='node-time'>Jul 22, 2021 04:26:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='356'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the add button symbol on edit guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:26:51 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='358'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the combination for name field</div>
+			<span class='node-time'>Jul 22, 2021 04:26:53 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='360'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the combination for pincode</div>
+			<span class='node-time'>Jul 22, 2021 04:26:57 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='362'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the save button for edit pin</div>
+			<span class='node-time'>Jul 22, 2021 04:27:00 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='364'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the edit text</div>
+			<span class='node-time'>Jul 22, 2021 04:27:02 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='366'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the add button symbol on edit guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:27:04 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='368'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the long length for name field</div>
+			<span class='node-time'>Jul 22, 2021 04:27:06 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='370'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the long length for pincode</div>
+			<span class='node-time'>Jul 22, 2021 04:27:10 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='372'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the save button for edit pin</div>
+			<span class='node-time'>Jul 22, 2021 04:27:14 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='374'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the edit text</div>
+			<span class='node-time'>Jul 22, 2021 04:27:16 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='376'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the add button symbol on edit guest list page</div>
+			<span class='node-time'>Jul 22, 2021 04:27:18 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='378'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the short for name field</div>
+			<span class='node-time'>Jul 22, 2021 04:27:20 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='380'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I enter the short for pincode</div>
+			<span class='node-time'>Jul 22, 2021 04:27:23 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='382'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the save button for edit pin</div>
+			<span class='node-time'>Jul 22, 2021 04:27:27 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='384'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the guest list right icon</div>
+			<span class='node-time'>Jul 22, 2021 04:27:29 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='386'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management main screen</div>
+			<span class='node-time'>Jul 22, 2021 04:27:31 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='388'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:27:31 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='390'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management device selection page</div>
+			<span class='node-time'>Jul 22, 2021 04:27:36 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='392'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:27:36 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='396'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying the cooler setting UI implementation</div>
+			<span class='node-time'>Jul 22, 2021 04:27:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 18s+140ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='398'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:27:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='400'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Device Management</div>
+			<span class='node-time'>Jul 22, 2021 04:27:43 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='402'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on SDB</div>
+			<span class='node-time'>Jul 22, 2021 04:27:46 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='404'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verify the main cooler setting text</div>
+			<span class='node-time'>Jul 22, 2021 04:27:48 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='406'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the save button for edit pin</div>
+			<span class='node-time'>Jul 22, 2021 04:27:48 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='408'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the header text for cooler settings</div>
+			<span class='node-time'>Jul 22, 2021 04:27:48 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='410'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the cooler status card title</div>
+			<span class='node-time'>Jul 22, 2021 04:27:48 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='412'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the cooler status toggle button</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='414'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the scheduler card title</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='416'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the scheduler card toggle button</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='418'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the scheduled at card title</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='420'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the scheduled at right icon</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='422'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the temperature card title</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='424'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the temperature card title</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='426'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the back button on cooler setting screen</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='428'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the back button cooler settings</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='430'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:27:49 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='432'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management main screen</div>
+			<span class='node-time'>Jul 22, 2021 04:27:54 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='434'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:27:54 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='436'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on back button on device management device selection page</div>
+			<span class='node-time'>Jul 22, 2021 04:27:59 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='438'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:27:59 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='442'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying the app setting UI</div>
+			<span class='node-time'>Jul 22, 2021 04:28:04 PM</span>
+			&middot; <span class='node-duration'>0h 0m 14s+858ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='444'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:28:04 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='446'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the app setting text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:07 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='448'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Version is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:28:09 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='450'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the app setting card title</div>
+			<span class='node-time'>Jul 22, 2021 04:28:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='452'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the language name card title</div>
+			<span class='node-time'>Jul 22, 2021 04:28:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='454'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the right icon for for languages</div>
+			<span class='node-time'>Jul 22, 2021 04:28:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='456'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the right icon for for languages</div>
+			<span class='node-time'>Jul 22, 2021 04:28:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='460'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verify Version Functionality</div>
+			<span class='node-time'>Jul 22, 2021 04:28:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 10s+619ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='462'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Version is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:28:19 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='464'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Back Button</div>
+			<span class='node-time'>Jul 22, 2021 04:28:30 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='466'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:28:30 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='470'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verify profile setting UI</div>
+			<span class='node-time'>Jul 22, 2021 04:28:35 PM</span>
+			&middot; <span class='node-duration'>0h 0m 21s+234ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='472'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:28:35 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='474'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify View/Edit Account text is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:28:37 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='476'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on App view and edit account</div>
+			<span class='node-time'>Jul 22, 2021 04:28:37 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='478'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on profile setting right icon</div>
+			<span class='node-time'>Jul 22, 2021 04:28:39 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='480'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the personal information text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='482'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the name text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='484'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the email text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='486'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the mobile text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='488'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the address text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='490'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Scroll up the page</div>
+			<span class='node-time'>Jul 22, 2021 04:28:41 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='492'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Edit profile text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:44 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='494'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Edit profile right icon text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:44 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='496'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Security text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:44 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='498'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Scroll up the page</div>
+			<span class='node-time'>Jul 22, 2021 04:28:44 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='500'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:28:46 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='502'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Security text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:56 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='504'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify the renew text</div>
+			<span class='node-time'>Jul 22, 2021 04:28:56 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='506'>
+		<div class='collapsible-header'>
+			<div class='node-name'>verify the right icon button</div>
+			<span class='node-time'>Jul 22, 2021 04:28:56 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='508'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Back Button in profile screen</div>
+			<span class='node-time'>Jul 22, 2021 04:28:56 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='510'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Back Button in account settings screen</div>
+			<span class='node-time'>Jul 22, 2021 04:28:56 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='514'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verifying application Settings screen-App Settings screen</div>
+			<span class='node-time'>Jul 22, 2021 04:28:56 PM</span>
+			&middot; <span class='node-duration'>0h 0m 11s+427ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='516'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:28:56 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='518'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on hamburger menu in landing screen</div>
+			<span class='node-time'>Jul 22, 2021 04:29:01 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='520'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I tap on the app setting text</div>
+			<span class='node-time'>Jul 22, 2021 04:29:03 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='522'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Language in App Settings page</div>
+			<span class='node-time'>Jul 22, 2021 04:29:05 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='524'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Back Button displayed in Language Page</div>
+			<span class='node-time'>Jul 22, 2021 04:29:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='526'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Language Header Text in Language Page</div>
+			<span class='node-time'>Jul 22, 2021 04:29:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='528'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verify Language English Text in Language Page</div>
+			<span class='node-time'>Jul 22, 2021 04:29:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='530'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verify Language German Text in Language Page</div>
+			<span class='node-time'>Jul 22, 2021 04:29:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='532'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Back Button in Language Screen</div>
+			<span class='node-time'>Jul 22, 2021 04:29:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  pass' status='pass' test-id='536'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verify Temperature Functionality</div>
+			<span class='node-time'>Jul 22, 2021 04:29:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+855ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='538'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Verify Temperature unit text is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:29:08 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='540'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I update Temperature Unit in Settings</div>
+			<span class='node-time'>Jul 22, 2021 04:29:09 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+	<li class='node level-1  fail' status='fail' test-id='544'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Verify German Language Functionality</div>
+			<span class='node-time'>Jul 22, 2021 04:29:09 PM</span>
+			&middot; <span class='node-duration'>0h 0m 7s+440ms</span>
+			<span class='test-status right fail'>fail</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='fail'>
+							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+							<td class='timestamp'>4:29:18 PM</td>
+							<td class='step-details'>
+									Failure Screenshot
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>4:29:18 PM</td>
+							<td class='step-details'>
+									Screenshot
+								<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\40012176.LNTIES\Dometic_Interact_Automation\target\cucumber-reports\advanced-reports\Extentreport_MTC\screenshot7857519976426571894.png' src='C:\Users\40012176.LNTIES\Dometic_Interact_Automation\target\cucumber-reports\advanced-reports\Extentreport_MTC\screenshot7857519976426571894.png'>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-2 leaf pass' status='pass' test-id='546'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Wait short period for Page to Load</div>
+			<span class='node-time'>Jul 22, 2021 04:29:09 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='548'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify Languages text is displayed</div>
+			<span class='node-time'>Jul 22, 2021 04:29:14 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='550'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I Tap on Language in App Settings page</div>
+			<span class='node-time'>Jul 22, 2021 04:29:14 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='552'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I update on the German language</div>
+			<span class='node-time'>Jul 22, 2021 04:29:16 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+	<li class='node level-2 leaf pass' status='pass' test-id='554'>
+		<div class='collapsible-header'>
+			<div class='node-name'>I verify on Language text updated with German translation</div>
+			<span class='node-time'>Jul 22, 2021 04:29:16 PM</span>
+			&middot; <span class='node-duration'>0h 0m 0s+0ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+	</li>
+		</ul>
+	</li>
+</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 22, 2021 04:23:59 PM</td>
+										<td class='linked' test-id='59'>Settings</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.dometic.SDB.qa.util.Baseclass.asserttextAccessibility(Baseclass.java:87)
+	at com.dometic.SDB.stepdefinition.Settings.iVerifyOnLanguageTextUpdatedWithGermanTranslation(Settings.java:102)
+	at ✽.I verify on Language text updated with German translation(src/test/java/com/dometic/SDB/features/TC07_Settings.feature:276)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>8</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>226</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jul 22, 2021 04:21:39 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jul 22, 2021 04:29:19 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 7m 40s+23ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 8,
+				passParent: 6,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 2,
+				childCount: 226,
+				passChild: 226,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "LaunchScreen":63.572,"LaunchScreen":58.439,"SplashScreen":21.526,"SplashScreen":16.524,"DashboardScreen":52.785,"DashboardScreen":52.783,"Settings":317.866,"Settings":317.131
+			};
+		</script>
+	
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+			
+            
+        $(document).ready(function() {
+
+        });
+      
+        
+		</script>
+	</body>
+</html>

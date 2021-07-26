@@ -3,6 +3,7 @@ package com.dometic.MTC.stepdefinition;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.dometic.MTC.qa.Pages.Constant_Batteries_MTC;
 import com.dometic.MTC.qa.Pages.Constant_BilgePump_MTC;
+import com.dometic.MTC.qa.Pages.Constant_Security;
 import com.dometic.MTC.qa.Pages.Constant_Tracking_MTC;
 import com.dometic.MTC.qa.util.Baseclass;
 import cucumber.api.java.en.Then;
@@ -19,8 +20,9 @@ import java.util.List;
 
 public class TrackingMTC extends Baseclass {
     public static List<String> radiusFromCenter, alertLatency;
-    public static Double radiuscenterYardValue,radiuscenterYardUpdatedValue,radiuscenterValue,radiuscenterUpdatedValue;
-
+    public static Double radiuscenterYardValue, radiuscenterYardUpdatedValue, radiuscenterValue, radiuscenterUpdatedValue;
+    public static int tracking_current_carousel_value_number, iteration_count;
+    public static String tracking_current_carousel_value;
     @Then("I Tap on Tracking tile")
     public void iTapOnTrackingTile() throws InterruptedException, ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Tracking tile");
@@ -105,9 +107,10 @@ public class TrackingMTC extends Baseclass {
     }
 
     @Then("I Verify Alert Latency expandIcon is displayed")
-    public void iVerifyAlertLatencyExpandIconIsDisplayed() throws ClassNotFoundException {
+    public void iVerifyAlertLatencyExpandIconIsDisplayed() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Verify Alert Latency expandIcon is displayed");
         Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Tracking_MTC.mtc_Tracking_Alert_Latency_expandIcon_Access_ID));
+        Thread.sleep(2000);
     }
 
     @Then("I Tap on Radius from center")
@@ -165,7 +168,7 @@ public class TrackingMTC extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll up the screen in Alert Latency");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1590)).release().perform();
+                .moveTo(PointOption.point(530, 1600)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -212,10 +215,9 @@ public class TrackingMTC extends Baseclass {
         double updatedValue = radiuscenterValue * 1.09;
         System.out.println(updatedValue);
         System.out.println(radiuscenterUpdatedValue);
-        if(updatedValue==radiuscenterUpdatedValue){
+        if (updatedValue == radiuscenterUpdatedValue) {
             System.out.println("Text comparison is Successful");
-        }
-        else {
+        } else {
             System.out.println("Both Actual and Expected text is mismatching");
         }
     }
@@ -233,11 +235,70 @@ public class TrackingMTC extends Baseclass {
         double updatedValue = radiuscenterYardValue * 0.91;
         System.out.println(updatedValue);
         System.out.println(radiuscenterYardUpdatedValue);
-        if(updatedValue==radiuscenterYardUpdatedValue){
+        if (updatedValue == radiuscenterYardUpdatedValue) {
             System.out.println("Text comparison is Successful");
-        }
-        else {
+        } else {
             System.out.println("Both Actual and Expected text is mismatching");
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Radius from center")
+    public void iScrollToTheMaximumCarouselValueInRadiusFromCenter() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum carousel value in Radius from center");
+        TouchAction action = new TouchAction(driver);
+        tracking_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tracking_MTC.mtc_Tracking_Radius_cardSubText_Access_ID).getText();
+        tracking_current_carousel_value_number = Integer.parseInt(tracking_current_carousel_value);
+        iteration_count =  ((1000 - tracking_current_carousel_value_number ))/10;
+//        System.out.println("I scroll to the maximum carousel value in Radius from center"+iteration_count);
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1450)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Radius from center")
+    public void iScrollToTheMinimumCarouselValueInRadiusFromCenter() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum carousel value in Radius from center");
+        TouchAction action = new TouchAction(driver);
+        tracking_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tracking_MTC.mtc_Tracking_Radius_cardSubText_Access_ID).getText();
+        tracking_current_carousel_value_number = Integer.parseInt(tracking_current_carousel_value);
+        iteration_count =  (tracking_current_carousel_value_number- 1 );
+//        System.out.println("I scroll to the minimum carousel value in Radius from center"+iteration_count);
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1575)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the maximum carousel value in Alert Latency")
+    public void iScrollToTheMaximumCarouselValueInAlertLatency() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the maximum carousel value in Alert Latency");
+        TouchAction action = new TouchAction(driver);
+        tracking_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tracking_MTC.mtc_Tracking_Alert_Latency_cardSubText_Access_ID).getText();
+        tracking_current_carousel_value_number = Integer.parseInt(tracking_current_carousel_value);
+        iteration_count =  (300 - tracking_current_carousel_value_number );
+//        System.out.println("I scroll to the maximum carousel value in Alert Latency"+iteration_count);
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1600)).release().perform();
+            Thread.sleep(1000);
+        }
+    }
+
+    @Then("I scroll to the minimum carousel value in Alert Latency")
+    public void iScrollToTheMinimumCarouselValueInAlertLatency() throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum carousel value in Alert Latency");
+        TouchAction action = new TouchAction(driver);
+        tracking_current_carousel_value = driver.findElementByAccessibilityId(Constant_Tracking_MTC.mtc_Tracking_Alert_Latency_cardSubText_Access_ID).getText();
+        tracking_current_carousel_value_number = Integer.parseInt(tracking_current_carousel_value);
+        iteration_count =  ((tracking_current_carousel_value_number - 1 ));
+//        System.out.println("I scroll to the minimum carousel value in Alert Latency"+iteration_count);
+        for (int i = 0; i < iteration_count ; i++) {
+            action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1725)).release().perform();
+            Thread.sleep(1000);
         }
     }
 }

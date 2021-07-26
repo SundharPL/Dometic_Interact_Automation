@@ -3,6 +3,7 @@ package com.dometic.MTC.stepdefinition;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.dometic.MTC.qa.Pages.Constant_Batteries_MTC;
 import com.dometic.MTC.qa.Pages.Constant_BilgePump_MTC;
+import com.dometic.MTC.qa.Pages.Constant_Tank_MTC;
 import com.dometic.MTC.qa.util.Baseclass;
 import cucumber.api.java.en.Then;
 import io.appium.java_client.TouchAction;
@@ -22,8 +23,9 @@ public class BilgePump extends Baseclass {
     public static int bilge_pump_current_carousel_value_number, iteration_count;
 
     @Then("I Tap on Bilge Pump tile on landing screen")
-    public void iTapOnBilgePumpTileOnLandingScreen() {
+    public void iTapOnBilgePumpTileOnLandingScreen() throws InterruptedException {
         Taponbutton(Constant_BilgePump_MTC.mtc_Bilge_Pump_tile_xpath);
+        Thread.sleep(2000);
     }
 
     @Then("I verify Bilge Pump header text")
@@ -134,7 +136,7 @@ public class BilgePump extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Cycle Hour");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(500, 750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(500, 600)).release().perform();
+                .moveTo(PointOption.point(500, 625)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -170,7 +172,7 @@ public class BilgePump extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Daily Cycle");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(530, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 750)).release().perform();
+                .moveTo(PointOption.point(530, 775)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -206,7 +208,7 @@ public class BilgePump extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Max Daily Cycle");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(530, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 900)).release().perform();
+                .moveTo(PointOption.point(530, 925)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -279,7 +281,7 @@ public class BilgePump extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Warnings-Max Daily Cycle");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(530, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1375)).release().perform();
+                .moveTo(PointOption.point(530, 1450)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -347,8 +349,7 @@ public class BilgePump extends Baseclass {
 
     @Then("I Tap on Bilge Pump Alert toggle if it's already in OFF state")
     public void iTapOnBilgePumpAlertToggleIfItSAlreadyInOFFState() throws InterruptedException {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath));
-        if (elements.size() != 0) {
+        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath)).getText().equalsIgnoreCase("OFF")) {
             Taponbutton(Constant_BilgePump_MTC.mtc_Bilge_Pump_Alerts_toggle_xpath);
             Thread.sleep(10000);
         }
@@ -356,8 +357,7 @@ public class BilgePump extends Baseclass {
 
     @Then("I Tap on Bilge Pump Warnings toggle if it's already in OFF state")
     public void iTapOnBilgePumpWarningsToggleIfItSAlreadyInOFFState() throws InterruptedException {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath));
-        if (elements.size() != 0) {
+        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath)).getText().equalsIgnoreCase("OFF")) {
             Taponbutton(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_toggle_xpath);
             Thread.sleep(10000);
         }
@@ -372,7 +372,7 @@ public class BilgePump extends Baseclass {
         iteration_count = ((60 - bilge_pump_current_carousel_value_number));
         for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(500, 750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(500, 600)).release().perform();
+                    .moveTo(PointOption.point(500, 625)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -383,9 +383,10 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Cycles_Per_Hour_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((bilge_pump_current_carousel_value_number - 1));
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(500, 600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+        iteration_count = ((bilge_pump_current_carousel_value_number - 1));
+        System.out.println(iteration_count);
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(500, 625)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(500, 750)).release().perform();
             System.out.println("Scrolling up the Page");
             Thread.sleep(1000);
@@ -398,10 +399,10 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Daily_Cycles_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((200 - bilge_pump_current_carousel_value_number ));
-        for (int i = 0; i < iteration_count ; i++) {
+        iteration_count = ((200 - bilge_pump_current_carousel_value_number));
+        for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(535, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(535, 750)).release().perform();
+                    .moveTo(PointOption.point(535, 775)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -412,9 +413,9 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Daily_Cycles_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((bilge_pump_current_carousel_value_number - 1 ));
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(540, 750)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+        iteration_count = ((bilge_pump_current_carousel_value_number - 1));
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(540, 775)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(540, 900)).release().perform();
             Thread.sleep(1000);
         }
@@ -426,10 +427,10 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Continuous_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((60 - bilge_pump_current_carousel_value_number ));
-        for (int i = 0; i < iteration_count ; i++) {
+        iteration_count = ((60 - bilge_pump_current_carousel_value_number));
+        for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(530, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 900)).release().perform();
+                    .moveTo(PointOption.point(530, 925)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -440,9 +441,9 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Continuous_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((bilge_pump_current_carousel_value_number - 0 ));
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(530, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+        iteration_count = ((bilge_pump_current_carousel_value_number - 0));
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 925)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(530, 1050)).release().perform();
             Thread.sleep(1000);
         }
@@ -454,10 +455,11 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((60 - bilge_pump_current_carousel_value_number ));
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(530, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1325)).release().perform();
+        iteration_count = ((60 - bilge_pump_current_carousel_value_number));
+        System.out.println(iteration_count);
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 1425)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1300)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -466,12 +468,13 @@ public class BilgePump extends Baseclass {
     public void iScrollToTheMinimumCarouselValueInWarningsMaxCycleHour() throws InterruptedException, ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll to the minimum value in Warnings-Max Cycle Hour");
         TouchAction action = new TouchAction(driver);
-        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Max_Daily_Cycles_Applied_Value_access_id).getText();
+        bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Cycle_Hour_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((bilge_pump_current_carousel_value_number - 1 ));
-        for (int i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(530, 1325)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1450)).release().perform();
+        iteration_count = ((bilge_pump_current_carousel_value_number - 1));
+        System.out.println(iteration_count);
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 1300)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(530, 1425)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -482,11 +485,10 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Daily_Cycles_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((200 - bilge_pump_current_carousel_value_number ));
-        for (int i = 0; i < iteration_count ; i++) {
+        iteration_count = ((200 - bilge_pump_current_carousel_value_number));
+        for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(530, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(530, 1375)).release().perform();
-            System.out.println("Scrolling down the Page");
+                    .moveTo(PointOption.point(530, 1450)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -497,9 +499,9 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Max_Daily_Cycles_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((bilge_pump_current_carousel_value_number - 1 ));
-        for (int i = 0; i <iteration_count ; i++) {
-            action.press(PointOption.point(530, 1375)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+        iteration_count = ((bilge_pump_current_carousel_value_number - 1));
+        for (int i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(530, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(530, 1575)).release().perform();
             System.out.println("Scrolling down the Page");
             Thread.sleep(1000);
@@ -512,8 +514,8 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Continuous_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((60 - bilge_pump_current_carousel_value_number ));
-        for (int i = 0; i < iteration_count ; i++) {
+        iteration_count = ((60 - bilge_pump_current_carousel_value_number));
+        for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(530, 1600)).release().perform();
             System.out.println("Scrolling down the Page");
@@ -527,12 +529,37 @@ public class BilgePump extends Baseclass {
         TouchAction action = new TouchAction(driver);
         bilge_pump_current_carousel_value = driver.findElementByAccessibilityId(Constant_BilgePump_MTC.mtc_Bilge_Pump_Warnings_Continuous_Applied_Value_access_id).getText();
         bilge_pump_current_carousel_value_number = Integer.parseInt(bilge_pump_current_carousel_value);
-        iteration_count =  ((bilge_pump_current_carousel_value_number - 0 ));
-        for (int i = 0; i < iteration_count ; i++) {
+        iteration_count = ((bilge_pump_current_carousel_value_number - 0));
+        for (int i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(530, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(530, 1725)).release().perform();
             System.out.println("Scrolling up the Page");
             Thread.sleep(1000);
+        }
+    }
+
+    @Then("I Scroll the screen till the {int}nd instance")
+    public void iScrollTheScreenTillTheNdInstance(int arg0) throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the screen till the 2nd instance");
+        for (int i = 0; i < 1; i++) {
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(1000, 530)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(400, 530)).release().perform();
+            Thread.sleep(2000);
+            break;
+        }
+
+    }
+
+    @Then("I Scroll the screen till the {int}rd instance")
+    public void iScrollTheScreenTillTheRdInstance(int arg0) throws ClassNotFoundException, InterruptedException {
+        ScenarioDef.createNode(new GherkinKeyword("Then"), "I Scroll the screen till the 3rd instance");
+        for (int i = 0; i < 2; i++) {
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(1000, 530)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(400, 530)).release().perform();
+            Thread.sleep(2000);
+
         }
     }
 }
