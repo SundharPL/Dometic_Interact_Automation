@@ -44,7 +44,7 @@ public class Constant_Batteries_MTC {
     public static final String mtc_Batteries_WEEKText_xpath="//*[@text='WEEK']";
     public static final String mtc_Batteries_AlertsText_xpath="//*[@text='Alerts']";
     public static final String mtc_Batteries_Alerts_toggle_xpath="//*[@content-desc='com.dometicapp:id/batteryScreen-alertsBattery-switchComponent']";
-    public static final String mtc_Batteries_Alerts_Status_Text_xpath="(//*[@text='OFF'])[1]";
+    public static final String mtc_Batteries_Alerts_Status_Text_xpath="//*[contains(@text,'Alert')]//following::android.widget.TextView[1]";
     public static final String mtc_Batteries_Alerts_Status_On_Text_xpath="(//*[@text='ON'])[1]";
     public static final String mtc_Batteries_MONTHText_xpath="//*[@text='MONTH']";
     public static final String mtc_Batteries_Alerts_Battery_Voltage_BelowText_xpath="(//*[@text='Battery Voltage Below'])[1]";
@@ -52,7 +52,7 @@ public class Constant_Batteries_MTC {
     public static final String mtc_Batteries_Set_LatencyText_xpath="(//*[@text='Latency'])[1]";
     public static final String mtc_Batteries_WarningsText_xpath="//*[@text='Warnings']";
     public static final String mtc_Batteries_Warnings_toggle_xpath="//*[@content-desc='com.dometicapp:id/batteryScreen-warningBattery-switchComponent']";
-    public static final String mtc_Batteries_Warnings_Status_Text_xpath="(//*[@text='OFF'])[1]";
+    public static final String mtc_Batteries_Warnings_Status_Text_xpath="//*[contains(@text,'Warning')]//following::android.widget.TextView[1]";
     public static final String mtc_Batteries_Warnings_Status_On_Text_xpath="(//*[@text='ON'])[2]";
     public static final String mtc_Batteries_Warnings_Battery_Voltage_BelowText_xpath="(//*[@text='Battery Voltage Below'])[2]";
     public static final String mtc_Batteries_Warnings_Battery_Voltage_BelowText_Apply_xpath="//*[@text='Apply']";

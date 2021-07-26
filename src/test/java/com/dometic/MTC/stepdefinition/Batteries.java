@@ -19,9 +19,10 @@ import java.util.List;
 
 public class Batteries extends Baseclass {
     public static List<String> alertBatteryVoltageBelow, alertSetLatency, warningsBatteryVoltageBelow, warningsSetLatency;
-    public static String current_carousel_value ;
+    public static String current_carousel_value;
     public static Float current_carousel_value_number;
     public static Double iteration_count;
+
     @Then("I Tap on Batteries tile on landing screen")
     public void iTapOnBatteriesTileOnLandingScreen() throws InterruptedException {
         Taponbutton(Constant_Batteries_MTC.mtc_Batteries_xpath);
@@ -35,7 +36,9 @@ public class Batteries extends Baseclass {
 
     @Then("I verify Battery status")
     public void iVerifyBatteryStatus() {
-        Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Batteries_MTC.mtc_Batteries_Status_Access_ID));
+        if (driver.findElementsByAccessibilityId(Constant_Batteries_MTC.mtc_Batteries_Status_Access_ID).size() != 0) {
+            Assert.assertTrue(iselementdisplayedaccessabilityId(Constant_Batteries_MTC.mtc_Batteries_Status_Access_ID));
+        }
     }
 
     @Then("I verify Voltage Graph text")
@@ -81,11 +84,9 @@ public class Batteries extends Baseclass {
     @Then("I Tap on Alert toggle if it's already in OFF state")
     public void iTapOnAlertToggleIfItSAlreadyInOFFState() throws InterruptedException {
 //        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath)).getText().equalsIgnoreCase(Constant_Batteries_MTC.mtc_Climate_Tile_Power_toggle_Status)) {
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath));
-        if (elements.size() != 0) {
+        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Alerts_Status_Text_xpath)).getText().equalsIgnoreCase("OFF")) {
             Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Alerts_toggle_xpath);
             Thread.sleep(10000);
-
         }
     }
 
@@ -132,8 +133,7 @@ public class Batteries extends Baseclass {
     public void iTapOnWarningsToggleIfItSAlreadyInOFFState() throws InterruptedException {
 //        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath)).getText().equalsIgnoreCase(Constant_Batteries_MTC.mtc_Climate_Tile_Power_toggle_Status)) {
 //            System.out.println(driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath)).getText());
-        List<AndroidElement> elements = driver.findElements(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath));
-        if (elements.size() != 0) {
+        if (driver.findElement(By.xpath(Constant_Batteries_MTC.mtc_Batteries_Warnings_Status_Text_xpath)).getText().equalsIgnoreCase("OFF")) {
             Taponbutton(Constant_Batteries_MTC.mtc_Batteries_Warnings_toggle_xpath);
             Thread.sleep(10000);
         }
@@ -212,7 +212,7 @@ public class Batteries extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(500, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(500, 900)).release().perform();
+                .moveTo(PointOption.point(500, 925)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -248,7 +248,7 @@ public class Batteries extends Baseclass {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Alert-Battery Voltage Below");
         TouchAction action = new TouchAction(driver);
         action.press(PointOption.point(530, 1200)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1050)).release().perform();
+                .moveTo(PointOption.point(530, 1075)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -311,8 +311,8 @@ public class Batteries extends Baseclass {
     public void iScrollUpTheScreenInWarningsSetLatency() throws ClassNotFoundException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up the screen in Warnings-Set Latency");
         TouchAction action = new TouchAction(driver);
-        action.press(PointOption.point(530, 1715)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-                .moveTo(PointOption.point(530, 1575)).release().perform();
+        action.press(PointOption.point(530, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(530, 1600)).release().perform();
         System.out.println("Scrolling up the Page");
     }
 
@@ -407,28 +407,32 @@ public class Batteries extends Baseclass {
 //        }
 
     }
+
     @Then("I scroll up to maximum value in Alert-Battery Voltage Below carousel")
     public void iScrollUpToMaximumValueInAlertBatteryVoltageBelowCarousel() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up to maximum value in Alert-Battery Voltage Below carousel");
         TouchAction action = new TouchAction(driver);
         current_carousel_value = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Alerts_Battery_Voltage_Below_Applied_Value_access_id).getText();
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
-        iteration_count =  ((25.9 - current_carousel_value_number)*10);
-        for (float i = 0; i < iteration_count ; i++) {
+        iteration_count = ((26.0 - current_carousel_value_number) * 10);
+//        System.out.println("I scroll up to maximum value in Alert-Battery Voltage Below carousel"+iteration_count);
+        for (float i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(540, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(540, 900)).release().perform();
+                    .moveTo(PointOption.point(540, 925)).release().perform();
             Thread.sleep(1000);
         }
     }
+
     @Then("I scroll up to minimum value in Alert-Battery Voltage Below carousel")
     public void iScrollUpToMinimumValueInAlertBatteryVoltageBelowCarousel() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I scroll up to minimum value in Alert-Battery Voltage Below carousel");
         TouchAction action = new TouchAction(driver);
         current_carousel_value = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Alerts_Battery_Voltage_Below_Applied_Value_access_id).getText();
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
-        iteration_count =  ((current_carousel_value_number - 5.0)*10);
-        for (float i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(540, 900)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+        iteration_count = ((current_carousel_value_number - 5.0) * 10);
+//        System.out.println("I scroll up to minimum value in Alert-Battery Voltage Below carousel"+iteration_count);
+        for (float i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(540, 925)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(540, 1050)).release().perform();
             Thread.sleep(1000);
         }
@@ -440,10 +444,11 @@ public class Batteries extends Baseclass {
         TouchAction action = new TouchAction(driver);
         current_carousel_value = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Alerts_SetLatency_Applied_Value_access_id).getText();
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
-        iteration_count =  ((60.0 - current_carousel_value_number));
-        for (float i = 0; i < iteration_count ; i++) {
+        iteration_count = ((60.0 - current_carousel_value_number));
+//        System.out.println("I scroll to the maximum carousel value in Alert-Set Latency"+iteration_count);
+        for (float i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(540, 1200)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(540, 1050)).release().perform();
+                    .moveTo(PointOption.point(540, 1075)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -454,9 +459,10 @@ public class Batteries extends Baseclass {
         TouchAction action = new TouchAction(driver);
         current_carousel_value = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Alerts_SetLatency_Applied_Value_access_id).getText();
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
-        iteration_count =  ((current_carousel_value_number - 0.0));
-        for (float i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(540, 1050)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+        iteration_count = ((current_carousel_value_number - 0.0));
+//        System.out.println("I scroll to the minimum carousel value in Alert-Set Latency"+iteration_count);
+        for (float i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(540, 1075)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(540, 1200)).release().perform();
             Thread.sleep(1000);
         }
@@ -468,8 +474,9 @@ public class Batteries extends Baseclass {
         TouchAction action = new TouchAction(driver);
         current_carousel_value = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Warnings_Battery_Voltage_Below_Applied_value_access_id).getText();
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
-        iteration_count =  ((25.9 - current_carousel_value_number)*10);
-        for (float i = 0; i < iteration_count ; i++) {
+        iteration_count = ((25.9 - current_carousel_value_number) * 10);
+//        System.out.println("I scroll to the maximum carousel value in Warnings-Battery Voltage Below"+iteration_count);
+        for (float i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(540, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(540, 1450)).release().perform();
             Thread.sleep(1000);
@@ -482,8 +489,9 @@ public class Batteries extends Baseclass {
         TouchAction action = new TouchAction(driver);
         current_carousel_value = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Warnings_Battery_Voltage_Below_Applied_value_access_id).getText();
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
-        iteration_count =  ((current_carousel_value_number - 5.0)*10);
-        for (float i = 0; i < iteration_count ; i++) {
+        iteration_count = ((current_carousel_value_number - 5.0) * 10);
+//        System.out.println("I scroll to the minimum carousel value in Warnings-Battery Voltage Below"+iteration_count);
+        for (float i = 0; i < iteration_count; i++) {
             action.press(PointOption.point(540, 1450)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
                     .moveTo(PointOption.point(540, 1575)).release().perform();
             Thread.sleep(1000);
@@ -496,10 +504,11 @@ public class Batteries extends Baseclass {
         TouchAction action = new TouchAction(driver);
         current_carousel_value = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Warnings_Set_Latency_Applied_Value_access_id).getText();
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
-        iteration_count =  (( 60.0 - current_carousel_value_number));
-        for (float i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(495, 1715)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(495, 1575)).release().perform();
+        iteration_count = ((60.0 - current_carousel_value_number));
+//        System.out.println("I scroll to the maximum carousel value in Warnings-Set Latency"+iteration_count);
+        for (float i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(495, 1725)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(495, 1600)).release().perform();
             Thread.sleep(1000);
         }
     }
@@ -510,10 +519,11 @@ public class Batteries extends Baseclass {
         TouchAction action = new TouchAction(driver);
         current_carousel_value = driver.findElementByAccessibilityId(Constant_Batteries_MTC.mtc_Warnings_Set_Latency_Applied_Value_access_id).getText();
         current_carousel_value_number = Float.parseFloat(current_carousel_value);
-        iteration_count =  ((current_carousel_value_number - 0.0));
-        for (float i = 0; i < iteration_count ; i++) {
-            action.press(PointOption.point(500, 1575)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-                    .moveTo(PointOption.point(500, 1715)).release().perform();
+        iteration_count = ((current_carousel_value_number - 0.0));
+//        System.out.println("I scroll to the minimum carousel value in Warnings-Set Latency"+iteration_count);
+        for (float i = 0; i < iteration_count; i++) {
+            action.press(PointOption.point(500, 1600)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+                    .moveTo(PointOption.point(500, 1725)).release().perform();
             Thread.sleep(1000);
         }
     }

@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="14" time="959.762957">
+<testcase classname="Verifying application Splash screen in Dometic Marine application" name="Launching the application" time="23.827022">
+<system-out><![CDATA[Given I Launch the application..............................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Splash screen in Dometic Marine application" name="Verifying application Splash screen Functionality" time="20.426064">
+<system-out><![CDATA[Then I Tap on Allow button in Permission popup in Login Page................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify Welcome Text is displaying in Login Page......................passed
+Then I Verify Page title is displayed in Login Page.........................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application DashBoard Screen in Dometic Marine application" name="Verifying application DashBoard screen functionality" time="56.876944">
+<system-out><![CDATA[Then I enter Valid Email....................................................passed
+Then I enter Valid Password.................................................passed
+Then I Tap on an Login button...............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I entered into Home Page...............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Marine Tile...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Wait until Landing screen is displayed...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Batteries Screen in Dometic Marine application" name="Verifying application Batteries(Port Engine) screen UI implementation" time="94.904984">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Batteries tile on landing screen..............................passed
+Then I verify Batteries header text.........................................passed
+Then I verify Battery status................................................passed
+Then I verify Voltage Graph text............................................passed
+Then I Tap on Voltage Graph down arrow......................................passed
+Then I verify Voltage text..................................................passed
+Then I verify History text..................................................passed
+Then I Scroll up the page...................................................passed
+Then I verify Day text......................................................passed
+Then I verify WEEK text.....................................................passed
+Then I verify MONTH text....................................................passed
+Then I Tap on week in voltage Graph.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on year in voltage Graph.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify Alerts text...................................................passed
+Then I Tap on Alert toggle if it's already in OFF state.....................passed
+Then I verify Alert-Battery Voltage Below Text..............................passed
+Then I Tap on Alert-Battery Voltage Below...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Battery Voltage Below...................................passed
+Then I verify Alert-Set Latency Text........................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I verify Warnings text.................................................passed
+Then I Tap on Warnings toggle if it's already in OFF state..................passed
+Then I verify Warnings-Battery Voltage Below Text...........................passed
+Then I Tap on Warnings-Battery Voltage Below................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Battery Voltage Below................................passed
+Then I verify Warnings-Set Latency Text.....................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Batteries Screen in Dometic Marine application" name="Verifying application Batteries(Stbd Engine) screen UI implementation" time="97.803768">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Batteries tile on landing screen..............................passed
+Then I Scroll the screen till the 2nd instance..............................passed
+Then I verify Batteries header text.........................................passed
+Then I verify Battery status................................................passed
+Then I verify Voltage Graph text............................................passed
+Then I Tap on Voltage Graph down arrow......................................passed
+Then I verify Voltage text..................................................passed
+Then I verify History text..................................................passed
+Then I Scroll up the page...................................................passed
+Then I verify Day text......................................................passed
+Then I verify WEEK text.....................................................passed
+Then I verify MONTH text....................................................passed
+Then I Tap on week in voltage Graph.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on year in voltage Graph.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify Alerts text...................................................passed
+Then I Tap on Alert toggle if it's already in OFF state.....................passed
+Then I verify Alert-Battery Voltage Below Text..............................passed
+Then I Tap on Alert-Battery Voltage Below...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Battery Voltage Below...................................passed
+Then I verify Alert-Set Latency Text........................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I verify Warnings text.................................................passed
+Then I Tap on Warnings toggle if it's already in OFF state..................passed
+Then I verify Warnings-Battery Voltage Below Text...........................passed
+Then I Tap on Warnings-Battery Voltage Below................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Battery Voltage Below................................passed
+Then I verify Warnings-Set Latency Text.....................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Batteries Screen in Dometic Marine application" name="Verifying application Batteries(Port-Center Engine) screen UI implementation" time="99.653694">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Batteries tile on landing screen..............................passed
+Then I Scroll the screen till the 3rd instance..............................passed
+Then I verify Batteries header text.........................................passed
+Then I verify Battery status................................................passed
+Then I verify Voltage Graph text............................................passed
+Then I Tap on Voltage Graph down arrow......................................passed
+Then I verify Voltage text..................................................passed
+Then I verify History text..................................................passed
+Then I Scroll up the page...................................................passed
+Then I verify Day text......................................................passed
+Then I verify WEEK text.....................................................passed
+Then I verify MONTH text....................................................passed
+Then I Tap on week in voltage Graph.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on year in voltage Graph.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify Alerts text...................................................passed
+Then I Tap on Alert toggle if it's already in OFF state.....................passed
+Then I verify Alert-Battery Voltage Below Text..............................passed
+Then I Tap on Alert-Battery Voltage Below...................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Battery Voltage Below...................................passed
+Then I verify Alert-Set Latency Text........................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I verify Warnings text.................................................passed
+Then I Tap on Warnings toggle if it's already in OFF state..................passed
+Then I verify Warnings-Battery Voltage Below Text...........................passed
+Then I Tap on Warnings-Battery Voltage Below................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Battery Voltage Below................................passed
+Then I verify Warnings-Set Latency Text.....................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Bilge Pump Screen in Dometic Marine application" name="Verifying application Bilge Pump(1st Instance) screen UI implementation" time="91.939433">
+<system-out><![CDATA[Then I Tap on Bilge Pump tile on landing screen.............................passed
+Then I verify Bilge Pump header text........................................passed
+Then I verify Bilge Pump status.............................................passed
+Then I verify Run Cycles text...............................................passed
+Then I Tap on Run Cycles down arrow.........................................passed
+Then I verify Voltage text..................................................passed
+Then I verify History text..................................................passed
+Then I Scroll up the page...................................................passed
+Then I verify Day text......................................................passed
+Then I verify WEEK text.....................................................passed
+Then I verify MONTH text....................................................passed
+Then I Tap on week in Run Cycles Graph......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on month in Run Cycles Graph.....................................passed
+Then I verify Alerts text...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Bilge Pump Alert toggle if it's already in OFF state..........passed
+Then I Scroll up the page...................................................passed
+Then I verify Alert-Max Cycle Hour Text.....................................passed
+Then I Tap on Alert-Max Cycle Hour..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Max Cycle Hour..........................................passed
+Then I verify Alert-Max Daily Cycle Text....................................passed
+Then I Tap on Alert-Max Daily Cycle.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Max Daily Cycle.........................................passed
+Then I verify Continuous Text...............................................passed
+Then I Tap on Continuous....................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Continuous....................................................passed
+Then I verify Warnings text.................................................passed
+Then I Tap on Bilge Pump Warnings toggle if it's already in OFF state.......passed
+Then I Scroll up the page...................................................passed
+Then I verify Warnings-Max Cycle Hour Text..................................passed
+Then I Tap on Warnings-Max Cycle Hour.......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Max Cycle Hour.......................................passed
+Then I verify Warnings-Max Daily Cycle Text.................................passed
+Then I Tap on Warnings-Max Daily Cycle......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Max Daily Cycle......................................passed
+Then I verify Continuous Text...............................................passed
+Then I Tap on Warnings-Continuous...........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Warnings-Continuous...........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Bilge Pump Screen in Dometic Marine application" name="Verifying application Bilge Pump(2nd Instance-FWD Bilge) screen UI implementation" time="98.779868">
+<system-out><![CDATA[Then I Tap on Bilge Pump tile on landing screen.............................passed
+Then I Scroll the screen till the 2nd instance..............................passed
+Then I verify Bilge Pump header text........................................passed
+Then I verify Bilge Pump status.............................................passed
+Then I verify Run Cycles text...............................................passed
+Then I Tap on Run Cycles down arrow.........................................passed
+Then I verify Voltage text..................................................passed
+Then I verify History text..................................................passed
+Then I Scroll up the page...................................................passed
+Then I verify Day text......................................................passed
+Then I verify WEEK text.....................................................passed
+Then I verify MONTH text....................................................passed
+Then I Tap on week in Run Cycles Graph......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on month in Run Cycles Graph.....................................passed
+Then I verify Alerts text...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Bilge Pump Alert toggle if it's already in OFF state..........passed
+Then I Scroll up the page...................................................passed
+Then I verify Alert-Max Cycle Hour Text.....................................passed
+Then I Tap on Alert-Max Cycle Hour..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Max Cycle Hour..........................................passed
+Then I verify Alert-Max Daily Cycle Text....................................passed
+Then I Tap on Alert-Max Daily Cycle.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Max Daily Cycle.........................................passed
+Then I verify Continuous Text...............................................passed
+Then I Tap on Continuous....................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Continuous....................................................passed
+Then I verify Warnings text.................................................passed
+Then I Tap on Bilge Pump Warnings toggle if it's already in OFF state.......passed
+Then I Scroll up the page...................................................passed
+Then I verify Warnings-Max Cycle Hour Text..................................passed
+Then I Tap on Warnings-Max Cycle Hour.......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Max Cycle Hour.......................................passed
+Then I verify Warnings-Max Daily Cycle Text.................................passed
+Then I Tap on Warnings-Max Daily Cycle......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Max Daily Cycle......................................passed
+Then I verify Continuous Text...............................................passed
+Then I Tap on Warnings-Continuous...........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Warnings-Continuous...........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Bilge Pump Screen in Dometic Marine application" name="Verifying application Bilge Pump(3rd Instance-Port Bilge) screen UI implementation" time="90.607372">
+<system-out><![CDATA[Then I Tap on Bilge Pump tile on landing screen.............................passed
+Then I Scroll the screen till the 3rd instance..............................passed
+Then I verify Bilge Pump header text........................................passed
+Then I verify Bilge Pump status.............................................passed
+Then I verify Run Cycles text...............................................passed
+Then I Tap on Run Cycles down arrow.........................................passed
+Then I verify Voltage text..................................................passed
+Then I verify History text..................................................passed
+Then I Scroll up the page...................................................passed
+Then I verify Day text......................................................passed
+Then I verify WEEK text.....................................................passed
+Then I verify MONTH text....................................................passed
+Then I Tap on week in Run Cycles Graph......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on month in Run Cycles Graph.....................................passed
+Then I verify Alerts text...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Bilge Pump Alert toggle if it's already in OFF state..........passed
+Then I Scroll up the page...................................................passed
+Then I verify Alert-Max Cycle Hour Text.....................................passed
+Then I Tap on Alert-Max Cycle Hour..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Max Cycle Hour..........................................passed
+Then I verify Alert-Max Daily Cycle Text....................................passed
+Then I Tap on Alert-Max Daily Cycle.........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Max Daily Cycle.........................................passed
+Then I verify Continuous Text...............................................passed
+Then I Tap on Continuous....................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Continuous....................................................passed
+Then I verify Warnings text.................................................passed
+Then I Tap on Bilge Pump Warnings toggle if it's already in OFF state.......passed
+Then I Scroll up the page...................................................passed
+Then I verify Warnings-Max Cycle Hour Text..................................passed
+Then I Tap on Warnings-Max Cycle Hour.......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Max Cycle Hour.......................................passed
+Then I verify Warnings-Max Daily Cycle Text.................................passed
+Then I Tap on Warnings-Max Daily Cycle......................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Max Daily Cycle......................................passed
+Then I verify Continuous Text...............................................passed
+Then I Tap on Warnings-Continuous...........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Warnings-Continuous...........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tank Screen in Dometic Marine application" name="Verifying application Tank screen UI implementation" time="75.311214">
+<system-out><![CDATA[Then I Tap on Tank tile on landing screen...................................passed
+Then I verify Tank header text..............................................passed
+Then I verify Alert text....................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tank Alert toggle if it's already in OFF state................passed
+Then I Scroll up the page...................................................passed
+Then I verify Alert-Tank Level Above Text...................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I verify Alert-Set Latency Text........................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I verify Warning text..................................................passed
+Then I Tap on Tank Warnings toggle if it's already in OFF state.............passed
+Then I verify Warnings-Tank Level Above Text................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I verify Warnings-Set Latency Text.....................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tank Screen in Dometic Marine application" name="Verifying application Tank screen(Grey Water) UI implementation" time="68.421098">
+<system-out><![CDATA[Then I Tap on Tank tile on landing screen...................................passed
+Then I Scroll the screen till grey water....................................passed
+Then I verify Tank header text..............................................passed
+Then I verify Tank Grey Water Tank text is displayed........................passed
+Then I verify Alert text....................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tank Alert toggle if it's already in OFF state................passed
+Then I Scroll up the page...................................................passed
+Then I verify Alert-Tank Level Above Text...................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I verify Alert-Set Latency Text........................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I verify Warning text..................................................passed
+Then I Tap on Tank Warnings toggle if it's already in OFF state.............passed
+Then I verify Warnings-Tank Level Above Text................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I verify Warnings-Set Latency Text.....................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tank Screen in Dometic Marine application" name="Verifying application Tank screen(Black Water) UI implementation" time="72.932598">
+<system-out><![CDATA[Then I Tap on Tank tile on landing screen...................................passed
+Then I Scroll the screen till Black Water...................................passed
+Then I verify Tank header text..............................................passed
+Then I verify Tank Black Water Tank text is displayed.......................passed
+Then I verify Alert text....................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tank Alert toggle if it's already in OFF state................passed
+Then I Scroll up the page...................................................passed
+Then I verify Alert-Tank Level Above Text...................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I verify the apply button..............................................passed
+Then I Tap on Alert-Tank Level Above........................................passed
+Then I verify Alert-Set Latency Text........................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll the page......................................................passed
+Then I Tap on Alert-Set Latency.............................................passed
+Then I verify Warning text..................................................passed
+Then I Tap on Tank Warnings toggle if it's already in OFF state.............passed
+Then I verify Warnings-Tank Level Above Text................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Tank Level Above.....................................passed
+Then I verify Warnings-Set Latency Text.....................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Scroll up the page...................................................passed
+Then I Tap on Warnings-Set Latency..........................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Security Screen in Dometic Marine application" name="Verifying application Security screen UI implementation" time="49.511825">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Security Tile on landing screen...............................passed
+Then I verify Security Header text is displayed.............................passed
+Then I verify Security Arm Icon is displayed................................passed
+Then I verify Security current status is displayed..........................passed
+Then I verify Arm button is displayed.......................................passed
+Then I verify Arm button label is displayed.................................passed
+Then I Verify Geo Fencing text is displayed in Security screen..............passed
+Then I Verify Geo Fencing-toggle status is displayed in Security screen.....passed
+Then I Verify Geo Fencing-toggle is displayed in Security screen............passed
+Then I Tap on Gio Fencing Radius from center toggle if it's already in OFF state.passed
+Then I Verify Geo Fencing Radius from center text is displayed in Security screen.passed
+Then I Verify Geo Fencing Radius from center Expand Icon is displayed in Security screen.passed
+Then I Verify Geo Fencing Alert Latency text is displayed in Security screen.passed
+Then I Verify Geo Fencing Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Scroll up the page...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Door Window Alert toggle if it's already in OFF state.........passed
+Then I Verify Door Window Alert text is displayed in Security screen........passed
+Then I Verify Door Window Alert-toggle status is displayed in Security screen.passed
+Then I Verify Door Window Alert-toggle is displayed in Security screen......passed
+Then I Verify Door Window Alert Alert Latency text is displayed in Security screen.passed
+Then I Verify Door Window Alert Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Scroll up the page...................................................passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Theft Alert toggle if it's already in OFF state...............passed
+Then I Verify Theft Alert text is displayed in Security screen..............passed
+Then I Verify Theft Alert-toggle status is displayed in Security screen.....passed
+Then I Verify Theft Alert-toggle is displayed in Security screen............passed
+Then I Verify Theft Alert Alert Latency text is displayed in Security screen.passed
+Then I Verify Theft Alert Alert Latency Expand Icon is displayed in Security screen.passed
+Then I Wait short period for Page to Load...................................passed
+Then I Tap on Back Button...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application" name="Verifying application Tracking(Gio Fencing) screen UI implementation" time="18.767073">
+<system-out><![CDATA[Then I Wait short period for Page to Load...................................passed
+Then I Tap on Tracking tile.................................................passed
+Then I Verify Tracking Header title.........................................passed
+Then I Verify Boat Location text is displayed...............................passed
+Then I Verify Latitude text is displayed....................................passed
+Then I Verify Longitude text is displayed...................................passed
+Then I Verify Geo Fencing text is displayed.................................passed
+Then I Verify Geo Fencing-toggle status is displayed........................passed
+Then I Verify Geo Fencing-toggle is displayed...............................passed
+Then I Tap on Gio Fencing toggle if it's already in OFF state...............passed
+Then I Scroll up the page...................................................passed
+Then I Verify Radius from center text is displayed..........................passed
+Then I Verify Radius from center expandIcon is displayed....................passed
+Then I Verify Alert Latency text is displayed...............................passed
+Then I Verify Alert Latency expandIcon is displayed.........................passed
+Then I Tap on Back Button...................................................passed
+Then I Wait short period for Page to Load...................................passed
+]]></system-out>
+</testcase>
+</testsuite>

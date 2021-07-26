@@ -459,8 +459,10 @@ public class Settings extends Baseclass {
     @Then("I Tap on Home in Settings screen")
     public void iTapOnHomeInSettingsScreen() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Home in Settings screen");
-        TaponbuttonaccessabilityID(Constant_settings.Settings_home_text_access_id);
-        Thread.sleep(1000);
+       if(driver.findElementsByAccessibilityId(Constant_settings.Settings_home_text_access_id).size()!=0){
+           TaponbuttonaccessabilityID(Constant_settings.Settings_home_text_access_id);
+           Thread.sleep(1000);
+       }
     }
 
     @Then("I Tap on Notification Settings")
@@ -473,6 +475,7 @@ public class Settings extends Baseclass {
     @Then("I Tap on Device Management")
     public void iTapOnDeviceManagement() throws ClassNotFoundException, InterruptedException {
         ScenarioDef.createNode(new GherkinKeyword("Then"), "I Tap on Device Management");
+
         TaponbuttonaccessabilityID(Constant_settings.Settings_deviceMangagement_text_access_id);
         Thread.sleep(2000);
     }
