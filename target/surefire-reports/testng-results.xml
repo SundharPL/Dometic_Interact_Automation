@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="30" total="30" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="79481" started-at="2021-08-04T09:29:17Z" finished-at="2021-08-04T09:30:37Z">
+    <groups>
+    </groups>
+    <test name="MTC" duration-ms="79481" started-at="2021-08-04T09:29:17Z" finished-at="2021-08-04T09:30:37Z">
+      <class name="com.dometic.MTC.androidrunner.MTC_runner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="setUpClass" is-config="true" duration-ms="138" started-at="2021-08-04T14:59:17Z" finished-at="2021-08-04T14:59:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="473" started-at="2021-08-04T14:59:18Z" data-provider="features" finished-at="2021-08-04T14:59:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Launching the application"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Splash screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Hooks.InitializeStep(Hooks.java:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
+	at cucumber.runner.TestStep.run(TestStep.java:49)
+	at cucumber.runner.TestCase.run(TestCase.java:40)
+	at cucumber.runner.Runner.runPickle(Runner.java:40)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:68)
+	at com.dometic.MTC.androidrunner.MTC_runner.feature(MTC_runner.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="11" started-at="2021-08-04T14:59:18Z" data-provider="features" finished-at="2021-08-04T14:59:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Splash screen Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Splash screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Basestepdefinition.tap_on_Allow_button(Basestepdefinition.java:65)
+	at ✽.I Tap on Allow button in Permission popup in Login Page(src/test/java/com/dometic/MTC/features/TC02_SplashScreen.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="60" started-at="2021-08-04T14:59:18Z" data-provider="features" finished-at="2021-08-04T14:59:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Signup Screen UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Signup Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Signup.iTapOnSignupLinkInLoginPage(Signup.java:111)
+	at ✽.I Tap on signup link in login page(src/test/java/com/dometic/MTC/features/TC03_Signup.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="5019" started-at="2021-08-04T14:59:18Z" data-provider="features" finished-at="2021-08-04T14:59:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Signup Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Signup Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Signup.iTapOnSignupLinkInLoginPage(Signup.java:111)
+	at ✽.I Tap on signup link in login page(src/test/java/com/dometic/MTC/features/TC03_Signup.feature:101)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="11" started-at="2021-08-04T14:59:23Z" data-provider="features" finished-at="2021-08-04T14:59:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Forgot Password Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Forgot Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextAccessibility(Baseclass.java:85)
+	at com.dometic.MTC.stepdefinition.Forgotpassword.iVerifyForgotYourPasswordTextIsDisplayeddInForgotPasswordPage(Forgotpassword.java:55)
+	at ✽.I verify Forgot your password text is displayedd in Forgot password Page(src/test/java/com/dometic/MTC/features/TC04_ForgotPassword.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="8051" started-at="2021-08-04T14:59:23Z" data-provider="features" finished-at="2021-08-04T14:59:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Forgot Password Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Forgot Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.cleartextaccessabilityId(Baseclass.java:82)
+	at com.dometic.MTC.stepdefinition.Forgotpassword.Forgotpassword_enter_invalid_credentials(Forgotpassword.java:40)
+	at ✽.I enter Email in Login Page(src/test/java/com/dometic/MTC/features/TC04_ForgotPassword.feature:40)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="9" started-at="2021-08-04T14:59:31Z" data-provider="features" finished-at="2021-08-04T14:59:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Login Page UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Login Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextAccessibility(Baseclass.java:85)
+	at com.dometic.MTC.stepdefinition.LoginScreen.iVerifyWelcomeTextIsDisplayedInLoginScreen(LoginScreen.java:123)
+	at ✽.I verify Welcome! Text is displayed in login screen(src/test/java/com/dometic/MTC/features/TC05_LoginScreen.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="2027" started-at="2021-08-04T14:59:31Z" data-provider="features" finished-at="2021-08-04T14:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application DashBoard screen functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application DashBoard Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:882)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:104)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:71)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:45)
+	at com.dometic.MTC.qa.util.Baseclass.cleartext(Baseclass.java:75)
+	at com.dometic.MTC.stepdefinition.LoginScreen.iEnterValidEmail(LoginScreen.java:196)
+	at ✽.I enter Valid Email(src/test/java/com/dometic/MTC/features/TC06_DashboardScreen.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="20" started-at="2021-08-04T14:59:33Z" data-provider="features" finished-at="2021-08-04T14:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Settings.iVerifyHamburgerMenuInLandingScreen(Settings.java:85)
+	at ✽.I verify hamburger menu in landing screen(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="16" started-at="2021-08-04T14:59:33Z" data-provider="features" finished-at="2021-08-04T14:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Settings.iTapOnHomeInSettingsScreen(Settings.java:462)
+	at ✽.I Tap on Home in Settings screen(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:23)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="7" started-at="2021-08-04T14:59:33Z" data-provider="features" finished-at="2021-08-04T14:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen(Account settings) UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Settings.iTapOnHamburgerMenuInLandingScreen(Settings.java:35)
+	at ✽.I Tap on hamburger menu in landing screen(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:347)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="6" started-at="2021-08-04T14:59:33Z" data-provider="features" finished-at="2021-08-04T14:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen(Account settings)Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.LandingPage.i_Tap_on_Back_Button(LandingPage.java:294)
+	at ✽.I Tap on Back Button(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:361)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="11" started-at="2021-08-04T14:59:33Z" data-provider="features" finished-at="2021-08-04T14:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen(Subscriptions) UI& Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextValidationAccessibility(Baseclass.java:95)
+	at com.dometic.MTC.stepdefinition.Settings.iVerifyIfSubscriptionTitleIsDisplayed(Settings.java:1086)
+	at ✽.I verify if subscription title is displayed(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:368)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="5017" started-at="2021-08-04T14:59:33Z" data-provider="features" finished-at="2021-08-04T14:59:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen(Device Management) UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Settings.iTapOnHamburgerMenuInLandingScreen(Settings.java:35)
+	at ✽.I Tap on hamburger menu in landing screen(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:377)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="2019" started-at="2021-08-04T14:59:38Z" data-provider="features" finished-at="2021-08-04T14:59:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying Device management(Vessel Information) UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextValidationAccessibility(Baseclass.java:95)
+	at com.dometic.MTC.stepdefinition.Settings.iVerifyTheDeviceManagementTitleText(Settings.java:1593)
+	at ✽.I verify the device management title text(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:397)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="7017" started-at="2021-08-04T14:59:40Z" data-provider="features" finished-at="2021-08-04T14:59:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying the Edit vessel screen UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextValidationAccessibility(Baseclass.java:95)
+	at com.dometic.MTC.stepdefinition.Settings.iVerifyTheVesselNameLableText(Settings.java:1659)
+	at ✽.I verify the vessel name label text(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:413)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="14" started-at="2021-08-04T14:59:48Z" data-provider="features" finished-at="2021-08-04T14:59:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen(View/Edit Account) Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Settings.iTapOnBackButtonInDeviceManagementScreen(Settings.java:2230)
+	at ✽.I Tap on back button in Device Management screen(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:505)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="13" started-at="2021-08-04T14:59:48Z" data-provider="features" finished-at="2021-08-04T14:59:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen Edit profile screen UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Settings.iTapOnEditProfileInProfileScreen(Settings.java:615)
+	at ✽.I Tap on Edit profile in profile screen(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:532)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="19" started-at="2021-08-04T14:59:48Z" data-provider="features" finished-at="2021-08-04T14:59:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Settings screen App Settings screen UI"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Settings Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.Settings.iTapOnBackButtonInEditProfileScreen(Settings.java:2330)
+	at ✽.I Tap on back button in Edit Profile Screen(src/test/java/com/dometic/MTC/features/TC08_SettingsScreen.feature:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="7024" started-at="2021-08-04T14:59:48Z" data-provider="features" finished-at="2021-08-04T14:59:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Batteries(Port Engine) screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Batteries Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextValidationAccessibility(Baseclass.java:95)
+	at com.dometic.MTC.stepdefinition.Batteries.iVerifyBatteriesHeaderText(Batteries.java:34)
+	at ✽.I verify Batteries header text(src/test/java/com/dometic/MTC/features/TC17_BatteriesScreenMTC.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="7048" started-at="2021-08-04T14:59:55Z" data-provider="features" finished-at="2021-08-04T15:00:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Batteries(Stbd Engine) screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Batteries Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at io.appium.java_client.TouchAction.perform(TouchAction.java:416)
+	at com.dometic.MTC.stepdefinition.BilgePump.iScrollTheScreenTillTheNdInstance(BilgePump.java:547)
+	at ✽.I Scroll the screen till the 2nd instance(src/test/java/com/dometic/MTC/features/TC17_BatteriesScreenMTC.feature:256)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="7036" started-at="2021-08-04T15:00:02Z" data-provider="features" finished-at="2021-08-04T15:00:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Batteries(Port-Center Engine) screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Batteries Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at io.appium.java_client.TouchAction.perform(TouchAction.java:416)
+	at com.dometic.MTC.stepdefinition.BilgePump.iScrollTheScreenTillTheRdInstance(BilgePump.java:560)
+	at ✽.I Scroll the screen till the 3rd instance(src/test/java/com/dometic/MTC/features/TC17_BatteriesScreenMTC.feature:512)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="2062" started-at="2021-08-04T15:00:09Z" data-provider="features" finished-at="2021-08-04T15:00:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Bilge Pump(1st Instance) screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Bilge Pump Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextValidationAccessibility(Baseclass.java:95)
+	at com.dometic.MTC.stepdefinition.BilgePump.iVerifyBilgePumpHeaderText(BilgePump.java:33)
+	at ✽.I verify Bilge Pump header text(src/test/java/com/dometic/MTC/features/TC18_BilgePumpScreenMTC.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="2021" started-at="2021-08-04T15:00:11Z" data-provider="features" finished-at="2021-08-04T15:00:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Bilge Pump(2nd Instance-FWD Bilge) screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Bilge Pump Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at io.appium.java_client.TouchAction.perform(TouchAction.java:416)
+	at com.dometic.MTC.stepdefinition.BilgePump.iScrollTheScreenTillTheNdInstance(BilgePump.java:547)
+	at ✽.I Scroll the screen till the 2nd instance(src/test/java/com/dometic/MTC/features/TC18_BilgePumpScreenMTC.feature:379)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="2020" started-at="2021-08-04T15:00:13Z" data-provider="features" finished-at="2021-08-04T15:00:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Bilge Pump(3rd Instance-Port Bilge) screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Bilge Pump Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at io.appium.java_client.TouchAction.perform(TouchAction.java:416)
+	at com.dometic.MTC.stepdefinition.BilgePump.iScrollTheScreenTillTheRdInstance(BilgePump.java:560)
+	at ✽.I Scroll the screen till the 3rd instance(src/test/java/com/dometic/MTC/features/TC18_BilgePumpScreenMTC.feature:754)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="2024" started-at="2021-08-04T15:00:15Z" data-provider="features" finished-at="2021-08-04T15:00:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Tank screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Tank Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextValidationAccessibility(Baseclass.java:95)
+	at com.dometic.MTC.stepdefinition.TankMTC.iVerifyTankHeaderText(TankMTC.java:175)
+	at ✽.I verify Tank header text(src/test/java/com/dometic/MTC/features/TC19_TankScreenMTC.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="2006" started-at="2021-08-04T15:00:17Z" data-provider="features" finished-at="2021-08-04T15:00:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Tank screen(Grey Water) UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Tank Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.TankMTC.iScrollTheScreenTillGreyWater(TankMTC.java:496)
+	at ✽.I Scroll the screen till grey water(src/test/java/com/dometic/MTC/features/TC19_TankScreenMTC.feature:259)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="2016" started-at="2021-08-04T15:00:19Z" data-provider="features" finished-at="2021-08-04T15:00:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Tank screen(Black Water) UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Tank Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.stepdefinition.TankMTC.iScrollTheScreenTillBlackWater(TankMTC.java:521)
+	at ✽.I Scroll the screen till Black Water(src/test/java/com/dometic/MTC/features/TC19_TankScreenMTC.feature:516)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="8030" started-at="2021-08-04T15:00:21Z" data-provider="features" finished-at="2021-08-04T15:00:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Security screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Security Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextValidationAccessibility(Baseclass.java:95)
+	at com.dometic.MTC.stepdefinition.Security.iVerifySecurityHeaderTextIsDisplayed(Security.java:33)
+	at ✽.I verify Security Header text is displayed(src/test/java/com/dometic/MTC/features/TC27_SecurityScreenMTC.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="feature" duration-ms="7031" started-at="2021-08-04T15:00:29Z" data-provider="features" finished-at="2021-08-04T15:00:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verifying application Tracking(Gio Fencing) screen UI implementation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verifying application Tracking(Gio Fencing) Screen in Dometic Marine application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.dometic.MTC.qa.util.Baseclass.asserttextValidationAccessibility(Baseclass.java:95)
+	at com.dometic.MTC.stepdefinition.TrackingMTC.iVerifyTrackingHeaderTitle(TrackingMTC.java:36)
+	at ✽.I Verify Tracking Header title(src/test/java/com/dometic/MTC/features/TC28_Tracking_GioFencingScreenMTC.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.dometic.MTC.androidrunner.MTC_runner@2669b199]" name="tearDownClass" is-config="true" duration-ms="731" started-at="2021-08-04T15:00:36Z" finished-at="2021-08-04T15:00:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.dometic.MTC.androidrunner.MTC_runner -->
+    </test> <!-- MTC -->
+  </suite> <!-- Suite -->
+</testng-results>
